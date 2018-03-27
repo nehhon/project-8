@@ -18,69 +18,8 @@
 <script>(function(d,e,j,h,f,c,b){d.GoogleAnalyticsObject=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)},d[f].l=1*new Date();c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-105062193-1","auto");ga("send","pageview");</script>
 </head>
 <body>
-
-    <div id="mapconfiguration" style="    display:none" >
-        <table>
-            <tbody>
-                <tr><td id="mapsizeOption"></td><td><input id="mapwidth" type="number" value="256" step="32" min="32" /></td></tr>
-				<tr><td>Gravity (Testing)</td><td><input id="mapgravity" type="number" value="9.8" /></td></tr>
-				<tr><td id="startingResourcesOption"></td></tr>
-				<tr><td id="infiniteWord"></td><td><input id="infiniteValue" type="checkbox" checked="true" /></td></tr>
-				<tr><td id="goldWord"></td><td><input id="goldValue" type="number" value="50000" step="250" /></td></tr>
-				<tr><td id="woodWord"></td><td><input id="woodValue" type="number" value="50000" step="250" /></td></tr>
-				<tr><td id="foodWord"></td><td><input id="foodValue" type="number" value="50000" step="250" /></td></tr>
-				<tr><td id="stoneWord"></td><td><input id="stoneValue" type="number" value="50000" step="250" /></td></tr>
-				<tr><td id="terrainOption"></td></tr>
-				<tr><td><select name="terrain" id="terrainSelect">
-  <option value="grass">Grass</option>
-  <option value="snow">Snow</option>
-</select>
-</td></tr>
-            </tbody>
-        </table>
-
-        <button id="closeButton1" class="start closeButton"></button>
-    </div>
-
-	<div id="alert" style="display:none">
-
-<h3 id="alerttitle"></h3>
-<div id="alerttext"></div>
-<button id="alertok"></button>
-</div>
-<div id="basic">
-<div id="notifybar">
-</div>
-<div id="index" style="display:block">
-<div id="info">Beta v29.3 - 24/3/2018 19:43</div>
-<div id="nh"></div>
-<div id="menuScroll">
-<div id="commonMenu">
-<div id="onlinetxt" style="margin-top:15px"><span>Online</span><span style="    margin-left: 795px;">Offline</span></div>
-<ul>
-<li style="background:url(https://i.imgur.com/SmfE6wG.png);height:450px;width:350px"><div></div><a style="padding-top: 350px;width: 350px;height: 100px;" id="strSearch" href="#GameList"></a></li>
-<li style="background:url(https://i.imgur.com/8rNgKFh.png);width:350px"  id="createGame1"><div></div><a href="#CreateGame" id="strCreate"></a></li>
-</ul>
-
-<ul style="margin-left:40px">
-<li id="Twitter" style="height:750px;"><a class="twitter-timeline" data-width="300" data-height="750" href="https://twitter.com/TzaredGame"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-</ul>
-
-<span style="margin-right:90px"></span>
-
-
-<ul>
-<li style="background:url(https://i.imgur.com/1xTvGJc.png);height:375px"><div></div><a style="padding-top:332px" href="#RandomMap" id="strRandomMap"></a></li>
-<li style="background:url(https://i.imgur.com/uWhMEgr.gif);height:375px"><div></div><a style="padding-top:332px" href="#CustomMap"  id="strcusMap"></a></li>
-</ul>
-<ul>
-<li style="background:url(https://i.imgur.com/T0ZuhNM.png);height:750px;width:340px;"><div></div><a style="padding-top:707px" href="#MapEditor" id="strMapEditor"></a></li>
-</ul>
-</div>
-</div>
-</div>
 <div id="loading" style="display:none">
-<p id="loadingtext">Caricamento</p>
+<p id="loadingtext"></p>
 <div>
 <svg id='logo' version='1.1' viewBox='0 0 145 90' x='0px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' y='0px'>
 <style type='text/css'>
@@ -146,6 +85,95 @@
 
 </div>
 
+</div>
+
+    <div id="mapconfiguration" style="    display:none" >
+        <table>
+            <tbody>
+                <tr><td id="mapsizeOption"></td><td><input id="mapwidth" type="number" value="256" step="32" min="32" /></td></tr>
+				<tr><td>Gravity (Testing)</td><td><input id="mapgravity" type="number" value="9.8" /></td></tr>
+				<tr><td id="startingResourcesOption"></td></tr>
+				<tr><td id="infiniteWord"></td><td><input id="infiniteValue" type="checkbox" checked="true" /></td></tr>
+				<tr><td id="goldWord"></td><td><input id="goldValue" type="number" value="50000" step="250" /></td></tr>
+				<tr><td id="woodWord"></td><td><input id="woodValue" type="number" value="50000" step="250" /></td></tr>
+				<tr><td id="foodWord"></td><td><input id="foodValue" type="number" value="50000" step="250" /></td></tr>
+				<tr><td id="stoneWord"></td><td><input id="stoneValue" type="number" value="50000" step="250" /></td></tr>
+				<tr><td id="terrainOption"></td></tr>
+				<tr><td><select name="terrain" id="terrainSelect">
+  <option value="grass">Grass</option>
+  <option value="snow">Snow</option>
+</select>
+</td></tr>
+            </tbody>
+        </table>
+
+        <button id="closeButton1" class="start closeButton"></button>
+    </div>
+	<div id="playingMenu" style="display:none">
+	<div>
+<ul>
+<li class="quitButton" id="quitButton1"></li>
+<li id="saveGame"></li>
+<li id="backToGame"></li>
+</ul>
+<div>
+<span id="musicVolume"></span><br/><input type="range" id="musicRange" value="80"/><br/><br/>
+<form id="musicSelect">
+  <input type="radio" name="mversion" value="originalMusic" checked="true" /> Original<br/>
+  <input type="radio" name="mversion" value="sharpRain" /> Original - <a href="https://www.youtube.com/user/rainheart666787/featured" target="_blank">Sharp Rain</a> Version<br/>
+  <input type="radio" name="mversion" value="originalMusic1" /> Original - Alternative One<br/>
+    <input type="radio" name="mversion" value="mute" /> Mute
+</form>
+<br />
+<span id="soundVolume"></span><br/><input type="range" id="soundRange" value="45"/><br/>
+</div>
+</div>
+</div>
+
+<div id="mapPropsWindow"></div>
+
+	<div id="alert" style="display:none">
+
+<h3 id="alerttitle"></h3>
+<div id="alerttext"></div>
+<button id="alertok"></button>
+</div>
+<div id="basic">
+<div id="notifybar">
+</div>
+<div id="index" style="display:block">
+<div id="info">Work in progress - Beta v29.5 - 27/3/2018 20:13</div>
+<div id="nh"></div>
+<div id="menuScroll">
+<div id="commonMenu">
+<div id="onlinetxt" style="margin-top:15px"><span>Online</span><span style="    margin-left: 795px;">Offline</span></div>
+<ul>
+<li style="background:url(https://i.imgur.com/SmfE6wG.png);height:450px;width:350px"><div></div><a style="padding-top: 350px;width: 350px;height: 100px;" id="strSearch" href="#GameList"></a></li>
+<li style="background:url(https://i.imgur.com/8rNgKFh.png);width:350px"  id="createGame1"><div></div><a href="#CreateGame" id="strCreate"></a></li>
+</ul>
+
+<ul style="display:none">
+<li style="background:url(https://i.imgur.com/LeaSwi8.png)"><div></div><a href="#Account">Mi cuenta</a></li>
+<li style="background:url(https://i.imgur.com/wjry0bv.gif);height:225px"><div></div><a style="padding-top:182px" href="#MatchHistory">Ultimas partidas</a></li>
+<li style="background:url(https://i.imgur.com/Y3TQ0sy.gif);height:225px"><div></div><a style="padding-top:182px" href="#Ranking">Clasificaci&oacute;n</a></li>
+</ul>
+
+<ul style="margin-left:40px">
+<li id="Twitter" style="height:750px;"><a class="twitter-timeline" data-width="300" data-height="750" href="https://twitter.com/TzaredGame"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+</ul>
+
+<span style="margin-right:90px"></span>
+
+
+<ul>
+<li style="background:url(https://i.imgur.com/1xTvGJc.png);height:375px"><div></div><a style="padding-top:332px" href="#RandomMap" id="strRandomMap"></a></li>
+<li style="background:url(https://i.imgur.com/uWhMEgr.gif);height:375px"><div></div><a style="padding-top:332px" href="#CustomMap"  id="strcusMap"></a></li>
+</ul>
+<ul>
+<li style="background:url(https://i.imgur.com/T0ZuhNM.png);height:750px;width:340px;"><div></div><a style="padding-top:707px" href="#MapEditor" id="strMapEditor"></a></li>
+</ul>
+</div>
+</div>
 </div>
 
 
@@ -287,26 +315,6 @@ margin-left: 151px;
 <h2 id="sendMessageH2"></h2>
 <input id="msginputGame" />
 </div>
-<div id="playingMenu" style="display:none">
-
-<ul>
-<li class="quitButton" id="quitButton1"></li>
-<li id="saveGame"></li>
-<li id="backToGame"></li>
-</ul>
-<hr style="margin-bottom:20px;"/>
-<div>
-<span id="musicVolume"></span><br/><input type="range" id="musicRange" value="80"/><br/><br/>
-<form id="musicSelect">
-  <input type="radio" name="mversion" value="originalMusic" checked="true" /> Original<br/>
-  <input type="radio" name="mversion" value="sharpRain" /> Original - <a href="https://www.youtube.com/user/rainheart666787/featured" target="_blank">Sharp Rain</a> Version<br/>
-  <input type="radio" name="mversion" value="originalMusic1" /> Original - Alternative One<br/>
-    <input type="radio" name="mversion" value="mute" /> Mute
-</form>
-<br />
-<span id="soundVolume"></span><br/><input type="range" id="soundRange" value="45"/><br/>
-</div>
-</div>
 <div id="ingameStats">
 
 <div>
@@ -328,6 +336,11 @@ margin-left: 151px;
 <button id="menueditor"></button>
 <button id="deleteUnit" style="color: #ff0000;font-weight: bold;font-size: 19px;">x</button>
 <button id="rotatebutton"></button>
+<button id="mapProps"></button>
+<span>Brush size: </span><input type="number" min="1" max="256" value="6" id="brushSize"/>
+<span>Active kingdom</span>
+<select id="selectKingdom">
+</select>
 </div>
 <div id="minimap" style="position:absolute; top: 31px;
     left: 4px;
@@ -382,7 +395,7 @@ margin-left: 151px;
 </div>
 </div>
 </div>
-</div>
-<script src=/netral.js?v293></script>
+</div>
+<script src=/netral.js?v295></script>
 </body>
 </html>
