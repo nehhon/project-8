@@ -15,18 +15,14 @@
 <meta name="description" content="Стратегическа игра в реално време за уеб браузъри, играйте сами или с приятели">
 <meta name="keywords" content="царед,игра,мултиплейър,онлайн,браузър">
 <script>(function(d,e,j,h,f,c,b){d.GoogleAnalyticsObject=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)},d[f].l=1*new Date();c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-105062193-1","auto");ga("send","pageview");</script>
-<link rel="stylesheet" type="text/css" href="/style.css?v296">
+<link rel="stylesheet" type="text/css" href="/style.css?v297">
 </head>
 <body>
 <div id="loading" style="display:none">
-<p id="loadingtext">Cargando</p>
+<p id="loadingtext"></p>
 <div>
 <svg id='logo' version='1.1' viewBox='0 0 145 90' x='0px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' y='0px'>
-<style type='text/css'>
-	.st0{fill:#2B2B2B;}
-	.st1{fill:none;stroke:#2B2B2B;stroke-miterlimit:10;}
-	.st2{fill:#00FFD4;}
-</style>
+<style type='text/css'>.st0{fill:#2b2b2b}.st1{fill:none;stroke:#2b2b2b;stroke-miterlimit:10}.st2{fill:#00ffd4}</style>
 <g>
 <g>
 <g id='XMLID_8_'>
@@ -80,37 +76,32 @@
 </g>
 </g>
 </svg>
-
 <span id="netral">nehhon netral engine</span>
-
 </div>
-
 </div>
-
-    <div id="mapconfiguration" style="    display:none" >
-        <table>
-            <tbody>
-                <tr><td id="mapsizeOption"></td><td><input id="mapwidth" type="number" value="256" step="32" min="32" /></td></tr>
-				<tr><td>Gravity (Testing)</td><td><input id="mapgravity" type="number" value="9.8" /></td></tr>
-				<tr><td id="startingResourcesOption"></td></tr>
-				<tr><td id="infiniteWord"></td><td><input id="infiniteValue" type="checkbox" checked="true" /></td></tr>
-				<tr><td id="goldWord"></td><td><input id="goldValue" type="number" value="50000" step="250" /></td></tr>
-				<tr><td id="woodWord"></td><td><input id="woodValue" type="number" value="50000" step="250" /></td></tr>
-				<tr><td id="foodWord"></td><td><input id="foodValue" type="number" value="50000" step="250" /></td></tr>
-				<tr><td id="stoneWord"></td><td><input id="stoneValue" type="number" value="50000" step="250" /></td></tr>
-				<tr><td id="terrainOption"></td></tr>
-				<tr><td><select name="terrain" id="terrainSelect">
-  <option value="grass">Grass</option>
-  <option value="snow">Snow</option>
+<div id="mapconfiguration" style="display:none">
+<table>
+<tbody>
+<tr><td id="mapsizeOption"></td><td><input id="mapwidth" type="number" value="256" step="32" min="32" /></td></tr>
+<tr><td>Gravity (Testing)</td><td><input id="mapgravity" type="number" value="9.8" /></td></tr>
+<tr><td id="startingResourcesOption"></td></tr>
+<tr><td id="infiniteWord"></td><td><input id="infiniteValue" type="checkbox" checked="true" /></td></tr>
+<tr><td id="goldWord"></td><td><input id="goldValue" type="number" value="50000" step="250" /></td></tr>
+<tr><td id="woodWord"></td><td><input id="woodValue" type="number" value="50000" step="250" /></td></tr>
+<tr><td id="foodWord"></td><td><input id="foodValue" type="number" value="50000" step="250" /></td></tr>
+<tr><td id="stoneWord"></td><td><input id="stoneValue" type="number" value="50000" step="250" /></td></tr>
+<tr><td id="terrainOption"></td></tr>
+<tr><td><select name="terrain" id="terrainSelect">
+<option value="grass">Grass</option>
+<option value="snow">Snow</option>
 </select>
 </td></tr>
-            </tbody>
-        </table>
-
-        <button id="closeButton1" class="start closeButton"></button>
-    </div>
-	<div id="playingMenu" style="display:none">
-	<div>
+</tbody>
+</table>
+<button id="closeButton1" class="start closeButton"></button>
+</div>
+<div id="playingMenu" style="display:none">
+<div>
 <ul>
 <li class="quitButton" id="quitButton1"></li>
 <li id="saveGame"></li>
@@ -119,108 +110,80 @@
 <div>
 <span id="musicVolume"></span><br/><input type="range" id="musicRange" value="80"/><br/><br/>
 <form id="musicSelect">
-  <input type="radio" name="mversion" value="originalMusic" checked="true" /> Original<br/>
-  <input type="radio" name="mversion" value="sharpRain" /> Original - <a href="https://www.youtube.com/user/rainheart666787/featured" target="_blank">Sharp Rain</a> Version<br/>
-  <input type="radio" name="mversion" value="originalMusic1" /> Original - Alternative One<br/>
-    <input type="radio" name="mversion" value="mute" /> Mute
+<input type="radio" name="mversion" value="originalMusic" checked="true" /> Original<br/>
+<input type="radio" name="mversion" value="sharpRain" /> Original - <a href="https://www.youtube.com/user/rainheart666787/featured" target="_blank">Sharp Rain</a> Version<br/>
+<input type="radio" name="mversion" value="originalMusic1" /> Original - Alternative One<br/>
+<input type="radio" name="mversion" value="mute" /> Mute
 </form>
 <br />
 <span id="soundVolume"></span><br/><input type="range" id="soundRange" value="45"/><br/>
 </div>
 </div>
 </div>
-
 <div id="mapPropsWindow"></div>
-
-	<div id="alert" style="display:none">
-
+<div id="alert" style="display:none">
+<div>
 <h3 id="alerttitle"></h3>
 <div id="alerttext"></div>
 <button id="alertok"></button>
+</div>
 </div>
 <div id="basic">
 <div id="notifybar">
 </div>
 <div id="index" style="display:block">
-<div id="info">Beta v29.5 - 28/3/2018 19:39</div>
+<div id="info">Beta v29.7 - 29/3/2018 14:47</div>
 <div id="nh"></div>
 <div id="menuScroll">
 <div id="commonMenu">
-<div id="onlinetxt" style="margin-top:15px"><span>Online</span><span style="    margin-left: 795px;">Offline</span></div>
+<div id="onlinetxt" style="margin-top:15px"><span>Online</span><span style="margin-left:795px">Offline</span></div>
 <ul>
-<li style="background:url(https://i.imgur.com/SmfE6wG.png);height:450px;width:350px"><div></div><a style="padding-top: 350px;width: 350px;height: 100px;" id="strSearch" href="#GameList"></a></li>
-<li style="background:url(https://i.imgur.com/8rNgKFh.png);width:350px"  id="createGame1"><div></div><a href="#CreateGame" id="strCreate"></a></li>
+<li style="background:url(https://i.imgur.com/SmfE6wG.png);height:450px;width:350px"><div></div><a style="padding-top:350px;width:350px;height:100px" id="strSearch" href="#GameList"></a></li>
+<li style="background:url(https://i.imgur.com/8rNgKFh.png);width:350px" id="createGame1"><div></div><a href="#CreateGame" id="strCreate"></a></li>
 </ul>
-
 <ul style="display:none">
 <li style="background:url(https://i.imgur.com/LeaSwi8.png)"><div></div><a href="#Account">Mi cuenta</a></li>
 <li style="background:url(https://i.imgur.com/wjry0bv.gif);height:225px"><div></div><a style="padding-top:182px" href="#MatchHistory">Ultimas partidas</a></li>
 <li style="background:url(https://i.imgur.com/Y3TQ0sy.gif);height:225px"><div></div><a style="padding-top:182px" href="#Ranking">Clasificaci&oacute;n</a></li>
 </ul>
-
 <ul style="margin-left:40px">
-<li id="Twitter" style="height:750px;"><a class="twitter-timeline" data-width="300" data-height="750" href="https://twitter.com/TzaredGame"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+<li id="Twitter" style="height:750px"><a class="twitter-timeline" data-width="300" data-height="750" href="https://twitter.com/TzaredGame"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
 </ul>
-
 <span style="margin-right:90px"></span>
-
-
 <ul>
 <li style="background:url(https://i.imgur.com/1xTvGJc.png);height:375px"><div></div><a style="padding-top:332px" href="#RandomMap" id="strRandomMap"></a></li>
-<li style="background:url(https://i.imgur.com/uWhMEgr.gif);height:375px"><div></div><a style="padding-top:332px" href="#CustomMap"  id="strcusMap"></a></li>
+<li style="background:url(https://i.imgur.com/uWhMEgr.gif);height:375px"><div></div><a style="padding-top:332px" href="#CustomMap" id="strcusMap"></a></li>
 </ul>
 <ul>
-<li style="background:url(https://i.imgur.com/T0ZuhNM.png);height:750px;width:340px;"><div></div><a style="padding-top:707px" href="#MapEditor" id="strMapEditor"></a></li>
+<li style="background:url(https://i.imgur.com/T0ZuhNM.png);height:750px;width:340px"><div></div><a style="padding-top:707px" href="#MapEditor" id="strMapEditor"></a></li>
 </ul>
 </div>
 </div>
 </div>
-
-
-
-
-
 <div id="playermenu" style="display:block">
-
 <div id="ranking"></div>
-
 <div id="RandomMap">
 <h2 id="h2rndMap"></h2>
 <div>
-
-            
 <table class="players" id="oneplayertable">
 <tbody id="oneplayertbody">
 </tbody>
 </table>
-
-
-          
-            <button style="margin-left:40px" id="start2" class="start startButton"></button>
-
-                <button class="start optionsButton" id="start1"></button>
-
-            </div>
-
+<button style="margin-left:40px" id="start2" class="start startButton"></button>
+<button class="start optionsButton" id="start1"></button>
 </div>
-
+</div>
 <div id="MatchHistory">
 <input id="statsLoad" type="file" accept=".txt" />
 <table id="matchtable">
 </table>
 </div>
-
 <div id="MatchX">
-
 <div id="divstats">
 <table id="statsTable">
-
 </table>
 </div>
 </div>
-
-
-
 <div id="Account"></div>
 <div id="game">
 <h2 id="gameName"></h2>
@@ -236,9 +199,7 @@
 <input id="sendmsg" type="submit" value="" />
 </div>
 <div id="buttons"></div>
-
 </div>
-
 <div id="GameList">
 <h2 id="gamesFound"></h2>
 <button id="refreshButton1" class="refreshButton"></button>
@@ -250,49 +211,31 @@
 </tbody>
 </table>
 </div>
-
 <div id="CustomMap">
 <h2 id="h2cusmap"></h2>
 <input id="mapload" type="file" accept=".tzared" />
 <label for="mapload">Choose a file</label>
 <div id="customMapcont" style="display:none">
-
-            
 <table class="players" id="customaptable">
 <tbody id="custombody">
 </tbody>
 </table>
-
 <button style="margin-left:40px" id="startCustom" class="start startButton"></button>
 <button style="margin-left:40px" id="playrecord" class="start"></button>
 <button style="margin-left:40px" id="seeStats" class="start"></button>
-
 </div>
 </div>
-
-<a class="backButton"  id="returnmenu" href="#" style="display:none">BACK</a>
-
+<a class="backButton" id="returnmenu" href="#" style="display:none">BACK</a>
 </div>
 <div id="gameFinish" style="display:none">
 <h1 id="finishTitle"></h1>
 <button id="returnmenu1"></button>
-
 </div>
-
-
-
-    <div id="notifybottom" style="display:none">
-    </div>
-
-
+<div id="notifybottom" style="display:none">
+</div>
 <div id="content" style="display:none">
 <ul id="msgs1"></ul>
-
-<div id="clicks" style="
-display:none;
-margin-top: 0px;
-margin-left: 151px;
-"></div>
+<div id="clicks" style="display:none;margin-top:0;margin-left:151px"></div>
 <canvas id="tzar"></canvas>
 <div id="playersinfo"></div>
 <div id="resources" style="display:block">
@@ -308,7 +251,6 @@ margin-left: 151px;
 <input id="msginputGame" />
 </div>
 <div id="ingameStats">
-
 <div>
 <table id="statsGame"></table>
 </div>
@@ -322,11 +264,11 @@ margin-left: 151px;
 <div id="mapeditorinfoUnits"></div>
 <div id="mapeditorinfoBuilds" style="display:none"></div>
 <div id="mapeditorinfoItems" style="display:none"></div>
-<div id="mapeditorinfoNature"  style="display:none"></div>
+<div id="mapeditorinfoNature" style="display:none"></div>
 </div>
 <div id="mapeditorinfotop">
 <button id="menueditor"></button>
-<button id="deleteUnit" style="color: #ff0000;font-weight: bold;font-size: 19px;">x</button>
+<button id="deleteUnit" style="color:#f00;font-weight:bold;font-size:19px">x</button>
 <button id="rotatebutton"></button>
 <button id="mapProps"></button>
 <span>Brush size: </span><input type="number" min="1" max="256" value="6" id="brushSize"/>
@@ -334,16 +276,10 @@ margin-left: 151px;
 <select id="selectKingdom">
 </select>
 </div>
-<div id="minimap" style="position:absolute; top: 31px;
-    left: 4px;
-    z-index: 99;"></div>
-
+<div id="minimap" style="position:absolute;top:31px;left:4px;z-index:99"></div>
 <div id="menu" style="display:block">
 <button id="gameMenu"></button>
-<div style="width: 151px;
-    height: calc(100% - 741px);
-    top: 645px;
-    background: url(https://i.imgur.com/pUykglr.gif) repeat;" id="kingdomcolor"></div>
+<div style="width:151px;height:calc(100% - 741px);top:645px;background:url(https://i.imgur.com/pUykglr.gif) repeat" id="kingdomcolor"></div>
 <div id="daynighticon"></div>
 <div id="icons20">
 <div id="attackmenu" style="display:none"></div>
@@ -372,10 +308,9 @@ margin-left: 151px;
 <button id="order5"></button>
 <button id="order6"></button>
 <button id="order7"></button>
-<button id="order8"></button> 
+<button id="order8"></button>
 </div>
 <div id="magicworkshopmenu" style="display:none">
-
 <button id="mgbook"></button>
 <button id="mgpotion"></button>
 <button id="mgsword"></button>
@@ -388,6 +323,6 @@ margin-left: 151px;
 </div>
 </div>
 </div>
-<script src=/netral.js?v296></script>
+<script src=/netral.js?v297></script>
 </body>
 </html>
