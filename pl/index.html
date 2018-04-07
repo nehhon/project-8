@@ -15,11 +15,11 @@
 <meta name="description" content="Gra strategiczna w czasie rzeczywistym dla przeglądarek internetowych, bawić się samotnie lub z przyjaciółmi">
 <meta name="keywords" content="tzared,gra,multiplayer,online,tzar,przeglądarka internetowa">
 <script>(function(d,e,j,h,f,c,b){d.GoogleAnalyticsObject=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)},d[f].l=1*new Date();c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-105062193-1","auto");ga("send","pageview");</script>
-<link rel="stylesheet" type="text/css" href="/style.css?v299">
+<link rel="stylesheet" type="text/css" href="/style300.css">
 <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
-    <div id="loading" style="display:none">
+<div id="loading" style="display:none">
 <p id="loadingtext"></p>
 <div>
 <svg id='logo' version='1.1' viewBox='0 0 145 90' x='0px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' y='0px'>
@@ -77,7 +77,7 @@
 </g>
 </g>
 </svg>
-<span id="netral">nehhon netral engine</span>
+<span id="netral">NEHHON NETRAL ENGINE</span>
 </div>
 </div>
 <div id="mapconfiguration" style="display:none">
@@ -86,7 +86,10 @@
 <tr><td id="mapsizeOption"></td><td><input id="mapwidth" type="number" value="256" step="32" min="32" /></td></tr>
 <tr><td>Gravity (Testing)</td><td><input id="mapgravity" type="number" value="9.8" /></td></tr>
 <tr><td id="startingResourcesOption"></td></tr>
-<tr><td id="infiniteWord"></td><td><input id="infiniteValue" type="checkbox" checked="true" /></td></tr>
+<tr><td id="infiniteWord"></td><td><label class="container">
+  <input id="infiniteValue" type="checkbox" checked="true">
+  <span class="checkmark"></span>
+</label></td></tr>
 <tr><td id="goldWord"></td><td><input id="goldValue" type="number" value="50000" step="250" /></td></tr>
 <tr><td id="woodWord"></td><td><input id="woodValue" type="number" value="50000" step="250" /></td></tr>
 <tr><td id="foodWord"></td><td><input id="foodValue" type="number" value="50000" step="250" /></td></tr>
@@ -97,9 +100,10 @@
 <option value="snow">Snow</option>
 </select>
 </td></tr>
+<tr><td><button id="closeButton1" class="start closeButton"></button></td></tr>
 </tbody>
 </table>
-<button id="closeButton1" class="start closeButton"></button>
+
 </div>
 <div id="playingMenu" style="display:none">
 <div>
@@ -122,6 +126,7 @@
 </div>
 </div>
 <div id="mapPropsWindow"></div>
+<div id="mapRulesWindow"></div>
 <div id="alert" style="display:none">
 <div>
 <h3 id="alerttitle"></h3>
@@ -133,24 +138,19 @@
 <div id="notifybar">
 </div>
 <div id="index" style="display:block">
-<div id="info">Work in progress - Beta v29.9 - 02/4/2018 17:32</div>
+<div id="info">Work in progress - Beta v30.0 - 07/4/2018 10:47</div>
 <div id="commonMenu">
 <ul>
-<li style="background:url(https://i.imgur.com/SmfE6wG.png);height:450px;width:350px"><div></div><a style="padding-top:350px;height:100px" id="strSearch" href="#GameList"></a></li>
-<li style="background:url(https://i.imgur.com/8rNgKFh.png);width:350px" id="createGame1"><div></div><a href="#CreateGame" id="strCreate"></a></li>
-</ul>
-<ul style="display:none">
-<li style="background:url(https://i.imgur.com/LeaSwi8.png)"><div></div><a href="#Account"></a></li>
-<li style="background:url(https://i.imgur.com/wjry0bv.gif);height:225px"><div></div><a style="padding-top:182px" href="#MatchHistory"></a></li>
-<li style="background:url(https://i.imgur.com/Y3TQ0sy.gif);height:225px"><div></div><a style="padding-top:182px" href="#Ranking"></a></li>
+<li style="background:url(https://i.imgur.com/SmfE6wG.png);height:450px;width:350px"><a id="strSearch" href="#GameList"></a></li>
+<li style="background:url(https://i.imgur.com/8rNgKFh.png);width:350px" id="createGame1"><a href="#CreateGame" id="strCreate"></a></li>
 </ul>
 <span id="separator"></span>
 <ul>
-<li style="background:url(https://i.imgur.com/1xTvGJc.png);height:375px"><div></div><a style="padding-top:332px" href="#RandomMap" id="strRandomMap"></a></li>
-<li style="background:url(https://i.imgur.com/uWhMEgr.gif);height:375px"><div></div><a style="padding-top:332px" href="#CustomMap" id="strcusMap"></a></li>
+<li style="background:url(https://i.imgur.com/1xTvGJc.png);height:375px"><a href="#RandomMap" id="strRandomMap"></a></li>
+<li style="background:url(https://i.imgur.com/uWhMEgr.gif);height:375px"><a  href="#CustomMap" id="strcusMap"></a></li>
 </ul>
 <ul>
-<li style="background:url(https://i.imgur.com/T0ZuhNM.png);height:750px;width:340px"><div></div><a style="padding-top:707px" href="#MapEditor" id="strMapEditor"></a></li>
+<li style="background:url(https://i.imgur.com/T0ZuhNM.png);height:750px;width:340px"><a  href="#MapEditor" id="strMapEditor"></a></li>
 </ul>
 </div>
 </div>
@@ -265,6 +265,7 @@
 <button id="deleteUnit" style="color:#f00;font-weight:bold;font-size:19px">x</button>
 <button id="rotatebutton"></button>
 <button id="mapProps"></button>
+<button id="mapRules"></button>
 <span>Brush size: </span><input type="number" min="1" max="256" value="6" id="brushSize"/>
 <span>Active kingdom</span>
 <select id="selectKingdom">
@@ -317,6 +318,6 @@
 </div>
 </div>
 </div>
-<script src=/netral.js?v299></script>
+<script src=/netral300.js></script>
 </body>
 </html>
