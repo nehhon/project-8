@@ -15,7 +15,7 @@
 <meta name="description" content="Gioco di strategia in tempo reale per browser web, giocare da soli o con gli amici">
 <meta name="keywords" content="tzared,giocare,multigiocatore,gioco,online,navigatore,tzar,web">
 <script>(function(d,e,j,h,f,c,b){d.GoogleAnalyticsObject=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)},d[f].l=1*new Date();c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-105062193-1","auto");ga("send","pageview");</script>
-<link rel="stylesheet" type="text/css" href="/style301.css">
+<link rel="stylesheet" type="text/css" href="/style304.css">
 <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
@@ -90,10 +90,10 @@
   <input id="infiniteValue" type="checkbox" checked="true">
   <span class="checkmark"></span>
 </label></td></tr>
-<tr><td id="goldWord"></td><td><input id="goldValue" type="number" value="50000" step="250" /></td></tr>
-<tr><td id="woodWord"></td><td><input id="woodValue" type="number" value="50000" step="250" /></td></tr>
-<tr><td id="foodWord"></td><td><input id="foodValue" type="number" value="50000" step="250" /></td></tr>
-<tr><td id="stoneWord"></td><td><input id="stoneValue" type="number" value="50000" step="250" /></td></tr>
+<tr><td id="goldWord"></td><td><input id="goldValue" type="number" value="400" step="250" /></td></tr>
+<tr><td id="woodWord"></td><td><input id="woodValue" type="number" value="400" step="250" /></td></tr>
+<tr><td id="foodWord"></td><td><input id="foodValue" type="number" value="400" step="250" /></td></tr>
+<tr><td id="stoneWord"></td><td><input id="stoneValue" type="number" value="400" step="250" /></td></tr>
 <tr><td id="terrainOption"></td></tr>
 <tr><td><select name="terrain" id="terrainSelect">
 <option value="grass">Grass</option>
@@ -138,7 +138,7 @@
 <div id="notifybar">
 </div>
 <div id="index" style="display:block">
-<div id="info">Work in progress - Beta v30.0 - 07/4/2018 10:47</div>
+<div id="info">Work in progress - Beta v30.4 - 26/04/2018 12:27</div>
 <div id="commonMenu">
 <ul>
 <li style="background:url(https://i.imgur.com/SmfE6wG.png);height:450px;width:350px"><a id="strSearch" href="#GameList"></a></li>
@@ -150,7 +150,8 @@
 <li style="background:url(https://i.imgur.com/uWhMEgr.gif);height:375px"><a  href="#CustomMap" id="strcusMap"></a></li>
 </ul>
 <ul>
-<li style="background:url(https://i.imgur.com/T0ZuhNM.png);height:750px;width:340px"><a  href="#MapEditor" id="strMapEditor"></a></li>
+<li style="background:url(https://i.imgur.com/EU0ozMl.png);height:450px;width:340px"><a  href="#MapEditor" id="strMapEditor"></a></li>
+<li style="background:url(https://i.imgur.com/O9fAvfI.png);height:300px;width:340px"><a  href="#Settings" id="strSettings"></a></li>
 </ul>
 </div>
 </div>
@@ -167,6 +168,7 @@
 <button class="start optionsButton" id="start1"></button>
 </div>
 </div>
+<div id="Settings"></div>
 <div id="MatchHistory">
 <input id="statsLoad" type="file" accept=".txt" />
 <table id="matchtable">
@@ -216,6 +218,7 @@
 </table>
 <button style="margin-left:40px" id="startCustom" class="start startButton"></button>
 <button style="margin-left:40px" id="playrecord" class="start"></button>
+<button style="margin-left:40px" id="editCustom" class="start"></button>
 <button style="margin-left:40px" id="seeStats" class="start"></button>
 </div>
 </div>
@@ -317,7 +320,7 @@
 </div>
 </div>
 </div>
-</div>
-<script src=/netral301.js></script>
+</div>
+<script src=/netral304.js></script>
 </body>
 </html>
