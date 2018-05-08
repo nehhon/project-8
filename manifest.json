@@ -23,7 +23,7 @@
       "sizes": "800x800"
     }
   ],
-  "start_url": "/hhh/index.html",
+  "start_url": "/",
   "display": "fullscreen",
   "theme_color": "#b00000",
   "background_color": "#ffffff"
