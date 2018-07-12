@@ -95,31 +95,7 @@
 </div>
 <button id="backToGameS" class="stanButton"></button>
 </div>
-<div id="mapconfiguration" style="display:none">
-<table>
-<tbody>
-<tr><td id="mapsizeOption"></td><td><input id="mapwidth" type="number" value="256" step="32" min="32" /></td></tr>
-<tr><td>Gravity (Testing)</td><td><input id="mapgravity" type="number" value="9.8" /></td></tr>
-<tr><td id="startingResourcesOption"></td></tr>
-<tr><td id="infiniteWord"></td><td><label class="container">
-  <input id="infiniteValue" type="checkbox" checked>
-  <span class="checkmark"></span>
-</label></td></tr>
-<tr><td id="goldWord"></td><td><input id="goldValue" type="number" value="400" step="250" /></td></tr>
-<tr><td id="woodWord"></td><td><input id="woodValue" type="number" value="400" step="250" /></td></tr>
-<tr><td id="foodWord"></td><td><input id="foodValue" type="number" value="400" step="250" /></td></tr>
-<tr><td id="stoneWord"></td><td><input id="stoneValue" type="number" value="400" step="250" /></td></tr>
-<tr><td id="terrainOption"></td></tr>
-<tr><td><select name="terrain" id="terrainSelect">
-<option value="grass">Grass</option>
-<option value="snow">Snow</option>
-</select>
-</td></tr>
-<tr><td><button id="closeButton1" class="start closeButton"></button></td></tr>
-</tbody>
-</table>
-
-</div>
+<div id="mapconfiguration" style="display:none"></div>
 <div id="playingMenu" style="display:none">
 <div>
 <ul>
@@ -205,6 +181,7 @@
 </svg>
 <div id="info"></div>
 <div id="commonMenu">
+    <div>
 <ul>
 <li style="background:url(https://i.imgur.com/SmfE6wG.png);height:450px;width:350px"><a id="strSearch" href="#GameList"></a></li>
 <li style="background:url(https://i.imgur.com/8rNgKFh.png);width:350px" id="createGame1"><a href="#CreateGame" id="strCreate"></a></li>
@@ -219,6 +196,7 @@
 <li style="background:url(https://i.imgur.com/O9fAvfI.png);height:300px;width:340px"><a  href="#Settings" id="strSettings"></a></li>
 </ul>
 </div>
+    </div>
 </div>
 <div id="playermenu" style="display:block">
 <div id="ranking"></div>
