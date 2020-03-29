@@ -1,0 +1,403 @@
+SPIELOPTIONEN
+Kartengr&ouml;&szlig;e
+Fortfahren
+ABBRECHEN
+Gesundheit
+Max health
+Angriff
+Verteidigung
+Manna
+K�nigreich
+SPEICHERN
+Bev&ouml;lkerungslimit
+Schwierigkeitsgrad
+Free population
+Equalize values for all kingdoms
+SCHLIESSEN
+COLOUR
+Name des Spielers
+Gold
+Holz
+Nahrung
+Steine
+Computer
+Team
+Captureable
+Natur
+Add
+Map size is too small, expanded to %s
+Gel&auml;nde
+Kartentyp
+Trocken
+Seen
+Kontinent
+Insel
+Inselgruppe
+Zuf&auml;llig
+AI aggresivity
+Visibility
+Kein Nebel
+Temporal fog
+Fog
+Extreme fog
+Ressourcen zu Beginn des Spiels
+Unendlich
+Initial peasants
+Bev&ouml;lkerungslimit
+EINSTELLUNGEN
+Language
+Automatic full screen
+Shadows
+SPIEL ANGEHALTEN
+Water
+Ground
+MEN&Uuml;
+OPTIONEN
+Random
+ZUF&Auml;LLIGE KARTE
+Clear map
+Full random map
+Das Spiel wird geladen...
+Kartengr&ouml;&szlig;e
+Karten&uuml;berschrift
+BENUTZERDEFINIERTE KARTE
+Beschreibung
+Author
+Einh.
+Buildings
+Items
+B�ume
+Ressourcen
+Goldene Felsen
+Felsen
+CHAT-NACHRICHT
+Cost
+Erforderlich
+Warte, dass Spieler eine Verbindung erstellen
+Fehler beim Laden des Spiels.
+Leider sind alle Pl&auml;tze im Spiel belegt.
+Password
+Spielgeschw.
+ZUR&Uuml;CK ZUM SPIEL
+SPIEL SPEICHERN
+Full screen
+BEENDEN
+Zoom speed
+Scrollgeschw.
+Menu opacity
+Tag-/Nachtzyklen
+Lautst&auml;rke
+Lautst&auml;rke
+Death sounds
+Unable to establish a P2P connection with the host, you may need to enable UPnP or open ports in your router configuration, look for information specific to your model if the problem persists
+Daily stats
+Games played
+Current players
+Total visits
+Playing
+Waiting
+Private
+No games found
+Geben Sie den Namen des Spiels ein
+Anzahl der Spieler
+Ja
+Nein
+Add AI
+Verbindung trennen
+SPIELEN
+BENUTZERDEFINIERTE KARTE| Benutzerdefinierte Karte spielen
+%s hat seine Verbindung zum Spiel getrennt!
+Das Spiel wurde vom Server abgebrochen.
+Sie wurden vom Server getrennt.
+Mehrspieler| Multiplayer-Spiel
+ERSTELLEN| Ein Spiel erstellen
+Aktualisieren
+Verbindung trennen
+Up
+Down
+Race
+OFFEN
+Das Spiel wird initialisiert...
+Click to join
+SPIEL LADEN| Spielstände
+Map editor
+EUROP&Auml;ER| Rasse des Spielers
+ARABER| Rasse des Spielers
+ASIATE| Rasse des Spielers
+Gew&ouml;hnliche
+EINZELSPIELER| Einzelspieler-Spiel
+About
+ZUR&Uuml;CK
+Spielinhalte lokal speichern
+Guide
+Warnung
+OK
+Downloading graphics...
+%s wurde besiegt!
+%s won!
+Nicht genug %s
+Es gibt nicht genug H&auml;user
+Das Bev&ouml;lkerungslimit wurde erreicht
+Connection error
+Asynchrones Netzwerk. Spiel wurde abgebrochen.
+B&auml;r
+Milizsoldat
+Pikenier
+Spion
+Stabk&auml;mpfer
+Bogensch&uuml;tze
+Zauberer
+Langbogensch&uuml;tze
+Baum
+Kreuzritter
+Priester
+Bauer
+Kathedrale
+Burg
+Holzwall
+Kasernen
+S&auml;gewerk
+Magierturm
+Krieger-Gilde
+Lagerhaus
+Ritter
+Feld
+Bauernhof
+H&auml;ndler-Gilde
+Kirche
+Schmiede
+Rind
+Stall
+Werkstatt
+Gasthaus
+Haus
+Wachturm
+Markplatz
+Vorposten
+Br&uuml;cke
+Trainingspuppe
+Katapult
+Balliste
+Schweres Katapult
+Geist
+Hafen
+Messias
+Magische Pforte
+Verstarkter W.-Turm
+Steinwall
+Bogen
+Schild
+Trank
+Eisen
+Hauptturm
+Kanonenturm
+Raketenturm
+Ork
+Zwerg
+Skelett
+Karawane
+Ninja
+Ronin
+Samurai
+Berittener Bogensch&uuml;tze
+Berittener Samurai
+Streitwagen
+Galeone
+Fischerboot
+Hulk
+Schebecke
+Steingolem
+Fledermaus
+Satrap
+Schwere Kavallerie
+Dschihad-K&auml;mpfer
+Fischgrund
+Janitschar
+Burg des B&ouml;sen
+Moschee
+Magierwerkstatt
+Kloster
+Shao-Linn
+M&ouml;nch
+Drachen
+Fliegender Teppich
+Dschinn
+Langbogen
+Goldabbau
+Steinabbau
+Holz f&auml;llen
+Geh&auml;rtetes Eisen
+Scale Armor
+Hellebarde
+Tierhaltung
+Wechselnder Anbau
+Kettenpanzer
+Schuppenpanzer
+Armbrust
+Feudalismus
+Architektur
+Lernen
+Ressourcen umwandeln
+Kartografie
+Handelsrouten
+Handelssteuern
+Wucher
+Versorgungslager
+Bestechung
+Heldentum
+Kriegsf&uuml;hrung
+Taktiken
+S&ouml;ldner
+Heldenhafte Aufgabe
+Ruhm
+Belagerungstaktiken
+Bodybuilding
+Spionage
+Fanatismus
+Kreuzzug
+Inquisition
+Heilung
+Medizin
+Segen
+Unsichtbarkeit
+Einfrieren
+Blitz
+Zum verst&auml;rkten Wachturm umbauen
+Zum Hauptturm umbauen
+Zum Kanonenturm umbauen
+Buddhismus
+Technik
+Gro&szlig;e Mauer
+Reiten
+Bew&auml;sserung
+Gepanzerter Streitwagen
+Meditation
+Kung-Fu
+Turniere
+Philosophie
+Ninjas
+&Uuml;berlegenheit
+Konzentration
+Verwirrung
+Strudel
+In Stein verwandeln
+Flammenbolzen
+Juwelen
+Bankwesen
+Chemie
+Meeresfr&uuml;chte
+Schie&szlig;pulver
+Raketenpfeil
+Bushido
+F&uuml;hrung
+Ehre
+Lehre von Sun Tzu
+Rinderdiebstahl
+Reitkunst
+Krumms&auml;bel
+Dschihad
+Fliegender Teppich
+Feuerregen
+Magische Vision
+Nekromantie
+Reitpferde
+Sklaverei
+Erlaubt die Produktion von Langbogensch&uuml;tzen
+Erh&ouml;ht die Goldproduktion
+Erh&ouml;ht die Steinproduktion
+Erh&ouml;ht die Holzproduktion
+Erh&ouml;ht die Angriffsst&auml;rke der Nahkampfeinheiten
+Erh&ouml;ht die Verteidigungsf&auml;higkeit einer Einheit
+Erlaubt die Produktion von Speerk&auml;mpfern
+Erlaubt die Produktion von K&uuml;hen
+Erh&ouml;ht die Produktion von Feldern
+Erlaubt die Produktion von Rittern
+Erh&ouml;ht die Angriffsst&auml;rke der Bogensch&uuml;tzen
+Sorgt daf&uuml;r, dass Bauern weniger kosten
+Bauern werden schneller produziert. Au&szlig;erdem sind W&auml;lle, Tore und T&uuml;rme aus Stein m&ouml;glich
+Erm&ouml;glicht, dass Einheiten Erfahrungen sammeln
+Erlaubt die Produktion von Galeonen
+Erm&ouml;glicht Handel
+Erh&ouml;ht die Handelsprofite
+Erlaubt es, Kredite in Gastst&auml;tten aufzunehmen
+Erh&ouml;ht das Bev&ouml;lkerungslimit
+Erlaubt die Bestechung von feindlichen Einheiten
+Erm&ouml;glicht unbegrenzte Erfahrungen
+Erfahrungen werden schneller gemacht
+Einheiten k&ouml;nnen in Gasth&auml;usern angeheuert werden
+Helden k&ouml;nnen in Gasth&auml;usern angeheuert werden
+Sie k&ouml;nnen bessere Einheiten in Gastst&auml;tten anheuern
+Die Produktion von schweren Katapulten ist m&ouml;glich
+Bei jedem neuen Level erh&ouml;ht sich die Anzahl der Trefferpunkte f&uuml;r die Einheit
+Erm&ouml;glicht die Produktion eines Spions
+Die Widerstandsf&auml;higkeit von Geb&auml;uden wird erh&ouml;ht
+Erlaubt, einen Kreuzzug zu predigen
+Erh&ouml;ht die Angriffsst&auml;rke von Priestern
+Erlaubt es, Einheiten zu heilen
+Erlaubt es, Einheiten aus der Entfernung zu heilen
+Erh&ouml;ht vor&uuml;bergehend die Angriffsf&auml;higkeit der Einheit
+Zauberspruch Unsichtbarkeit
+Erforscht die Beschw&ouml;rung Fledermaus
+Zauberspruch Einfrieren
+Zauberspruch Blitz
+Erforscht die Beschw&ouml;rung Steingolem
+Erm&ouml;glicht den Bau von Kanonent&uuml;rmen
+Erh&ouml;ht die Angriffsst&auml;rke von Belagerungswaffen
+Verst&auml;rkt W&auml;lle, T&uuml;rme und Tore aus Stein
+Erlaubt die Produktion von berittenen Bogensch&uuml;tzen
+Erh&ouml;ht den Ertrag aus Feldern
+Erlaubt die Produktion von gepanzerten Streitwagen
+Sorgt daf&uuml;r, dass M&ouml;nche weniger kosten
+Erh&ouml;ht die Angriffsf&auml;higkeit aller Kung-Fu-Einheiten
+Erm&ouml;glicht es, dass Kung-Fu-Einheiten Erfahrungen untereinander austauschen
+Erlaubt die Produktion erfahrener M&ouml;nche
+Erlaubt die Produktion von Ninjas
+Erm&ouml;glicht es, dass Priester Kung-Fu-Einheiten ausbilden
+Sorgt daf&uuml;r, dass sich das Manna schneller regeneriert
+Erforscht den Zauberspruch Verwirrung
+Erforscht den Zauberspruch Strudel
+Erforscht die Beschw&ouml;rung Drachen
+Erforscht den Zauberspruch In Stein verwandeln
+Erforscht den Zauberspruch Flammenbolzen
+Erm&ouml;glicht den Handel von Gegenst&auml;nden
+Erh&ouml;ht die Angriffsst&auml;rke der Kanonent&uuml;rme
+Erm&ouml;glicht den Bau von Raketent&uuml;rmen
+Erlaubt die Produktion von berittenen Samurai
+Einheiten in der N&auml;he eines Helden gewinnen an Erfahrungen
+Angriffsbonus bei K&auml;mpfen zwischen Helden
+Erh&ouml;ht die Geschwindigkeit beim Lernen
+Erm&ouml;glicht, dass Bauern Rinder stehlen k&ouml;nnen
+Sorgt daf&uuml;r, dass berittene Einheiten weniger Kosten verursachen
+Erh&ouml;ht die Angriffsf&auml;higkeit von Schwertk&auml;mpfern und erlaubt die Produktion von Satrapen
+Erlaubt die Produktion von Dschihad-Kriegern
+Erforscht die Beschw&ouml;rung Fliegender Teppich
+Erlaubt den Bau einer Magierwerkstatt
+Erforscht den Zauberspruch Magische Vision
+Erforscht den Zauberspruch Tote auferwecken
+Erforscht die Beschw&ouml;rung Dschinn
+Erh&ouml;ht die Produktion von Bergwerken
+Erh&ouml;ht die Angriffs- und Verteidigungsf&auml;higkeiten von berittenen Einheiten
+Erlaubt die Produktion von Janitscharen
+Feuerregen
+Einfrieren
+Verwirrung
+Unsichtbarkeit
+Dschinn produzieren
+Spawn Jinn
+Steingolem produzieren
+Feldermaus produzieren
+Fliegenden Teppich produzieren
+Blitz
+Ausbilden
+Tote auferwecken
+Magische Vision
+Heilen
+Segen
+Strudel
+Flammenbolzen
+In Stein verwandeln
+Schwert
+Erfahrung
+Manna
+Nahrung
+Copy room link

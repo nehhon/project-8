@@ -1,0 +1,403 @@
+GAME OPTIONS
+Map Size
+Continue
+CANCEL
+Health
+Max hälsa
+Attack
+Defense
+Manna
+Kingdom
+SAVE
+Population Limit
+Difficulty Level
+Fri befolkning
+Equalize values for all kingdoms
+CLOSE
+FÄRG
+Player Name
+Gold
+Wood
+Food
+Stone
+Computer
+Lag
+Captureable
+Nature
+Lägg till
+Map size is too small, expanded to %s
+Terrain
+Map Type
+Dry
+Lakes
+Continental
+Island
+Archipelagos
+Random
+AI aggresivity
+Visibility
+No Fog
+Temporal fog
+Fog
+Extreme fog
+Starting Resources
+Infinite
+Första bönderna
+Population Limit
+SETTINGS
+Språk
+Automatisk helskärm
+Shadows
+PAUSED
+Vatten
+Ground
+MENU
+OPTIONS
+Random
+RANDOM MAP
+Clear map
+Full random map
+Loading...
+Map Size
+Map Title
+CUSTOM MAP
+Description
+Author
+Units
+Buildings
+Items
+Trees
+Resources
+Golden rocks
+Rocks
+CHAT MESSAGE
+Cost
+Requires
+Waiting for players to connect
+Error loading game.
+Sorry, the game is full.
+Password
+Game Speed
+BACK TO GAME
+SAVE GAME
+Full skärm
+QUIT
+Zoom hastighet
+Scroll Speed
+Menu opacity
+Day - Night cycles
+Music Volume
+Sound Volume
+Death sounds
+Unable to establish a P2P connection with the host, you may need to enable UPnP or open ports in your router configuration, look for information specific to your model if the problem persists
+Daily stats
+Games played
+Current players
+Total visits
+Spelar
+Väntar
+Private
+Inga spel hittades
+Enter Game Name
+Number of Players
+Yes
+No
+Lägg till AI
+Disconnect
+PLAY
+CUSTOM MAP| Play custom map
+%s has disconnected!
+The game was canceled by the server.
+You were kicked off by the server.
+MULTIPLAYER| Multiplayer game
+CREATE| Create a game
+Refresh
+Kick
+Upp
+Ner
+Människors ras
+OPEN
+Initializing Game...
+Klicka för att gå med
+LOAD GAME| Load saved game
+Kartredigerare
+EUROPEAN| Player race
+ARABIAN| Player race
+ASIAN| Player race
+Common
+SINGLE PLAYER| Single player game
+Om
+BACK
+Spara spelinnehåll lokalt
+Guide
+Warning
+OK
+Hämtar grafik ...
+%s has been defeated!
+%s won!
+Not enough %s
+Not enough houses
+Population limit reached
+Anslutningsfel
+Network async. Game canceled.
+Bear
+Footman
+Pikeman
+Spy
+Maceman
+Archer
+Wizard
+Longbowman
+Tree
+Crusader
+Priest
+Peasant
+Cathedral
+Castle
+Wooden Wall
+Barracks
+Lumber Mill
+Mage Tower
+Warriors' Guild
+Storage
+Knight
+Field
+Farm
+Merchants' Guild
+Church
+Blacksmith
+Cow
+Stable
+Workshop
+Tavern
+House
+Watch Tower
+Market
+Outpost
+Bridge
+Dummy
+Catapult
+Ballista
+Heavy Catapult
+Ghost
+Harbor
+Messiah
+Magic Gateway
+Guard Tower
+Stone Wall
+Bow
+Shield
+Potion
+Iron
+Keep Tower
+Cannon Tower
+Rocket Tower
+Orc
+Dwarf
+Skeleton
+Caravan
+Ninja
+Ronin
+Samurai
+Horse Archer
+Horse Samurai
+Chariot
+Galleon
+Fishing Boat
+Hulk
+Pinque
+Stone Golem
+Bat
+Satrap
+Heavy Cavalry
+Jihad Warrior
+Fish Patch
+Janissary
+Castle of the Evil
+Mosque
+Magic Workshop
+Monastery
+Shao-Linn
+Monk
+Dragon
+Flying Carpet
+Jinn
+Longbow
+Gold Mining
+Stone Mining
+Wood Cutting
+Temper Iron
+Scale Armor
+Halberd
+Domestication
+Crop Rotation
+Chain Mail
+Plate Armor
+Crossbow
+Feudalism
+Architecture
+Learning
+Convert Resources
+Map Making
+Trade Routes
+Trade Taxes
+Usury
+Supply Storage
+Bribery
+Heroism
+Warfare
+Tactics
+Mercenaries
+Heroes' Quest
+Fame
+Siege Tactics
+Body Building
+Espionage
+Fanaticism
+Crusade
+Inquisition
+Healing
+Medicine
+Bless
+Invisibility
+Freeze
+Lightning
+Upgrade to Guard Tower
+Upgrade to Stone Tower
+Upgrade to Cannon Tower
+Buddhism
+Engineering
+Great Wall
+Art of Riding
+Irrigation
+Armored Chariot
+Meditation
+Kung-Fu
+Tournaments
+Philosophy
+Ninjas
+Mastery
+Concentration
+Confusion
+Whirlpool
+Turn to Stone
+Flame Bolt
+Jewelry
+Banking
+Chemistry
+Sea Food
+Gun Powder
+Rocket Arrow
+Bushido
+Leadership
+Honor
+Sun Tzu's Book
+Cow Poaching
+Horsemanship
+Scimitar
+Jihad
+Magic Carpet
+Rain of Fire
+Magic Vision
+Necromancy
+Riding Horses
+Slavery
+Allows the production of longbowmen
+Increases gold production
+Increases stone production
+Increases wood production
+Increases hand-to-hand units' attack power
+Increases unit's defense
+Allows the production of spear units
+Allows the production of cows
+Increases the production of fields
+Allows the production of knights
+Increases arrow units' attack power
+Makes peasants cheaper
+Peasants build faster, and allows stone wall, gate and towers
+Allows units to gather experience
+Allows the production of galleons
+Allows trading
+Increases trade profit
+Allows the obtaining of loans in taverns
+Increases the population limit
+Allows the bribing of enemy units
+Allows unlimited experience
+Gain experience faster
+Allows the recruitment of units in taverns
+Allows the recruitment of heroes in taverns
+Recruit better units from taverns
+Allows the production of heavy catapults
+Increases unit's hit points at every new level
+Allows the production of a spy
+Increases the building's resistance
+Allows the preaching of a crusade
+Increases priest attack
+Allows healing of units
+Allows remote healing of units
+Temporarily increases unit attack skill
+Invisibility spell
+Researches bat summoning
+Freeze spell
+Lightning spell
+Researches stone golem summoning
+Allows the building of cannon towers
+Increases siege weapon's attack
+Makes stone walls, towers and gates stronger
+Allows the production of horse archers
+Increases field production
+Allows the production of armored chariots
+Makes monks cheaper
+Increases the attack of all kung-fu units
+Allows sharing of experience between kung-fu units
+Allows the production of more experienced monks
+Allows the production of ninjas
+Allows priests to teach kung-fu units
+Allows faster manna restoration
+Researches the Confusion spell
+Researches the Whirlpool spell
+Researches Dragon summoning
+Researches the Turn to Stone spell
+Researches the Flame Bolt spell
+Allows trading of items
+Increases cannon tower's attack power
+Allows the building of rocket tower
+Allows the production of horse samurai
+Units around a hero gain experience
+Hero vs. hero attack bonus
+Increases the speed of learning
+Allows peasants to steal cows
+Makes mounted units cheaper
+Increases sword attack power and allows the production of satraps
+Allows the production of Jihad Warriors
+Researches Magic Carpet summoning
+Allows the building of a magic workshop
+Researches the Magic Vision spell
+Researches the Raise the Dead spell
+Researches Jinn summoning
+Increases mine production
+Increases the mounted units' attack and defense power
+Allows the production of Janissaries
+Rain of Fire
+Freeze
+Confusion
+Invisibility
+Spawn Dragon
+Spawn Jinn
+Spawn Stone Golem
+Spawn Bat
+Spawn Magic Carpet
+Lightning
+Teach
+Raise the Dead
+Magic Vision
+Heal
+Bless
+Whirlpool
+Flame Bolt
+Turn to Stone
+Sword
+Experience
+Manna
+Food
+Copy room link

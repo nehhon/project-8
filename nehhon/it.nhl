@@ -1,0 +1,403 @@
+OPZIONI DI GIOCO
+Dimensioni della mappa
+Continua
+ANNULLA
+Salute
+Massima salute
+Attacco
+Difesa
+mana
+Regno
+SALVA
+Limite di popolazione
+Livello di difficoltà dell'IA
+Popolazione libera
+Equalizzare i valori per tutti i regni
+CHIUDI
+COLORE
+Giocatore
+oro
+legna
+cibo
+pietra
+Computer
+Squadra
+Capturabile
+Natura
+Aggiungi
+La mappa è troppo piccola, espanso a %s
+Terreno
+Tipo di mappa
+Terra
+Laghi
+Continente
+Isole
+Arcipelaghi
+Casuale
+Aggressività AI
+Visibility
+Senza nebbia
+Nebbia temporale
+Nebbia
+Nebbia estrema
+Risorse iniziali
+Infinito
+Contadini iniziali
+Limite di popolazione
+DETTAGLI
+Lingua
+Schermo intero automatico
+Ombre
+PAUSA
+Acqua
+Terra
+MENU
+OPZIONI
+Aleatorio
+MAPPA CASUALE
+Pulire mappa
+Mappa casuale completa
+Caricamento...
+Dimensioni della mappa
+Nome della missione
+MISSIONE ATTUALE
+Descrizione
+Autore
+Unitā
+Edifici
+Articoli
+Alberi
+Risorse
+Oro
+Pietra
+MESSAGGIO
+Costo
+Necessita di
+In attesa della connessione dei giocatori
+Errore durante il caricamento della partita.
+La partita č completa.
+Password
+Velocitā
+RIPRENDI PARTITA
+SALVA PARTITA
+Schermo intero
+ESCI
+Velocità di zoom
+Scorrimento
+Opacità del menu
+Cicli giorno-notte
+Volume
+Volume
+Suoni di morte
+Impossibile stabilire una connessione P2P con l'host, potrebbe essere necessario attivare l'UPnP o aprire porte nella configurazione del suo router, cerca informazioni specifiche per il proprio modello se il problema persiste
+Statistiche oggi
+Partite giocate
+Giocatori attuali
+Totale visite
+Giocando
+Aspettando
+Privato
+Nessun gioco trovato
+Nome della partita
+Numero dei giocatori
+Sė
+No
+Aggiungi AI
+Sconnetti
+GIOCA
+MISSIONE| Gioca una missione creata
+%s si č sconnesso!
+L'host ha annullato la partita.
+L'host ti ha espulso dalla partita.
+MULTIGIOCATORE | Modalitā per pių giocatori
+CREA PARTITA| Creare una partita
+Aggiorna
+Esci
+Su
+Giù
+Razza
+DISPONIBILE
+Inizializzazione della partita...
+Clicca per unirti
+CARICA PARTITA| Carica partita salvata
+Editor mappe
+EUROPEA| Civiltā del giocatore
+ARABA| Civiltā del giocatore
+ASIATICA| Civiltā del giocatore
+Comuni
+GIOCATORE SINGOLO | Gioco per un solo giocatore
+About
+INDIETRO
+Salva il contenuto del gioco localmente
+Guida
+Avviso
+OK
+Scaricando le texture...
+%s č stato sconfitto!
+%s ha vinto!
+Non c'č sufficiente %s
+Numero di case insufficiente
+Raggiunto il limite della popolazione
+Errore di connessione
+Manca la sincronizzazione nella rete. Partita annullata.
+Orso
+Fante
+Lanciere
+Spia
+Soldato con mazza
+Arciere
+Mago
+Arciere arco lungo
+Albero
+Crociato
+Sacerdote
+Contadino
+Cattedrale
+Castello
+Palizzata
+Caserma
+Segheria
+Torre magica
+Accademia militare
+Magazzino
+Cavaliere
+Coltivazione
+Fattoria
+Camera commercio
+Chiesa
+Fonderia
+Mucca
+Stalla
+Laboratorio
+Taverna
+Casa
+Torre di vedetta
+Mercato
+Posto di guardia
+Ponte
+Fantoccio
+Catapulta
+Balista
+Catapulta pesante
+Fantasma
+Porto
+Messia
+Porta magica
+Torre di guardia
+Muraglia di pietra
+Arco
+Scudo
+Pozione
+Ferro
+Torre di pietra
+Torre da cannone
+Torre lanciarazzi
+Orco
+Nano
+Scheletro
+Commerciante
+Ninja
+Ronin
+Samurai
+Arciere a cavallo
+Samurai a cavallo
+Carro da guerra
+Galeone
+Barca da pesca
+Galera
+Goletta
+Golem di pietra
+Pipistrello
+Almohade
+Cavaliere pesante
+Guerriero jihad
+Branco di pesci
+Giannizzero
+Castello del Male
+Moschea
+Bottega della magia
+Tempio
+Shao-Linn
+Monaco
+Drago
+Tappeto volante
+Genio
+Arco lungo
+Arte mineraria
+Cava di pietra
+Sega
+Ferro temprato
+Armatura a scaglie
+Alabarda
+Allevamento
+Rotazione delle colture
+Cotta di maglia
+Armatura
+Balestra
+Feudalesimo
+Architettura
+Apprendimento
+Cambia risorse
+Cartografia
+Rotte commerciali
+Tassa sul commercio
+Usura
+Deposito di scorte
+Corruzione
+Eroismo
+Arte della guerra
+Strategia
+Mercenari
+Eroi
+Fama
+Tattiche d'assedio
+Preparazione fisica
+Spionaggio
+Fanatismo
+Crociata
+Inquisizione
+Guarigione
+Medicina
+Benedizione
+Invisibilitā
+Congelamento
+Fulmini
+Migliora in torre di guardia
+Migliora in torre di pietra
+Migliora in torre da cannone
+Buddismo
+Ingegneria
+Grande muraglia
+Doma dei cavalli
+Irrigazione
+Carro da guerra
+Meditazione
+Kung Fu
+Tornei
+Filosofia
+Ninja
+Dominio
+Concentrazione mentale
+Crea discordia
+Vortice
+Pietrificazione
+Raggio incendiario
+Gioielleria
+Banca
+Chimica
+Pesca d'altura
+Polvere
+Pirotecnica
+Bushido
+Leadership
+Onore
+Libro di Sun Tzu
+Abigeato
+Cavalleria
+Scimitarra
+Jihad
+Tappeto magico
+Pioggia di fuoco
+Visione magica
+Negromanzia
+Equitazione
+Schiavitų
+Permette di produrre arcieri con arco lungo
+Aumenta la produzione d'oro
+Aumenta la produzione di pietra
+Aumenta la produzione di legna
+Aumenta la potenza d'attacco delle unitā con la spada
+Aumenta la difesa della fanteria
+Permette di produrre lancieri
+Permette di produrre mucche
+Aumenta la produzione dei campi
+Permette di produrre cavalieri
+Aumenta la potenza d'attacco delle unitā con arco
+Riduce il prezzo dei contadini
+Pių veloce la costruzione, e abilita muraglie e torri di pietra
+Permette alle unitā di accumulare esperienza
+Permette di costruire galeoni
+Permette il commercio con barche e carovane
+Aumenta il beneficio commerciale
+Permette di ottenere prestiti nelle taverne
+Aumenta il limite della popolazione
+Permette di corrompere le unitā nemiche
+Consente di aumentare illimitatamente l'esperienza
+Dona esperienza con maggiore rapiditā
+Permette di reclutare unitā nelle taverne
+Permette di reclutare eroi nelle taverne
+Permette di reclutare unitā migliori nelle taverne
+Permette di generare catapulte pesanti
+Aumenta l'energia per ogni punto esperienza
+Permetti di creare spie
+Aumenta la resistenza degli edifici
+Permette di convocare una crociata
+Aumenta l'attacco di un sacerdote
+Permette di curare le unitā
+Permette la cura a distanza maggiore
+Aumenta temporaneamente la capacitā d'attacco di un'unitā
+Incantesimo di invisibilitā
+Consente di generare pipistrelli
+Incantesimo del congelamento
+Incantesimo di raggi
+Permette di generare golem di pietra
+Consente la costruzione delle torri da cannone
+Aumenta la potenza d'attacco delle armi d'assalto
+Rinforza le muraglie di pietra, delle torri e delle porte
+Permette di produrre arcieri a cavallo
+Aumenta la produzione dei campi
+Permette di costruire carri da guerra
+Riduce il prezzo dei monaci
+Aumenta l'attacco dei contadini
+Permette di condividere l'esperienza fra le unitā Kung Fu
+Permette di produrre monaci pių esperti
+Permette di produrre ninja
+Permette ai sacerdoti di insegnare alle unitā di Kung Fu
+Permette di ripristinare il mana pių rapidamente
+Impara l'incantesimo della discordia
+Impara l'incantesimo del vortice
+Permette di generare i draghi
+Impara l'incantesimo di pietrificazione
+Impara l'incantesimo del raggio incendiario
+Permette il commercio di oggetti
+Aumenta la potenza d'attacco delle torri da cannone
+Permette la costruzione delle torri lanciarazzi
+Permette di produrre samurai a cavallo
+Le unitā intorno all'eroe acquisiscono esperienza
+Bonus d'attacco dell'eroe contro eroe
+Aumenta la velocitā di apprendimento
+Permette ai contadini di rubare le mucche
+Riduce il prezzo delle unitā a cavallo
+Aumenta la potenza d'attacco della spada e consente di creare almohadi
+Permette di produrre guerrieri jihad
+Permette di creare tappeti magici
+Permette la costruzione di una bottega della magia
+Impara l'incantesimo della visione magica
+Impara l'incantesimo della resurrezione dei morti
+Permette di generare geni
+Aumenta la produzione di minerali
+Aumenta la potenza difensiva e offensiva delle unitā a cavallo
+Permette di produrre giannizzeri
+Pioggia di fuoco
+Congelamento
+Discordia
+Invisibilitā
+Genera drago
+Genera genio
+Genera golem di pietra
+Genera pipistrelli
+Crea tappeto magico
+Raggi
+Insegnamento
+Resurrezione
+Visione magica
+Cura
+Benedizione
+Vortice
+Raggio incendiario
+Pietrificazione
+Spada
+Esperienza
+Mana
+Cibo
+Copy room link

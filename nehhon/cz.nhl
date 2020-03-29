@@ -1,0 +1,403 @@
+NASTAVENÍ HRY
+Velikost mapy
+Pokračovat
+ZRUŠIT
+Zdraví
+Maximální zdraví
+Útok
+Obrana
+many
+Království
+ULOŽIT
+Limit populace
+Úroveň obtížnosti
+Volné místo pro populaci
+Equalize values for all kingdoms
+ZAVŘÍT
+BARVA
+Jméno hráče
+zlata
+dřeva
+jídla
+kamene
+Počítač
+Tým
+Captureable
+Zvěř
+Přidat
+Map size is too small, expanded to %s
+Terén
+Typ mapy
+Souš
+Jezernatá
+Kontinentální
+Ostrov
+Souostroví
+Náhodná
+AI aggresivity
+Visibility
+Zruší černý závoj
+Temporal fog
+Fog
+Extreme fog
+Úroveň surovin na začátku hry
+Nekonečná
+Počáteční rolníci
+Limit populace
+NASTAVENÍ
+Jazyk
+Automatická celá obrazovka
+Shadows
+PAUZA
+Voda
+Ground
+NABÍDKA
+NASTAVENÍ
+Random
+NÁHODNÁ MAPA
+Clear map
+Full random map
+Nahrává se...
+Velikost mapy
+Název mapy
+UŽIVATELSKÁ MAPA
+Popis
+Author
+Jednotky/Jednotek
+Budovy
+Předměty
+Stromy
+Suroviny
+Zlatá ruda
+Kameny
+KOMUNIKAČNÍ ZPRÁVA
+Cost
+Vyžaduje
+Čeká se, až se hráči připojí
+Při nahrávání hry došlo k chybě.
+Promiňte, ale herní server je již zaplněn.
+Password
+Rychlost hry
+ZPĚT DO HRY
+ULOŽIT HRU
+Celá obrazovka
+KONEC
+Rychlost přiblížení
+Rychlost rolování
+Menu opacity
+Cyklus dne a noci
+Hlasitost hudby
+Hlasitost zvuku
+Death sounds
+Unable to establish a P2P connection with the host, you may need to enable UPnP or open ports in your router configuration, look for information specific to your model if the problem persists
+Daily stats
+Games played
+Current players
+Total visits
+Hraje
+Čeká
+Private
+Žádná hra nebyla nalezena
+Zapište název hry
+Počet hráčů
+Ano
+Ne
+Přidat umělou inteligenci
+Odpojit
+HRÁT
+UŽIVATELSKÁ MAPA| Hrát na uživatelské mapě
+%s se odpojil!
+Server hru zrušil.
+Server vás vykopnul.
+HRA PRO VÍCE HRÁČŮ| Hra pro více hráčů
+VYTVOŘIT| Vytvořit hru
+Obnovit
+Vykopnout
+Nahoru
+Dolu
+Rasa
+OTEVŘENÉ
+Hra je inicializována...
+Kliknout pro připojení
+NAHRÁT HRU| Nahrát uloženou hru
+Editor mapy
+EVROPAN| Rasa hráče
+ARAB| Rasa hráče
+ASIAT| Rasa hráče
+Běžné
+HRA PRO JEDNOHO HRÁČE| Hra pro jednoho hráče
+O
+ZPĚT
+Uložit herní obsah do počítače
+Guide
+Upozornění
+OK
+Stahuji textury...
+%s byl poražen!
+%s won!
+Nemáte dostatek %s
+Nemáte dostatek domů
+Bylo dosaženo limitu populace
+Chyba připojení
+Počítačová síť není synchronizovaná. Hra byla zrušena.
+Medvěd
+Pěšák
+Kopiník
+Špion
+Palcátník
+Lučištník
+Mág
+Lučištník II. třídy
+Strom
+Křižák
+Kněz
+Rolník
+Katedrála
+Hrad
+Dřevěná zeď
+Kasárna
+Pila
+Kouzelnická věž
+Cech bojovníků
+Skladiště
+Rytíř
+Pole
+Farma
+Kupecký cech
+Kostel
+Kovárna
+Kráva
+Stáj
+Dílna
+Hospoda
+Dům
+Hlídková věž
+Tržiště
+Vojenské stanoviště
+Most
+Figurína
+Katapult
+Balista
+Těžký katapult
+Duch
+Přístav
+Mesiáš
+Magická brána
+Strážní věž
+Kamenná zeď
+Luk
+Štít
+Lektvar
+Železo
+Obranná věž
+Dělová věž
+Raketová věž
+Ork
+Trpaslík
+Kostra
+Karavana
+Nindža
+Ronin
+Samuraj
+Jízdní lučištník
+Jízdní samuraj
+Válečný vůz
+Galeona
+Rybářská loď
+Válečná loď
+Karavela
+Kamenný golem
+Netopýr
+Satrapa
+Těžké jezdectvo
+Bojovník džihádu
+Hejno ryb
+Janičár
+Hrad zla
+Mešita
+Kouzelnická dílna
+Klášter
+Shao-Linn
+Mnich
+Drak
+Létající koberec
+Džin
+Velký luk
+Těžba zlata
+Těžba kamene
+Těžba dřeva
+Tvrzené železo
+Šupinové brnění
+Halapartna
+Domestikace
+Střídavé hospodaření na polích
+Drátěná košile
+plátové brnění
+Kuše
+Feudalizmus
+Architektura
+Vzdělávání
+Směnit suroviny
+Kartografie
+Obchodní cesty
+Obchodní daně
+Lichvářství
+Uskladnění zásob
+Podplácení
+Hrdinství
+Válečnictví
+Taktiky
+Žoldáci
+Hrdinská výprava
+Sláva
+Taktiky obléhání
+Kulturistika
+Špionáž
+Fanatizmus
+Křížová výprava
+Inkvizice
+Uzdravování
+Lékařství
+Požehnat
+Neviditelnost
+Zmrazit
+Blesky
+Modernizovat na strážní věž
+Modernizovat na kamennou věž
+Modernizovat na dělovou věž
+Buddhismus
+Inženýrství
+Velká zeď
+Umění jízdy
+Zavlažování
+Obrněný válečný vůz
+Meditace
+Kung-Fu
+Turnaje
+Filozofie
+Nindžové
+Mistrovství
+Koncentrace
+Zmatení
+Vír
+Proměnit v kámen
+Ohnivý blesk
+Klenoty
+Bankovnictví
+Chemie
+Potraviny z moře
+Střelný prach
+Raketový šíp
+Bušidó
+Vůdcovství
+Čest
+Sun Tzuova kniha
+Pytlačení krav
+Jezdectví
+Šavle
+Džihád
+Kouzelný koberec
+Ohnivý déš
+Magický zrak
+Nekromantie
+Jízda na koních
+Otroctví
+Umožňuje produkci lučištníků II. třídy
+Zvyšuje produkci zlata
+Zvyšuje produkci kamene
+Zvyšuje produkci dřeva
+Zvyšuje sílu útoku jednotky při boji zblízka
+Zvyšuje obranu jednotky
+Umožňuje produkci jednotek s oštěpy
+Umožňuje produkci krav
+Zvyšuje produkci polí
+Umožňuje produkci rytířů
+Zvyšuje jednotce sílu útoku šípy
+Zlevňuje rolníky
+Rolnící staví rychleji, lze stavět též kamenné zdi, brány a věže
+Umožňuje jednotkám získávat zkušenost
+Umožňuje produkci galeon
+Umožňuje obchod
+Zvyšuje zisk z obchodu
+Umožňuje získání půjček v hospodách
+Zvyšuje limit populace
+Umožňuje podplácení nepřátelských jednotek
+Umožňuje neomezenou zkušenost
+Rychlejší získávání zkušenosti
+Umožňuje verbování jednotek v hospodách
+Umožňuje verbování hrdinů v hospodách
+Umožní verbovat v hospodách lepší jednotky
+Umožňuje produkci těžkých katapultů
+Zvyšuje zásahové body jednotky s každou novou úrovní
+Umožňuje produkci špionů
+Zvyšuje rezistenci budovy
+Umožňuje kázání o křížové výpravě
+Zvyšuje sílu útoku kněze
+Umožňuje uzdravování jednotek
+Umožňuje uzdravování jednotek na dálku
+Dočasně zvyšuje dovednost útoku jednotky
+Kouzlo neviditelnosti
+Provede výzkum přivolání netopýrů
+Kouzlo zmražení
+Kouzlo blesků
+Provede výzkum přivolání kamenného golema
+Umožňuje stavbu dělové věže
+Zvyšuje sílu útoku obléhacích válečných strojů
+Zesílí kamenné zdi, věže a brány
+Umožňuje produkci jízdních lučištníků
+Zvyšuje produkci na polích
+Umožňuje produkci obrněných válečných vozů
+Zlevňuje mnichy
+Zvyšuje hodnotu útoku všech kung-fu jednotek
+Umožňuje sdílení zkušeností mezi kung-fu jednotkami
+Umožňuje produkci zkušenějších mnichů
+Umožňuje produkci nindžů
+Umožňuje knězům cvičit kung-fu jednotky
+Umožňuje rychlejší obnovování many
+Provede výzkum kouzla zmatení
+Provede výzkum kouzla vír
+Provede výzkum přivolávání draků
+Provede výzkum kouzla zkamenění
+Provede výzkum kouzla ohnivého blesku
+Umožňuje obchodování předměty
+Zvyšuje sílu útoku dělové věže
+Umožňuje stavbu raketových věží
+Umožňuje produkci jízdních samurajů
+Jednotky kolem hrdiny získávají zkušenost
+Bonus při boji hrdiny proti hrdinovi
+Zvyšuje rychlost vzdělávání
+Umožňuje rolníkům krást krávy
+Zlevňuje jízdní jednotky
+Zvyšuje sílu útoku meči a umožňuje produkování satrapů
+Umožňuje produkci bojovníků džihádu
+Provede výzkum přivolávání kouzelného koberce
+Umožňuje stavbu kouzelnické dílny
+Provede výzkum kouzla magický zrak
+Provede výzkum kouzla oživování mrtvých
+Provede výzkum přivolávání džina
+Zvyšuje produkci dolů
+Zvyšuje sílu útoku a obranu jízdních jednotek
+Umožňuje produkci janičárů
+Ohnivý déš
+Zmražení
+Zmatení
+Neviditelnost
+Stvoření draka
+Stvoření džina
+Stvoření kamenného golema
+Stvoření netopýra
+Stvoření kouzelného koberce
+Blesky
+Učení
+Oživování mrtvých
+Magický zrak
+Uzdravování
+Požehnání
+Vír
+Ohnivý blesk
+Zkamenění
+Meč
+Zkušenost
+Mana
+Jídlo
+Copy room link

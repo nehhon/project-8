@@ -1,0 +1,403 @@
+OPCJE GRY
+Rozmiar mapy
+Dalej
+ANULUJ
+Zdrowie
+Maksymalne zdrowie
+Atak
+Obrona
+Mana
+Królestwo
+ZAPISZ
+Limit populacji
+Poziom trudności
+Początkowy limit populacji
+Equalize values for all kingdoms
+ZAMKNIJ
+Kolor
+Imię gracza
+Złota
+Drewna
+Pożywienia
+Kamienia
+Komputer
+Drużyna
+Captureable
+Natura
+Dodaj
+Map size is too small, expanded to %s
+Teren
+Typ mapy
+Sucha
+Jeziora
+Kontynent
+Wyspa
+Archipelag
+Losowa
+AI aggresivity
+Visibility
+Brak mgły
+Temporal fog
+Fog
+Extreme fog
+Surowce początkowe
+Nieskończone
+Wieśniak
+Limit populacji
+USTAWIENIA
+Język
+Automatyczny pełny ekran
+Shadows
+PAUZA
+Woda
+Ground
+MENU
+OPCJE
+Random
+LOSOWA MAPA
+Clear map
+Full random map
+Wczytywanie...
+Rozmiar mapy
+Tytuł mapy
+GOTOWA MAPA
+Opis
+Author
+Jednost.
+Buildings
+Items
+Drzewa
+Surowce
+Złoża złota
+Skały
+TEKST WIADOMOŚCI
+Cost
+Wymaga
+Czekam na pozostałych graczy.
+Wystąpił błąd przy wczytywaniu gry.
+Przykro mi, gra została zapełniona.
+Password
+Szybkość gry
+POWRÓT DO GRY
+ZAPISZ GRĘ
+Pełny ekran
+WYJŚCIE
+Prędkość Przybliża
+Przewijanie
+Menu opacity
+Cykle dzień-noc
+Muzyka
+Dźwięki
+Death sounds
+Unable to establish a P2P connection with the host, you may need to enable UPnP or open ports in your router configuration, look for information specific to your model if the problem persists
+Daily stats
+Games played
+Current players
+Total visits
+W trakcie
+Czekaj
+Private
+Nie znaleziono rozgrywki
+Wpisz nazwę gry
+Liczba graczy
+TAK
+NIE
+Dodaj AI
+Rozłącz
+Rozpocznij grę
+GOTOWA MAPA| Gra na gotowej mapie
+%s rozłączył się!
+Serwer anulował grę.
+Zostałeś wyrzucony przez serwer.
+WIELU GRACZY| Gra WIELOOSOBOWA
+UTWÓRZ| Utwórz nową grę
+Odśwież
+Wyrzuć
+Wyżej
+Niżej
+Rasa
+OTWÓRZ
+Inicjalizacja gry...
+Kliknij, aby Dołączyć
+WCZYTAJ GRĘ| Wczytaj zapisaną grę
+Edytor Mapy
+EUROPEJCZYCY| Rasa
+ARABOWIE| Rasa
+AZJACI| Rasa
+Zwykłe
+JEDEN GRACZ| Gra dla Jednego Gracza
+Na temat
+POWRÓT
+Zapisywanie zawartości gry lokalnie
+Guide
+Ostrzeżenie
+OK
+Pobieranie tekstur...
+%s został pokonany!
+%s won!
+Brakuje: %s
+Zbyt mało domów
+Osiągnięto limit populacji
+Błąd połączenia
+Brak synchronizacji sieci. Gra przerwana.
+Niedźwiedź
+Piechur
+Pikinier
+Szpieg
+Wekiernik
+Łucznik
+Mag
+Strzelec
+Drzewo
+Krzyżowiec
+Kapłan
+Wieśniak
+Katedra
+Zamek
+Drewniany mur
+Koszary
+Tartak
+Wieża magów
+Gildia wojowników
+Magazyn
+Rycerz
+Pole
+Farma
+Gildia kupców
+Kościół
+Kuźnia
+Krowa
+Stajnia
+Warsztat
+Gospoda
+Dom
+Wieża
+Targ
+Fort
+Most
+Manekin
+Katapulta
+Balista
+Ciężka katapulta
+Duch
+Port
+Mesjasz
+Magiczne wrota
+Strażnica
+Kamienny mur
+Łuk
+Tarcza
+Eliksir
+Żelazo
+Baszta
+Baszta artyleryjska
+Baszta rakietowa
+Ork
+Krasnolud
+Szkielet
+Karawana
+Ninja
+Ronin
+Samuraj
+Łucznik konny
+Samuraj konny
+Rydwan
+Galeon
+Łódź rybacka
+Fregata
+Karaka
+Kamienny golem
+Nietoperz
+Satrapa
+Ciężka konnica
+Wojownik dżihadu
+Ławica ryb
+Janczar
+Zamek Zła
+Meczet
+Warsztat magów
+Klasztor
+Shaolin
+Mnich
+Smok
+Latający dywan
+Dżin
+Długi Łuk
+Wydobycie złota
+Wydobycie kamienia
+Ścinanie drzew
+Hartowanie żelaza
+Zbroja łuskowa
+Halabarda
+Udomowienie
+Płodozmian
+Kolczuga
+Zbroja płytowa
+Kusza
+Feudalizm
+Architektura
+Nauka
+Wymień surowce
+Kartografia
+Szlaki handlowe
+Podatki handlowe
+Lichwa
+Składowanie zapasów
+Przekupstwo
+Bohaterstwo
+Sztuka wojny
+Taktyka
+Najemnicy
+Misje bohaterów
+Sława
+Taktyka oblężnicza
+Kulturystyka
+Szpiegostwo
+Fanatyzm
+Wyprawa krzyżowa
+Inkwizycja
+Uzdrawianie
+Medycyna
+Błogosławieństwo
+Niewidzialność
+Zamrożenie
+Piorun
+Zamień na strażnicę
+Zamień na basztę
+Zamień na basztę artyleryjską
+Buddyzm
+Inżynieria
+Wielki mur
+Jeździectwo
+Irygacja
+Rydwan pancerny
+Medytacja
+Kung-Fu
+Turnieje
+Filozofia
+Ninja
+Mistrzostwo
+Koncentracja
+Szał bitewny
+Wir
+Petryfikacja
+Ognisty pocisk
+Złotnictwo
+Banki
+Chemia
+Owoce Morza
+Proch Strzelniczy
+Rakiety
+Bushido
+Przywództwo
+Honor
+Księga Sun Tzu
+Kradzież bydła
+Ujeżdżanie
+Jatagan
+Dżihad
+Latający dywan
+Ognisty deszcz
+Magiczna wizja
+Nekromancja
+Jeździectwo
+Niewolnictwo
+Pozwala na produkcję strzelców
+Zwiększa wydobycie złota
+Zwiększa wydobycie kamienia
+Zwiększa wydobycie drewna
+Zwiększa skuteczność ataku przy walce wręcz
+Zwiększa skuteczność obrony jednostek
+Pozwala na produkcję oszczepników
+Pozwala na produkcję krów
+Zwiększa wydajność pól uprawnych
+Pozwala na produkcję rycerzy
+Zwiększa skuteczność ataku na odległość
+Produkcja wieśniaków jest tańsza
+Wieśniacy budują szybciej. Umożliwia prod. kam. muru, bramy i wież
+Pozwala jednostkom zbierać doświadczenie
+Pozwala na produkcję galeonów
+Umożliwia wymianę handlową
+Zwiększa zyski z handlu
+Umożliwia podejmowanie pożyczek w gospodach
+Zwiększa limit populacji
+Pozwala przekupywać jednostki wroga
+Pozwala na zdobywanie nieograniczonego doświadczenia
+Przyspiesza zdobywanie doświadczenia
+Pozwala na rekrutację najemników w gospodach
+Pozwala na rekrutację herosów w gospodach
+W gospodach można rekrutować lepsze jednostki
+Umożliwia produkcję ciężkich katapult
+Po każdym nowym poziomie zwiększa liczbę pkt. życia jednostki
+Pozwala na produkcję szpiegów
+Zwiększa odporność budowli
+Pozwala utworzyć wyprawę krzyżową
+Zwiększa skuteczność ataków kapłana
+Pozwala uzdrawiać jednostki
+Pozwala uzdrawiać jednostki na odległość
+Czasowo zwiększa skuteczność atakuj jednostki
+Zaklęcie: Niewidzialność
+Rozpoczyna badania nad tworzeniem nietoperzy
+Zaklęcie: Zamrożenie
+Zaklęcie: Piorun
+Rozpoczyna badania nad tworzeniem golemów
+Pozwala na budowę baszt artyleryjskich
+Zwiększa skuteczność ataku machin oblężniczych
+Zwiększa odporność kamiennych murów, wież i bram
+Pozwala na produkcję łuczników konnych
+Zwiększa wydajność pól uprawnych
+Pozwala na produkcję rydwanów pancernych
+Produkcja mnichów staje się tańsza
+Zwiększa skuteczność ataku jednostek kung-fu
+Pozwala na wymianę dośw. pomiędzy jednostkami kung-fu
+Pozwala na produkcję bardziej doświadczonych mnichów
+Pozwala na produkcję ninji
+Pozwala kapłanowi uczyć jednostki kung-fu
+Przyspiesza odnowę mana
+Rozpoczyna badania nad zaklęciem szał bitewny
+Rozpoczyna badania nad zaklęciem wir
+Rozpoczyna badania nad tworzeniem smoków
+Rozpoczyna badania nad zaklęciem petryfikacji
+Rozpoczyna badania nad zaklęciem ognisty pocisk
+Pozwala na handel przedmiotami
+Zwiększa siłę ognia baszt artyleryjskich
+Umożliwia zbudowanie baszt rakietowych
+Pozwala na produkcję samurajów konnych
+Jednostki wokół herosa zdobywają doświadczenie
+Premia do ataku herosa przeciwko innemu herosowi
+Zwiększa szybkość zdobywania doświadczenia
+Wieśniacy mogą kraść krowy
+Produkcja jednostek konnych staje się tańsza
+Zwiększa skuteczność ataków mieczem i umożliwia prod. satrapów
+Pozwala na produkcję wojowników dżihadu
+Rozpoczyna badania nad tworzeniem latającego dywanu
+Umożliwia budowę warsztatu magów
+Rozpoczyna badania nad zaklęciem magiczna wizja
+Rozpoczyna badania nad zaklęciem wskrzeszenie
+Rozpoczyna badania nad tworzeniem dżinów
+Zwiększa wydobycie w kopalniach
+Zwiększa skuteczność ataku i obrony jednostek konnych
+Pozwala na produkcję janczarów
+Ognisty deszcz
+Zamrożenie
+Szał bitewny
+Niewidzialność
+Tworzenie smoka
+Tworzenie dżina
+Tworzenie golema
+Tworzenie nietoperza
+Tworzenie latającego dywanu
+Piorun
+Nauka
+Wskrzeszenie
+Magiczna wizja
+Uzdrawianie
+Błogosławieństwo
+Wir
+Ognisty pocisk
+Petryfikacja
+Miecz
+Doświadczenie
+Mana
+Pożywienie
+Copy room link

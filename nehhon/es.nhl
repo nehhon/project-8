@@ -1,0 +1,403 @@
+OPCIONES DE JUEGO
+Tamaño del mapa
+Continuar
+CANCELAR
+Salud
+Salud máxima
+Ataque
+Defensa
+maná
+Reino
+GUARDAR
+Límite de población
+Nivel de dificultad de la IA
+Free population
+Igualas valores para todos los jugadores
+CERRAR
+Color
+Jugador
+oro
+madera
+comida
+piedra
+Ordenador
+Equipo
+Capturable
+Naturaleza
+Añadir
+Mapa demasiado pequeño, expandido a %s
+Terreno
+Tipo de mapa
+Tierra
+Lagos
+Continente
+Islas
+Archipiélagos
+Al azar
+Agresividad de la IA
+Visibilidad
+Sin niebla
+Niebla temporal
+Niebla
+Niebla extrema
+Recursos iniciales
+Infinito
+Campesinos iniciales
+Límite de población
+AJUSTES
+Idioma
+Pantalla completa automática
+Sombras
+PAUSA
+Agua
+Tierra
+MENÚ
+OPCIONES
+Aleatorio
+MAPA ALEATORIO
+Limpiar mapa
+Mapa aleatorio completo
+Cargando...
+Tamaño del mapa
+Nombre de la misión
+MISIÓN EXISTENTE
+Descripción
+Autor
+Unidades
+Edificios
+Objetos
+Árboles
+Recursos
+Oro
+Piedra
+MENSAJE
+Coste
+Necesita
+Esperando conexión de jugadores
+Error al cargar la partida.
+Lo siento, la partida está completa.
+Contraseña
+Velocidad
+VOLVER AL JUEGO
+GUARDAR PARTIDA
+Pantalla completa
+SALIR
+Velocidad de zoom
+Scroll
+Opacidad del menú
+Ciclos noche-día
+Volumen musica
+Volumen sonidos
+Sonidos de muerte
+Imposible establecer una conexión P2P con el host, tal vez necesite habilitar UPnP o abrir puertos en la configuración de su router, busca información específica para su modelo si el problema persiste
+Estadísticas hoy
+Partidas jugadas
+Jugadores actuales
+Visitas totales
+Jugando
+Esperando
+Privado
+No se encontraron partidas
+Nombre de la partida
+Número de jugadores
+Sí
+No
+Añadir IA
+Desconectar
+JUGAR
+MISIÓN| Jugar una misión ya creada
+¡%s se ha desconectado!
+El servidor ha cancelado la partida.
+El servidor te ha expulsado de la partida.
+MULTIJUGADOR| Juego para varios jugadores
+CREAR| Crear una partida
+Actualizar
+Expulsar
+Arriba
+Abajo
+Raza
+DISPONIBLE
+Iniciando la partida...
+Click para unirse
+CARGAR PARTIDA| Cargar una partida guardada
+Editor de mapas
+EUROPEO| Civilización del jugador
+ÁRABE| Civilización del jugador
+ASIÀTICO| Civilización del jugador
+Comunes
+UN SOLO JUGADOR| Juego para un solo jugador
+Info
+VOLVER
+Guardar contenidos del juego localmente
+Guía
+Aviso
+OK
+Descargando gráficos...
+¡%s ha sido derrotado!
+%s ha ganado!
+No hay suficiente %s
+No hay suficientes casas
+Alcanzado límite de población
+Error de conexión
+Falta de sincronización en red. Partida cancelada.
+Oso
+Infante
+Lancero
+Espía
+Soldado con maza
+Arquero
+Mago
+Arquero arco largo
+Árbol
+Cruzado
+Sacerdote
+Campesino
+Catedral
+Castillo
+Empalizada
+Cuartel
+Serrería
+Torre mágica
+Academia militar
+Almacén
+Caballero
+Cultivo
+Granja
+Cámara de comercio
+Iglesia
+Herrería
+Vaca
+Establo
+Taller
+Taberna
+Casa
+Torre vigía
+Mercado
+Puesto de guardia
+Puente
+Muñeco entrenar
+Balista
+Catapulta
+Catapulta pesada
+Fantasma
+Puerto
+Mesías
+Puerta mágica
+Torre de guardia
+Muralla de piedra
+Arco
+Escudo
+Poción
+Hierro
+Torre de piedra
+Torre de cañón
+Torre lanzacohetes
+Orco
+Enano
+Esqueleto
+Comerciante
+Ninja
+Ronin
+Samurái
+Arquero a caballo
+Samurái a caballo
+Carro de guerra
+Galeón
+Barco de pesca
+Galera
+Goleta
+Golem de piedra
+Murciélago
+Almohade
+Caballería pesada
+Guerrero jihad
+Banco de pesca
+Jenízaro
+Castillo del Mal
+Mezquita
+Taller mágico
+Templo
+Shao-Linn
+Monje
+Dragón
+Alfombra voladora
+Genio
+Arco largo
+Minería de oro
+Cantera de piedra
+Sierra
+Hierro templado
+Armadura de láminas
+Alabarda
+Domesticación
+Rotación de cultivos
+Cota de malla
+Armadura
+Ballesta
+Feudalismo
+Arquitectura
+Aprendizaje
+Cambiar recursos
+Cartografía
+Rutas comerciales
+Impuestos sobre el comercio
+Usura
+Almacenaje de provisiones
+Soborno
+Heroísmo
+Arte de la guerra
+Estrategia
+Mercenarios
+Héroes
+Fama
+Tácticas de asedio
+Preparación física
+Espionaje
+Fanatismo
+Cruzada
+Inquisición
+Curación
+Medicina
+Bendecir
+Hacer invisible
+Congelar
+Rayos
+Mejorar a torre de guardia
+Mejorar a torre de piedra
+Mejorar a torre de cañón
+Budismo
+Ingeniería
+Gran muralla
+Doma de caballos
+Regadío
+Carro de guerra
+Meditación
+Kung Fu
+Torneos
+Filosofía
+Ninjas
+Dominio
+Concentración mental
+Desconcertar
+Remolino
+Convertir en piedra
+Rayo incendiario
+Joyería
+Banca
+Química
+Pesca de altura
+Pólvora
+Pirotecnia
+Bushido
+Liderazgo
+Honor
+Libro de Sun Tzu
+Cuatrerismo
+Caballería
+Cimitarra
+Jihad
+Alfombra mágica
+Lluvia de fuego
+Visión mágica
+Nigromancia
+Equitación
+Esclavitud
+Permite producir arqueros de arco largo
+Aumenta la producción de oro
+Aumenta la producción de piedra
+Aumenta la producción de madera
+Aumenta el poder de ataque de las unidades con espada
+Aumenta la defensa de la infantería
+Permite producir lanceros
+Permite producir vacas
+Aumenta la producción de los campos
+Permite producir caballeros
+Aumenta el poder de ataque de las unidades con arco
+Abarata el precio de los campesinos
+Los campesinos construyen más deprisa; permite construir murallas, puertas y torres de piedra
+Permite que las unidades adquieran experiencia
+Permite generar galeones
+Permite el comercio con barcos y caravanas
+Aumenta el beneficio comercial
+Permite obtener préstamos en las tabernas
+Aumenta el límite de población
+Permite sobornar a unidades enemigas
+Permite aumentar ilimitadamente la experiencia
+Gana experiencia con mayor rapidez
+Permite reclutar unidades en las tabernas
+Permite reclutar héroes en las tabernas
+Permite reclutar mejores unidades en las tabernas
+Permite generar catapultas pesadas
+Aumenta la energía por cada punto de experiencia
+Permite producir espías
+Aumenta la resistencia de los edificios
+Permite convocar una cruzada
+Aumenta el ataque de un sacerdote
+Permite curar unidades
+Permite la curación a mayor distancia
+Aumenta temporalmente la capacidad de ataque de una unidad
+Hechizo de invisibilidad
+Permite engendrar murciélagos
+Hechizo de congelación
+Hechizo de rayos
+Permite engendrar golem de piedra
+Permite la construcción de torres de cañón
+Aumenta el poder de ataque de las armas de asalto
+Refuerza las murallas de piedra, de las torres y de las puertas
+Permite producir arqueros a caballo
+Aumenta la producción de los cultivos
+Permite generar carros de guerra
+Abarata el precio de los monjes
+Aumenta el ataque de los campesinos
+Permite compartir experiencia entre unidades de Kung Fu
+Permite generar monjes más experimentados
+Permite generar ninjas
+Permite a los sacerdotes enseñar a unidades de Kung Fu
+Permite restaurar el maná más rápidamente
+Aprende el hechizo del desconcierto
+Aprende el hechizo del remolino
+Permite engendrar los dragones
+Aprende el hechizo de convertir en piedra
+Aprende el hechizo del rayo incendiario
+Permite el comercio de objetos
+Aumenta el poder de ataque de las torres de cañón
+Permite la construcción de la torre lanzacohetes
+Permite generar samuráis a caballo
+Las unidades que rodean al héroe ganan experiencia
+Bonus de ataque de héroe vs. héroe
+Aumenta la velocidad de aprendizaje
+Permite que los campesinos roben vacas
+Abarata el precio de las unidades a caballo
+Aumenta el poder de ataque de la espada y permite generar almohades
+Permite producir guerreros jihad
+Permite engendrar alfombras mágicas
+Permite la construcción de un taller mágico
+Aprende el hechizo de la visión mágica
+Aprende el hechizo de la resurrección de los muertos
+Permite engendrar genios
+Aumenta la producción minera
+Aumenta el poder defensivo y de ataque de las unidades a caballo
+Permite generar jenízaros
+Lluvia de fuego
+Congelación
+Desconcierto
+Invisibilidad
+Engendrar dragón
+Engendrar genio
+Engendrar golem de piedra
+Engendrar murciélagos
+Engendrar alfombra mágica
+Rayos
+Enseñar
+Resurrección
+Visión mágica
+Curar
+Bendición
+Remolino
+Rayo incendiario
+Convertir en piedra
+Espada
+Experiencia
+Maná
+Comida
+Copiar URL

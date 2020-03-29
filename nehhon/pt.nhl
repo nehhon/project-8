@@ -1,0 +1,403 @@
+OPÇÕES DO JOGO
+Tamanho do mapa
+Continuar
+CANCELAR
+Saúde
+Saúde máxima
+Ataque
+Defesa
+Manna
+Reino
+GRAVAR
+Limite da população
+Nível de dificuldade
+População livre
+Equalize values for all kingdoms
+FECHAR
+Cor
+Nome do jogador
+Ouro
+Madeira
+Comida
+Pedra
+Computador
+Equipa
+Captureable
+Natureza
+Adicionar
+Map size is too small, expanded to %s
+Terreno
+Tipo de mapa
+Seco
+Lagos
+Continental
+Ilha
+Arquipélagos
+Aleatório
+AI aggresivity
+Visibility
+Sem Campo de Visão
+Temporal fog
+Fog
+Extreme fog
+Recursos iniciais
+Infinito
+Camponeses iniciais
+Limite da População
+OPÇÕES
+Língua
+Tela cheia automática
+Shadows
+PAUSA
+Água
+Ground
+MENU
+OPÇÕES
+Random
+MAPA ALEATÓRIO
+Clear map
+Full random map
+Carregando...
+Tamanho do mapa
+Nome do Mapa
+MAPA PREDEFINIDO
+Descrição
+Author
+Unidades
+Buildings
+Items
+Árvores
+Recursos
+Rochas com Ouro
+Rochas
+MENSAGEM
+Cost
+Requer
+Esperando pelos jogadores para ligar:
+Erro no carregamento de jogo
+Desculpa, o jogo está preenchido.
+Password
+Velocidade
+VOLTAR AO JOGO
+GRAVAR JOGO
+Tela cheia
+ABANDONAR
+Velocidade de zoom
+Deslizamento
+Menu opacity
+Transição dia/noite
+Volume
+Volume
+Death sounds
+Unable to establish a P2P connection with the host, you may need to enable UPnP or open ports in your router configuration, look for information specific to your model if the problem persists
+Daily stats
+Games played
+Current players
+Total visits
+Jogando
+Esperando
+Private
+Nenhum jogo encontrado
+Introduzir nome do jogo
+Número de Jogadores
+Sim
+Não
+Adicionar IA
+Desligar
+JOGAR
+MAPA PREDEFINIDO| Mapa predefinido
+%s desligou!
+O jogo foi cancelado pelo servidor
+Foste expulso pelo servidor
+MULTIJOGADOR| Jogo Multijogador
+CRIAR| Criar um jogo
+Actualizar
+Sair
+Up
+Down
+Raça
+ABRIR
+Iniciando jogo...
+Clique para participar
+CARREGAR JOGO| Carregar jogo
+Editor de mapas
+EUROPEU| Civilização do jogador
+ÁRABE| Civilização do jogador
+ASIÁTICO| Civilização do jogador
+Comuns
+JOGO INDIVIDUAL| Jogo Individual
+Info
+VOLTAR
+Salvar o conteúdo do jogo localmente
+Guide
+Aviso
+ACEITAR
+Baixando texturas...
+%s foi derrotado!
+%s won!
+%s insuficiente
+Casas insuficientes
+Alcançado o limite da população
+Erro de conexão
+Assincronia de rede. Jogo cancelado.
+Urso
+Soldado
+Lanceiro
+Espião
+Maceiro
+Arqueiro
+Mago
+Arqueiro Poderoso
+Árvore
+Cruzado
+Sacerdote
+Camponês
+Catedral
+Castelo
+Muralha de Madeira
+Quartel
+Serração
+Torre dos Magos
+Academia Militar
+Armazém
+Cavaleiro
+Campo
+Quinta
+Associação Comercial
+Igreja
+Ferreiro
+Vaca
+Estábulo
+Oficina
+Taberna
+Casa
+Torre de Vigia
+Mercado
+Posto Avançado
+Ponte
+Espantalho
+Catapulta
+Balista
+Catapulta Pesada
+Fantasma
+Porto
+Messias
+Portal Mágico
+Torre de Defesa
+Muralha de Pedra
+Arco
+Escudo
+Poção
+Ferro Temperado
+Torre de Pedra
+Torre de Canhão
+Torre Incendiária
+Orc
+Anão
+Esqueleto
+Caravana
+Ninja
+Ronin
+Samurai
+Arqueiro Montado
+Samurai Montado
+Quadriga
+Galeão
+Barco de Pesca
+Hulk
+Pinque
+Gigante
+Morcego
+Sátrapa
+Cavalaria Pesada
+Guerreiro Jihad
+Cardume
+Janíçaro
+Castelo do Mal
+Mesquita
+Oficina Mágica
+Mosteiro
+Shao-Linn
+Monge
+Dragão
+Tapete Voador
+Génio
+Arco Longo
+Extrair ouro
+Extrair pedra
+Serra
+Ferro Temperado
+Armadura de Escamas
+Alabarda
+Domesticação
+Rotação de Culturas
+Armadura de Correntes
+Armadura de Placas
+Besta
+Feudalismo
+Arquitectura
+Aprendizagem
+Converter Recursos
+Feitura de Mapas
+Rotas Comerciais
+Taxas Comerciais
+Usura
+Armazém de Abastecimento
+Suborno
+Heroísmo
+Guerra
+Táctica
+Mercenários
+Missão de Herói
+Fama
+Táctica de Cerco
+Musculação
+Espionagem
+Fanatismo
+Cruzada
+Inquisição
+Curar
+Medicina
+Abençoar
+Invisibilidade
+Congelar
+Relâmpago
+Melhorar para Torre de Defesa
+Melhorar para Torre de Pedra
+Melhorar para Torre de Canhão
+Budismo
+Engenharia
+Grande Muralha
+Arte Equestre
+Irrigação
+Quadriga
+Meditação
+Kung-Fu
+Torneios
+Filosofia
+Ninjas
+Mestria
+Concentração
+Confusão
+Turbilhão
+Transformar em Pedra
+Labareda
+Joalharia
+Banqueiro
+Química
+Pescado
+Pólvora
+Flecha Incendiária
+Bushido
+Liderança
+Honra
+Livro de Sun Tzu's
+Roubar vacas
+Equitação
+Cimitarra
+Jihad
+Tapete Voador
+Chuva de Fogo
+Visão Mágica
+Necromancia
+Montar a cavalo
+Escravatura
+Permite a criação de Arqueiros Poderosos
+Aumenta a extracção de ouro
+Aumenta a extracção de pedra
+Aumenta o corte de madeira
+Aumenta o poder de ataque na luta corpo a corpo
+Aumenta o poder de defesa das Unidades
+Permite a criação de unidades de Lanceiros
+Permite a produção de vacas
+Aumenta a produção dos campos
+Permite a criação de Cavaleiros
+Aumenta o poder de ataque das Unidades de Arqueiros
+Torna os camponeses mais baratos
+Camponeses constroem mais depressa e permite muralha de pedra, portão e torres
+Permite que as unidades acumulem experiência
+Permite a produção de Galeões
+Permite o comércio
+Aumenta o lucro comercial
+Permite a obtenção de empréstimos em tabernas
+Aumenta o limite da população
+Permite subornar unidades inimigas
+Permite experiência ilimitada
+Ganhar experiência mais rapidamente
+Permite recrutamento de Unidades nas Tabernas
+Permite recrutamento de Heróis nas Tabernas
+Recrutar as melhores Unidades nas Tabernas
+Permite a produção de catapultas pesadas
+Aumenta os pontos de saúde das unidades em cada novo nível
+Permite a criação de um espião
+Aumenta a resistência dos edifícios
+Permite pregar cruzada
+Aumenta o poder de ataque do Sacerdote
+Permite o tratamento das unidades
+Permite o tratamento das unidades
+Aumenta temporariamente o poder de ataque das unidades
+Feitiço da Invisibilidade
+Pesquisa a invocação de morcegos
+Feitiço de Gelar
+Feitiço do Relâmpago
+Pesquisa a invocação de gigantes
+Permite a construção de torres de canhões
+Aumenta o poder das armas de cerco
+Torna as Muralhas, Torres e Portões mais fortes
+Permite a criação de Arqueiros Montados
+Aumenta a produção dos campos
+Permite a construção de Quadrigas
+Torna os Monges mais baratos
+Aumenta o poder de ataque de todas as unidades de Kung-Fu
+Permite a partilha de experiência entre Unidades de Kung-Fu
+Permite a criação de monges mais experientes
+Permite a criação de Ninjas
+Permite que os Sacerdotes ensinem as Unidades de Kung-Fu
+Permite recuperar manna mais rapidamente
+Pesquisa o feitiço da confusão
+Pesquisa o feitiço do turbilhão
+Pesquisa a invocação de Dragão
+Pesquisa o feitiço da transformação em pedra
+Pesquisa o feitiço da Labareda
+Permite o comércio de itens
+Aumenta o poder de ataque das Torres de Canhões
+Permite a construção de Torres Incendiárias
+Permite a criação de Samurais montados
+Unidades com herói ganham experiência
+Bónus de Ataque Herói versus Herói
+Aumenta a velocidade de aprendizagem
+Permite que os camponeses roubem vacas
+Torna as unidades montadas mais baratas
+Aumenta o poder de ataque com espada e permite a criação de Sátrapas
+Permite a criação de Guerreiros Jihad
+Pesquisa a invocação de Tapete Mágico
+Permite a construção de Oficina Mágica
+Pesquisa o feitiço da Visão Mágica
+Pesquisa o feitiço do Ressuscitamento
+Pesquisa a invocação de Génio
+Aumenta a produção das Minas
+Aumenta os poderes de ataque e de defesa das unidades montadas
+Permite a criação de Janíçaros
+Chuva de Fogo
+Gelar
+Confusão
+Invisibilidade
+Criar Dragão
+Criar Génio
+Criar Gigante
+Criar Morcego
+Criar Tapete Voador
+Relâmpago
+Ensinar
+Ressuscitar
+Visão Mágica
+Curar
+Abençoar
+Turbilhão
+Labareda
+Transformar em Pedra
+Espada
+Experiência
+Manna
+Comida
+Copy room link
