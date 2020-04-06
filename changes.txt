@@ -1,0 +1,26 @@
+##365
+Extended changelog
+Asian priest teaches automatically
+Fixed a bug when loading some maps online
+Adjusted catapult bonus
+Damage formula changed to attack²/(attack+defence)
+Initial towers option (from 0 to 40)
+Shift key now works correctly
+Updated translations
+##364
+Desktop version
+Wooden gates
+Fixed unnamed online users (this could collapse the room)
+Fixed rocket tower cost
+Added game over screen (music: Astronomia - Tony Igy)
+Minor bug fixes
+##363
+Custom maps online
+Private rooms (only accessible sharing the url)
+AI aggressiveness option
+Waypoint enabled for taverns and cathedrals
+Updated translations in Spanish, Italian and Russian
+Adaptative minimum map size
+Wooden wall default shape changed, press shift for square shape
+Backspace key is working as supr key for Mac OS users
+Minor bug fixes (a lot)
