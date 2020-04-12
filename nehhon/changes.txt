@@ -1,9 +1,16 @@
+##366
+Updated online server, fixed P2P error
+Fixed a bug when creating magic units near fields
+Fixed black screen bug starting a game
+Minimum attack changed to 1
+AI organizes the army
+Added an input to join online games by url in the desktop version
 ##365
 Extended changelog
 Asian priest teaches automatically
 Fixed a bug when loading some maps online
 Adjusted catapult bonus
-Damage formula changed to attack²/(attack+defence)
+Damage formula changed to attack²/(attack+defense)
 Initial towers option (from 0 to 40)
 Shift key now works correctly
 Updated translations
