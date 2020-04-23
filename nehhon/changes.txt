@@ -1,3 +1,14 @@
+##367
+Updated pathfinder
+CPU usage reduced by 30%, 80% in water maps
+Fixed "Script 0:0 error" when expelling some items from inventory
+No automatic attack to walls
+Added an alert when an enemy attacks
+Move the screen with the central mouse button
+Game over music: Tony Igy - Astronomia - Cornelius Link version
+Leadership tech is working properly
+Option to move the screen with WASD keys (enabled by default)
+Minor bug fixes
 ##366
 Updated online server, fixed P2P error
 Fixed a bug when creating magic units near fields
