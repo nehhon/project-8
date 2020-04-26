@@ -1,3 +1,10 @@
+##368
+Smooth zoom transition
+Ctrl+key shortcuts (ctr+c: castle, ctr+b: barrack...)
+Fixed boats
+Crusader flag
+Minor bug fixes (custom maps online, leadership tech)
+(AI update for the next version)
 ##367
 Updated pathfinder
 CPU usage reduced by 30%, 80% in water maps
