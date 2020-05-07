@@ -1,3 +1,9 @@
+##373
+AI updated: extended difficulty options, further use of technologies and better management of resources (more to come)
+Maximum online room size extended to 20 players
+Game doesn't crash if someone disconnects while loading
+Hide trees pressing "<" or "\" keys
+Press alt+click to create 100 units or alt+shift+click for 1000
 ##370
 Updated multiplayer, reduced latency and bandwidth usage
 Negative starting resources allowed
