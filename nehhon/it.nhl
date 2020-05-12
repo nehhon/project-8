@@ -64,7 +64,7 @@ Nome della missione
 MISSIONE ATTUALE
 Descrizione
 Autore
-Unitā
+Unità
 Edifici
 Articoli
 Alberi
@@ -76,15 +76,15 @@ Costo
 Necessita di
 In attesa della connessione dei giocatori
 Errore durante il caricamento della partita.
-La partita č completa.
+La partita è completa.
 Password
-Velocitā
+Velocità
 RIPRENDI PARTITA
 SALVA PARTITA
 Schermo intero
 ESCI
 Velocità di zoom
-Scorrimento
+Velocità di scorrimento
 Opacità del menu
 Cicli giorno-notte
 Volume musica
@@ -107,10 +107,10 @@ Aggiungi AI
 Sconnetti
 GIOCA
 MISSIONE| Gioca una missione creata
-%s si č sconnesso!
+%s si è sconnesso!
 L'host ha annullato la partita.
 L'host ti ha espulso dalla partita.
-MULTIGIOCATORE | Modalitā per pių giocatori
+MULTIGIOCATORE | Modalità per pių giocatori
 CREA PARTITA| Creare una partita
 Aggiorna
 Esci
@@ -122,9 +122,9 @@ Inizializzazione della partita...
 Clicca per unirti
 CARICA PARTITA| Carica partita salvata
 Editor mappe
-EUROPEA| Civiltā del giocatore
-ARABA| Civiltā del giocatore
-ASIATICA| Civiltā del giocatore
+EUROPEA| Civiltà del giocatore
+ARABA| Civiltà del giocatore
+ASIATICA| Civiltà del giocatore
 Comuni
 GIOCATORE SINGOLO | Gioco per un solo giocatore
 About
@@ -134,9 +134,9 @@ Guida
 Avviso
 OK
 Scaricando le texture...
-%s č stato sconfitto!
+%s è stato sconfitto!
 %s ha vinto!
-Non c'č sufficiente %s
+Non c'è sufficiente %s
 Numero di case insufficiente
 Raggiunto il limite della popolazione
 Errore di connessione
@@ -260,7 +260,7 @@ Inquisizione
 Guarigione
 Medicina
 Benedizione
-Invisibilitā
+Invisibilità
 Congelamento
 Fulmini
 Migliora in torre di guardia
@@ -307,37 +307,37 @@ Permette di produrre arcieri con arco lungo
 Aumenta la produzione d'oro
 Aumenta la produzione di pietra
 Aumenta la produzione di legna
-Aumenta la potenza d'attacco delle unitā con la spada
+Aumenta la potenza d'attacco delle unità con la spada
 Aumenta la difesa della fanteria
 Permette di produrre lancieri
 Permette di produrre mucche
 Aumenta la produzione dei campi
 Permette di produrre cavalieri
-Aumenta la potenza d'attacco delle unitā con arco
+Aumenta la potenza d'attacco delle unità con arco
 Riduce il prezzo dei contadini
 Pių veloce la costruzione, e abilita muraglie e torri di pietra
-Permette alle unitā di accumulare esperienza
+Permette alle unità di accumulare esperienza
 Permette di costruire galeoni
 Permette il commercio con barche e carovane
 Aumenta il beneficio commerciale
 Permette di ottenere prestiti nelle taverne
 Aumenta il limite della popolazione
-Permette di corrompere le unitā nemiche
+Permette di corrompere le unità nemiche
 Consente di aumentare illimitatamente l'esperienza
-Dona esperienza con maggiore rapiditā
-Permette di reclutare unitā nelle taverne
+Dona esperienza con maggiore rapidità
+Permette di reclutare unità nelle taverne
 Permette di reclutare eroi nelle taverne
-Permette di reclutare unitā migliori nelle taverne
+Permette di reclutare unità migliori nelle taverne
 Permette di generare catapulte pesanti
 Aumenta l'energia per ogni punto esperienza
 Permetti di creare spie
 Aumenta la resistenza degli edifici
 Permette di convocare una crociata
 Aumenta l'attacco di un sacerdote
-Permette di curare le unitā
+Permette di curare le unità
 Permette la cura a distanza maggiore
-Aumenta temporaneamente la capacitā d'attacco di un'unitā
-Incantesimo di invisibilitā
+Aumenta temporaneamente la capacità d'attacco di un'unità
+Incantesimo di invisibilità
 Consente di generare pipistrelli
 Incantesimo del congelamento
 Incantesimo di raggi
@@ -350,10 +350,10 @@ Aumenta la produzione dei campi
 Permette di costruire carri da guerra
 Riduce il prezzo dei monaci
 Aumenta l'attacco dei contadini
-Permette di condividere l'esperienza fra le unitā Kung Fu
+Permette di condividere l'esperienza fra le unità Kung Fu
 Permette di produrre monaci pių esperti
 Permette di produrre ninja
-Permette ai sacerdoti di insegnare alle unitā di Kung Fu
+Permette ai sacerdoti di insegnare alle unità di Kung Fu
 Permette di ripristinare il mana pių rapidamente
 Impara l'incantesimo della discordia
 Impara l'incantesimo del vortice
@@ -364,11 +364,11 @@ Permette il commercio di oggetti
 Aumenta la potenza d'attacco delle torri da cannone
 Permette la costruzione delle torri lanciarazzi
 Permette di produrre samurai a cavallo
-Le unitā intorno all'eroe acquisiscono esperienza
+Le unità intorno all'eroe acquisiscono esperienza
 Bonus d'attacco dell'eroe contro eroe
-Aumenta la velocitā di apprendimento
+Aumenta la velocità di apprendimento
 Permette ai contadini di rubare le mucche
-Riduce il prezzo delle unitā a cavallo
+Riduce il prezzo delle unità a cavallo
 Aumenta la potenza d'attacco della spada e consente di creare almohadi
 Permette di produrre guerrieri jihad
 Permette di creare tappeti magici
@@ -377,12 +377,12 @@ Impara l'incantesimo della visione magica
 Impara l'incantesimo della resurrezione dei morti
 Permette di generare geni
 Aumenta la produzione di minerali
-Aumenta la potenza difensiva e offensiva delle unitā a cavallo
+Aumenta la potenza difensiva e offensiva delle unità a cavallo
 Permette di produrre giannizzeri
 Pioggia di fuoco
 Congelamento
 Discordia
-Invisibilitā
+Invisibilità
 Genera drago
 Genera genio
 Genera golem di pietra
@@ -401,12 +401,12 @@ Spada
 Esperienza
 Mana
 Cibo
-Copy room link
+Copia URL
 SEI STATO
 SCONFITTO
 HAI
 VINTO
 Torri
 PARTECIPA| Unisciti alla partita
-WASD as arrow keys
+WASD come tasti freccia
 Fluttuazione dei minerali

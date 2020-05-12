@@ -1,3 +1,10 @@
+##374
+-Trading
+-Fixed a bug when creating magic units that caused random errors (floating units, blocked mana...)
+-Fixed "Maximum call stack size exceeded" error when tab was minimized for a long time
+-Alt+click shortcut for attack the same type of units
+-Crusade regeneration time
+-Tab and ctrl + double click shortcuts
 ##373
 AI updated: extended difficulty options, further use of technologies and better management of resources (more to come)
 Maximum online room size extended to 20 players
