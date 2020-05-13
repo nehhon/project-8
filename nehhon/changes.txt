@@ -1,8 +1,16 @@
+##377
+-Tree density option
+-Music info
+-Trade between teammates
+-Minor bug fixes
+-Updated translations
 ##374
 -Trading
 -Fixed a bug when creating magic units that caused random errors (floating units, blocked mana...)
 -Fixed "Maximum call stack size exceeded" error when tab was minimized for a long time
 -Alt+click shortcut for attack the same type of units
+-Added a new track by Diemiurgo
+-Updated audio engine
 -Crusade regeneration time
 -Tab and ctrl + double click shortcuts
 ##373
