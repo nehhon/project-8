@@ -1,3 +1,11 @@
+##378
+-Symmetric random map option
+-Common starting position for teammates option
+-Synchro and "Script 0:0" errors when changing host have probably been fixed
+-Server location changed from NY to Amsterdam
+-Added a new album Tzar Orchestral Version by @elchopin_42
+-Updated theme
+-Minor bug fixes
 ##377
 -Tree density option
 -Music info
