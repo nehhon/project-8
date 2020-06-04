@@ -90,7 +90,6 @@ Day - Night cycles
 Music Volume
 Sound Volume
 Death sounds
-Unable to establish a P2P connection with the host, you may need to enable UPnP or open ports in your router configuration, look for information specific to your model if the problem persists
 Daily stats
 Games played
 Current players
@@ -111,7 +110,7 @@ CUSTOM MAP| Play custom map
 The game was canceled by the server.
 You were kicked off by the server.
 MULTIPLAYER| Multiplayer game
-CREATE| Create a game
+CREATE| Create room
 Refresh
 Kick
 Up
@@ -413,3 +412,4 @@ Ore Floatation
 Tree density
 Symmetrical map
 Shared initial position
+Peace time

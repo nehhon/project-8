@@ -35,7 +35,7 @@ Isole
 Arcipelaghi
 Casuale
 Aggressività AI
-Visibility
+Visibilità
 Senza nebbia
 Nebbia temporale
 Nebbia
@@ -90,7 +90,6 @@ Cicli giorno-notte
 Volume musica
 Volume suoni
 Suoni di morte
-Impossibile stabilire una connessione P2P con l'host, potrebbe essere necessario attivare l'UPnP o aprire porte nella configurazione del suo router, cerca informazioni specifiche per il proprio modello se il problema persiste
 Statistiche oggi
 Partite giocate
 Giocatori attuali
@@ -111,7 +110,7 @@ MISSIONE| Gioca una missione creata
 L'host ha annullato la partita.
 L'host ti ha espulso dalla partita.
 MULTIGIOCATORE | Modalità per pių giocatori
-CREA PARTITA| Creare una partita
+CREA PARTITA| Nuova stanza
 Aggiorna
 Esci
 Su
@@ -413,3 +412,4 @@ Fluttuazione dei minerali
 Densità della foresta
 Mappa simmetrica
 Posizione iniziale comune
+Peace time

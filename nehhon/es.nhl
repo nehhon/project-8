@@ -90,7 +90,6 @@ Ciclos noche-día
 Volumen musica
 Volumen sonidos
 Sonidos de muerte
-Imposible establecer una conexión P2P con el host, tal vez necesite habilitar UPnP o abrir puertos en la configuración de su router, busca información específica para su modelo si el problema persiste
 Estadísticas hoy
 Partidas jugadas
 Jugadores actuales
@@ -111,7 +110,7 @@ MISIÓN| Jugar una misión ya creada
 El servidor ha cancelado la partida.
 El servidor te ha expulsado de la partida.
 MULTIJUGADOR| Juego para varios jugadores
-CREAR| Crear una partida
+CREAR| Crear sala
 Actualizar
 Expulsar
 Arriba
@@ -413,3 +412,4 @@ Flotación de minerales
 Densidad del bosque
 Mapa simétrico
 Posición inicial compartida
+Peace time

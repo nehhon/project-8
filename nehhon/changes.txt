@@ -1,26 +1,29 @@
+##379
+Peace time option
+Bug fixes
 ##378
--Symmetric random map option
--Common starting position for teammates option
--Synchro and "Script 0:0" errors when changing host have probably been fixed
--Server location changed from NY to Amsterdam
--Added a new album Tzar Orchestral Version by @elchopin_42
--Updated theme
--Minor bug fixes
+Symmetric random map option
+Common starting position for teammates option
+Synchro and "Script 0:0" errors when changing host have probably been fixed
+Server location changed from NY to Amsterdam
+Added a new album Tzar Orchestral Version by @elchopin_42
+Updated theme
+Minor bug fixes
 ##377
--Tree density option
--Music info
--Trade between teammates
--Minor bug fixes
--Updated translations
+Tree density option
+Music info
+Trade between teammates
+Minor bug fixes
+Updated translations
 ##374
--Trading
--Fixed a bug when creating magic units that caused random errors (floating units, blocked mana...)
--Fixed "Maximum call stack size exceeded" error when tab was minimized for a long time
--Alt+click shortcut for attack the same type of units
--Added a new track by Diemiurgo
--Updated audio engine
--Crusade regeneration time
--Tab and ctrl + double click shortcuts
+Trading
+Fixed a bug when creating magic units that caused random errors (floating units, blocked mana...)
+Fixed "Maximum call stack size exceeded" error when tab was minimized for a long time
+Alt+click shortcut for attack the same type of units
+Added a new track by Diemiurgo
+Updated audio engine
+Crusade regeneration time
+Tab and ctrl + double click shortcuts
 ##373
 AI updated: extended difficulty options, further use of technologies and better management of resources (more to come)
 Maximum online room size extended to 20 players
