@@ -98,7 +98,7 @@ Giocando
 Aspettando
 Privato
 Nessun gioco trovato
-Nome della partita
+Nome della stanza
 Numero dei giocatori
 Sė
 No
@@ -115,7 +115,7 @@ Aggiorna
 Esci
 Su
 Giù
-Razza
+Civilizzazione
 DISPONIBILE
 Inizializzazione della partita...
 Clicca per unirti
@@ -407,9 +407,19 @@ HAI
 VINTO
 Torri
 PARTECIPA| Unisciti alla partita
-WASD come tasti freccia
 Fluttuazione dei minerali
 Densità della foresta
 Mappa simmetrica
 Posizione iniziale comune
-Peace time
+Tempo di pace
+Zoom to cursor
+Condizione di vittoria
+Distruggere tutto
+Distruggere castelli e caserme
+Distruggere castelli
+Tattiche di sbarco
+Permette di imbarcare un maggior numero di unità
+Zoom illimitato
+Chat di squadra
+WASD come tasti freccia
+Situazione geografica inviata

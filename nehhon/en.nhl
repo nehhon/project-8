@@ -98,7 +98,7 @@ Playing
 Waiting
 Private
 No games found
-Enter Game Name
+Room name
 Number of Players
 Yes
 No
@@ -115,7 +115,7 @@ Refresh
 Kick
 Up
 Down
-Race
+Civilization
 OPEN
 Initializing Game...
 Click to join
@@ -407,9 +407,19 @@ YOU ARE
 VICTORIOUS
 Towers
 JOIN| Join game
-WASD as arrow keys
 Ore Floatation
 Tree density
 Symmetrical map
 Shared initial position
 Peace time
+Zoom to cursor
+Victory Condition
+Kill everything
+Destroy castles & barracks
+Destroy castles
+Landing Tactics
+Increases ship storage
+Unlimited zoom
+Team chat
+WASD as arrow keys
+Location sent

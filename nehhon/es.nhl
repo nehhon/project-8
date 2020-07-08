@@ -11,7 +11,7 @@ Reino
 GUARDAR
 Límite de población
 Nivel de dificultad de la IA
-Free population
+Poblacion libre
 Igualas valores para todos los jugadores
 CERRAR
 Color
@@ -115,7 +115,7 @@ Actualizar
 Expulsar
 Arriba
 Abajo
-Raza
+Civilización
 DISPONIBLE
 Iniciando la partida...
 Click para unirse
@@ -407,9 +407,19 @@ HAS
 GANADO
 Torres
 UNIRSE| Incorporarse a una partida
-WASD como teclas de dirección
 Flotación de minerales
 Densidad del bosque
 Mapa simétrico
 Posición inicial compartida
-Peace time
+Tiempo de paz
+Zoom hacia el cursor
+Condición de victoria
+Destruir todo
+Destruir castillos y cuarteles
+Destruir castillos
+Tácticas de desembarco
+Permite embarcar un mayor número de unidades
+Zoom ilimitado
+Chat de equipo
+WASD como teclas de dirección
+Enviada situación geográfica
