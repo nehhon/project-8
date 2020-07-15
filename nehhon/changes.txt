@@ -1,4 +1,8 @@
-##380
+##386
+Experimental features
+Updated guide
+Minor bug fixes
+##385
 Added x2 and x4 AI upscaled graphics option (terrains aren't affected), for this first test a generic algorithm was used, these new graphics will be progressively improved with a better quality and more fps
 Graphics size reduced from 30MB to 17MB
 Anti-aliasing option
