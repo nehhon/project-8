@@ -1,3 +1,15 @@
+##388
+Massive performance gain with multi-threading enabled
+Rally points (shift + click)
+Ctrl + right click and patrol actions working properly
+Learn spells
+Steal cows
+Get loans in taverns
+Spy can impersonate
+Ninja cost increased to 350
+Peasant can bribe
+Max speed changed to x15
+Messiah knows all the spells
 ##387
 Touch screen controls (mobile version first release)
 Complete guide

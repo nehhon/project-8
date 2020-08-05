@@ -409,7 +409,7 @@ var noExitRuntime;
 if (Module["noExitRuntime"]) noExitRuntime = Module["noExitRuntime"];
 
 if (typeof WebAssembly !== "object") {
- err("no native wasm support detected");
+ abort("no native wasm support detected");
 }
 
 function setValue(ptr, value, type, noSafe) {
@@ -484,8 +484,8 @@ function getValue(ptr, type, noSafe) {
 var wasmMemory;
 
 var wasmTable = new WebAssembly.Table({
- "initial": 414,
- "maximum": 414 + 0,
+ "initial": 424,
+ "maximum": 424 + 0,
  "element": "anyfunc"
 });
 
@@ -881,7 +881,7 @@ function updateGlobalBufferAndViews(buf) {
  Module["HEAPF64"] = HEAPF64 = new Float64Array(buf);
 }
 
-var STATIC_BASE = 1024, STACK_BASE = 9485728, STACKTOP = STACK_BASE, STACK_MAX = 4242848, DYNAMIC_BASE = 9485728, DYNAMICTOP_PTR = 4241904;
+var STATIC_BASE = 1024, STACK_BASE = 9490720, STACKTOP = STACK_BASE, STACK_MAX = 4247840, DYNAMIC_BASE = 9490720, DYNAMICTOP_PTR = 4246896;
 
 if (ENVIRONMENT_IS_PTHREAD) {}
 
@@ -1120,12 +1120,12 @@ function abort(what) {
  }
  if (ENVIRONMENT_IS_PTHREAD) console.error("Pthread aborting at " + new Error().stack);
  what += "";
- out(what);
  err(what);
  ABORT = true;
  EXITSTATUS = 1;
  what = "abort(" + what + "). Build with -s ASSERTIONS=1 for more info.";
- throw new WebAssembly.RuntimeError(what);
+ var e = new WebAssembly.RuntimeError(what);
+ throw e;
 }
 
 var memoryInitializer = null;
@@ -1260,127 +1260,124 @@ var ASM_CONSTS = {
  1097: function($0, $1) {
   scrSetup($0, $1);
  },
- 1118: function($0) {
-  perfw($0);
- },
- 1130: function() {
+ 1118: function() {
   clearleftar();
  },
- 1145: function($0, $1) {
+ 1133: function($0, $1) {
   cursor($0, $1);
  },
- 1166: function($0, $1, $2) {
+ 1156: function($0, $1, $2) {
   cnsoSPmsg($0, $1, $2);
  },
- 1195: function($0, $1) {
-  animTimer($0, $1);
- },
- 1214: function($0, $1, $2) {
+ 1185: function($0, $1, $2) {
   peerSend($0, $1, $2);
  },
- 1242: function() {
+ 1211: function() {
   rlyCheck();
  },
- 1253: function($0) {
+ 1222: function($0) {
   checkAlive($0);
  },
- 1268: function($0, $1, $2) {
+ 1237: function($0, $1, $2) {
   NHretransmit($0, $1, $2);
  },
- 1291: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 1260: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   onlineTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 1346: function($0) {
+ 1315: function($0) {
   thereIsAnIdiot($0);
  },
- 1365: function() {
+ 1334: function() {
   SetupGameConfig();
  },
- 1385: function($0, $1, $2, $3, $4, $5) {
+ 1354: function($0, $1, $2, $3, $4, $5) {
   onlineTable($0, $1, $2, $3, $4, $5);
  },
- 1428: function() {
+ 1397: function() {
   mapWindow();
  },
- 1440: function() {
+ 1409: function() {
   setupPlayermenu();
  },
- 1458: function($0, $1, $2, $3) {
+ 1427: function($0, $1, $2) {
+  peerSend($0, $1, $2);
+ },
+ 1451: function($0, $1, $2, $3) {
   chat($0, 0, $1, $2, $3);
  },
- 1485: function() {
-  presetuprndtable();
+ 1478: function($0) {
+  presetuprndtable($0);
  },
- 1507: function($0, $1, $2, $3, $4) {
+ 1499: function($0, $1, $2, $3, $4) {
   randomMapTable($0, $1, $2, $3, $4);
  },
- 1549: function($0) {
+ 1541: function($0) {
   play($0);
  },
- 1560: function($0, $1, $2) {
+ 1552: function($0, $1, $2) {
   play($0, $1, $2);
  },
- 1635: function() {
+ 1627: function() {
   menuDefect();
  },
- 1649: function($0, $1) {
+ 1641: function($0, $1) {
   dmgAlert($0, $1);
  },
- 1667: function() {
+ 1659: function() {
   setupMWmenu();
  },
- 1686: function($0, $1, $2, $3, $4, $5) {
+ 1678: function($0, $1, $2, $3, $4, $5) {
   setupTradingmenu($0, $1, $2, $3, $4, $5);
  },
- 1731: function() {
+ 1723: function() {
   cleanMenuIcons();
  },
- 1751: function() {
+ 1740: function() {
   setupColorGL();
  },
- 1768: function($0, $1, $2, $3, $4, $5) {
+ 1757: function($0, $1, $2, $3, $4, $5) {
   addRNDOBJ($0, $1, $2, $3, $4, $5);
  },
- 1806: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
+ 1795: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
   insertInfo($0, $1, $2, $3, $4, 0, $5, $6, $7, $8, $9, $10, $11, $12);
  },
- 1880: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
+ 1869: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
   insertInfo($0, $1, $2, $3, $4, 1, $5, $6, $7, $8, $9, $10, $11, $12);
  },
- 1965: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {
+ 1954: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {
   multiOptions($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13);
  },
- 2042: function() {
+ 2031: function() {
   waitlistsetup();
  },
- 2060: function() {
+ 2049: function() {
   startMovement0();
  },
- 2081: function() {
+ 2070: function() {
   waitingList();
  },
- 2095: function() {
+ 2084: function() {
   startGame();
  },
- 2109: function() {
+ 2098: function() {
   gid("playersinfo").innerHTML = "<span style='width:50px;float:left;font-size:11px;color:#dcaa14;text-decoration:overline;'>Score</span><br>";
  },
- 2250: function($0, $1, $2, $3, $4, $5, $6, $7) {
+ 2239: function($0, $1, $2, $3, $4, $5, $6, $7) {
   setupPlayerInfo($0, $1, $2, $3, $4, $5, $6, $7);
  },
- 2302: function() {
+ 2291: function() {
   editorPlayerTable();
  },
- 2325: function() {
+ 2314: function() {
   activeKingdomSetup();
   setupColorGL();
  },
- 2363: function() {
+ 2352: function() {
   editorPlayerTable();
   activeKingdomSetup();
   setupColorGL();
  },
- 2656: function($0, $1, $2, $3, $4) {
+ 2640: function($0, $1, $2, $3, $4) {
   buttonSetup($0, $1, $2, $3, $4);
  },
  2800: function($0, $1, $2, $3) {
@@ -1392,122 +1389,151 @@ var ASM_CONSTS = {
  2850: function($0) {
   sresizeBuffer($0);
  },
- 2873: function() {
-  bufferPos();
+ 2873: function($0, $1, $2, $3) {
+  bufferPos($0, $1, $2, $3);
  },
- 2888: function() {
-  bufferPhysics();
+ 2901: function($0, $1, $2, $3, $4) {
+  bufferPhysics($0, $1, $2, $3, $4);
  },
- 2909: function() {
-  bufferMargin();
+ 2937: function($0, $1, $2, $3, $4) {
+  bufferMargin($0, $1, $2, $3, $4);
  },
- 2929: function() {
-  bufferIMG();
+ 2966: function($0, $1, $2, $3, $4) {
+  bufferIMG($0, $1, $2, $3, $4);
  },
- 2946: function($0, $1, $2, $3, $4, $5) {
+ 2998: function($0, $1, $2, $3, $4, $5) {
   customMapTable($0, $1, $2, $3, $4, $5);
  },
- 3088: function($0, $1) {
-  EDterrainInfo($0, $1);
- },
- 3114: function($0, $1, $2, $3) {
-  locationAlert($0, $1, $2, $3);
- },
- 3148: function() {
-  ms("SENT");
- },
- 3159: function() {
-  showGuide();
- },
- 3171: function($0, $1) {
-  setupArrows($0, $1);
- },
- 3195: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {
-  selectionOne0($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14);
- },
- 3280: function($0, $1) {
-  showHealthOne($0, $1);
- },
- 3304: function() {
-  gid("delunit").style.display = "block";
- },
- 3341: function($0, $1, $2) {
-  selectMulp($0, $1, $2);
- },
- 3364: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
-  editProps($0, $1, $2, $3, $4, $5, $6, $7, $8, $9);
- },
- 3418: function($0, $1, $2, $3, $4, $5, $6, $7) {
-  writeProps($0, $1, $2, $3, $4, $5, $6, $7);
- },
- 3492: function() {
-  setupGameMusic();
- },
- 3581: function($0) {
-  showProgress($0);
- },
- 3709: function() {
-  stpTupdtr();
- },
- 3721: function($0) {
-  setupGL($0);
- },
- 3735: function() {
-  setupGL();
- },
- 3747: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
-  setupEditorPlayerTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
- },
- 3812: function($0) {
-  pong($0);
- },
- 3821: function($0) {
-  updateMax($0);
- },
- 3837: function() {
-  moduleLoaded();
- },
- 3852: function() {
-  playerWon();
- },
- 3864: function($0) {
-  updateHealth($0);
- },
- 3881: function() {
-  popAlert(4);
- },
- 3893: function($0) {
-  popAlert($0);
- },
- 3906: function() {
-  gameOver();
- },
- 3917: function($0, $1) {
-  popInfo($0, $1);
- },
- 3936: function($0, $1, $2, $3) {
+ 3152: function($0, $1, $2, $3) {
   changeresources($0, $1, $2, $3);
  },
- 3974: function($0, $1) {
+ 3186: function($0, $1) {
+  popInfo($0, $1);
+ },
+ 3201: function($0, $1) {
   changePlayerScore($0, $1);
  },
- 63330: function($0, $1) {
+ 3228: function($0, $1) {
+  EDterrainInfo($0, $1);
+ },
+ 3254: function($0, $1) {
+  ms("manage", $0, $1);
+ },
+ 3273: function($0, $1) {
+  ms("manage22", $0, $1);
+ },
+ 3294: function($0, $1, $2, $3) {
+  locationAlert($0, $1, $2, $3);
+ },
+ 3328: function($0) {
+  ms("cycnfo", $0);
+ },
+ 3344: function($0) {
+  ms("recv", $0);
+ },
+ 3358: function($0, $1) {
+  setupArrows($0, $1);
+ },
+ 3377: function() {
+  showGuide();
+ },
+ 3389: function($0, $1) {
+  setupArrows($0, $1);
+ },
+ 3413: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {
+  selectionOne0($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14);
+ },
+ 3504: function($0, $1) {
+  showHealthOne($0, $1);
+ },
+ 3528: function() {
+  gid("delunit").style.display = "block";
+ },
+ 3565: function($0, $1, $2) {
+  selectMulp($0, $1, $2);
+ },
+ 3586: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
+  editProps($0, $1, $2, $3, $4, $5, $6, $7, $8, $9);
+ },
+ 3640: function($0, $1, $2, $3, $4, $5, $6, $7) {
+  writeProps($0, $1, $2, $3, $4, $5, $6, $7);
+ },
+ 3689: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+  writeProps($0, $1, $2, $3, $4, $5, $6, $7, $8);
+ },
+ 3764: function() {
+  setupGameMusic();
+ },
+ 3853: function($0) {
+  showProgress($0);
+ },
+ 3981: function() {
+  stpTupdtr();
+ },
+ 3993: function($0) {
+  setupGL($0);
+ },
+ 4007: function() {
+  setupGL();
+ },
+ 4019: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+  setupEditorPlayerTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
+ },
+ 4084: function($0) {
+  pong($0);
+ },
+ 4093: function($0) {
+  updateMax($0);
+ },
+ 4109: function() {
+  moduleLoaded();
+ },
+ 4124: function() {
+  playerWon();
+ },
+ 4136: function($0) {
+  updateHealth($0);
+ },
+ 4153: function() {
+  popAlert(4);
+ },
+ 4165: function($0) {
+  popAlert($0);
+ },
+ 4178: function() {
+  gameOver();
+ },
+ 63288: function() {
+  throw "Canceled!";
+ },
+ 63508: function($0, $1) {
   setTimeout(function() {
    _do_emscripten_dispatch_to_thread($0, $1);
   }, 0);
+ },
+ 63610: function() {
+  return TOTAL_STACK;
  }
 };
 
-function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
- if (ENVIRONMENT_IS_PTHREAD) {
-  return _emscripten_proxy_to_main_thread_js(-1 - code, 1, code, sigPtr, argbuf);
- }
+function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
  var args = readAsmConstArgs(sigPtr, argbuf);
+ if (ENVIRONMENT_IS_PTHREAD) {
+  return _emscripten_proxy_to_main_thread_js.apply(null, [ -1 - code, 0 ].concat(args));
+ }
  return ASM_CONSTS[code].apply(null, args);
 }
 
 function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
  var args = readAsmConstArgs(sigPtr, argbuf);
+ return ASM_CONSTS[code].apply(null, args);
+}
+
+function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
+ var args = readAsmConstArgs(sigPtr, argbuf);
+ if (ENVIRONMENT_IS_PTHREAD) {
+  return _emscripten_proxy_to_main_thread_js.apply(null, [ -1 - code, 1 ].concat(args));
+ }
  return ASM_CONSTS[code].apply(null, args);
 }
 
@@ -1674,7 +1700,7 @@ var ERRNO_CODES = {
  ESTRPIPE: 135
 };
 
-var __main_thread_futex_wait_address = 4242832;
+var __main_thread_futex_wait_address = 4247824;
 
 function _emscripten_futex_wake(addr, count) {
  if (addr <= 0 || addr > GROWABLE_HEAP_I8().length || addr & 3 != 0 || count < 0) return -28;
@@ -1745,12 +1771,12 @@ var PThread = {
   for (var i = 0; i < pthreadPoolSize; ++i) {
    PThread.allocateUnusedWorker();
   }
-  PThread.mainThreadBlock = 4242080;
+  PThread.mainThreadBlock = 4247072;
   for (var i = 0; i < 232 / 4; ++i) GROWABLE_HEAP_U32()[PThread.mainThreadBlock / 4 + i] = 0;
   GROWABLE_HEAP_I32()[PThread.mainThreadBlock + 12 >> 2] = PThread.mainThreadBlock;
   var headPtr = PThread.mainThreadBlock + 156;
   GROWABLE_HEAP_I32()[headPtr >> 2] = headPtr;
-  var tlsMemory = 4242320;
+  var tlsMemory = 4247312;
   for (var i = 0; i < 128; ++i) GROWABLE_HEAP_U32()[tlsMemory / 4 + i] = 0;
   Atomics.store(GROWABLE_HEAP_U32(), PThread.mainThreadBlock + 104 >> 2, tlsMemory);
   Atomics.store(GROWABLE_HEAP_U32(), PThread.mainThreadBlock + 40 >> 2, PThread.mainThreadBlock);
@@ -1758,14 +1784,11 @@ var PThread = {
  },
  initWorker: function() {},
  pthreads: {},
- exitHandlers: null,
+ threadExitHandlers: [],
  setThreadStatus: function() {},
  runExitHandlers: function() {
-  if (PThread.exitHandlers !== null) {
-   while (PThread.exitHandlers.length > 0) {
-    PThread.exitHandlers.pop()();
-   }
-   PThread.exitHandlers = null;
+  while (PThread.threadExitHandlers.length > 0) {
+   PThread.threadExitHandlers.pop()();
   }
   if (ENVIRONMENT_IS_PTHREAD && threadInfoStruct) ___pthread_tsd_run_dtors();
  },
@@ -1962,6 +1985,10 @@ function ___assert_fail(condition, filename, line, func) {
  abort("Assertion failed: " + UTF8ToString(condition) + ", at: " + [ filename ? UTF8ToString(filename) : "unknown filename", line, func ? UTF8ToString(func) : "unknown function" ]);
 }
 
+function ___call_main(argc, argv) {
+ var returnCode = _main(argc, argv);
+}
+
 var _emscripten_get_now;
 
 if (ENVIRONMENT_IS_PTHREAD) {
@@ -2000,10 +2027,6 @@ function ___clock_gettime(a0, a1) {
 
 function _atexit(func, arg) {
  if (ENVIRONMENT_IS_PTHREAD) return _emscripten_proxy_to_main_thread_js(1, 1, func, arg);
- __ATEXIT__.unshift({
-  func: func,
-  arg: arg
- });
 }
 
 function ___cxa_atexit(a0, a1) {
@@ -2041,6 +2064,11 @@ function _abort() {
  abort();
 }
 
+function _emscripten_check_blocking_allowed() {
+ if (ENVIRONMENT_IS_PTHREAD) return;
+ warnOnce("Blocking on the main thread is very dangerous, see https://emscripten.org/docs/porting/pthreads.html#blocking-on-the-main-browser-thread");
+}
+
 function _emscripten_conditional_set_current_thread_status_js(expectedStatus, newStatus) {}
 
 function _emscripten_conditional_set_current_thread_status(expectedStatus, newStatus) {
@@ -2076,11 +2104,19 @@ function _emscripten_futex_wait(addr, val, timeout) {
 }
 
 function _emscripten_get_sbrk_ptr() {
- return 4241904;
+ return 4246896;
+}
+
+function _emscripten_has_threading_support() {
+ return typeof SharedArrayBuffer !== "undefined";
 }
 
 function _emscripten_is_main_browser_thread() {
  return __pthread_is_main_browser_thread | 0;
+}
+
+function _emscripten_is_main_runtime_thread() {
+ return __pthread_is_main_runtime_thread | 0;
 }
 
 function _emscripten_memcpy_big(dest, src, num) {
@@ -2109,7 +2145,9 @@ function readAsmConstArgs(sigPtr, buf) {
  var ch;
  buf >>= 2;
  while (ch = GROWABLE_HEAP_U8()[sigPtr++]) {
-  __readAsmConstArgsArray.push(ch < 105 ? GROWABLE_HEAP_F64()[++buf >> 1] : GROWABLE_HEAP_I32()[buf]);
+  var double = ch < 105;
+  if (double && buf & 1) buf++;
+  __readAsmConstArgsArray.push(double ? GROWABLE_HEAP_F64()[buf++ >> 1] : GROWABLE_HEAP_I32()[buf]);
   ++buf;
  }
  return __readAsmConstArgsArray;
@@ -2123,12 +2161,6 @@ function _emscripten_receive_on_main_thread_js(index, numCallArgs, args) {
  }
  var isEmAsmConst = index < 0;
  var func = !isEmAsmConst ? proxiedFunctionTable[index] : ASM_CONSTS[-index - 1];
- if (isEmAsmConst) {
-  var sigPtr = _emscripten_receive_on_main_thread_js_callArgs[1];
-  var varargPtr = _emscripten_receive_on_main_thread_js_callArgs[2];
-  var constArgs = readAsmConstArgs(sigPtr, varargPtr);
-  return func.apply(null, constArgs);
- }
  return func.apply(null, _emscripten_receive_on_main_thread_js_callArgs);
 }
 
@@ -2169,6 +2201,7 @@ function _emscripten_resize_heap(requestedSize) {
 }
 
 var JSEvents = {
+ inEventHandler: 0,
  removeAllEventListeners: function() {
   for (var i = JSEvents.eventHandlers.length - 1; i >= 0; --i) {
    JSEvents._removeHandler(i);
@@ -2384,6 +2417,13 @@ function _emscripten_set_current_thread_status_js(newStatus) {}
 
 function _emscripten_set_current_thread_status(newStatus) {
  newStatus = newStatus | 0;
+}
+
+function _emscripten_set_thread_name_js(threadId, name) {}
+
+function _emscripten_set_thread_name(threadId, name) {
+ threadId = threadId | 0;
+ name = name | 0;
 }
 
 var Fetch = {
@@ -2674,7 +2714,7 @@ function __emscripten_fetch_delete_cached_data(db, fetch, onsuccess, onerror) {
  }
 }
 
-var _fetch_work_queue = 4242064;
+var _fetch_work_queue = 4247056;
 
 function __emscripten_get_fetch_work_queue() {
  return _fetch_work_queue;
@@ -3066,10 +3106,7 @@ function _fd_write(fd, iov, iovcnt, pnum) {
 }
 
 function _pthread_cleanup_push(routine, arg) {
- if (PThread.exitHandlers === null) {
-  PThread.exitHandlers = [];
- }
- PThread.exitHandlers.push(function() {
+ PThread.threadExitHandlers.push(function() {
   dynCall_vi(routine, arg);
  });
 }
@@ -3297,24 +3334,30 @@ var asmGlobalArg = {};
 
 var asmLibraryArg = {
  "__assert_fail": ___assert_fail,
+ "__call_main": ___call_main,
  "__clock_gettime": ___clock_gettime,
  "__cxa_atexit": ___cxa_atexit,
  "_emscripten_fetch_free": __emscripten_fetch_free,
  "_emscripten_notify_thread_queue": __emscripten_notify_thread_queue,
  "abort": _abort,
+ "emscripten_asm_const_async_on_main_thread_vii": _emscripten_asm_const_async_on_main_thread_vii,
  "emscripten_asm_const_iii": _emscripten_asm_const_iii,
  "emscripten_asm_const_sync_on_main_thread_iii": _emscripten_asm_const_sync_on_main_thread_iii,
+ "emscripten_check_blocking_allowed": _emscripten_check_blocking_allowed,
  "emscripten_conditional_set_current_thread_status": _emscripten_conditional_set_current_thread_status,
  "emscripten_futex_wait": _emscripten_futex_wait,
  "emscripten_futex_wake": _emscripten_futex_wake,
  "emscripten_get_now": _emscripten_get_now,
  "emscripten_get_sbrk_ptr": _emscripten_get_sbrk_ptr,
+ "emscripten_has_threading_support": _emscripten_has_threading_support,
  "emscripten_is_main_browser_thread": _emscripten_is_main_browser_thread,
+ "emscripten_is_main_runtime_thread": _emscripten_is_main_runtime_thread,
  "emscripten_memcpy_big": _emscripten_memcpy_big,
  "emscripten_receive_on_main_thread_js": _emscripten_receive_on_main_thread_js,
  "emscripten_resize_heap": _emscripten_resize_heap,
  "emscripten_set_canvas_element_size": _emscripten_set_canvas_element_size,
  "emscripten_set_current_thread_status": _emscripten_set_current_thread_status,
+ "emscripten_set_thread_name": _emscripten_set_thread_name,
  "emscripten_start_fetch": _emscripten_start_fetch,
  "emscripten_webgl_create_context": _emscripten_webgl_create_context,
  "fd_write": _fd_write,
@@ -3352,6 +3395,10 @@ var __Z9stpTactilb = Module["__Z9stpTactilb"] = function() {
 
 var __Z9setupZoomf = Module["__Z9setupZoomf"] = function() {
  return (__Z9setupZoomf = Module["__Z9setupZoomf"] = Module["asm"]["_Z9setupZoomf"]).apply(null, arguments);
+};
+
+var __Z12checkDelAnimj = Module["__Z12checkDelAnimj"] = function() {
+ return (__Z12checkDelAnimj = Module["__Z12checkDelAnimj"] = Module["asm"]["_Z12checkDelAnimj"]).apply(null, arguments);
 };
 
 var __Z9onLimits2ii = Module["__Z9onLimits2ii"] = function() {
@@ -3440,10 +3487,6 @@ var __Z10pidkingdomj = Module["__Z10pidkingdomj"] = function() {
 
 var __Z7onldataj = Module["__Z7onldataj"] = function() {
  return (__Z7onldataj = Module["__Z7onldataj"] = Module["asm"]["_Z7onldataj"]).apply(null, arguments);
-};
-
-var __Z10movtablexej = Module["__Z10movtablexej"] = function() {
- return (__Z10movtablexej = Module["__Z10movtablexej"] = Module["asm"]["_Z10movtablexej"]).apply(null, arguments);
 };
 
 var __Z12setupVersionjbb = Module["__Z12setupVersionjbb"] = function() {
@@ -3542,8 +3585,8 @@ var __Z16setupTranslationjj = Module["__Z16setupTranslationjj"] = function() {
  return (__Z16setupTranslationjj = Module["__Z16setupTranslationjj"] = Module["asm"]["_Z16setupTranslationjj"]).apply(null, arguments);
 };
 
-var __Z10checkStockv = Module["__Z10checkStockv"] = function() {
- return (__Z10checkStockv = Module["__Z10checkStockv"] = Module["asm"]["_Z10checkStockv"]).apply(null, arguments);
+var __Z10checkStockb = Module["__Z10checkStockb"] = function() {
+ return (__Z10checkStockb = Module["__Z10checkStockb"] = Module["asm"]["_Z10checkStockb"]).apply(null, arguments);
 };
 
 var __Z11movtableADDjjjj = Module["__Z11movtableADDjjjj"] = function() {
@@ -3762,6 +3805,34 @@ var __Z10runnxtcyclv = Module["__Z10runnxtcyclv"] = function() {
  return (__Z10runnxtcyclv = Module["__Z10runnxtcyclv"] = Module["asm"]["_Z10runnxtcyclv"]).apply(null, arguments);
 };
 
+var __Z8wrkstatev = Module["__Z8wrkstatev"] = function() {
+ return (__Z8wrkstatev = Module["__Z8wrkstatev"] = Module["asm"]["_Z8wrkstatev"]).apply(null, arguments);
+};
+
+var __Z7chtgspdj = Module["__Z7chtgspdj"] = function() {
+ return (__Z7chtgspdj = Module["__Z7chtgspdj"] = Module["asm"]["_Z7chtgspdj"]).apply(null, arguments);
+};
+
+var __Z10movtablexev = Module["__Z10movtablexev"] = function() {
+ return (__Z10movtablexev = Module["__Z10movtablexev"] = Module["asm"]["_Z10movtablexev"]).apply(null, arguments);
+};
+
+var __Z7mouseUpiijjbbbb = Module["__Z7mouseUpiijjbbbb"] = function() {
+ return (__Z7mouseUpiijjbbbb = Module["__Z7mouseUpiijjbbbb"] = Module["asm"]["_Z7mouseUpiijjbbbb"]).apply(null, arguments);
+};
+
+var __Z9mouseMoveiib = Module["__Z9mouseMoveiib"] = function() {
+ return (__Z9mouseMoveiib = Module["__Z9mouseMoveiib"] = Module["asm"]["_Z9mouseMoveiib"]).apply(null, arguments);
+};
+
+var __Z6runKeyjb = Module["__Z6runKeyjb"] = function() {
+ return (__Z6runKeyjb = Module["__Z6runKeyjb"] = Module["asm"]["_Z6runKeyjb"]).apply(null, arguments);
+};
+
+var __Z12executeOrderjj = Module["__Z12executeOrderjj"] = function() {
+ return (__Z12executeOrderjj = Module["__Z12executeOrderjj"] = Module["asm"]["_Z12executeOrderjj"]).apply(null, arguments);
+};
+
 var __Z14setupResourcesjjjjt = Module["__Z14setupResourcesjjjjt"] = function() {
  return (__Z14setupResourcesjjjjt = Module["__Z14setupResourcesjjjjt"] = Module["asm"]["_Z14setupResourcesjjjjt"]).apply(null, arguments);
 };
@@ -3814,6 +3885,10 @@ var __Z14customMapTablev = Module["__Z14customMapTablev"] = function() {
  return (__Z14customMapTablev = Module["__Z14customMapTablev"] = Module["asm"]["_Z14customMapTablev"]).apply(null, arguments);
 };
 
+var __Z12updresourcesv = Module["__Z12updresourcesv"] = function() {
+ return (__Z12updresourcesv = Module["__Z12updresourcesv"] = Module["asm"]["_Z12updresourcesv"]).apply(null, arguments);
+};
+
 var __Z16EDgetTerrainInfov = Module["__Z16EDgetTerrainInfov"] = function() {
  return (__Z16EDgetTerrainInfov = Module["__Z16EDgetTerrainInfov"] = Module["asm"]["_Z16EDgetTerrainInfov"]).apply(null, arguments);
 };
@@ -3854,10 +3929,6 @@ var __Z15getColorTexturev = Module["__Z15getColorTexturev"] = function() {
  return (__Z15getColorTexturev = Module["__Z15getColorTexturev"] = Module["asm"]["_Z15getColorTexturev"]).apply(null, arguments);
 };
 
-var __Z12executeOrderjj = Module["__Z12executeOrderjj"] = function() {
- return (__Z12executeOrderjj = Module["__Z12executeOrderjj"] = Module["asm"]["_Z12executeOrderjj"]).apply(null, arguments);
-};
-
 var __Z10changePagei = Module["__Z10changePagei"] = function() {
  return (__Z10changePagei = Module["__Z10changePagei"] = Module["asm"]["_Z10changePagei"]).apply(null, arguments);
 };
@@ -3872,10 +3943,6 @@ var __Z9menustatej = Module["__Z9menustatej"] = function() {
 
 var __Z7svpropsiiiiiii = Module["__Z7svpropsiiiiiii"] = function() {
  return (__Z7svpropsiiiiiii = Module["__Z7svpropsiiiiiii"] = Module["asm"]["_Z7svpropsiiiiiii"]).apply(null, arguments);
-};
-
-var __Z9mouseMoveiib = Module["__Z9mouseMoveiib"] = function() {
- return (__Z9mouseMoveiib = Module["__Z9mouseMoveiib"] = Module["asm"]["_Z9mouseMoveiib"]).apply(null, arguments);
 };
 
 var __Z9mouseDowniij = Module["__Z9mouseDowniij"] = function() {
@@ -3900,14 +3967,6 @@ var __Z8mouseOutj = Module["__Z8mouseOutj"] = function() {
 
 var __Z10mouseEnterj = Module["__Z10mouseEnterj"] = function() {
  return (__Z10mouseEnterj = Module["__Z10mouseEnterj"] = Module["asm"]["_Z10mouseEnterj"]).apply(null, arguments);
-};
-
-var __Z7mouseUpiijjbbbb = Module["__Z7mouseUpiijjbbbb"] = function() {
- return (__Z7mouseUpiijjbbbb = Module["__Z7mouseUpiijjbbbb"] = Module["asm"]["_Z7mouseUpiijjbbbb"]).apply(null, arguments);
-};
-
-var __Z6runKeyjb = Module["__Z6runKeyjb"] = function() {
- return (__Z6runKeyjb = Module["__Z6runKeyjb"] = Module["asm"]["_Z6runKeyjb"]).apply(null, arguments);
 };
 
 var __Z9peacetimev = Module["__Z9peacetimev"] = function() {
@@ -4078,6 +4137,10 @@ var _memalign = Module["_memalign"] = function() {
  return (_memalign = Module["_memalign"] = Module["asm"]["memalign"]).apply(null, arguments);
 };
 
+var _emscripten_main_browser_thread_id = Module["_emscripten_main_browser_thread_id"] = function() {
+ return (_emscripten_main_browser_thread_id = Module["_emscripten_main_browser_thread_id"] = Module["asm"]["emscripten_main_browser_thread_id"]).apply(null, arguments);
+};
+
 var ___pthread_tsd_run_dtors = Module["___pthread_tsd_run_dtors"] = function() {
  return (___pthread_tsd_run_dtors = Module["___pthread_tsd_run_dtors"] = Module["asm"]["__pthread_tsd_run_dtors"]).apply(null, arguments);
 };
@@ -4092,10 +4155,6 @@ var _emscripten_current_thread_process_queued_calls = Module["_emscripten_curren
 
 var _emscripten_register_main_browser_thread_id = Module["_emscripten_register_main_browser_thread_id"] = function() {
  return (_emscripten_register_main_browser_thread_id = Module["_emscripten_register_main_browser_thread_id"] = Module["asm"]["emscripten_register_main_browser_thread_id"]).apply(null, arguments);
-};
-
-var _emscripten_main_browser_thread_id = Module["_emscripten_main_browser_thread_id"] = function() {
- return (_emscripten_main_browser_thread_id = Module["_emscripten_main_browser_thread_id"] = Module["asm"]["emscripten_main_browser_thread_id"]).apply(null, arguments);
 };
 
 var _do_emscripten_dispatch_to_thread = Module["_do_emscripten_dispatch_to_thread"] = function() {
@@ -4154,6 +4213,10 @@ var __emscripten_call_on_thread = Module["__emscripten_call_on_thread"] = functi
  return (__emscripten_call_on_thread = Module["__emscripten_call_on_thread"] = Module["asm"]["_emscripten_call_on_thread"]).apply(null, arguments);
 };
 
+var _proxy_main = Module["_proxy_main"] = function() {
+ return (_proxy_main = Module["_proxy_main"] = Module["asm"]["proxy_main"]).apply(null, arguments);
+};
+
 var _emscripten_tls_init = Module["_emscripten_tls_init"] = function() {
  return (_emscripten_tls_init = Module["_emscripten_tls_init"] = Module["asm"]["emscripten_tls_init"]).apply(null, arguments);
 };
@@ -4162,16 +4225,16 @@ var __growWasmMemory = Module["__growWasmMemory"] = function() {
  return (__growWasmMemory = Module["__growWasmMemory"] = Module["asm"]["__growWasmMemory"]).apply(null, arguments);
 };
 
-var dynCall_ii = Module["dynCall_ii"] = function() {
- return (dynCall_ii = Module["dynCall_ii"] = Module["asm"]["dynCall_ii"]).apply(null, arguments);
-};
-
 var dynCall_vi = Module["dynCall_vi"] = function() {
  return (dynCall_vi = Module["dynCall_vi"] = Module["asm"]["dynCall_vi"]).apply(null, arguments);
 };
 
 var dynCall_vii = Module["dynCall_vii"] = function() {
  return (dynCall_vii = Module["dynCall_vii"] = Module["asm"]["dynCall_vii"]).apply(null, arguments);
+};
+
+var dynCall_ii = Module["dynCall_ii"] = function() {
+ return (dynCall_ii = Module["dynCall_ii"] = Module["asm"]["dynCall_ii"]).apply(null, arguments);
 };
 
 var dynCall_iiii = Module["dynCall_iiii"] = function() {
@@ -4280,22 +4343,7 @@ function callMain(args) {
  var argc = 0;
  var argv = 0;
  try {
-  var ret = entryFunction(argc, argv);
-  exit(ret, true);
- } catch (e) {
-  if (e instanceof ExitStatus) {
-   return;
-  } else if (e == "unwind") {
-   noExitRuntime = true;
-   return;
-  } else {
-   var toLog = e;
-   if (e && typeof e === "object" && e.stack) {
-    toLog = [ e, e.stack ];
-   }
-   err("exception thrown: " + toLog);
-   quit_(1, e);
-  }
+  var ret = Module["_proxy_main"](argc, argv);
  } finally {
   calledMain = true;
  }

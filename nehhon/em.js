@@ -474,7 +474,7 @@ var noExitRuntime;if (Module['noExitRuntime']) noExitRuntime = Module['noExitRun
 
 
 if (typeof WebAssembly !== 'object') {
-  err('no native wasm support detected');
+  abort('no native wasm support detected');
 }
 
 
@@ -534,8 +534,8 @@ var wasmMemory;
 // In the wasm backend, we polyfill the WebAssembly object,
 // so this creates a (non-native-wasm) table for us.
 var wasmTable = new WebAssembly.Table({
-  'initial': 409,
-  'maximum': 409 + 0,
+  'initial': 417,
+  'maximum': 417 + 0,
   'element': 'anyfunc'
 });
 
@@ -1149,11 +1149,11 @@ function updateGlobalBufferAndViews(buf) {
 }
 
 var STATIC_BASE = 1024,
-    STACK_BASE = 9483920,
+    STACK_BASE = 9488752,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 4241040,
-    DYNAMIC_BASE = 9483920,
-    DYNAMICTOP_PTR = 4240864;
+    STACK_MAX = 4245872,
+    DYNAMIC_BASE = 9488752,
+    DYNAMICTOP_PTR = 4245696;
 
 
 
@@ -1413,7 +1413,6 @@ function abort(what) {
   }
 
   what += '';
-  out(what);
   err(what);
 
   ABORT = true;
@@ -1421,10 +1420,15 @@ function abort(what) {
 
   what = 'abort(' + what + '). Build with -s ASSERTIONS=1 for more info.';
 
-  // Throw a wasm runtime error, because a JS error might be seen as a foreign
+  // Use a wasm runtime error, because a JS error might be seen as a foreign
   // exception, which means we'd run destructors on it. We need the error to
   // simply make the program stop.
-  throw new WebAssembly.RuntimeError(what);
+  var e = new WebAssembly.RuntimeError(what);
+
+  // Throw the error whether or not MODULARIZE is set because abort is used
+  // in code paths apart from instantiation where an exception is expected
+  // to be thrown when abort is called.
+  throw e;
 }
 
 
@@ -1544,6 +1548,8 @@ function createWasm() {
       return WebAssembly.instantiate(binary, info);
     }).then(receiver, function(reason) {
       err('failed to asynchronously prepare wasm: ' + reason);
+
+
       abort(reason);
     });
   }
@@ -1596,92 +1602,109 @@ var ASM_CONSTS = {
   1031: function($0, $1, $2, $3) {console.log($0,$1,$2,$3);},  
  1070: function($0, $1, $2, $3) {spAlert2($0,$1,$2,$3)},  
  1097: function($0, $1) {scrSetup($0,$1)},  
- 1118: function($0) {perfw($0)},  
- 1130: function() {clearleftar()},  
- 1145: function($0, $1) {cursor($0,$1)},  
- 1166: function($0, $1, $2) {cnsoSPmsg($0,$1,$2);},  
- 1195: function($0, $1) {animTimer($0,$1)},  
- 1214: function($0, $1, $2) {peerSend($0,$1,$2);},  
- 1242: function() {rlyCheck()},  
- 1253: function($0) {checkAlive($0)},  
- 1268: function($0, $1, $2) {NHretransmit($0,$1,$2)},  
- 1291: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {onlineTable($0,$1,$2,$3,$4,$5,$6,$7,$8);},  
- 1346: function($0) {thereIsAnIdiot($0)},  
- 1365: function() {SetupGameConfig()},  
- 1385: function($0, $1, $2, $3, $4, $5) {onlineTable($0,$1,$2,$3,$4,$5);},  
- 1428: function() {mapWindow()},  
- 1440: function() {setupPlayermenu()},  
- 1458: function($0, $1, $2, $3) {chat($0,0,$1,$2,$3)},  
- 1485: function() {presetuprndtable();},  
- 1507: function($0, $1, $2, $3, $4) {randomMapTable($0,$1,$2,$3,$4);},  
- 1549: function($0) {play($0)},  
- 1560: function($0, $1, $2) {play($0,$1,$2)},  
- 1635: function() {menuDefect();},  
- 1649: function($0, $1) {dmgAlert($0,$1)},  
- 1667: function() {setupMWmenu();},  
- 1686: function($0, $1, $2, $3, $4, $5) {setupTradingmenu($0,$1,$2,$3,$4,$5)},  
- 1731: function() {cleanMenuIcons();},  
- 1751: function() {setupColorGL()},  
- 1768: function($0, $1, $2, $3, $4, $5) {addRNDOBJ($0,$1,$2,$3,$4,$5)},  
- 1806: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {insertInfo($0,$1,$2,$3,$4,0,$5,$6,$7,$8,$9,$10,$11,$12)},  
- 1880: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {insertInfo($0,$1,$2,$3,$4,1,$5,$6,$7,$8,$9,$10,$11,$12)},  
- 1965: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {multiOptions($0,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)},  
- 2042: function() {waitlistsetup()},  
- 2060: function() {startMovement0()},  
- 2081: function() {waitingList()},  
- 2095: function() {startGame()},  
- 2109: function() {gid("playersinfo").innerHTML="<span style='width:50px;float:left;font-size:11px;color:#dcaa14;text-decoration:overline;'>Score</span><br>"},  
- 2250: function($0, $1, $2, $3, $4, $5, $6, $7) {setupPlayerInfo($0,$1,$2,$3,$4,$5,$6,$7)},  
- 2302: function() {editorPlayerTable();},  
- 2325: function() {activeKingdomSetup();setupColorGL()},  
- 2363: function() {editorPlayerTable();activeKingdomSetup();setupColorGL()},  
- 2656: function($0, $1, $2, $3, $4) {buttonSetup($0,$1,$2,$3,$4)},  
+ 1118: function() {clearleftar()},  
+ 1133: function($0, $1) {cursor($0,$1)},  
+ 1156: function($0, $1, $2) {cnsoSPmsg($0,$1,$2);},  
+ 1185: function($0, $1, $2) {peerSend($0,$1,$2);},  
+ 1211: function() {rlyCheck()},  
+ 1222: function($0) {checkAlive($0)},  
+ 1237: function($0, $1, $2) {NHretransmit($0,$1,$2)},  
+ 1260: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {onlineTable($0,$1,$2,$3,$4,$5,$6,$7,$8);},  
+ 1315: function($0) {thereIsAnIdiot($0)},  
+ 1334: function() {SetupGameConfig()},  
+ 1354: function($0, $1, $2, $3, $4, $5) {onlineTable($0,$1,$2,$3,$4,$5);},  
+ 1397: function() {mapWindow()},  
+ 1409: function() {setupPlayermenu()},  
+ 1427: function($0, $1, $2) {peerSend($0,$1,$2);},  
+ 1451: function($0, $1, $2, $3) {chat($0,0,$1,$2,$3)},  
+ 1478: function($0) {presetuprndtable($0)},  
+ 1499: function($0, $1, $2, $3, $4) {randomMapTable($0,$1,$2,$3,$4);},  
+ 1541: function($0) {play($0)},  
+ 1552: function($0, $1, $2) {play($0,$1,$2)},  
+ 1627: function() {menuDefect();},  
+ 1641: function($0, $1) {dmgAlert($0,$1)},  
+ 1659: function() {setupMWmenu();},  
+ 1678: function($0, $1, $2, $3, $4, $5) {setupTradingmenu($0,$1,$2,$3,$4,$5)},  
+ 1723: function() {cleanMenuIcons()},  
+ 1740: function() {setupColorGL()},  
+ 1757: function($0, $1, $2, $3, $4, $5) {addRNDOBJ($0,$1,$2,$3,$4,$5)},  
+ 1795: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {insertInfo($0,$1,$2,$3,$4,0,$5,$6,$7,$8,$9,$10,$11,$12)},  
+ 1869: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {insertInfo($0,$1,$2,$3,$4,1,$5,$6,$7,$8,$9,$10,$11,$12)},  
+ 1954: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {multiOptions($0,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)},  
+ 2031: function() {waitlistsetup()},  
+ 2049: function() {startMovement0()},  
+ 2070: function() {waitingList()},  
+ 2084: function() {startGame()},  
+ 2098: function() {gid("playersinfo").innerHTML="<span style='width:50px;float:left;font-size:11px;color:#dcaa14;text-decoration:overline;'>Score</span><br>"},  
+ 2239: function($0, $1, $2, $3, $4, $5, $6, $7) {setupPlayerInfo($0,$1,$2,$3,$4,$5,$6,$7)},  
+ 2291: function() {editorPlayerTable();},  
+ 2314: function() {activeKingdomSetup();setupColorGL()},  
+ 2352: function() {editorPlayerTable();activeKingdomSetup();setupColorGL()},  
+ 2640: function($0, $1, $2, $3, $4) {buttonSetup($0,$1,$2,$3,$4)},  
  2800: function($0, $1, $2, $3) {setup3Dtexture($0,$1,$2,$3)},  
  2835: function() {nhcleanclose()},  
  2850: function($0) {sresizeBuffer($0);},  
- 2873: function() {bufferPos();},  
- 2888: function() {bufferPhysics();},  
- 2909: function() {bufferMargin();},  
- 2929: function() {bufferIMG();},  
- 2946: function($0, $1, $2, $3, $4, $5) {customMapTable($0,$1,$2,$3,$4,$5);},  
- 3088: function($0, $1) {EDterrainInfo($0,$1)},  
- 3114: function($0, $1, $2, $3) {locationAlert($0,$1,$2,$3)},  
- 3148: function() {ms("SENT")},  
- 3159: function() {showGuide()},  
- 3171: function($0, $1) {setupArrows($0,$1);},  
- 3195: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {selectionOne0($0,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)},  
- 3280: function($0, $1) {showHealthOne($0,$1)},  
- 3304: function() {gid("delunit").style.display="block"},  
- 3341: function($0, $1, $2) {selectMulp($0,$1,$2)},  
- 3364: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {editProps($0,$1,$2,$3,$4,$5,$6,$7,$8,$9)},  
- 3418: function($0, $1, $2, $3, $4, $5, $6, $7) {writeProps($0,$1,$2,$3,$4,$5,$6,$7)},  
- 3492: function() {setupGameMusic()},  
- 3581: function($0) {showProgress($0)},  
- 3709: function() {stpTupdtr()},  
- 3721: function($0) {setupGL($0)},  
- 3735: function() {setupGL()},  
- 3747: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {setupEditorPlayerTable($0,$1,$2,$3,$4,$5,$6,$7,$8)},  
- 3812: function($0) {pong($0)},  
- 3821: function($0) {updateMax($0)},  
- 3837: function() {moduleLoaded()},  
- 3852: function() {playerWon()},  
- 3864: function($0) {updateHealth($0)},  
- 3881: function() {popAlert(4)},  
- 3893: function($0) {popAlert($0)},  
- 3906: function() {gameOver()},  
- 3917: function($0, $1) {popInfo($0,$1)},  
- 3936: function($0, $1, $2, $3) {changeresources($0,$1,$2,$3)},  
- 3974: function($0, $1) {changePlayerScore($0,$1)}
+ 2873: function($0, $1, $2, $3) {bufferPos($0,$1,$2,$3)},  
+ 2901: function($0, $1, $2, $3, $4) {bufferPhysics($0,$1,$2,$3,$4)},  
+ 2937: function($0, $1, $2, $3, $4) {bufferMargin($0,$1,$2,$3,$4)},  
+ 2966: function($0, $1, $2, $3, $4) {bufferIMG($0,$1,$2,$3,$4)},  
+ 2998: function($0, $1, $2, $3, $4, $5) {customMapTable($0,$1,$2,$3,$4,$5);},  
+ 3152: function($0, $1, $2, $3) {changeresources($0,$1,$2,$3)},  
+ 3186: function($0, $1) {popInfo($0,$1)},  
+ 3201: function($0, $1) {changePlayerScore($0,$1)},  
+ 3228: function($0, $1) {EDterrainInfo($0,$1)},  
+ 3254: function($0, $1) {ms("manage",$0,$1)},  
+ 3273: function($0, $1) {ms("manage22",$0,$1)},  
+ 3294: function($0, $1, $2, $3) {locationAlert($0,$1,$2,$3)},  
+ 3328: function($0) {ms("cycnfo",$0)},  
+ 3344: function($0) {ms("recv",$0)},  
+ 3358: function($0, $1) {setupArrows($0,$1)},  
+ 3377: function() {showGuide()},  
+ 3389: function($0, $1) {setupArrows($0,$1);},  
+ 3413: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {selectionOne0($0,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)},  
+ 3504: function($0, $1) {showHealthOne($0,$1)},  
+ 3528: function() {gid("delunit").style.display="block"},  
+ 3565: function($0, $1, $2) {selectMulp($0,$1,$2)},  
+ 3586: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {editProps($0,$1,$2,$3,$4,$5,$6,$7,$8,$9)},  
+ 3640: function($0, $1, $2, $3, $4, $5, $6, $7) {writeProps($0,$1,$2,$3,$4,$5,$6,$7)},  
+ 3689: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {writeProps($0,$1,$2,$3,$4,$5,$6,$7,$8)},  
+ 3764: function() {setupGameMusic()},  
+ 3853: function($0) {showProgress($0)},  
+ 3981: function() {stpTupdtr()},  
+ 3993: function($0) {setupGL($0)},  
+ 4007: function() {setupGL()},  
+ 4019: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {setupEditorPlayerTable($0,$1,$2,$3,$4,$5,$6,$7,$8)},  
+ 4084: function($0) {pong($0)},  
+ 4093: function($0) {updateMax($0)},  
+ 4109: function() {moduleLoaded()},  
+ 4124: function() {playerWon()},  
+ 4136: function($0) {updateHealth($0)},  
+ 4153: function() {popAlert(4)},  
+ 4165: function($0) {popAlert($0)},  
+ 4178: function() {gameOver()}
 };
+
+function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
+  var args = readAsmConstArgs(sigPtr, argbuf);
+
+  return ASM_CONSTS[code].apply(null, args);
+}
+
+function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
+  var args = readAsmConstArgs(sigPtr, argbuf);
+
+  return ASM_CONSTS[code].apply(null, args);
+}
 
 function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   var args = readAsmConstArgs(sigPtr, argbuf);
+
   return ASM_CONSTS[code].apply(null, args);
 }
 
 
 
-// STATICTOP = STATIC_BASE + 4240016;
+// STATICTOP = STATIC_BASE + 4244848;
 /* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
 
 
@@ -1734,7 +1757,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
 
   
   function _atexit(func, arg) {
-      __ATEXIT__.unshift({ func: func, arg: arg });
+  
     }function ___cxa_atexit(a0,a1
   ) {
   return _atexit(a0,a1);
@@ -1753,7 +1776,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   ;
 
   function _emscripten_get_sbrk_ptr() {
-      return 4240864;
+      return 4245696;
     }
 
   function _emscripten_is_main_browser_thread() {
@@ -2139,7 +2162,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   }
   
   
-  var _fetch_work_queue=4241024;function __emscripten_get_fetch_work_queue() {
+  var _fetch_work_queue=4245856;function __emscripten_get_fetch_work_queue() {
       return _fetch_work_queue;
     }function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readystatechangecb) {
     if (typeof noExitRuntime !== 'undefined') noExitRuntime = true; // If we are the main Emscripten runtime, we should not be closing down.
@@ -2329,9 +2352,15 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   var __readAsmConstArgsArray=[];function readAsmConstArgs(sigPtr, buf) {
       __readAsmConstArgsArray.length = 0;
       var ch;
-      buf >>= 2; // Align buf up front to index Int32Array (HEAP32)
+      // Most arguments are i32s, so shift the buffer pointer so it is a plain
+      // index into HEAP32.
+      buf >>= 2;
       while (ch = HEAPU8[sigPtr++]) {
-        __readAsmConstArgsArray.push(ch < 105 ? HEAPF64[++buf >> 1] : HEAP32[buf]);
+        // A double takes two 32-bit slots, and must also be aligned - the backend
+        // will emit padding to avoid that.
+        var double = ch < 105;
+        if (double && (buf & 1)) buf++;
+        __readAsmConstArgsArray.push(double ? HEAPF64[buf++ >> 1] : HEAP32[buf]);
         ++buf;
       }
       return __readAsmConstArgsArray;
@@ -2367,7 +2396,7 @@ function intArrayToString(array) {
 
 
 var asmGlobalArg = {};
-var asmLibraryArg = { "__assert_fail": ___assert_fail, "__cxa_atexit": ___cxa_atexit, "_emscripten_fetch_free": __emscripten_fetch_free, "abort": _abort, "emscripten_asm_const_iii": _emscripten_asm_const_iii, "emscripten_get_now": _emscripten_get_now, "emscripten_get_sbrk_ptr": _emscripten_get_sbrk_ptr, "emscripten_is_main_browser_thread": _emscripten_is_main_browser_thread, "emscripten_memcpy_big": _emscripten_memcpy_big, "emscripten_resize_heap": _emscripten_resize_heap, "emscripten_start_fetch": _emscripten_start_fetch, "fd_write": _fd_write, "memory": wasmMemory, "setTempRet0": _setTempRet0, "table": wasmTable };
+var asmLibraryArg = { "__assert_fail": ___assert_fail, "__cxa_atexit": ___cxa_atexit, "_emscripten_fetch_free": __emscripten_fetch_free, "abort": _abort, "emscripten_asm_const_async_on_main_thread_vii": _emscripten_asm_const_async_on_main_thread_vii, "emscripten_asm_const_iii": _emscripten_asm_const_iii, "emscripten_asm_const_sync_on_main_thread_iii": _emscripten_asm_const_sync_on_main_thread_iii, "emscripten_get_now": _emscripten_get_now, "emscripten_get_sbrk_ptr": _emscripten_get_sbrk_ptr, "emscripten_is_main_browser_thread": _emscripten_is_main_browser_thread, "emscripten_memcpy_big": _emscripten_memcpy_big, "emscripten_resize_heap": _emscripten_resize_heap, "emscripten_start_fetch": _emscripten_start_fetch, "fd_write": _fd_write, "memory": wasmMemory, "setTempRet0": _setTempRet0, "table": wasmTable };
 var asm = createWasm();
 /** @type {function(...*):?} */
 var ___wasm_call_ctors = Module["___wasm_call_ctors"] = function() {
@@ -2397,6 +2426,11 @@ var __Z9stpTactilb = Module["__Z9stpTactilb"] = function() {
 /** @type {function(...*):?} */
 var __Z9setupZoomf = Module["__Z9setupZoomf"] = function() {
   return (__Z9setupZoomf = Module["__Z9setupZoomf"] = Module["asm"]["_Z9setupZoomf"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var __Z12checkDelAnimj = Module["__Z12checkDelAnimj"] = function() {
+  return (__Z12checkDelAnimj = Module["__Z12checkDelAnimj"] = Module["asm"]["_Z12checkDelAnimj"]).apply(null, arguments);
 };
 
 /** @type {function(...*):?} */
@@ -2507,11 +2541,6 @@ var __Z10pidkingdomj = Module["__Z10pidkingdomj"] = function() {
 /** @type {function(...*):?} */
 var __Z7onldataj = Module["__Z7onldataj"] = function() {
   return (__Z7onldataj = Module["__Z7onldataj"] = Module["asm"]["_Z7onldataj"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var __Z10movtablexej = Module["__Z10movtablexej"] = function() {
-  return (__Z10movtablexej = Module["__Z10movtablexej"] = Module["asm"]["_Z10movtablexej"]).apply(null, arguments);
 };
 
 /** @type {function(...*):?} */
@@ -2635,8 +2664,8 @@ var __Z16setupTranslationjj = Module["__Z16setupTranslationjj"] = function() {
 };
 
 /** @type {function(...*):?} */
-var __Z10checkStockv = Module["__Z10checkStockv"] = function() {
-  return (__Z10checkStockv = Module["__Z10checkStockv"] = Module["asm"]["_Z10checkStockv"]).apply(null, arguments);
+var __Z10checkStockb = Module["__Z10checkStockb"] = function() {
+  return (__Z10checkStockb = Module["__Z10checkStockb"] = Module["asm"]["_Z10checkStockb"]).apply(null, arguments);
 };
 
 /** @type {function(...*):?} */
@@ -2910,6 +2939,36 @@ var __Z10runnxtcyclv = Module["__Z10runnxtcyclv"] = function() {
 };
 
 /** @type {function(...*):?} */
+var __Z7chtgspdj = Module["__Z7chtgspdj"] = function() {
+  return (__Z7chtgspdj = Module["__Z7chtgspdj"] = Module["asm"]["_Z7chtgspdj"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var __Z10movtablexev = Module["__Z10movtablexev"] = function() {
+  return (__Z10movtablexev = Module["__Z10movtablexev"] = Module["asm"]["_Z10movtablexev"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var __Z7mouseUpiijjbbbb = Module["__Z7mouseUpiijjbbbb"] = function() {
+  return (__Z7mouseUpiijjbbbb = Module["__Z7mouseUpiijjbbbb"] = Module["asm"]["_Z7mouseUpiijjbbbb"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var __Z9mouseMoveiib = Module["__Z9mouseMoveiib"] = function() {
+  return (__Z9mouseMoveiib = Module["__Z9mouseMoveiib"] = Module["asm"]["_Z9mouseMoveiib"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var __Z6runKeyjb = Module["__Z6runKeyjb"] = function() {
+  return (__Z6runKeyjb = Module["__Z6runKeyjb"] = Module["asm"]["_Z6runKeyjb"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var __Z12executeOrderjj = Module["__Z12executeOrderjj"] = function() {
+  return (__Z12executeOrderjj = Module["__Z12executeOrderjj"] = Module["asm"]["_Z12executeOrderjj"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
 var __Z14setupResourcesjjjjt = Module["__Z14setupResourcesjjjjt"] = function() {
   return (__Z14setupResourcesjjjjt = Module["__Z14setupResourcesjjjjt"] = Module["asm"]["_Z14setupResourcesjjjjt"]).apply(null, arguments);
 };
@@ -2975,6 +3034,11 @@ var __Z14customMapTablev = Module["__Z14customMapTablev"] = function() {
 };
 
 /** @type {function(...*):?} */
+var __Z12updresourcesv = Module["__Z12updresourcesv"] = function() {
+  return (__Z12updresourcesv = Module["__Z12updresourcesv"] = Module["asm"]["_Z12updresourcesv"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
 var __Z16EDgetTerrainInfov = Module["__Z16EDgetTerrainInfov"] = function() {
   return (__Z16EDgetTerrainInfov = Module["__Z16EDgetTerrainInfov"] = Module["asm"]["_Z16EDgetTerrainInfov"]).apply(null, arguments);
 };
@@ -3025,11 +3089,6 @@ var __Z15getColorTexturev = Module["__Z15getColorTexturev"] = function() {
 };
 
 /** @type {function(...*):?} */
-var __Z12executeOrderjj = Module["__Z12executeOrderjj"] = function() {
-  return (__Z12executeOrderjj = Module["__Z12executeOrderjj"] = Module["asm"]["_Z12executeOrderjj"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
 var __Z10changePagei = Module["__Z10changePagei"] = function() {
   return (__Z10changePagei = Module["__Z10changePagei"] = Module["asm"]["_Z10changePagei"]).apply(null, arguments);
 };
@@ -3047,11 +3106,6 @@ var __Z9menustatej = Module["__Z9menustatej"] = function() {
 /** @type {function(...*):?} */
 var __Z7svpropsiiiiiii = Module["__Z7svpropsiiiiiii"] = function() {
   return (__Z7svpropsiiiiiii = Module["__Z7svpropsiiiiiii"] = Module["asm"]["_Z7svpropsiiiiiii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var __Z9mouseMoveiib = Module["__Z9mouseMoveiib"] = function() {
-  return (__Z9mouseMoveiib = Module["__Z9mouseMoveiib"] = Module["asm"]["_Z9mouseMoveiib"]).apply(null, arguments);
 };
 
 /** @type {function(...*):?} */
@@ -3082,16 +3136,6 @@ var __Z8mouseOutj = Module["__Z8mouseOutj"] = function() {
 /** @type {function(...*):?} */
 var __Z10mouseEnterj = Module["__Z10mouseEnterj"] = function() {
   return (__Z10mouseEnterj = Module["__Z10mouseEnterj"] = Module["asm"]["_Z10mouseEnterj"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var __Z7mouseUpiijjbbbb = Module["__Z7mouseUpiijjbbbb"] = function() {
-  return (__Z7mouseUpiijjbbbb = Module["__Z7mouseUpiijjbbbb"] = Module["asm"]["_Z7mouseUpiijjbbbb"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var __Z6runKeyjb = Module["__Z6runKeyjb"] = function() {
-  return (__Z6runKeyjb = Module["__Z6runKeyjb"] = Module["asm"]["_Z6runKeyjb"]).apply(null, arguments);
 };
 
 /** @type {function(...*):?} */
@@ -3409,6 +3453,9 @@ var dynCall_jiji = Module["dynCall_jiji"] = function() {
 
 
 // === Auto-generated postamble setup entry stuff ===
+
+
+
 
 
 
