@@ -1,3 +1,7 @@
+#389
+Great wall technology working properly
+Fixed trading
+Minor bug fixes
 ##388
 Massive performance gain with multi-threading enabled
 Rally points (shift + click)

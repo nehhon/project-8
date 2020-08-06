@@ -534,8 +534,8 @@ var wasmMemory;
 // In the wasm backend, we polyfill the WebAssembly object,
 // so this creates a (non-native-wasm) table for us.
 var wasmTable = new WebAssembly.Table({
-  'initial': 417,
-  'maximum': 417 + 0,
+  'initial': 418,
+  'maximum': 418 + 0,
   'element': 'anyfunc'
 });
 
@@ -1149,11 +1149,11 @@ function updateGlobalBufferAndViews(buf) {
 }
 
 var STATIC_BASE = 1024,
-    STACK_BASE = 9488752,
+    STACK_BASE = 9488816,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 4245872,
-    DYNAMIC_BASE = 9488752,
-    DYNAMICTOP_PTR = 4245696;
+    STACK_MAX = 4245936,
+    DYNAMIC_BASE = 9488816,
+    DYNAMICTOP_PTR = 4245760;
 
 
 
@@ -1684,6 +1684,12 @@ var ASM_CONSTS = {
  4178: function() {gameOver()}
 };
 
+function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
+  var args = readAsmConstArgs(sigPtr, argbuf);
+
+  return ASM_CONSTS[code].apply(null, args);
+}
+
 function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
   var args = readAsmConstArgs(sigPtr, argbuf);
 
@@ -1696,15 +1702,9 @@ function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
   return ASM_CONSTS[code].apply(null, args);
 }
 
-function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
-  var args = readAsmConstArgs(sigPtr, argbuf);
-
-  return ASM_CONSTS[code].apply(null, args);
-}
 
 
-
-// STATICTOP = STATIC_BASE + 4244848;
+// STATICTOP = STATIC_BASE + 4244912;
 /* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
 
 
@@ -1776,7 +1776,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   ;
 
   function _emscripten_get_sbrk_ptr() {
-      return 4245696;
+      return 4245760;
     }
 
   function _emscripten_is_main_browser_thread() {
@@ -2162,7 +2162,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   }
   
   
-  var _fetch_work_queue=4245856;function __emscripten_get_fetch_work_queue() {
+  var _fetch_work_queue=4245920;function __emscripten_get_fetch_work_queue() {
       return _fetch_work_queue;
     }function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readystatechangecb) {
     if (typeof noExitRuntime !== 'undefined') noExitRuntime = true; // If we are the main Emscripten runtime, we should not be closing down.
@@ -2966,6 +2966,11 @@ var __Z6runKeyjb = Module["__Z6runKeyjb"] = function() {
 /** @type {function(...*):?} */
 var __Z12executeOrderjj = Module["__Z12executeOrderjj"] = function() {
   return (__Z12executeOrderjj = Module["__Z12executeOrderjj"] = Module["asm"]["_Z12executeOrderjj"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var __Z7wardgofv = Module["__Z7wardgofv"] = function() {
+  return (__Z7wardgofv = Module["__Z7wardgofv"] = Module["asm"]["_Z7wardgofv"]).apply(null, arguments);
 };
 
 /** @type {function(...*):?} */

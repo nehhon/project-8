@@ -484,8 +484,8 @@ function getValue(ptr, type, noSafe) {
 var wasmMemory;
 
 var wasmTable = new WebAssembly.Table({
- "initial": 424,
- "maximum": 424 + 0,
+ "initial": 426,
+ "maximum": 426 + 0,
  "element": "anyfunc"
 });
 
@@ -881,7 +881,7 @@ function updateGlobalBufferAndViews(buf) {
  Module["HEAPF64"] = HEAPF64 = new Float64Array(buf);
 }
 
-var STATIC_BASE = 1024, STACK_BASE = 9490720, STACKTOP = STACK_BASE, STACK_MAX = 4247840, DYNAMIC_BASE = 9490720, DYNAMICTOP_PTR = 4246896;
+var STATIC_BASE = 1024, STACK_BASE = 9490784, STACKTOP = STACK_BASE, STACK_MAX = 4247904, DYNAMIC_BASE = 9490784, DYNAMICTOP_PTR = 4246960;
 
 if (ENVIRONMENT_IS_PTHREAD) {}
 
@@ -1700,7 +1700,7 @@ var ERRNO_CODES = {
  ESTRPIPE: 135
 };
 
-var __main_thread_futex_wait_address = 4247824;
+var __main_thread_futex_wait_address = 4247888;
 
 function _emscripten_futex_wake(addr, count) {
  if (addr <= 0 || addr > GROWABLE_HEAP_I8().length || addr & 3 != 0 || count < 0) return -28;
@@ -1771,12 +1771,12 @@ var PThread = {
   for (var i = 0; i < pthreadPoolSize; ++i) {
    PThread.allocateUnusedWorker();
   }
-  PThread.mainThreadBlock = 4247072;
+  PThread.mainThreadBlock = 4247136;
   for (var i = 0; i < 232 / 4; ++i) GROWABLE_HEAP_U32()[PThread.mainThreadBlock / 4 + i] = 0;
   GROWABLE_HEAP_I32()[PThread.mainThreadBlock + 12 >> 2] = PThread.mainThreadBlock;
   var headPtr = PThread.mainThreadBlock + 156;
   GROWABLE_HEAP_I32()[headPtr >> 2] = headPtr;
-  var tlsMemory = 4247312;
+  var tlsMemory = 4247376;
   for (var i = 0; i < 128; ++i) GROWABLE_HEAP_U32()[tlsMemory / 4 + i] = 0;
   Atomics.store(GROWABLE_HEAP_U32(), PThread.mainThreadBlock + 104 >> 2, tlsMemory);
   Atomics.store(GROWABLE_HEAP_U32(), PThread.mainThreadBlock + 40 >> 2, PThread.mainThreadBlock);
@@ -2104,7 +2104,7 @@ function _emscripten_futex_wait(addr, val, timeout) {
 }
 
 function _emscripten_get_sbrk_ptr() {
- return 4246896;
+ return 4246960;
 }
 
 function _emscripten_has_threading_support() {
@@ -2714,7 +2714,7 @@ function __emscripten_fetch_delete_cached_data(db, fetch, onsuccess, onerror) {
  }
 }
 
-var _fetch_work_queue = 4247056;
+var _fetch_work_queue = 4247120;
 
 function __emscripten_get_fetch_work_queue() {
  return _fetch_work_queue;
@@ -3831,6 +3831,10 @@ var __Z6runKeyjb = Module["__Z6runKeyjb"] = function() {
 
 var __Z12executeOrderjj = Module["__Z12executeOrderjj"] = function() {
  return (__Z12executeOrderjj = Module["__Z12executeOrderjj"] = Module["asm"]["_Z12executeOrderjj"]).apply(null, arguments);
+};
+
+var __Z7wardgofv = Module["__Z7wardgofv"] = function() {
+ return (__Z7wardgofv = Module["__Z7wardgofv"] = Module["asm"]["_Z7wardgofv"]).apply(null, arguments);
 };
 
 var __Z14setupResourcesjjjjt = Module["__Z14setupResourcesjjjjt"] = function() {
