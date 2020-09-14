@@ -484,8 +484,8 @@ function getValue(ptr, type, noSafe) {
 var wasmMemory;
 
 var wasmTable = new WebAssembly.Table({
- "initial": 426,
- "maximum": 426 + 0,
+ "initial": 430,
+ "maximum": 430 + 0,
  "element": "anyfunc"
 });
 
@@ -881,7 +881,7 @@ function updateGlobalBufferAndViews(buf) {
  Module["HEAPF64"] = HEAPF64 = new Float64Array(buf);
 }
 
-var STATIC_BASE = 1024, STACK_BASE = 9490784, STACKTOP = STACK_BASE, STACK_MAX = 4247904, DYNAMIC_BASE = 9490784, DYNAMICTOP_PTR = 4246960;
+var STATIC_BASE = 1024, STACK_BASE = 9490736, STACKTOP = STACK_BASE, STACK_MAX = 4247856, DYNAMIC_BASE = 9490736, DYNAMICTOP_PTR = 4246912;
 
 if (ENVIRONMENT_IS_PTHREAD) {}
 
@@ -1251,281 +1251,284 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1031: function($0, $1, $2, $3) {
-  console.log($0, $1, $2, $3);
- },
- 1070: function($0, $1, $2, $3) {
+ 1024: function($0, $1, $2, $3) {
   spAlert2($0, $1, $2, $3);
  },
- 1097: function($0, $1) {
+ 1051: function($0, $1) {
   scrSetup($0, $1);
  },
- 1118: function() {
+ 1072: function() {
   clearleftar();
  },
- 1133: function($0, $1) {
+ 1087: function($0, $1) {
   cursor($0, $1);
  },
- 1156: function($0, $1, $2) {
+ 1110: function($0, $1, $2) {
   cnsoSPmsg($0, $1, $2);
  },
- 1185: function($0, $1, $2) {
+ 1139: function($0, $1, $2) {
   peerSend($0, $1, $2);
  },
- 1211: function() {
+ 1165: function() {
   rlyCheck();
  },
- 1222: function($0) {
+ 1176: function($0) {
   checkAlive($0);
  },
- 1237: function($0, $1, $2) {
+ 1191: function($0, $1, $2) {
   NHretransmit($0, $1, $2);
  },
- 1260: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 1214: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   onlineTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 1315: function($0) {
+ 1269: function($0) {
   thereIsAnIdiot($0);
  },
- 1334: function() {
+ 1288: function() {
   SetupGameConfig();
  },
- 1354: function($0, $1, $2, $3, $4, $5) {
+ 1308: function($0, $1, $2, $3, $4, $5) {
   onlineTable($0, $1, $2, $3, $4, $5);
  },
- 1397: function() {
+ 1351: function() {
   mapWindow();
  },
- 1409: function() {
+ 1363: function() {
   setupPlayermenu();
  },
- 1427: function($0, $1, $2) {
+ 1381: function($0, $1, $2) {
   peerSend($0, $1, $2);
  },
- 1451: function($0, $1, $2, $3) {
+ 1405: function($0, $1, $2, $3) {
   chat($0, 0, $1, $2, $3);
  },
- 1478: function($0) {
+ 1432: function($0) {
   presetuprndtable($0);
  },
- 1499: function($0, $1, $2, $3, $4) {
+ 1453: function($0, $1, $2, $3, $4) {
   randomMapTable($0, $1, $2, $3, $4);
  },
- 1541: function($0) {
+ 1495: function($0) {
   play($0);
  },
- 1552: function($0, $1, $2) {
+ 1506: function($0, $1, $2) {
   play($0, $1, $2);
  },
- 1627: function() {
+ 1581: function() {
   menuDefect();
  },
- 1641: function($0, $1) {
+ 1595: function($0, $1) {
   dmgAlert($0, $1);
  },
- 1659: function() {
+ 1613: function() {
   setupMWmenu();
  },
- 1678: function($0, $1, $2, $3, $4, $5) {
+ 1632: function($0, $1, $2, $3, $4, $5) {
   setupTradingmenu($0, $1, $2, $3, $4, $5);
  },
- 1723: function() {
+ 1677: function() {
   cleanMenuIcons();
  },
- 1740: function() {
+ 1694: function() {
   setupColorGL();
  },
- 1757: function($0, $1, $2, $3, $4, $5) {
+ 1711: function($0, $1, $2, $3, $4, $5) {
   addRNDOBJ($0, $1, $2, $3, $4, $5);
  },
- 1795: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
+ 1749: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
   insertInfo($0, $1, $2, $3, $4, 0, $5, $6, $7, $8, $9, $10, $11, $12);
  },
- 1869: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
+ 1823: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
   insertInfo($0, $1, $2, $3, $4, 1, $5, $6, $7, $8, $9, $10, $11, $12);
  },
- 1954: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {
+ 1908: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {
   multiOptions($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13);
  },
- 2031: function() {
+ 1985: function() {
   waitlistsetup();
  },
- 2049: function() {
+ 2003: function() {
   startMovement0();
  },
- 2070: function() {
+ 2024: function() {
   waitingList();
  },
- 2084: function() {
+ 2038: function() {
   startGame();
  },
- 2098: function() {
+ 2052: function() {
   gid("playersinfo").innerHTML = "<span style='width:50px;float:left;font-size:11px;color:#dcaa14;text-decoration:overline;'>Score</span><br>";
  },
- 2239: function($0, $1, $2, $3, $4, $5, $6, $7) {
+ 2193: function($0, $1, $2, $3, $4, $5, $6, $7) {
   setupPlayerInfo($0, $1, $2, $3, $4, $5, $6, $7);
  },
- 2291: function() {
+ 2245: function() {
   editorPlayerTable();
  },
- 2314: function() {
+ 2268: function() {
   activeKingdomSetup();
   setupColorGL();
  },
- 2352: function() {
+ 2306: function() {
   editorPlayerTable();
   activeKingdomSetup();
   setupColorGL();
  },
- 2640: function($0, $1, $2, $3, $4) {
+ 2592: function($0, $1, $2, $3, $4) {
   buttonSetup($0, $1, $2, $3, $4);
  },
- 2800: function($0, $1, $2, $3) {
+ 2752: function($0, $1, $2, $3) {
   setup3Dtexture($0, $1, $2, $3);
  },
- 2835: function() {
+ 2787: function() {
+  startGameStep0.check();
+ },
+ 2810: function($0, $1) {
+  chFFg($0, $1);
+ },
+ 2826: function() {
   nhcleanclose();
  },
- 2850: function($0) {
+ 2841: function($0) {
   sresizeBuffer($0);
  },
- 2873: function($0, $1, $2, $3) {
+ 2864: function($0, $1, $2, $3) {
   bufferPos($0, $1, $2, $3);
  },
- 2901: function($0, $1, $2, $3, $4) {
+ 2892: function($0, $1, $2, $3, $4) {
   bufferPhysics($0, $1, $2, $3, $4);
  },
- 2937: function($0, $1, $2, $3, $4) {
+ 2928: function($0, $1, $2, $3, $4) {
   bufferMargin($0, $1, $2, $3, $4);
  },
- 2966: function($0, $1, $2, $3, $4) {
+ 2957: function($0, $1, $2, $3, $4) {
   bufferIMG($0, $1, $2, $3, $4);
  },
- 2998: function($0, $1, $2, $3, $4, $5) {
+ 2989: function($0, $1, $2, $3, $4, $5) {
   customMapTable($0, $1, $2, $3, $4, $5);
  },
- 3152: function($0, $1, $2, $3) {
+ 3136: function($0, $1, $2, $3) {
   changeresources($0, $1, $2, $3);
  },
- 3186: function($0, $1) {
+ 3170: function($0, $1) {
   popInfo($0, $1);
  },
- 3201: function($0, $1) {
+ 3185: function($0, $1) {
   changePlayerScore($0, $1);
  },
- 3228: function($0, $1) {
+ 3212: function($0, $1) {
   EDterrainInfo($0, $1);
  },
- 3254: function($0, $1) {
+ 3238: function($0, $1) {
   ms("manage", $0, $1);
  },
- 3273: function($0, $1) {
+ 3257: function($0, $1) {
   ms("manage22", $0, $1);
  },
- 3294: function($0, $1, $2, $3) {
+ 3278: function($0, $1, $2, $3) {
   locationAlert($0, $1, $2, $3);
  },
- 3328: function($0) {
+ 3312: function($0) {
   ms("cycnfo", $0);
  },
- 3344: function($0) {
+ 3328: function($0) {
   ms("recv", $0);
  },
- 3358: function($0, $1) {
+ 3342: function($0, $1) {
   setupArrows($0, $1);
  },
- 3377: function() {
+ 3361: function() {
   showGuide();
  },
- 3389: function($0, $1) {
+ 3373: function($0, $1) {
   setupArrows($0, $1);
  },
- 3413: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {
+ 3397: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {
   selectionOne0($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14);
  },
- 3504: function($0, $1) {
+ 3488: function($0, $1) {
   showHealthOne($0, $1);
  },
- 3528: function() {
+ 3512: function() {
   gid("delunit").style.display = "block";
  },
- 3565: function($0, $1, $2) {
+ 3549: function($0, $1, $2) {
   selectMulp($0, $1, $2);
  },
- 3586: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
+ 3570: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
   editProps($0, $1, $2, $3, $4, $5, $6, $7, $8, $9);
  },
- 3640: function($0, $1, $2, $3, $4, $5, $6, $7) {
+ 3624: function($0, $1, $2, $3, $4, $5, $6, $7) {
   writeProps($0, $1, $2, $3, $4, $5, $6, $7);
  },
- 3689: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 3673: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   writeProps($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 3764: function() {
+ 3748: function() {
   setupGameMusic();
  },
- 3853: function($0) {
+ 3812: function($0) {
   showProgress($0);
  },
- 3981: function() {
+ 3940: function() {
   stpTupdtr();
  },
- 3993: function($0) {
-  setupGL($0);
+ 3952: function($0, $1) {
+  setupGL($0, $1);
  },
- 4007: function() {
-  setupGL();
+ 3969: function($0) {
+  setupGL(0, $0);
  },
- 4019: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 3985: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   setupEditorPlayerTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 4084: function($0) {
+ 4050: function($0) {
   pong($0);
  },
- 4093: function($0) {
+ 4059: function($0) {
   updateMax($0);
  },
- 4109: function() {
+ 4075: function() {
   moduleLoaded();
  },
- 4124: function() {
+ 4090: function() {
   playerWon();
  },
- 4136: function($0) {
+ 4102: function($0) {
   updateHealth($0);
  },
- 4153: function() {
+ 4119: function() {
   popAlert(4);
  },
- 4165: function($0) {
+ 4131: function($0) {
   popAlert($0);
  },
- 4178: function() {
+ 4144: function() {
   gameOver();
  },
- 63288: function() {
+ 63240: function() {
   throw "Canceled!";
  },
- 63508: function($0, $1) {
+ 63460: function($0, $1) {
   setTimeout(function() {
    _do_emscripten_dispatch_to_thread($0, $1);
   }, 0);
  },
- 63610: function() {
+ 63562: function() {
   return TOTAL_STACK;
  }
 };
+
+function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
+ var args = readAsmConstArgs(sigPtr, argbuf);
+ return ASM_CONSTS[code].apply(null, args);
+}
 
 function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
  var args = readAsmConstArgs(sigPtr, argbuf);
  if (ENVIRONMENT_IS_PTHREAD) {
   return _emscripten_proxy_to_main_thread_js.apply(null, [ -1 - code, 0 ].concat(args));
  }
- return ASM_CONSTS[code].apply(null, args);
-}
-
-function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
- var args = readAsmConstArgs(sigPtr, argbuf);
  return ASM_CONSTS[code].apply(null, args);
 }
 
@@ -1700,7 +1703,7 @@ var ERRNO_CODES = {
  ESTRPIPE: 135
 };
 
-var __main_thread_futex_wait_address = 4247888;
+var __main_thread_futex_wait_address = 4247840;
 
 function _emscripten_futex_wake(addr, count) {
  if (addr <= 0 || addr > GROWABLE_HEAP_I8().length || addr & 3 != 0 || count < 0) return -28;
@@ -1771,12 +1774,12 @@ var PThread = {
   for (var i = 0; i < pthreadPoolSize; ++i) {
    PThread.allocateUnusedWorker();
   }
-  PThread.mainThreadBlock = 4247136;
+  PThread.mainThreadBlock = 4247088;
   for (var i = 0; i < 232 / 4; ++i) GROWABLE_HEAP_U32()[PThread.mainThreadBlock / 4 + i] = 0;
   GROWABLE_HEAP_I32()[PThread.mainThreadBlock + 12 >> 2] = PThread.mainThreadBlock;
   var headPtr = PThread.mainThreadBlock + 156;
   GROWABLE_HEAP_I32()[headPtr >> 2] = headPtr;
-  var tlsMemory = 4247376;
+  var tlsMemory = 4247328;
   for (var i = 0; i < 128; ++i) GROWABLE_HEAP_U32()[tlsMemory / 4 + i] = 0;
   Atomics.store(GROWABLE_HEAP_U32(), PThread.mainThreadBlock + 104 >> 2, tlsMemory);
   Atomics.store(GROWABLE_HEAP_U32(), PThread.mainThreadBlock + 40 >> 2, PThread.mainThreadBlock);
@@ -2104,7 +2107,7 @@ function _emscripten_futex_wait(addr, val, timeout) {
 }
 
 function _emscripten_get_sbrk_ptr() {
- return 4246960;
+ return 4246912;
 }
 
 function _emscripten_has_threading_support() {
@@ -2714,7 +2717,7 @@ function __emscripten_fetch_delete_cached_data(db, fetch, onsuccess, onerror) {
  }
 }
 
-var _fetch_work_queue = 4247120;
+var _fetch_work_queue = 4247072;
 
 function __emscripten_get_fetch_work_queue() {
  return _fetch_work_queue;
@@ -4079,6 +4082,14 @@ var __Z14finishSavegamev = Module["__Z14finishSavegamev"] = function() {
 
 var __Z8mapWidthv = Module["__Z8mapWidthv"] = function() {
  return (__Z8mapWidthv = Module["__Z8mapWidthv"] = Module["asm"]["_Z8mapWidthv"]).apply(null, arguments);
+};
+
+var __Z13mapVisibilityv = Module["__Z13mapVisibilityv"] = function() {
+ return (__Z13mapVisibilityv = Module["__Z13mapVisibilityv"] = Module["asm"]["_Z13mapVisibilityv"]).apply(null, arguments);
+};
+
+var __Z12chvisibilityj = Module["__Z12chvisibilityj"] = function() {
+ return (__Z12chvisibilityj = Module["__Z12chvisibilityj"] = Module["asm"]["_Z12chvisibilityj"]).apply(null, arguments);
 };
 
 var __Z13readSavegame0j = Module["__Z13readSavegame0j"] = function() {

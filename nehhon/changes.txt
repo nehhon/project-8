@@ -1,4 +1,10 @@
-#389
+##390
+Fog of war finished
+Explore action
+Magic vision spell
+Some random graphic errors have been corrected
+Guide translated into Italian and Portuguese
+##389
 Great wall technology working properly
 Fixed trading
 Minor bug fixes

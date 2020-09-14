@@ -534,8 +534,8 @@ var wasmMemory;
 // In the wasm backend, we polyfill the WebAssembly object,
 // so this creates a (non-native-wasm) table for us.
 var wasmTable = new WebAssembly.Table({
-  'initial': 418,
-  'maximum': 418 + 0,
+  'initial': 421,
+  'maximum': 421 + 0,
   'element': 'anyfunc'
 });
 
@@ -1149,11 +1149,11 @@ function updateGlobalBufferAndViews(buf) {
 }
 
 var STATIC_BASE = 1024,
-    STACK_BASE = 9488816,
+    STACK_BASE = 9488720,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 4245936,
-    DYNAMIC_BASE = 9488816,
-    DYNAMICTOP_PTR = 4245760;
+    STACK_MAX = 4245840,
+    DYNAMIC_BASE = 9488720,
+    DYNAMICTOP_PTR = 4245664;
 
 
 
@@ -1599,92 +1599,93 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  1031: function($0, $1, $2, $3) {console.log($0,$1,$2,$3);},  
- 1070: function($0, $1, $2, $3) {spAlert2($0,$1,$2,$3)},  
- 1097: function($0, $1) {scrSetup($0,$1)},  
- 1118: function() {clearleftar()},  
- 1133: function($0, $1) {cursor($0,$1)},  
- 1156: function($0, $1, $2) {cnsoSPmsg($0,$1,$2);},  
- 1185: function($0, $1, $2) {peerSend($0,$1,$2);},  
- 1211: function() {rlyCheck()},  
- 1222: function($0) {checkAlive($0)},  
- 1237: function($0, $1, $2) {NHretransmit($0,$1,$2)},  
- 1260: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {onlineTable($0,$1,$2,$3,$4,$5,$6,$7,$8);},  
- 1315: function($0) {thereIsAnIdiot($0)},  
- 1334: function() {SetupGameConfig()},  
- 1354: function($0, $1, $2, $3, $4, $5) {onlineTable($0,$1,$2,$3,$4,$5);},  
- 1397: function() {mapWindow()},  
- 1409: function() {setupPlayermenu()},  
- 1427: function($0, $1, $2) {peerSend($0,$1,$2);},  
- 1451: function($0, $1, $2, $3) {chat($0,0,$1,$2,$3)},  
- 1478: function($0) {presetuprndtable($0)},  
- 1499: function($0, $1, $2, $3, $4) {randomMapTable($0,$1,$2,$3,$4);},  
- 1541: function($0) {play($0)},  
- 1552: function($0, $1, $2) {play($0,$1,$2)},  
- 1627: function() {menuDefect();},  
- 1641: function($0, $1) {dmgAlert($0,$1)},  
- 1659: function() {setupMWmenu();},  
- 1678: function($0, $1, $2, $3, $4, $5) {setupTradingmenu($0,$1,$2,$3,$4,$5)},  
- 1723: function() {cleanMenuIcons()},  
- 1740: function() {setupColorGL()},  
- 1757: function($0, $1, $2, $3, $4, $5) {addRNDOBJ($0,$1,$2,$3,$4,$5)},  
- 1795: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {insertInfo($0,$1,$2,$3,$4,0,$5,$6,$7,$8,$9,$10,$11,$12)},  
- 1869: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {insertInfo($0,$1,$2,$3,$4,1,$5,$6,$7,$8,$9,$10,$11,$12)},  
- 1954: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {multiOptions($0,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)},  
- 2031: function() {waitlistsetup()},  
- 2049: function() {startMovement0()},  
- 2070: function() {waitingList()},  
- 2084: function() {startGame()},  
- 2098: function() {gid("playersinfo").innerHTML="<span style='width:50px;float:left;font-size:11px;color:#dcaa14;text-decoration:overline;'>Score</span><br>"},  
- 2239: function($0, $1, $2, $3, $4, $5, $6, $7) {setupPlayerInfo($0,$1,$2,$3,$4,$5,$6,$7)},  
- 2291: function() {editorPlayerTable();},  
- 2314: function() {activeKingdomSetup();setupColorGL()},  
- 2352: function() {editorPlayerTable();activeKingdomSetup();setupColorGL()},  
- 2640: function($0, $1, $2, $3, $4) {buttonSetup($0,$1,$2,$3,$4)},  
- 2800: function($0, $1, $2, $3) {setup3Dtexture($0,$1,$2,$3)},  
- 2835: function() {nhcleanclose()},  
- 2850: function($0) {sresizeBuffer($0);},  
- 2873: function($0, $1, $2, $3) {bufferPos($0,$1,$2,$3)},  
- 2901: function($0, $1, $2, $3, $4) {bufferPhysics($0,$1,$2,$3,$4)},  
- 2937: function($0, $1, $2, $3, $4) {bufferMargin($0,$1,$2,$3,$4)},  
- 2966: function($0, $1, $2, $3, $4) {bufferIMG($0,$1,$2,$3,$4)},  
- 2998: function($0, $1, $2, $3, $4, $5) {customMapTable($0,$1,$2,$3,$4,$5);},  
- 3152: function($0, $1, $2, $3) {changeresources($0,$1,$2,$3)},  
- 3186: function($0, $1) {popInfo($0,$1)},  
- 3201: function($0, $1) {changePlayerScore($0,$1)},  
- 3228: function($0, $1) {EDterrainInfo($0,$1)},  
- 3254: function($0, $1) {ms("manage",$0,$1)},  
- 3273: function($0, $1) {ms("manage22",$0,$1)},  
- 3294: function($0, $1, $2, $3) {locationAlert($0,$1,$2,$3)},  
- 3328: function($0) {ms("cycnfo",$0)},  
- 3344: function($0) {ms("recv",$0)},  
- 3358: function($0, $1) {setupArrows($0,$1)},  
- 3377: function() {showGuide()},  
- 3389: function($0, $1) {setupArrows($0,$1);},  
- 3413: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {selectionOne0($0,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)},  
- 3504: function($0, $1) {showHealthOne($0,$1)},  
- 3528: function() {gid("delunit").style.display="block"},  
- 3565: function($0, $1, $2) {selectMulp($0,$1,$2)},  
- 3586: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {editProps($0,$1,$2,$3,$4,$5,$6,$7,$8,$9)},  
- 3640: function($0, $1, $2, $3, $4, $5, $6, $7) {writeProps($0,$1,$2,$3,$4,$5,$6,$7)},  
- 3689: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {writeProps($0,$1,$2,$3,$4,$5,$6,$7,$8)},  
- 3764: function() {setupGameMusic()},  
- 3853: function($0) {showProgress($0)},  
- 3981: function() {stpTupdtr()},  
- 3993: function($0) {setupGL($0)},  
- 4007: function() {setupGL()},  
- 4019: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {setupEditorPlayerTable($0,$1,$2,$3,$4,$5,$6,$7,$8)},  
- 4084: function($0) {pong($0)},  
- 4093: function($0) {updateMax($0)},  
- 4109: function() {moduleLoaded()},  
- 4124: function() {playerWon()},  
- 4136: function($0) {updateHealth($0)},  
- 4153: function() {popAlert(4)},  
- 4165: function($0) {popAlert($0)},  
- 4178: function() {gameOver()}
+  1024: function($0, $1, $2, $3) {spAlert2($0,$1,$2,$3)},  
+ 1051: function($0, $1) {scrSetup($0,$1)},  
+ 1072: function() {clearleftar()},  
+ 1087: function($0, $1) {cursor($0,$1)},  
+ 1110: function($0, $1, $2) {cnsoSPmsg($0,$1,$2);},  
+ 1139: function($0, $1, $2) {peerSend($0,$1,$2);},  
+ 1165: function() {rlyCheck()},  
+ 1176: function($0) {checkAlive($0)},  
+ 1191: function($0, $1, $2) {NHretransmit($0,$1,$2)},  
+ 1214: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {onlineTable($0,$1,$2,$3,$4,$5,$6,$7,$8);},  
+ 1269: function($0) {thereIsAnIdiot($0)},  
+ 1288: function() {SetupGameConfig()},  
+ 1308: function($0, $1, $2, $3, $4, $5) {onlineTable($0,$1,$2,$3,$4,$5);},  
+ 1351: function() {mapWindow()},  
+ 1363: function() {setupPlayermenu()},  
+ 1381: function($0, $1, $2) {peerSend($0,$1,$2);},  
+ 1405: function($0, $1, $2, $3) {chat($0,0,$1,$2,$3)},  
+ 1432: function($0) {presetuprndtable($0)},  
+ 1453: function($0, $1, $2, $3, $4) {randomMapTable($0,$1,$2,$3,$4);},  
+ 1495: function($0) {play($0)},  
+ 1506: function($0, $1, $2) {play($0,$1,$2)},  
+ 1581: function() {menuDefect();},  
+ 1595: function($0, $1) {dmgAlert($0,$1)},  
+ 1613: function() {setupMWmenu();},  
+ 1632: function($0, $1, $2, $3, $4, $5) {setupTradingmenu($0,$1,$2,$3,$4,$5)},  
+ 1677: function() {cleanMenuIcons()},  
+ 1694: function() {setupColorGL()},  
+ 1711: function($0, $1, $2, $3, $4, $5) {addRNDOBJ($0,$1,$2,$3,$4,$5)},  
+ 1749: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {insertInfo($0,$1,$2,$3,$4,0,$5,$6,$7,$8,$9,$10,$11,$12)},  
+ 1823: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {insertInfo($0,$1,$2,$3,$4,1,$5,$6,$7,$8,$9,$10,$11,$12)},  
+ 1908: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {multiOptions($0,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)},  
+ 1985: function() {waitlistsetup()},  
+ 2003: function() {startMovement0()},  
+ 2024: function() {waitingList()},  
+ 2038: function() {startGame()},  
+ 2052: function() {gid("playersinfo").innerHTML="<span style='width:50px;float:left;font-size:11px;color:#dcaa14;text-decoration:overline;'>Score</span><br>"},  
+ 2193: function($0, $1, $2, $3, $4, $5, $6, $7) {setupPlayerInfo($0,$1,$2,$3,$4,$5,$6,$7)},  
+ 2245: function() {editorPlayerTable();},  
+ 2268: function() {activeKingdomSetup();setupColorGL()},  
+ 2306: function() {editorPlayerTable();activeKingdomSetup();setupColorGL()},  
+ 2592: function($0, $1, $2, $3, $4) {buttonSetup($0,$1,$2,$3,$4)},  
+ 2752: function($0, $1, $2, $3) {setup3Dtexture($0,$1,$2,$3)},  
+ 2787: function() {startGameStep0.check()},  
+ 2810: function($0, $1) {chFFg($0,$1)},  
+ 2826: function() {nhcleanclose()},  
+ 2841: function($0) {sresizeBuffer($0);},  
+ 2864: function($0, $1, $2, $3) {bufferPos($0,$1,$2,$3)},  
+ 2892: function($0, $1, $2, $3, $4) {bufferPhysics($0,$1,$2,$3,$4)},  
+ 2928: function($0, $1, $2, $3, $4) {bufferMargin($0,$1,$2,$3,$4)},  
+ 2957: function($0, $1, $2, $3, $4) {bufferIMG($0,$1,$2,$3,$4)},  
+ 2989: function($0, $1, $2, $3, $4, $5) {customMapTable($0,$1,$2,$3,$4,$5);},  
+ 3136: function($0, $1, $2, $3) {changeresources($0,$1,$2,$3)},  
+ 3170: function($0, $1) {popInfo($0,$1)},  
+ 3185: function($0, $1) {changePlayerScore($0,$1)},  
+ 3212: function($0, $1) {EDterrainInfo($0,$1)},  
+ 3238: function($0, $1) {ms("manage",$0,$1)},  
+ 3257: function($0, $1) {ms("manage22",$0,$1)},  
+ 3278: function($0, $1, $2, $3) {locationAlert($0,$1,$2,$3)},  
+ 3312: function($0) {ms("cycnfo",$0)},  
+ 3328: function($0) {ms("recv",$0)},  
+ 3342: function($0, $1) {setupArrows($0,$1)},  
+ 3361: function() {showGuide()},  
+ 3373: function($0, $1) {setupArrows($0,$1);},  
+ 3397: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {selectionOne0($0,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)},  
+ 3488: function($0, $1) {showHealthOne($0,$1)},  
+ 3512: function() {gid("delunit").style.display="block"},  
+ 3549: function($0, $1, $2) {selectMulp($0,$1,$2)},  
+ 3570: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {editProps($0,$1,$2,$3,$4,$5,$6,$7,$8,$9)},  
+ 3624: function($0, $1, $2, $3, $4, $5, $6, $7) {writeProps($0,$1,$2,$3,$4,$5,$6,$7)},  
+ 3673: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {writeProps($0,$1,$2,$3,$4,$5,$6,$7,$8)},  
+ 3748: function() {setupGameMusic()},  
+ 3812: function($0) {showProgress($0)},  
+ 3940: function() {stpTupdtr()},  
+ 3952: function($0, $1) {setupGL($0,$1)},  
+ 3969: function($0) {setupGL(0,$0)},  
+ 3985: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {setupEditorPlayerTable($0,$1,$2,$3,$4,$5,$6,$7,$8)},  
+ 4050: function($0) {pong($0)},  
+ 4059: function($0) {updateMax($0)},  
+ 4075: function() {moduleLoaded()},  
+ 4090: function() {playerWon()},  
+ 4102: function($0) {updateHealth($0)},  
+ 4119: function() {popAlert(4)},  
+ 4131: function($0) {popAlert($0)},  
+ 4144: function() {gameOver()}
 };
 
-function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
+function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
   var args = readAsmConstArgs(sigPtr, argbuf);
 
   return ASM_CONSTS[code].apply(null, args);
@@ -1696,7 +1697,7 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
   return ASM_CONSTS[code].apply(null, args);
 }
 
-function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
+function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   var args = readAsmConstArgs(sigPtr, argbuf);
 
   return ASM_CONSTS[code].apply(null, args);
@@ -1704,7 +1705,7 @@ function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
 
 
 
-// STATICTOP = STATIC_BASE + 4244912;
+// STATICTOP = STATIC_BASE + 4244816;
 /* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
 
 
@@ -1776,7 +1777,7 @@ function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
   ;
 
   function _emscripten_get_sbrk_ptr() {
-      return 4245760;
+      return 4245664;
     }
 
   function _emscripten_is_main_browser_thread() {
@@ -2162,7 +2163,7 @@ function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
   }
   
   
-  var _fetch_work_queue=4245920;function __emscripten_get_fetch_work_queue() {
+  var _fetch_work_queue=4245824;function __emscripten_get_fetch_work_queue() {
       return _fetch_work_queue;
     }function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readystatechangecb) {
     if (typeof noExitRuntime !== 'undefined') noExitRuntime = true; // If we are the main Emscripten runtime, we should not be closing down.
@@ -3279,6 +3280,16 @@ var __Z8mapWidthv = Module["__Z8mapWidthv"] = function() {
 };
 
 /** @type {function(...*):?} */
+var __Z13mapVisibilityv = Module["__Z13mapVisibilityv"] = function() {
+  return (__Z13mapVisibilityv = Module["__Z13mapVisibilityv"] = Module["asm"]["_Z13mapVisibilityv"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var __Z12chvisibilityj = Module["__Z12chvisibilityj"] = function() {
+  return (__Z12chvisibilityj = Module["__Z12chvisibilityj"] = Module["asm"]["_Z12chvisibilityj"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
 var __Z13readSavegame0j = Module["__Z13readSavegame0j"] = function() {
   return (__Z13readSavegame0j = Module["__Z13readSavegame0j"] = Module["asm"]["_Z13readSavegame0j"]).apply(null, arguments);
 };
@@ -3441,11 +3452,6 @@ var dynCall_viiiiiiiii = Module["dynCall_viiiiiiiii"] = function() {
 /** @type {function(...*):?} */
 var dynCall_jiiii = Module["dynCall_jiiii"] = function() {
   return (dynCall_jiiii = Module["dynCall_jiiii"] = Module["asm"]["dynCall_jiiii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_iidiiii = Module["dynCall_iidiiii"] = function() {
-  return (dynCall_iidiiii = Module["dynCall_iidiiii"] = Module["asm"]["dynCall_iidiiii"]).apply(null, arguments);
 };
 
 /** @type {function(...*):?} */
