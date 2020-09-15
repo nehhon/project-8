@@ -1,4 +1,7 @@
-##390
+##392
+Fog of war working properly using WebGL 1 engine
+Exploring temporarily disabled
+##391
 Fog of war finished
 Explore action
 Magic vision spell

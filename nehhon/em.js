@@ -1685,7 +1685,7 @@ var ASM_CONSTS = {
  4144: function() {gameOver()}
 };
 
-function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
+function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   var args = readAsmConstArgs(sigPtr, argbuf);
 
   return ASM_CONSTS[code].apply(null, args);
@@ -1697,7 +1697,7 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
   return ASM_CONSTS[code].apply(null, args);
 }
 
-function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
+function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
   var args = readAsmConstArgs(sigPtr, argbuf);
 
   return ASM_CONSTS[code].apply(null, args);

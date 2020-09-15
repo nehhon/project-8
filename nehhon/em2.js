@@ -1519,11 +1519,6 @@ var ASM_CONSTS = {
  }
 };
 
-function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
- var args = readAsmConstArgs(sigPtr, argbuf);
- return ASM_CONSTS[code].apply(null, args);
-}
-
 function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
  var args = readAsmConstArgs(sigPtr, argbuf);
  if (ENVIRONMENT_IS_PTHREAD) {
@@ -1537,6 +1532,11 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
  if (ENVIRONMENT_IS_PTHREAD) {
   return _emscripten_proxy_to_main_thread_js.apply(null, [ -1 - code, 1 ].concat(args));
  }
+ return ASM_CONSTS[code].apply(null, args);
+}
+
+function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
+ var args = readAsmConstArgs(sigPtr, argbuf);
  return ASM_CONSTS[code].apply(null, args);
 }
 
