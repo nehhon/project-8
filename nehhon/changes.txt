@@ -1,3 +1,5 @@
+##394
+Increased stability
 ##392
 Fog of war working properly using WebGL 1 engine
 Exploring temporarily disabled

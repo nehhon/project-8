@@ -42,11 +42,8 @@ this.onmessage = function(e) {
   try {
     if (e.data.cmd === 'load') { // Preload command that is called once per worker to parse and load the Emscripten code.
 
-
       // Initialize the global "process"-wide fields:
       Module['DYNAMIC_BASE'] = e.data.DYNAMIC_BASE;
-
-      Module['DYNAMICTOP_PTR'] = e.data.DYNAMICTOP_PTR;
 
       // Module and memory were sent from main thread
       Module['wasmModule'] = e.data.wasmModule;
@@ -111,7 +108,7 @@ this.onmessage = function(e) {
         // enable that to work. If you find the following line to crash, either change the signature
         // to "proper" void *ThreadMain(void *arg) form, or try linking with the Emscripten linker
         // flag -s EMULATE_FUNCTION_POINTER_CASTS=1 to add in emulation for this x86 ABI extension.
-        var result = Module['dynCall_ii'](e.data.start_routine, e.data.arg);
+        var result = Module['dynCall']('ii', e.data.start_routine, [e.data.arg]);
 
         // The thread might have finished without calling pthread_exit(). If so, then perform the exit operation ourselves.
         // (This is a no-op if explicit pthread_exit() had been called prior.)
@@ -149,54 +146,5 @@ this.onmessage = function(e) {
   }
 };
 
-// Node.js support
-if (typeof process === 'object' && typeof process.versions === 'object' && typeof process.versions.node === 'string') {
-  // Create as web-worker-like an environment as we can.
-  self = {
-    location: {
-      href: __filename
-    }
-  };
-
-  var onmessage = this.onmessage;
-
-  var nodeWorkerThreads = require('worker_threads');
-
-  global.Worker = nodeWorkerThreads.Worker;
-
-  var parentPort = nodeWorkerThreads.parentPort;
-
-  parentPort.on('message', function(data) {
-    onmessage({ data: data });
-  });
-
-  var nodeFS = require('fs');
-
-  var nodeRead = function(filename) {
-    return nodeFS.readFileSync(filename, 'utf8');
-  };
-
-  function globalEval(x) {
-    global.require = require;
-    global.Module = Module;
-    eval.call(null, x);
-  }
-
-  importScripts = function(f) {
-    globalEval(nodeRead(f));
-  };
-
-  postMessage = function(msg) {
-    parentPort.postMessage(msg);
-  };
-
-  if (typeof performance === 'undefined') {
-    performance = {
-      now: function() {
-        return Date.now();
-      }
-    };
-  }
-}
 
 
