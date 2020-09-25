@@ -176,6 +176,13 @@ if (Module['quit']) quit_ = Module['quit'];
 
 var STACK_ALIGN = 16;
 
+function dynamicAlloc(size) {
+  var ret = HEAP32[DYNAMICTOP_PTR>>2];
+  var end = (ret + size + 15) & -16;
+  HEAP32[DYNAMICTOP_PTR>>2] = end;
+  return ret;
+}
+
 function alignMemory(size, factor) {
   if (!factor) factor = STACK_ALIGN; // stack alignment (16-byte) by default
   return Math.ceil(size / factor) * factor;
@@ -210,6 +217,9 @@ function warnOnce(text) {
     err(text);
   }
 }
+
+
+
 
 
 
@@ -379,6 +389,35 @@ function removeFunction(index) {
 
 
 
+var funcWrappers = {};
+
+function getFuncWrapper(func, sig) {
+  if (!func) return; // on null pointer, return undefined
+  assert(sig);
+  if (!funcWrappers[sig]) {
+    funcWrappers[sig] = {};
+  }
+  var sigCache = funcWrappers[sig];
+  if (!sigCache[func]) {
+    // optimize away arguments usage in common cases
+    if (sig.length === 1) {
+      sigCache[func] = function dynCall_wrapper() {
+        return dynCall(sig, func);
+      };
+    } else if (sig.length === 2) {
+      sigCache[func] = function dynCall_wrapper(arg) {
+        return dynCall(sig, func, [arg]);
+      };
+    } else {
+      // general case
+      sigCache[func] = function dynCall_wrapper() {
+        return dynCall(sig, func, Array.prototype.slice.call(arguments));
+      };
+    }
+  }
+  return sigCache[func];
+}
+
 
 
 
@@ -387,6 +426,15 @@ function removeFunction(index) {
 
 function makeBigInt(low, high, unsigned) {
   return unsigned ? ((+((low>>>0)))+((+((high>>>0)))*4294967296.0)) : ((+((low>>>0)))+((+((high|0)))*4294967296.0));
+}
+
+/** @param {Array=} args */
+function dynCall(sig, ptr, args) {
+  if (args && args.length) {
+    return Module['dynCall_' + sig].apply(null, [ptr].concat(args));
+  } else {
+    return Module['dynCall_' + sig].call(null, ptr);
+  }
 }
 
 var tempRet0 = 0;
@@ -405,6 +453,7 @@ var getTempRet0 = function() {
 // Then the stack.
 // Then 'dynamic' memory for sbrk.
 var GLOBAL_BASE = 1024;
+
 
 
 
@@ -487,7 +536,7 @@ var wasmMemory;
 
 var wasmTable = new WebAssembly.Table({
   'initial': 421,
-  'maximum': 421,
+  'maximum': 421 + 0,
   'element': 'anyfunc'
 });
 
@@ -590,10 +639,10 @@ function cwrap(ident, returnType, argTypes, opts) {
   }
 }
 
-
 var ALLOC_NORMAL = 0; // Tries to use _malloc()
 var ALLOC_STACK = 1; // Lives for the duration of the current function call
-var ALLOC_NONE = 2; // Do not allocate
+var ALLOC_DYNAMIC = 2; // Cannot be freed except through sbrk
+var ALLOC_NONE = 3; // Do not allocate
 
 // allocate(): This is for internal use. You can use it yourself as well, but the interface
 //             is a little tricky (see docs right below). The reason is that it is optimized
@@ -627,7 +676,7 @@ function allocate(slab, types, allocator, ptr) {
   } else {
     ret = [_malloc,
     stackAlloc,
-    ][allocator](Math.max(size, singleType ? 1 : types.length));
+    dynamicAlloc][allocator](Math.max(size, singleType ? 1 : types.length));
   }
 
   if (zeroinit) {
@@ -677,6 +726,12 @@ function allocate(slab, types, allocator, ptr) {
   }
 
   return ret;
+}
+
+// Allocate memory during any stage of startup - static memory early on, dynamic memory later, malloc when ready
+function getMemory(size) {
+  if (!runtimeInitialized) return dynamicAlloc(size);
+  return _malloc(size);
 }
 
 
@@ -1055,6 +1110,7 @@ function writeAsciiToMemory(str, buffer, dontAddNull) {
 
 var PAGE_SIZE = 16384;
 var WASM_PAGE_SIZE = 65536;
+var ASMJS_PAGE_SIZE = 16777216;
 
 function alignUp(x, multiple) {
   if (x % multiple > 0) {
@@ -1095,17 +1151,24 @@ function updateGlobalBufferAndViews(buf) {
   Module['HEAPF64'] = HEAPF64 = new Float64Array(buf);
 }
 
-var STACK_BASE = 9488672,
+var STATIC_BASE = 1024,
+    STACK_BASE = 9488928,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 4245792,
-    DYNAMIC_BASE = 9488672;
-
+    STACK_MAX = 4246048,
+    DYNAMIC_BASE = 9488928,
+    DYNAMICTOP_PTR = 4245872;
 
 
 
 var TOTAL_STACK = 5242880;
 
 var INITIAL_INITIAL_MEMORY = Module['INITIAL_MEMORY'] || 57671680;
+
+
+
+
+
+
 
 
 
@@ -1137,6 +1200,7 @@ if (wasmMemory) {
 INITIAL_INITIAL_MEMORY = buffer.byteLength;
 updateGlobalBufferAndViews(buffer);
 
+HEAP32[DYNAMICTOP_PTR>>2] = DYNAMIC_BASE;
 
 
 
@@ -1150,6 +1214,26 @@ updateGlobalBufferAndViews(buffer);
 
 
 
+
+function callRuntimeCallbacks(callbacks) {
+  while(callbacks.length > 0) {
+    var callback = callbacks.shift();
+    if (typeof callback == 'function') {
+      callback(Module); // Pass the module as the first argument.
+      continue;
+    }
+    var func = callback.func;
+    if (typeof func === 'number') {
+      if (callback.arg === undefined) {
+        Module['dynCall_v'](func);
+      } else {
+        Module['dynCall_vi'](func, callback.arg);
+      }
+    } else {
+      func(callback.arg === undefined ? null : callback.arg);
+    }
+  }
+}
 
 var __ATPRERUN__  = []; // functions called before the runtime is initialized
 var __ATINIT__    = []; // functions called during startup
@@ -1217,6 +1301,29 @@ function addOnExit(cb) {
 
 function addOnPostRun(cb) {
   __ATPOSTRUN__.unshift(cb);
+}
+
+/** @param {number|boolean=} ignore */
+function unSign(value, bits, ignore) {
+  if (value >= 0) {
+    return value;
+  }
+  return bits <= 32 ? 2*Math.abs(1 << (bits-1)) + value // Need some trickery, since if bits == 32, we are right at the limit of the bits JS uses in bitshifts
+                    : Math.pow(2, bits)         + value;
+}
+/** @param {number|boolean=} ignore */
+function reSign(value, bits, ignore) {
+  if (value <= 0) {
+    return value;
+  }
+  var half = bits <= 32 ? Math.abs(1 << (bits-1)) // abs is needed if bits == 32
+                        : Math.pow(2, bits-1);
+  if (value >= half && (bits <= 32 || value > half)) { // for huge values, we can hit the precision limit and always get true here. so don't do that
+                                                       // but, in general there is no perfect solution here. With 64-bit ints, we get rounding and errors
+                                                       // TODO: In i64 mode 1, resign the two parts separately and safely
+    value = -2*half + value; // Cannot bitshift half, as it may be at the limit of the bits JS uses in bitshifts
+  }
+  return value;
 }
 
 
@@ -1327,7 +1434,9 @@ function abort(what) {
   throw e;
 }
 
+
 var memoryInitializer = null;
+
 
 
 
@@ -1363,8 +1472,7 @@ function isFileURI(filename) {
 
 
 
-
-var wasmBinaryFile = 'a.out.wasm';
+var wasmBinaryFile = 'w.wasm';
 if (!isDataURI(wasmBinaryFile)) {
   wasmBinaryFile = locateFile(wasmBinaryFile);
 }
@@ -1401,7 +1509,9 @@ function getBinaryPromise() {
     });
   }
   // Otherwise, getBinary should be able to get it synchronously
-  return Promise.resolve().then(getBinary);
+  return new Promise(function(resolve, reject) {
+    resolve(getBinary());
+  });
 }
 
 
@@ -1483,6 +1593,7 @@ function createWasm() {
   instantiateAsync();
   return {}; // no exports yet; we'll fill them in later
 }
+
 
 // Globals used by JS i64 conversions
 var tempDouble;
@@ -1583,6 +1694,28 @@ var ASM_CONSTS = {
  4320: function() {gameOver()}
 };
 
+function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
+  var args = readAsmConstArgs(sigPtr, argbuf);
+
+  return ASM_CONSTS[code].apply(null, args);
+}
+
+function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
+  var args = readAsmConstArgs(sigPtr, argbuf);
+
+  return ASM_CONSTS[code].apply(null, args);
+}
+
+function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
+  var args = readAsmConstArgs(sigPtr, argbuf);
+
+  return ASM_CONSTS[code].apply(null, args);
+}
+
+
+
+// STATICTOP = STATIC_BASE + 4245024;
+/* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
 
 
 
@@ -1590,26 +1723,6 @@ var ASM_CONSTS = {
 /* no memory initializer */
 // {{PRE_LIBRARY}}
 
-
-  function callRuntimeCallbacks(callbacks) {
-      while(callbacks.length > 0) {
-        var callback = callbacks.shift();
-        if (typeof callback == 'function') {
-          callback(Module); // Pass the module as the first argument.
-          continue;
-        }
-        var func = callback.func;
-        if (typeof func === 'number') {
-          if (callback.arg === undefined) {
-            wasmTable.get(func)();
-          } else {
-            wasmTable.get(func)(callback.arg);
-          }
-        } else {
-          func(callback.arg === undefined ? null : callback.arg);
-        }
-      }
-    }
 
   function demangle(func) {
       return func;
@@ -1625,38 +1738,21 @@ var ASM_CONSTS = {
         });
     }
 
-  
-  function dynCallLegacy(sig, ptr, args) {
-      if (args && args.length) {
-        return Module['dynCall_' + sig].apply(null, [ptr].concat(args));
-      }
-      return Module['dynCall_' + sig].call(null, ptr);
-    }function dynCall(sig, ptr, args) {
-      // Without WASM_BIGINT support we cannot directly call function with i64 as
-      // part of thier signature, so we rely the dynCall functions generated by
-      // wasm-emscripten-finalize
-      if (sig.indexOf('j') != -1) {
-        return dynCallLegacy(sig, ptr, args);
-      }
-  
-      return wasmTable.get(ptr).apply(null, args)
-    }
-
   function jsStackTrace() {
-      var error = new Error();
-      if (!error.stack) {
+      var err = new Error();
+      if (!err.stack) {
         // IE10+ special cases: It does have callstack info, but it is only populated if an Error object is thrown,
         // so try that as a special-case.
         try {
           throw new Error();
         } catch(e) {
-          error = e;
+          err = e;
         }
-        if (!error.stack) {
+        if (!err.stack) {
           return '(no stack trace available)';
         }
       }
-      return error.stack.toString();
+      return err.stack.toString();
     }
 
   function stackTrace() {
@@ -1671,6 +1767,7 @@ var ASM_CONSTS = {
 
   
   function _atexit(func, arg) {
+  
     }function ___cxa_atexit(a0,a1
   ) {
   return _atexit(a0,a1);
@@ -1685,25 +1782,12 @@ var ASM_CONSTS = {
       abort();
     }
 
-  
-  function mainThreadEM_ASM(code, sigPtr, argbuf, sync) {
-      var args = readAsmConstArgs(sigPtr, argbuf);
-      return ASM_CONSTS[code].apply(null, args);
-    }function _emscripten_asm_const_async_on_main_thread(code, sigPtr, argbuf) {
-      return mainThreadEM_ASM(code, sigPtr, argbuf, 0);
-    }
-
-  function _emscripten_asm_const_int(code, sigPtr, argbuf) {
-      var args = readAsmConstArgs(sigPtr, argbuf);
-      return ASM_CONSTS[code].apply(null, args);
-    }
-
-  function _emscripten_asm_const_int_sync_on_main_thread(code, sigPtr, argbuf) {
-      return mainThreadEM_ASM(code, sigPtr, argbuf, 1);
-    }
-
   var _emscripten_get_now;_emscripten_get_now = function() { return performance.now(); }
   ;
+
+  function _emscripten_get_sbrk_ptr() {
+      return 4245872;
+    }
 
   function _emscripten_is_main_browser_thread() {
       return !ENVIRONMENT_IS_WORKER;
@@ -1726,13 +1810,13 @@ var ASM_CONSTS = {
         return 1 /*success*/;
       } catch(e) {
       }
-      // implicit 0 return to save code size (caller will cast "undefined" into 0
-      // anyhow)
     }function _emscripten_resize_heap(requestedSize) {
       requestedSize = requestedSize >>> 0;
       var oldSize = _emscripten_get_heap_size();
       // With pthreads, races can happen (another thread might increase the size in between), so return a failure, and let the caller retry.
   
+  
+      var PAGE_MULTIPLE = 65536;
   
       // Memory resize rules:
       // 1. When resizing, always produce a resized heap that is at least 16MB (to avoid tiny heap sizes receiving lots of repeated resizes at startup)
@@ -1741,7 +1825,7 @@ var ASM_CONSTS = {
       //                                         MEMORY_GROWTH_GEOMETRIC_STEP factor (default +20%),
       //                                         At most overreserve by MEMORY_GROWTH_GEOMETRIC_CAP bytes (default 96MB).
       // 3b. If MEMORY_GROWTH_LINEAR_STEP != -1, excessively resize the heap linearly: increase the heap size by at least MEMORY_GROWTH_LINEAR_STEP bytes.
-      // 4. Max size for the heap is capped at 2048MB-WASM_PAGE_SIZE, or by MAXIMUM_MEMORY, or by ASAN limit, depending on which is smallest
+      // 4. Max size for the heap is capped at 2048MB-PAGE_MULTIPLE, or by MAXIMUM_MEMORY, or by ASAN limit, depending on which is smallest
       // 5. If we were unable to allocate as much memory, it may be due to over-eager decision to excessively reserve due to (3) above.
       //    Hence if an allocation fails, cut down on the amount of excess growth, in an attempt to succeed to perform a smaller allocation.
   
@@ -1762,7 +1846,7 @@ var ASM_CONSTS = {
         overGrownHeapSize = Math.min(overGrownHeapSize, requestedSize + 100663296 );
   
   
-        var newSize = Math.min(maxHeapSize, alignUp(Math.max(minHeapSize, requestedSize, overGrownHeapSize), 65536));
+        var newSize = Math.min(maxHeapSize, alignUp(Math.max(minHeapSize, requestedSize, overGrownHeapSize), PAGE_MULTIPLE));
   
         var replacement = emscripten_realloc_buffer(newSize);
         if (replacement) {
@@ -1824,7 +1908,7 @@ var ASM_CONSTS = {
     var fetch_attr = fetch + 112;
     var requestMethod = UTF8ToString(fetch_attr);
     if (!requestMethod) requestMethod = 'GET';
-    var userData = HEAPU32[fetch + 4 >> 2];
+    var userData = HEAPU32[fetch_attr + 32 >> 2];
     var fetchAttributes = HEAPU32[fetch_attr + 52 >> 2];
     var timeoutMsecs = HEAPU32[fetch_attr + 56 >> 2];
     var withCredentials = !!HEAPU32[fetch_attr + 60 >> 2];
@@ -1905,6 +1989,10 @@ var ASM_CONSTS = {
         Fetch.setu64(fetch + 32, len);
       }
       HEAPU16[fetch + 40 >> 1] = xhr.readyState;
+      if (xhr.readyState === 4 && xhr.status === 0) {
+        if (len > 0) xhr.status = 200; // If loading files from a source that does not give HTTP status code, assume success if we got data bytes.
+        else xhr.status = 404; // Conversely, no data bytes is 404.
+      }
       HEAPU16[fetch + 42 >> 1] = xhr.status;
       if (xhr.statusText) stringToUTF8(xhr.statusText, fetch + 44, 64);
       if (xhr.status >= 200 && xhr.status < 300) {
@@ -1916,6 +2004,7 @@ var ASM_CONSTS = {
     xhr.onerror = function(e) {
       saveResponse(fetchAttrLoadToMemory);
       var status = xhr.status; // XXX TODO: Overwriting xhr.status doesn't work here, so don't override anywhere else either.
+      if (xhr.readyState === 4 && status === 0) status = 404; // If no error recorded, pretend it was 404 Not Found.
       Fetch.setu64(fetch + 24, 0);
       Fetch.setu64(fetch + 32, xhr.response ? xhr.response.byteLength : 0);
       HEAPU16[fetch + 40 >> 1] = xhr.readyState;
@@ -2080,7 +2169,12 @@ var ASM_CONSTS = {
     } catch(e) {
       onerror(fetch, 0, e);
     }
-  }function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readystatechangecb) {
+  }
+  
+  
+  var _fetch_work_queue=4246032;function __emscripten_get_fetch_work_queue() {
+      return _fetch_work_queue;
+    }function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readystatechangecb) {
     if (typeof noExitRuntime !== 'undefined') noExitRuntime = true; // If we are the main Emscripten runtime, we should not be closing down.
   
     var fetch_attr = fetch + 112;
@@ -2098,22 +2192,22 @@ var ASM_CONSTS = {
     var fetchAttrReplace = !!(fetchAttributes & 16);
   
     var reportSuccess = function(fetch, xhr, e) {
-      if (onsuccess) wasmTable.get(onsuccess)(fetch);
+      if (onsuccess) dynCall_vi(onsuccess, fetch);
       else if (successcb) successcb(fetch);
     };
   
     var reportProgress = function(fetch, xhr, e) {
-      if (onprogress) wasmTable.get(onprogress)(fetch);
+      if (onprogress) dynCall_vi(onprogress, fetch);
       else if (progresscb) progresscb(fetch);
     };
   
     var reportError = function(fetch, xhr, e) {
-      if (onerror) wasmTable.get(onerror)(fetch);
+      if (onerror) dynCall_vi(onerror, fetch);
       else if (errorcb) errorcb(fetch);
     };
   
     var reportReadyStateChange = function(fetch, xhr, e) {
-      if (onreadystatechange) wasmTable.get(onreadystatechange)(fetch);
+      if (onreadystatechange) dynCall_vi(onreadystatechange, fetch);
       else if (readystatechangecb) readystatechangecb(fetch);
     };
   
@@ -2123,11 +2217,11 @@ var ASM_CONSTS = {
   
     var cacheResultAndReportSuccess = function(fetch, xhr, e) {
       var storeSuccess = function(fetch, xhr, e) {
-        if (onsuccess) wasmTable.get(onsuccess)(fetch);
+        if (onsuccess) dynCall_vi(onsuccess, fetch);
         else if (successcb) successcb(fetch);
       };
       var storeError = function(fetch, xhr, e) {
-        if (onsuccess) wasmTable.get(onsuccess)(fetch);
+        if (onsuccess) dynCall_vi(onsuccess, fetch);
         else if (successcb) successcb(fetch);
       };
       __emscripten_fetch_cache_data(Fetch.dbInstance, fetch, xhr.response, storeSuccess, storeError);
@@ -2218,8 +2312,6 @@ var ASM_CONSTS = {
       },basename:function(path) {
         // EMSCRIPTEN return '/'' for '/', not an empty string
         if (path === '/') return '/';
-        path = PATH.normalize(path);
-        path = path.replace(/\/$/, "");
         var lastSlash = path.lastIndexOf('/');
         if (lastSlash === -1) return path;
         return path.substr(lastSlash+1);
@@ -2313,10 +2405,8 @@ function intArrayToString(array) {
 }
 
 
-
-/* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
-
-var asmLibraryArg = { "__assert_fail": ___assert_fail, "__cxa_atexit": ___cxa_atexit, "__indirect_function_table": wasmTable, "_emscripten_fetch_free": __emscripten_fetch_free, "abort": _abort, "emscripten_asm_const_async_on_main_thread": _emscripten_asm_const_async_on_main_thread, "emscripten_asm_const_int": _emscripten_asm_const_int, "emscripten_asm_const_int_sync_on_main_thread": _emscripten_asm_const_int_sync_on_main_thread, "emscripten_get_now": _emscripten_get_now, "emscripten_is_main_browser_thread": _emscripten_is_main_browser_thread, "emscripten_memcpy_big": _emscripten_memcpy_big, "emscripten_resize_heap": _emscripten_resize_heap, "emscripten_start_fetch": _emscripten_start_fetch, "fd_write": _fd_write, "memory": wasmMemory, "setTempRet0": _setTempRet0 };
+var asmGlobalArg = {};
+var asmLibraryArg = { "__assert_fail": ___assert_fail, "__cxa_atexit": ___cxa_atexit, "_emscripten_fetch_free": __emscripten_fetch_free, "abort": _abort, "emscripten_asm_const_async_on_main_thread_vii": _emscripten_asm_const_async_on_main_thread_vii, "emscripten_asm_const_iii": _emscripten_asm_const_iii, "emscripten_asm_const_sync_on_main_thread_iii": _emscripten_asm_const_sync_on_main_thread_iii, "emscripten_get_now": _emscripten_get_now, "emscripten_get_sbrk_ptr": _emscripten_get_sbrk_ptr, "emscripten_is_main_browser_thread": _emscripten_is_main_browser_thread, "emscripten_memcpy_big": _emscripten_memcpy_big, "emscripten_resize_heap": _emscripten_resize_heap, "emscripten_start_fetch": _emscripten_start_fetch, "fd_write": _fd_write, "memory": wasmMemory, "setTempRet0": _setTempRet0, "table": wasmTable };
 var asm = createWasm();
 /** @type {function(...*):?} */
 var ___wasm_call_ctors = Module["___wasm_call_ctors"] = function() {
@@ -3014,8 +3104,8 @@ var __Z5test3jj = Module["__Z5test3jj"] = function() {
 };
 
 /** @type {function(...*):?} */
-var __Z7setupGLfj = Module["__Z7setupGLfj"] = function() {
-  return (__Z7setupGLfj = Module["__Z7setupGLfj"] = Module["asm"]["_Z7setupGLfj"]).apply(null, arguments);
+var __Z7setupGLfjj = Module["__Z7setupGLfjj"] = function() {
+  return (__Z7setupGLfjj = Module["__Z7setupGLfjj"] = Module["asm"]["_Z7setupGLfjj"]).apply(null, arguments);
 };
 
 /** @type {function(...*):?} */
@@ -3279,6 +3369,106 @@ var stackAlloc = Module["stackAlloc"] = function() {
 };
 
 /** @type {function(...*):?} */
+var __growWasmMemory = Module["__growWasmMemory"] = function() {
+  return (__growWasmMemory = Module["__growWasmMemory"] = Module["asm"]["__growWasmMemory"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_vi = Module["dynCall_vi"] = function() {
+  return (dynCall_vi = Module["dynCall_vi"] = Module["asm"]["dynCall_vi"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_vii = Module["dynCall_vii"] = function() {
+  return (dynCall_vii = Module["dynCall_vii"] = Module["asm"]["dynCall_vii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_iiii = Module["dynCall_iiii"] = function() {
+  return (dynCall_iiii = Module["dynCall_iiii"] = Module["asm"]["dynCall_iiii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_ii = Module["dynCall_ii"] = function() {
+  return (dynCall_ii = Module["dynCall_ii"] = Module["asm"]["dynCall_ii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_iiiii = Module["dynCall_iiiii"] = function() {
+  return (dynCall_iiiii = Module["dynCall_iiiii"] = Module["asm"]["dynCall_iiiii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_viii = Module["dynCall_viii"] = function() {
+  return (dynCall_viii = Module["dynCall_viii"] = Module["asm"]["dynCall_viii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_iii = Module["dynCall_iii"] = function() {
+  return (dynCall_iii = Module["dynCall_iii"] = Module["asm"]["dynCall_iii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_iiiiiii = Module["dynCall_iiiiiii"] = function() {
+  return (dynCall_iiiiiii = Module["dynCall_iiiiiii"] = Module["asm"]["dynCall_iiiiiii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_viiii = Module["dynCall_viiii"] = function() {
+  return (dynCall_viiii = Module["dynCall_viiii"] = Module["asm"]["dynCall_viiii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_viiiiii = Module["dynCall_viiiiii"] = function() {
+  return (dynCall_viiiiii = Module["dynCall_viiiiii"] = Module["asm"]["dynCall_viiiiii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_viiiii = Module["dynCall_viiiii"] = function() {
+  return (dynCall_viiiii = Module["dynCall_viiiii"] = Module["asm"]["dynCall_viiiii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_viiiiiii = Module["dynCall_viiiiiii"] = function() {
+  return (dynCall_viiiiiii = Module["dynCall_viiiiiii"] = Module["asm"]["dynCall_viiiiiii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_fi = Module["dynCall_fi"] = function() {
+  return (dynCall_fi = Module["dynCall_fi"] = Module["asm"]["dynCall_fi"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_dii = Module["dynCall_dii"] = function() {
+  return (dynCall_dii = Module["dynCall_dii"] = Module["asm"]["dynCall_dii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_diii = Module["dynCall_diii"] = function() {
+  return (dynCall_diii = Module["dynCall_diii"] = Module["asm"]["dynCall_diii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_fii = Module["dynCall_fii"] = function() {
+  return (dynCall_fii = Module["dynCall_fii"] = Module["asm"]["dynCall_fii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_diiii = Module["dynCall_diiii"] = function() {
+  return (dynCall_diiii = Module["dynCall_diiii"] = Module["asm"]["dynCall_diiii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_diiiiiiii = Module["dynCall_diiiiiiii"] = function() {
+  return (dynCall_diiiiiiii = Module["dynCall_diiiiiiii"] = Module["asm"]["dynCall_diiiiiiii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
+var dynCall_viiiiiiiii = Module["dynCall_viiiiiiiii"] = function() {
+  return (dynCall_viiiiiiiii = Module["dynCall_viiiiiiiii"] = Module["asm"]["dynCall_viiiiiiiii"]).apply(null, arguments);
+};
+
+/** @type {function(...*):?} */
 var dynCall_jiiii = Module["dynCall_jiiii"] = function() {
   return (dynCall_jiiii = Module["dynCall_jiiii"] = Module["asm"]["dynCall_jiiii"]).apply(null, arguments);
 };
@@ -3288,20 +3478,11 @@ var dynCall_jiji = Module["dynCall_jiji"] = function() {
   return (dynCall_jiji = Module["dynCall_jiji"] = Module["asm"]["dynCall_jiji"]).apply(null, arguments);
 };
 
-/** @type {function(...*):?} */
-var __growWasmMemory = Module["__growWasmMemory"] = function() {
-  return (__growWasmMemory = Module["__growWasmMemory"] = Module["asm"]["__growWasmMemory"]).apply(null, arguments);
-};
-
 
 
 
 
 // === Auto-generated postamble setup entry stuff ===
-
-
-
-
 
 
 
@@ -3526,7 +3707,6 @@ function callMain(args) {
     }
   } finally {
     calledMain = true;
-
   }
 }
 
@@ -3596,13 +3776,12 @@ function exit(status, implicit) {
   if (noExitRuntime) {
   } else {
 
+    ABORT = true;
     EXITSTATUS = status;
 
     exitRuntime();
 
     if (Module['onExit']) Module['onExit'](status);
-
-    ABORT = true;
   }
 
   quit_(status, new ExitStatus(status));

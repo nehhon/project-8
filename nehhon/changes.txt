@@ -1,3 +1,9 @@
+##395
+Added fog quality option
+Desktop app working properly with multithreading enabled
+Resurrection spell
+Increased scroll speed
+Minor bug fixes
 ##394
 Increased stability
 ##392
