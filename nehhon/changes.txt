@@ -1,3 +1,7 @@
+##396
+Fixed some graphic bugs
+Pathfinder working properly for 2x2 units (catapults, boats...)
+Minor bug fixes
 ##395
 Added fog quality option
 Desktop app working properly with multithreading enabled

@@ -881,7 +881,7 @@ function updateGlobalBufferAndViews(buf) {
  Module["HEAPF64"] = HEAPF64 = new Float64Array(buf);
 }
 
-var STATIC_BASE = 1024, STACK_BASE = 9490864, STACKTOP = STACK_BASE, STACK_MAX = 4247984, DYNAMIC_BASE = 9490864, DYNAMICTOP_PTR = 4247040;
+var STATIC_BASE = 1024, STACK_BASE = 9490880, STACKTOP = STACK_BASE, STACK_MAX = 4248e3, DYNAMIC_BASE = 9490880, DYNAMICTOP_PTR = 4247056;
 
 if (ENVIRONMENT_IS_PTHREAD) {}
 
@@ -1527,7 +1527,7 @@ var ASM_CONSTS = {
  63432: function() {
   throw "Canceled!";
  },
- 63654: function($0, $1) {
+ 63672: function($0, $1) {
   setTimeout(function() {
    _do_emscripten_dispatch_to_thread($0, $1);
   }, 0);
@@ -1718,7 +1718,7 @@ var ERRNO_CODES = {
  ESTRPIPE: 135
 };
 
-var __main_thread_futex_wait_address = 4247968;
+var __main_thread_futex_wait_address = 4247984;
 
 function _emscripten_futex_wake(addr, count) {
  if (addr <= 0 || addr > GROWABLE_HEAP_I8().length || addr & 3 != 0 || count < 0) return -28;
@@ -1789,12 +1789,12 @@ var PThread = {
   for (var i = 0; i < pthreadPoolSize; ++i) {
    PThread.allocateUnusedWorker();
   }
-  PThread.mainThreadBlock = 4247216;
+  PThread.mainThreadBlock = 4247232;
   for (var i = 0; i < 232 / 4; ++i) GROWABLE_HEAP_U32()[PThread.mainThreadBlock / 4 + i] = 0;
   GROWABLE_HEAP_I32()[PThread.mainThreadBlock + 12 >> 2] = PThread.mainThreadBlock;
   var headPtr = PThread.mainThreadBlock + 156;
   GROWABLE_HEAP_I32()[headPtr >> 2] = headPtr;
-  var tlsMemory = 4247456;
+  var tlsMemory = 4247472;
   for (var i = 0; i < 128; ++i) GROWABLE_HEAP_U32()[tlsMemory / 4 + i] = 0;
   Atomics.store(GROWABLE_HEAP_U32(), PThread.mainThreadBlock + 104 >> 2, tlsMemory);
   Atomics.store(GROWABLE_HEAP_U32(), PThread.mainThreadBlock + 40 >> 2, PThread.mainThreadBlock);
@@ -2118,7 +2118,7 @@ function _emscripten_futex_wait(addr, val, timeout) {
 }
 
 function _emscripten_get_sbrk_ptr() {
- return 4247040;
+ return 4247056;
 }
 
 function _emscripten_is_main_browser_thread() {
@@ -2717,7 +2717,7 @@ function __emscripten_fetch_delete_cached_data(db, fetch, onsuccess, onerror) {
  }
 }
 
-var _fetch_work_queue = 4247200;
+var _fetch_work_queue = 4247216;
 
 function __emscripten_get_fetch_work_queue() {
  return _fetch_work_queue;
