@@ -22,7 +22,7 @@ cibo
 pietra
 Computer
 Squadra
-Capturabile
+Catturabile
 Natura
 Aggiungi
 La mappa è troppo piccola, espanso a %s
@@ -38,7 +38,7 @@ Aggressività AI
 Visibilità
 Senza nebbia
 Nebbia temporale
-Nebbia
+Nebbia di guerra
 Nebbia estrema
 Risorse iniziali
 Infinito
@@ -421,7 +421,7 @@ Tattiche di sbarco
 Permette di imbarcare un maggior numero di unità
 Zoom illimitato
 Chat di squadra
-WASD come tasti freccia
+WASD come tasti direzionali
 Situazione geografica inviata
 Muovi
 Attacca il nemico
@@ -453,3 +453,4 @@ Contratta mercenari
 Contratta eroi
 Mantieni la posizione
 Corrompi il nemico
+Porta di pietra

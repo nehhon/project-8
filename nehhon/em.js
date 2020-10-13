@@ -176,13 +176,6 @@ if (Module['quit']) quit_ = Module['quit'];
 
 var STACK_ALIGN = 16;
 
-function dynamicAlloc(size) {
-  var ret = HEAP32[DYNAMICTOP_PTR>>2];
-  var end = (ret + size + 15) & -16;
-  HEAP32[DYNAMICTOP_PTR>>2] = end;
-  return ret;
-}
-
 function alignMemory(size, factor) {
   if (!factor) factor = STACK_ALIGN; // stack alignment (16-byte) by default
   return Math.ceil(size / factor) * factor;
@@ -217,10 +210,6 @@ function warnOnce(text) {
     err(text);
   }
 }
-
-
-
-
 
 
 
@@ -389,35 +378,6 @@ function removeFunction(index) {
 
 
 
-var funcWrappers = {};
-
-function getFuncWrapper(func, sig) {
-  if (!func) return; // on null pointer, return undefined
-  assert(sig);
-  if (!funcWrappers[sig]) {
-    funcWrappers[sig] = {};
-  }
-  var sigCache = funcWrappers[sig];
-  if (!sigCache[func]) {
-    // optimize away arguments usage in common cases
-    if (sig.length === 1) {
-      sigCache[func] = function dynCall_wrapper() {
-        return dynCall(sig, func);
-      };
-    } else if (sig.length === 2) {
-      sigCache[func] = function dynCall_wrapper(arg) {
-        return dynCall(sig, func, [arg]);
-      };
-    } else {
-      // general case
-      sigCache[func] = function dynCall_wrapper() {
-        return dynCall(sig, func, Array.prototype.slice.call(arguments));
-      };
-    }
-  }
-  return sigCache[func];
-}
-
 
 
 
@@ -426,15 +386,6 @@ function getFuncWrapper(func, sig) {
 
 function makeBigInt(low, high, unsigned) {
   return unsigned ? ((+((low>>>0)))+((+((high>>>0)))*4294967296.0)) : ((+((low>>>0)))+((+((high|0)))*4294967296.0));
-}
-
-/** @param {Array=} args */
-function dynCall(sig, ptr, args) {
-  if (args && args.length) {
-    return Module['dynCall_' + sig].apply(null, [ptr].concat(args));
-  } else {
-    return Module['dynCall_' + sig].call(null, ptr);
-  }
 }
 
 var tempRet0 = 0;
@@ -446,13 +397,6 @@ var setTempRet0 = function(value) {
 var getTempRet0 = function() {
   return tempRet0;
 };
-
-
-// The address globals begin at. Very low in memory, for code size and optimization opportunities.
-// Above 0 is static memory, starting with globals.
-// Then the stack.
-// Then 'dynamic' memory for sbrk.
-var GLOBAL_BASE = 1024;
 
 
 
@@ -495,7 +439,7 @@ function setValue(ptr, value, type, noSafe) {
       case 'i8': HEAP8[((ptr)>>0)]=value; break;
       case 'i16': HEAP16[((ptr)>>1)]=value; break;
       case 'i32': HEAP32[((ptr)>>2)]=value; break;
-      case 'i64': (tempI64 = [value>>>0,(tempDouble=value,(+(Math_abs(tempDouble))) >= 1.0 ? (tempDouble > 0.0 ? ((Math_min((+(Math_floor((tempDouble)/4294967296.0))), 4294967295.0))|0)>>>0 : (~~((+(Math_ceil((tempDouble - +(((~~(tempDouble)))>>>0))/4294967296.0)))))>>>0) : 0)],HEAP32[((ptr)>>2)]=tempI64[0],HEAP32[(((ptr)+(4))>>2)]=tempI64[1]); break;
+      case 'i64': (tempI64 = [value>>>0,(tempDouble=value,(+(Math.abs(tempDouble))) >= 1.0 ? (tempDouble > 0.0 ? ((Math.min((+(Math.floor((tempDouble)/4294967296.0))), 4294967295.0))|0)>>>0 : (~~((+(Math.ceil((tempDouble - +(((~~(tempDouble)))>>>0))/4294967296.0)))))>>>0) : 0)],HEAP32[((ptr)>>2)]=tempI64[0],HEAP32[(((ptr)+(4))>>2)]=tempI64[1]); break;
       case 'float': HEAPF32[((ptr)>>2)]=value; break;
       case 'double': HEAPF64[((ptr)>>3)]=value; break;
       default: abort('invalid type for setValue: ' + type);
@@ -529,18 +473,7 @@ function getValue(ptr, type, noSafe) {
 // Wasm globals
 
 var wasmMemory;
-
-// In fastcomp asm.js, we don't need a wasm Table at all.
-// In the wasm backend, we polyfill the WebAssembly object,
-// so this creates a (non-native-wasm) table for us.
-
-var wasmTable = new WebAssembly.Table({
-  'initial': 421,
-  'maximum': 421 + 0,
-  'element': 'anyfunc'
-});
-
-
+var wasmTable;
 
 
 //========================================
@@ -639,99 +572,33 @@ function cwrap(ident, returnType, argTypes, opts) {
   }
 }
 
+
 var ALLOC_NORMAL = 0; // Tries to use _malloc()
 var ALLOC_STACK = 1; // Lives for the duration of the current function call
-var ALLOC_DYNAMIC = 2; // Cannot be freed except through sbrk
-var ALLOC_NONE = 3; // Do not allocate
 
 // allocate(): This is for internal use. You can use it yourself as well, but the interface
 //             is a little tricky (see docs right below). The reason is that it is optimized
 //             for multiple syntaxes to save space in generated code. So you should
 //             normally not use allocate(), and instead allocate memory using _malloc(),
 //             initialize it with setValue(), and so forth.
-// @slab: An array of data, or a number. If a number, then the size of the block to allocate,
-//        in *bytes* (note that this is sometimes confusing: the next parameter does not
-//        affect this!)
-// @types: Either an array of types, one for each byte (or 0 if no type at that position),
-//         or a single type which is used for the entire block. This only matters if there
-//         is initial data - if @slab is a number, then this does not matter at all and is
-//         ignored.
+// @slab: An array of data.
 // @allocator: How to allocate memory, see ALLOC_*
-/** @type {function((TypedArray|Array<number>|number), string, number, number=)} */
-function allocate(slab, types, allocator, ptr) {
-  var zeroinit, size;
-  if (typeof slab === 'number') {
-    zeroinit = true;
-    size = slab;
-  } else {
-    zeroinit = false;
-    size = slab.length;
-  }
-
-  var singleType = typeof types === 'string' ? types : null;
-
+/** @type {function((Uint8Array|Array<number>), number)} */
+function allocate(slab, allocator) {
   var ret;
-  if (allocator == ALLOC_NONE) {
-    ret = ptr;
+
+  if (allocator == ALLOC_STACK) {
+    ret = stackAlloc(slab.length);
   } else {
-    ret = [_malloc,
-    stackAlloc,
-    dynamicAlloc][allocator](Math.max(size, singleType ? 1 : types.length));
+    ret = _malloc(slab.length);
   }
 
-  if (zeroinit) {
-    var stop;
-    ptr = ret;
-    assert((ret & 3) == 0);
-    stop = ret + (size & ~3);
-    for (; ptr < stop; ptr += 4) {
-      HEAP32[((ptr)>>2)]=0;
-    }
-    stop = ret + size;
-    while (ptr < stop) {
-      HEAP8[((ptr++)>>0)]=0;
-    }
-    return ret;
+  if (slab.subarray || slab.slice) {
+    HEAPU8.set(/** @type {!Uint8Array} */(slab), ret);
+  } else {
+    HEAPU8.set(new Uint8Array(slab), ret);
   }
-
-  if (singleType === 'i8') {
-    if (slab.subarray || slab.slice) {
-      HEAPU8.set(/** @type {!Uint8Array} */ (slab), ret);
-    } else {
-      HEAPU8.set(new Uint8Array(slab), ret);
-    }
-    return ret;
-  }
-
-  var i = 0, type, typeSize, previousType;
-  while (i < size) {
-    var curr = slab[i];
-
-    type = singleType || types[i];
-    if (type === 0) {
-      i++;
-      continue;
-    }
-
-    if (type == 'i64') type = 'i32'; // special case: we have one i32 here, and one i32 later
-
-    setValue(ret+i, curr, type);
-
-    // no need to look up size unless type changes, so cache it
-    if (previousType !== type) {
-      typeSize = getNativeTypeSize(type);
-      previousType = type;
-    }
-    i += typeSize;
-  }
-
   return ret;
-}
-
-// Allocate memory during any stage of startup - static memory early on, dynamic memory later, malloc when ready
-function getMemory(size) {
-  if (!runtimeInitialized) return dynamicAlloc(size);
-  return _malloc(size);
 }
 
 
@@ -1110,7 +977,6 @@ function writeAsciiToMemory(str, buffer, dontAddNull) {
 
 var PAGE_SIZE = 16384;
 var WASM_PAGE_SIZE = 65536;
-var ASMJS_PAGE_SIZE = 16777216;
 
 function alignUp(x, multiple) {
   if (x % multiple > 0) {
@@ -1151,24 +1017,16 @@ function updateGlobalBufferAndViews(buf) {
   Module['HEAPF64'] = HEAPF64 = new Float64Array(buf);
 }
 
-var STATIC_BASE = 1024,
-    STACK_BASE = 9488928,
+var STACK_BASE = 9460784,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 4246048,
-    DYNAMIC_BASE = 9488928,
-    DYNAMICTOP_PTR = 4245872;
+    STACK_MAX = 4217904;
+
 
 
 
 var TOTAL_STACK = 5242880;
 
 var INITIAL_INITIAL_MEMORY = Module['INITIAL_MEMORY'] || 57671680;
-
-
-
-
-
-
 
 
 
@@ -1200,7 +1058,6 @@ if (wasmMemory) {
 INITIAL_INITIAL_MEMORY = buffer.byteLength;
 updateGlobalBufferAndViews(buffer);
 
-HEAP32[DYNAMICTOP_PTR>>2] = DYNAMIC_BASE;
 
 
 
@@ -1215,25 +1072,8 @@ HEAP32[DYNAMICTOP_PTR>>2] = DYNAMIC_BASE;
 
 
 
-function callRuntimeCallbacks(callbacks) {
-  while(callbacks.length > 0) {
-    var callback = callbacks.shift();
-    if (typeof callback == 'function') {
-      callback(Module); // Pass the module as the first argument.
-      continue;
-    }
-    var func = callback.func;
-    if (typeof func === 'number') {
-      if (callback.arg === undefined) {
-        Module['dynCall_v'](func);
-      } else {
-        Module['dynCall_vi'](func, callback.arg);
-      }
-    } else {
-      func(callback.arg === undefined ? null : callback.arg);
-    }
-  }
-}
+
+
 
 var __ATPRERUN__  = []; // functions called before the runtime is initialized
 var __ATINIT__    = []; // functions called during startup
@@ -1303,29 +1143,6 @@ function addOnPostRun(cb) {
   __ATPOSTRUN__.unshift(cb);
 }
 
-/** @param {number|boolean=} ignore */
-function unSign(value, bits, ignore) {
-  if (value >= 0) {
-    return value;
-  }
-  return bits <= 32 ? 2*Math.abs(1 << (bits-1)) + value // Need some trickery, since if bits == 32, we are right at the limit of the bits JS uses in bitshifts
-                    : Math.pow(2, bits)         + value;
-}
-/** @param {number|boolean=} ignore */
-function reSign(value, bits, ignore) {
-  if (value <= 0) {
-    return value;
-  }
-  var half = bits <= 32 ? Math.abs(1 << (bits-1)) // abs is needed if bits == 32
-                        : Math.pow(2, bits-1);
-  if (value >= half && (bits <= 32 || value > half)) { // for huge values, we can hit the precision limit and always get true here. so don't do that
-                                                       // but, in general there is no perfect solution here. With 64-bit ints, we get rounding and errors
-                                                       // TODO: In i64 mode 1, resign the two parts separately and safely
-    value = -2*half + value; // Cannot bitshift half, as it may be at the limit of the bits JS uses in bitshifts
-  }
-  return value;
-}
-
 
 
 
@@ -1337,28 +1154,6 @@ function reSign(value, bits, ignore) {
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc
 
-
-var Math_abs = Math.abs;
-var Math_cos = Math.cos;
-var Math_sin = Math.sin;
-var Math_tan = Math.tan;
-var Math_acos = Math.acos;
-var Math_asin = Math.asin;
-var Math_atan = Math.atan;
-var Math_atan2 = Math.atan2;
-var Math_exp = Math.exp;
-var Math_log = Math.log;
-var Math_sqrt = Math.sqrt;
-var Math_ceil = Math.ceil;
-var Math_floor = Math.floor;
-var Math_pow = Math.pow;
-var Math_imul = Math.imul;
-var Math_fround = Math.fround;
-var Math_round = Math.round;
-var Math_min = Math.min;
-var Math_max = Math.max;
-var Math_clz32 = Math.clz32;
-var Math_trunc = Math.trunc;
 
 
 
@@ -1434,9 +1229,7 @@ function abort(what) {
   throw e;
 }
 
-
 var memoryInitializer = null;
-
 
 
 
@@ -1468,6 +1261,7 @@ var fileURIPrefix = "file://";
 function isFileURI(filename) {
   return hasPrefix(filename, fileURIPrefix);
 }
+
 
 
 
@@ -1509,9 +1303,7 @@ function getBinaryPromise() {
     });
   }
   // Otherwise, getBinary should be able to get it synchronously
-  return new Promise(function(resolve, reject) {
-    resolve(getBinary());
-  });
+  return Promise.resolve().then(getBinary);
 }
 
 
@@ -1530,7 +1322,15 @@ function createWasm() {
   /** @param {WebAssembly.Module=} module*/
   function receiveInstance(instance, module) {
     var exports = instance.exports;
+
+
+
+
     Module['asm'] = exports;
+
+    wasmTable = Module['asm']['__indirect_function_table'];
+
+
     removeRunDependency('wasm-instantiate');
   }
   // we can't run yet (except in a pthread, where we have a custom sync instantiator)
@@ -1594,7 +1394,6 @@ function createWasm() {
   return {}; // no exports yet; we'll fill them in later
 }
 
-
 // Globals used by JS i64 conversions
 var tempDouble;
 var tempI64;
@@ -1612,117 +1411,116 @@ var ASM_CONSTS = {
  1176: function($0, $1) {console.log("ss",$0,$1)},  
  1200: function($0) {checkAlive($0)},  
  1215: function($0, $1) {rcrconsole($0,$1)},  
- 1236: function($0, $1, $2) {NHretransmit($0,$1,$2)},  
- 1259: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {onlineTable($0,$1,$2,$3,$4,$5,$6,$7,$8);},  
- 1314: function($0) {thereIsAnIdiot($0)},  
- 1333: function() {SetupGameConfig()},  
- 1353: function($0, $1, $2, $3, $4, $5) {onlineTable($0,$1,$2,$3,$4,$5);},  
- 1396: function() {mapWindow()},  
- 1408: function() {setupPlayermenu()},  
- 1426: function($0, $1, $2) {peerSend($0,$1,$2);},  
- 1450: function($0, $1, $2, $3) {chat($0,0,$1,$2,$3)},  
- 1477: function($0) {presetuprndtable($0)},  
- 1498: function($0, $1, $2, $3, $4) {randomMapTable($0,$1,$2,$3,$4);},  
- 1540: function($0) {play($0)},  
- 1551: function($0, $1, $2) {play($0,$1,$2)},  
- 1626: function() {menuDefect();},  
- 1640: function($0, $1) {dmgAlert($0,$1)},  
- 1658: function() {setupMWmenu();},  
- 1677: function($0, $1, $2, $3, $4, $5) {setupTradingmenu($0,$1,$2,$3,$4,$5)},  
- 1722: function() {cleanMenuIcons()},  
- 1739: function() {setupColorGL()},  
- 1756: function($0, $1, $2, $3, $4, $5) {addRNDOBJ($0,$1,$2,$3,$4,$5)},  
- 1794: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {insertInfo($0,$1,$2,$3,$4,0,$5,$6,$7,$8,$9,$10,$11,$12)},  
- 1868: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {insertInfo($0,$1,$2,$3,$4,1,$5,$6,$7,$8,$9,$10,$11,$12)},  
- 1953: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {multiOptions($0,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)},  
- 2030: function() {waitlistsetup()},  
- 2048: function() {startMovement0()},  
- 2069: function() {waitingList()},  
- 2083: function() {startGame()},  
- 2097: function() {gid("playersinfo").innerHTML="<span style='width:50px;float:left;font-size:11px;color:#dcaa14;text-decoration:overline;'>Score</span><br>"},  
- 2238: function($0, $1, $2, $3, $4, $5, $6, $7) {setupPlayerInfo($0,$1,$2,$3,$4,$5,$6,$7)},  
- 2290: function() {editorPlayerTable();},  
- 2313: function() {activeKingdomSetup();setupColorGL()},  
- 2351: function() {editorPlayerTable();activeKingdomSetup();setupColorGL()},  
- 2640: function($0, $1, $2, $3, $4) {buttonSetup($0,$1,$2,$3,$4)},  
- 2800: function($0, $1, $2, $3) {setup3Dtexture($0,$1,$2,$3)},  
- 2835: function() {startGameStep0.check()},  
- 2858: function() {svggme2()},  
- 2868: function($0, $1) {chFFg($0,$1)},  
- 2884: function() {nhcleanclose()},  
- 2899: function($0) {sresizeBuffer($0);},  
- 2922: function($0, $1, $2, $3) {bufferPos($0,$1,$2,$3)},  
- 2950: function($0, $1, $2, $3, $4) {bufferPhysics($0,$1,$2,$3,$4)},  
- 2986: function($0, $1, $2, $3, $4) {bufferMargin($0,$1,$2,$3,$4)},  
- 3015: function($0, $1, $2, $3, $4) {bufferIMG($0,$1,$2,$3,$4)},  
- 3047: function($0, $1, $2, $3, $4, $5) {customMapTable($0,$1,$2,$3,$4,$5);},  
- 3200: function($0, $1, $2, $3) {changeresources($0,$1,$2,$3)},  
- 3234: function($0, $1) {popInfo($0,$1)},  
- 3249: function($0, $1) {changePlayerScore($0,$1)},  
- 3276: function($0, $1) {EDterrainInfo($0,$1)},  
- 3302: function($0, $1) {ms("manage",$0,$1)},  
- 3321: function($0, $1) {ms("manage22",$0,$1)},  
- 3342: function($0, $1, $2, $3) {locationAlert($0,$1,$2,$3)},  
- 3376: function($0) {console.log("cycnfo",$0)},  
- 3401: function($0, $1) {console.log("checkcycle",$0,$1)},  
- 3436: function() {console.log("SENT")},  
- 3456: function($0, $1) {console.log("currentCycle",$0,$1)},  
- 3490: function($0) {console.log("recv",$0)},  
- 3513: function($0, $1) {setupArrows($0,$1)},  
- 3532: function() {showGuide()},  
- 3544: function($0, $1) {setupArrows($0,$1);},  
- 3568: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {selectionOne0($0,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)},  
- 3664: function($0, $1) {showHealthOne($0,$1)},  
- 3688: function() {gid("delunit").style.display="block"},  
- 3725: function($0, $1, $2) {selectMulp($0,$1,$2)},  
- 3746: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {editProps($0,$1,$2,$3,$4,$5,$6,$7,$8,$9)},  
- 3800: function($0, $1, $2, $3, $4, $5, $6, $7) {writeProps($0,$1,$2,$3,$4,$5,$6,$7)},  
- 3849: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {writeProps($0,$1,$2,$3,$4,$5,$6,$7,$8)},  
- 3924: function() {setupGameMusic()},  
- 3988: function($0) {showProgress($0)},  
- 4116: function() {stpTupdtr()},  
- 4128: function($0, $1) {setupGL($0,$1)},  
- 4145: function($0) {setupGL(0,$0)},  
- 4161: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {setupEditorPlayerTable($0,$1,$2,$3,$4,$5,$6,$7,$8)},  
- 4226: function($0) {pong($0)},  
- 4235: function($0) {updateMax($0)},  
- 4251: function() {moduleLoaded()},  
- 4266: function() {playerWon()},  
- 4278: function($0) {updateHealth($0)},  
- 4295: function() {popAlert(4)},  
- 4307: function($0) {popAlert($0)},  
- 4320: function() {gameOver()}
+ 1236: function($0) {fstdD("SEC55",$0)},  
+ 1254: function($0, $1, $2) {NHretransmit($0,$1,$2)},  
+ 1277: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {onlineTable($0,$1,$2,$3,$4,$5,$6,$7,$8);},  
+ 1332: function($0) {thereIsAnIdiot($0)},  
+ 1351: function() {SetupGameConfig()},  
+ 1371: function($0, $1, $2, $3, $4, $5) {onlineTable($0,$1,$2,$3,$4,$5);},  
+ 1414: function() {mapWindow()},  
+ 1426: function() {setupPlayermenu()},  
+ 1444: function($0, $1, $2) {peerSend($0,$1,$2);},  
+ 1468: function($0, $1, $2, $3) {chat($0,0,$1,$2,$3)},  
+ 1495: function($0) {presetuprndtable($0)},  
+ 1516: function($0, $1, $2, $3, $4) {randomMapTable($0,$1,$2,$3,$4);},  
+ 1558: function($0) {play($0)},  
+ 1569: function($0, $1, $2) {play($0,$1,$2)},  
+ 1644: function() {menuDefect();},  
+ 1658: function($0, $1) {dmgAlert($0,$1)},  
+ 1676: function() {setupMWmenu();},  
+ 1695: function($0, $1, $2, $3, $4, $5) {setupTradingmenu($0,$1,$2,$3,$4,$5)},  
+ 1740: function() {cleanMenuIcons()},  
+ 1757: function() {setupColorGL()},  
+ 1774: function($0, $1, $2, $3, $4, $5) {addRNDOBJ($0,$1,$2,$3,$4,$5)},  
+ 1812: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {insertInfo($0,$1,$2,$3,$4,0,$5,$6,$7,$8,$9,$10,$11,$12)},  
+ 1886: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {insertInfo($0,$1,$2,$3,$4,1,$5,$6,$7,$8,$9,$10,$11,$12)},  
+ 1971: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {multiOptions($0,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)},  
+ 2048: function() {waitlistsetup()},  
+ 2066: function() {startMovement0()},  
+ 2087: function() {waitingList()},  
+ 2101: function() {startGame()},  
+ 2115: function() {gid("playersinfo").innerHTML="<span style='width:50px;float:left;font-size:11px;color:#dcaa14;text-decoration:overline;'>Score</span><br>"},  
+ 2256: function($0, $1, $2, $3, $4, $5, $6, $7) {setupPlayerInfo($0,$1,$2,$3,$4,$5,$6,$7)},  
+ 2308: function() {editorPlayerTable();},  
+ 2331: function() {activeKingdomSetup();setupColorGL()},  
+ 2369: function() {editorPlayerTable();activeKingdomSetup();setupColorGL()},  
+ 2656: function($0, $1, $2, $3, $4) {buttonSetup($0,$1,$2,$3,$4)},  
+ 2816: function($0, $1, $2, $3) {setup3Dtexture($0,$1,$2,$3)},  
+ 2851: function() {startGameStep0.check()},  
+ 2874: function() {svggme2()},  
+ 2884: function($0, $1) {chFFg($0,$1)},  
+ 2900: function() {fstdD("SEC56")},  
+ 2915: function() {nhcleanclose()},  
+ 2930: function($0) {sresizeBuffer($0);},  
+ 2953: function($0, $1, $2, $3) {bufferPos($0,$1,$2,$3)},  
+ 2981: function($0, $1, $2, $3, $4) {bufferPhysics($0,$1,$2,$3,$4)},  
+ 3017: function($0, $1, $2, $3, $4) {bufferMargin($0,$1,$2,$3,$4)},  
+ 3046: function($0, $1, $2, $3, $4) {bufferIMG($0,$1,$2,$3,$4)},  
+ 3078: function($0, $1, $2, $3, $4, $5) {customMapTable($0,$1,$2,$3,$4,$5);},  
+ 3232: function($0, $1, $2, $3) {changeresources($0,$1,$2,$3)},  
+ 3266: function($0, $1) {popInfo($0,$1)},  
+ 3281: function($0, $1) {changePlayerScore($0,$1)},  
+ 3308: function($0, $1) {EDterrainInfo($0,$1)},  
+ 3334: function($0, $1) {ms("manage",$0,$1)},  
+ 3353: function($0, $1) {ms("manage22",$0,$1)},  
+ 3374: function($0, $1, $2, $3) {locationAlert($0,$1,$2,$3)},  
+ 3408: function($0) {console.log("cycnfo",$0)},  
+ 3433: function($0, $1) {console.log("checkcycle",$0,$1)},  
+ 3468: function() {console.log("SENT")},  
+ 3488: function($0, $1) {console.log("currentCycle",$0,$1)},  
+ 3522: function($0) {console.log("recv",$0)},  
+ 3545: function($0, $1) {setupArrows($0,$1)},  
+ 3564: function() {showGuide()},  
+ 3576: function($0, $1) {setupArrows($0,$1);},  
+ 3600: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {selectionOne0($0,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)},  
+ 3696: function($0, $1) {showHealthOne($0,$1)},  
+ 3720: function() {gid("delunit").style.display="block"},  
+ 3757: function($0, $1, $2) {selectMulp($0,$1,$2)},  
+ 3778: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {editProps($0,$1,$2,$3,$4,$5,$6,$7,$8,$9)},  
+ 3832: function($0, $1, $2, $3, $4, $5, $6, $7) {writeProps($0,$1,$2,$3,$4,$5,$6,$7)},  
+ 3881: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {writeProps($0,$1,$2,$3,$4,$5,$6,$7,$8)},  
+ 3956: function() {setupGameMusic()},  
+ 4000: function($0) {showProgress($0)},  
+ 4128: function() {stpTupdtr()},  
+ 4140: function($0, $1) {setupGL($0,$1)},  
+ 4157: function($0) {setupGL(0,$0)},  
+ 4173: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {setupEditorPlayerTable($0,$1,$2,$3,$4,$5,$6,$7,$8)},  
+ 4238: function($0) {pong($0)},  
+ 4247: function($0) {updateMax($0)},  
+ 4263: function() {moduleLoaded()},  
+ 4278: function() {playerWon()},  
+ 4290: function($0) {updateHealth($0)},  
+ 4307: function() {popAlert(4)},  
+ 4319: function($0) {popAlert($0)},  
+ 4332: function() {gameOver()}
 };
 
-function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
-  var args = readAsmConstArgs(sigPtr, argbuf);
-
-  return ASM_CONSTS[code].apply(null, args);
-}
-
-function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
-  var args = readAsmConstArgs(sigPtr, argbuf);
-
-  return ASM_CONSTS[code].apply(null, args);
-}
-
-function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
-  var args = readAsmConstArgs(sigPtr, argbuf);
-
-  return ASM_CONSTS[code].apply(null, args);
-}
-
-
-
-// STATICTOP = STATIC_BASE + 4245024;
-/* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
 
 
 
 
-/* no memory initializer */
 // {{PRE_LIBRARY}}
 
+
+  function callRuntimeCallbacks(callbacks) {
+      while(callbacks.length > 0) {
+        var callback = callbacks.shift();
+        if (typeof callback == 'function') {
+          callback(Module); // Pass the module as the first argument.
+          continue;
+        }
+        var func = callback.func;
+        if (typeof func === 'number') {
+          if (callback.arg === undefined) {
+            wasmTable.get(func)();
+          } else {
+            wasmTable.get(func)(callback.arg);
+          }
+        } else {
+          func(callback.arg === undefined ? null : callback.arg);
+        }
+      }
+    }
 
   function demangle(func) {
       return func;
@@ -1738,21 +1536,38 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
         });
     }
 
+  function dynCallLegacy(sig, ptr, args) {
+      if (args && args.length) {
+        return Module['dynCall_' + sig].apply(null, [ptr].concat(args));
+      }
+      return Module['dynCall_' + sig].call(null, ptr);
+    }
+  function dynCall(sig, ptr, args) {
+      // Without WASM_BIGINT support we cannot directly call function with i64 as
+      // part of thier signature, so we rely the dynCall functions generated by
+      // wasm-emscripten-finalize
+      if (sig.indexOf('j') != -1) {
+        return dynCallLegacy(sig, ptr, args);
+      }
+  
+      return wasmTable.get(ptr).apply(null, args)
+    }
+
   function jsStackTrace() {
-      var err = new Error();
-      if (!err.stack) {
+      var error = new Error();
+      if (!error.stack) {
         // IE10+ special cases: It does have callstack info, but it is only populated if an Error object is thrown,
         // so try that as a special-case.
         try {
           throw new Error();
         } catch(e) {
-          err = e;
+          error = e;
         }
-        if (!err.stack) {
+        if (!error.stack) {
           return '(no stack trace available)';
         }
       }
-      return err.stack.toString();
+      return error.stack.toString();
     }
 
   function stackTrace() {
@@ -1765,10 +1580,9 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
       abort('Assertion failed: ' + UTF8ToString(condition) + ', at: ' + [filename ? UTF8ToString(filename) : 'unknown filename', line, func ? UTF8ToString(func) : 'unknown function']);
     }
 
-  
   function _atexit(func, arg) {
-  
-    }function ___cxa_atexit(a0,a1
+    }
+  function ___cxa_atexit(a0,a1
   ) {
   return _atexit(a0,a1);
   }
@@ -1782,12 +1596,25 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
       abort();
     }
 
+  function mainThreadEM_ASM(code, sigPtr, argbuf, sync) {
+      var args = readAsmConstArgs(sigPtr, argbuf);
+      return ASM_CONSTS[code].apply(null, args);
+    }
+  function _emscripten_asm_const_async_on_main_thread(code, sigPtr, argbuf) {
+      return mainThreadEM_ASM(code, sigPtr, argbuf, 0);
+    }
+
+  function _emscripten_asm_const_int(code, sigPtr, argbuf) {
+      var args = readAsmConstArgs(sigPtr, argbuf);
+      return ASM_CONSTS[code].apply(null, args);
+    }
+
+  function _emscripten_asm_const_int_sync_on_main_thread(code, sigPtr, argbuf) {
+      return mainThreadEM_ASM(code, sigPtr, argbuf, 1);
+    }
+
   var _emscripten_get_now;_emscripten_get_now = function() { return performance.now(); }
   ;
-
-  function _emscripten_get_sbrk_ptr() {
-      return 4245872;
-    }
 
   function _emscripten_is_main_browser_thread() {
       return !ENVIRONMENT_IS_WORKER;
@@ -1797,7 +1624,6 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
       HEAPU8.copyWithin(dest, src, src + num);
     }
 
-  
   function _emscripten_get_heap_size() {
       return HEAPU8.length;
     }
@@ -1810,13 +1636,14 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
         return 1 /*success*/;
       } catch(e) {
       }
-    }function _emscripten_resize_heap(requestedSize) {
+      // implicit 0 return to save code size (caller will cast "undefined" into 0
+      // anyhow)
+    }
+  function _emscripten_resize_heap(requestedSize) {
       requestedSize = requestedSize >>> 0;
       var oldSize = _emscripten_get_heap_size();
       // With pthreads, races can happen (another thread might increase the size in between), so return a failure, and let the caller retry.
   
-  
-      var PAGE_MULTIPLE = 65536;
   
       // Memory resize rules:
       // 1. When resizing, always produce a resized heap that is at least 16MB (to avoid tiny heap sizes receiving lots of repeated resizes at startup)
@@ -1825,7 +1652,7 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
       //                                         MEMORY_GROWTH_GEOMETRIC_STEP factor (default +20%),
       //                                         At most overreserve by MEMORY_GROWTH_GEOMETRIC_CAP bytes (default 96MB).
       // 3b. If MEMORY_GROWTH_LINEAR_STEP != -1, excessively resize the heap linearly: increase the heap size by at least MEMORY_GROWTH_LINEAR_STEP bytes.
-      // 4. Max size for the heap is capped at 2048MB-PAGE_MULTIPLE, or by MAXIMUM_MEMORY, or by ASAN limit, depending on which is smallest
+      // 4. Max size for the heap is capped at 2048MB-WASM_PAGE_SIZE, or by MAXIMUM_MEMORY, or by ASAN limit, depending on which is smallest
       // 5. If we were unable to allocate as much memory, it may be due to over-eager decision to excessively reserve due to (3) above.
       //    Hence if an allocation fails, cut down on the amount of excess growth, in an attempt to succeed to perform a smaller allocation.
   
@@ -1846,7 +1673,7 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
         overGrownHeapSize = Math.min(overGrownHeapSize, requestedSize + 100663296 );
   
   
-        var newSize = Math.min(maxHeapSize, alignUp(Math.max(minHeapSize, requestedSize, overGrownHeapSize), PAGE_MULTIPLE));
+        var newSize = Math.min(maxHeapSize, alignUp(Math.max(minHeapSize, requestedSize, overGrownHeapSize), 65536));
   
         var replacement = emscripten_realloc_buffer(newSize);
         if (replacement) {
@@ -1857,7 +1684,6 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
       return false;
     }
 
-  
   var Fetch={xhrs:[],setu64:function(addr, val) {
       HEAPU32[addr >> 2] = val;
       HEAPU32[addr + 4 >> 2] = (val / 4294967296)|0;
@@ -1908,7 +1734,7 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
     var fetch_attr = fetch + 112;
     var requestMethod = UTF8ToString(fetch_attr);
     if (!requestMethod) requestMethod = 'GET';
-    var userData = HEAPU32[fetch_attr + 32 >> 2];
+    var userData = HEAPU32[fetch + 4 >> 2];
     var fetchAttributes = HEAPU32[fetch_attr + 52 >> 2];
     var timeoutMsecs = HEAPU32[fetch_attr + 56 >> 2];
     var withCredentials = !!HEAPU32[fetch_attr + 60 >> 2];
@@ -1989,10 +1815,6 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
         Fetch.setu64(fetch + 32, len);
       }
       HEAPU16[fetch + 40 >> 1] = xhr.readyState;
-      if (xhr.readyState === 4 && xhr.status === 0) {
-        if (len > 0) xhr.status = 200; // If loading files from a source that does not give HTTP status code, assume success if we got data bytes.
-        else xhr.status = 404; // Conversely, no data bytes is 404.
-      }
       HEAPU16[fetch + 42 >> 1] = xhr.status;
       if (xhr.statusText) stringToUTF8(xhr.statusText, fetch + 44, 64);
       if (xhr.status >= 200 && xhr.status < 300) {
@@ -2004,7 +1826,6 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
     xhr.onerror = function(e) {
       saveResponse(fetchAttrLoadToMemory);
       var status = xhr.status; // XXX TODO: Overwriting xhr.status doesn't work here, so don't override anywhere else either.
-      if (xhr.readyState === 4 && status === 0) status = 404; // If no error recorded, pretend it was 404 Not Found.
       Fetch.setu64(fetch + 24, 0);
       Fetch.setu64(fetch + 32, xhr.response ? xhr.response.byteLength : 0);
       HEAPU16[fetch + 40 >> 1] = xhr.readyState;
@@ -2170,11 +1991,7 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
       onerror(fetch, 0, e);
     }
   }
-  
-  
-  var _fetch_work_queue=4246032;function __emscripten_get_fetch_work_queue() {
-      return _fetch_work_queue;
-    }function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readystatechangecb) {
+  function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readystatechangecb) {
     if (typeof noExitRuntime !== 'undefined') noExitRuntime = true; // If we are the main Emscripten runtime, we should not be closing down.
   
     var fetch_attr = fetch + 112;
@@ -2192,22 +2009,22 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
     var fetchAttrReplace = !!(fetchAttributes & 16);
   
     var reportSuccess = function(fetch, xhr, e) {
-      if (onsuccess) dynCall_vi(onsuccess, fetch);
+      if (onsuccess) wasmTable.get(onsuccess)(fetch);
       else if (successcb) successcb(fetch);
     };
   
     var reportProgress = function(fetch, xhr, e) {
-      if (onprogress) dynCall_vi(onprogress, fetch);
+      if (onprogress) wasmTable.get(onprogress)(fetch);
       else if (progresscb) progresscb(fetch);
     };
   
     var reportError = function(fetch, xhr, e) {
-      if (onerror) dynCall_vi(onerror, fetch);
+      if (onerror) wasmTable.get(onerror)(fetch);
       else if (errorcb) errorcb(fetch);
     };
   
     var reportReadyStateChange = function(fetch, xhr, e) {
-      if (onreadystatechange) dynCall_vi(onreadystatechange, fetch);
+      if (onreadystatechange) wasmTable.get(onreadystatechange)(fetch);
       else if (readystatechangecb) readystatechangecb(fetch);
     };
   
@@ -2217,11 +2034,11 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
   
     var cacheResultAndReportSuccess = function(fetch, xhr, e) {
       var storeSuccess = function(fetch, xhr, e) {
-        if (onsuccess) dynCall_vi(onsuccess, fetch);
+        if (onsuccess) wasmTable.get(onsuccess)(fetch);
         else if (successcb) successcb(fetch);
       };
       var storeError = function(fetch, xhr, e) {
-        if (onsuccess) dynCall_vi(onsuccess, fetch);
+        if (onsuccess) wasmTable.get(onsuccess)(fetch);
         else if (successcb) successcb(fetch);
       };
       __emscripten_fetch_cache_data(Fetch.dbInstance, fetch, xhr.response, storeSuccess, storeError);
@@ -2247,7 +2064,6 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
     return fetch;
   }
 
-  
   function flush_NO_FILESYSTEM() {
       // flush anything remaining in the buffers during shutdown
       if (typeof _fflush !== 'undefined') _fflush(0);
@@ -2255,7 +2071,6 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
       if (buffers[1].length) SYSCALLS.printChar(1, 10);
       if (buffers[2].length) SYSCALLS.printChar(2, 10);
     }
-  
   
   var PATH={splitPath:function(filename) {
         var splitPathRe = /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
@@ -2312,6 +2127,8 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
       },basename:function(path) {
         // EMSCRIPTEN return '/'' for '/', not an empty string
         if (path === '/') return '/';
+        path = PATH.normalize(path);
+        path = path.replace(/\/$/, "");
         var lastSlash = path.lastIndexOf('/');
         if (lastSlash === -1) return path;
         return path.substr(lastSlash+1);
@@ -2322,7 +2139,8 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
         return PATH.normalize(paths.join('/'));
       },join2:function(l, r) {
         return PATH.normalize(l + '/' + r);
-      }};var SYSCALLS={mappings:{},buffers:[null,[],[]],printChar:function(stream, curr) {
+      }};
+  var SYSCALLS={mappings:{},buffers:[null,[],[]],printChar:function(stream, curr) {
         var buffer = SYSCALLS.buffers[stream];
         if (curr === 0 || curr === 10) {
           (stream === 1 ? out : err)(UTF8ArrayToString(buffer, 0));
@@ -2339,7 +2157,8 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
         return ret;
       },get64:function(low, high) {
         return low;
-      }};function _fd_write(fd, iov, iovcnt, pnum) {
+      }};
+  function _fd_write(fd, iov, iovcnt, pnum) {
       // hack to support printf in SYSCALLS_REQUIRE_FILESYSTEM=0
       var num = 0;
       for (var i = 0; i < iovcnt; i++) {
@@ -2358,8 +2177,8 @@ function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
       setTempRet0(($i) | 0);
     }
 
-  
-  var readAsmConstArgsArray=[];function readAsmConstArgs(sigPtr, buf) {
+  var readAsmConstArgsArray=[];
+  function readAsmConstArgs(sigPtr, buf) {
       readAsmConstArgsArray.length = 0;
       var ch;
       // Most arguments are i32s, so shift the buffer pointer so it is a plain
@@ -2405,8 +2224,9 @@ function intArrayToString(array) {
 }
 
 
-var asmGlobalArg = {};
-var asmLibraryArg = { "__assert_fail": ___assert_fail, "__cxa_atexit": ___cxa_atexit, "_emscripten_fetch_free": __emscripten_fetch_free, "abort": _abort, "emscripten_asm_const_async_on_main_thread_vii": _emscripten_asm_const_async_on_main_thread_vii, "emscripten_asm_const_iii": _emscripten_asm_const_iii, "emscripten_asm_const_sync_on_main_thread_iii": _emscripten_asm_const_sync_on_main_thread_iii, "emscripten_get_now": _emscripten_get_now, "emscripten_get_sbrk_ptr": _emscripten_get_sbrk_ptr, "emscripten_is_main_browser_thread": _emscripten_is_main_browser_thread, "emscripten_memcpy_big": _emscripten_memcpy_big, "emscripten_resize_heap": _emscripten_resize_heap, "emscripten_start_fetch": _emscripten_start_fetch, "fd_write": _fd_write, "memory": wasmMemory, "setTempRet0": _setTempRet0, "table": wasmTable };
+
+__ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
+var asmLibraryArg = { "__assert_fail": ___assert_fail, "__cxa_atexit": ___cxa_atexit, "_emscripten_fetch_free": __emscripten_fetch_free, "abort": _abort, "emscripten_asm_const_async_on_main_thread": _emscripten_asm_const_async_on_main_thread, "emscripten_asm_const_int": _emscripten_asm_const_int, "emscripten_asm_const_int_sync_on_main_thread": _emscripten_asm_const_int_sync_on_main_thread, "emscripten_get_now": _emscripten_get_now, "emscripten_is_main_browser_thread": _emscripten_is_main_browser_thread, "emscripten_memcpy_big": _emscripten_memcpy_big, "emscripten_resize_heap": _emscripten_resize_heap, "emscripten_start_fetch": _emscripten_start_fetch, "fd_write": _fd_write, "memory": wasmMemory, "setTempRet0": _setTempRet0 };
 var asm = createWasm();
 /** @type {function(...*):?} */
 var ___wasm_call_ctors = Module["___wasm_call_ctors"] = function() {
@@ -3369,106 +3189,6 @@ var stackAlloc = Module["stackAlloc"] = function() {
 };
 
 /** @type {function(...*):?} */
-var __growWasmMemory = Module["__growWasmMemory"] = function() {
-  return (__growWasmMemory = Module["__growWasmMemory"] = Module["asm"]["__growWasmMemory"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_vi = Module["dynCall_vi"] = function() {
-  return (dynCall_vi = Module["dynCall_vi"] = Module["asm"]["dynCall_vi"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_vii = Module["dynCall_vii"] = function() {
-  return (dynCall_vii = Module["dynCall_vii"] = Module["asm"]["dynCall_vii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_iiii = Module["dynCall_iiii"] = function() {
-  return (dynCall_iiii = Module["dynCall_iiii"] = Module["asm"]["dynCall_iiii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_ii = Module["dynCall_ii"] = function() {
-  return (dynCall_ii = Module["dynCall_ii"] = Module["asm"]["dynCall_ii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_iiiii = Module["dynCall_iiiii"] = function() {
-  return (dynCall_iiiii = Module["dynCall_iiiii"] = Module["asm"]["dynCall_iiiii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_viii = Module["dynCall_viii"] = function() {
-  return (dynCall_viii = Module["dynCall_viii"] = Module["asm"]["dynCall_viii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_iii = Module["dynCall_iii"] = function() {
-  return (dynCall_iii = Module["dynCall_iii"] = Module["asm"]["dynCall_iii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_iiiiiii = Module["dynCall_iiiiiii"] = function() {
-  return (dynCall_iiiiiii = Module["dynCall_iiiiiii"] = Module["asm"]["dynCall_iiiiiii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_viiii = Module["dynCall_viiii"] = function() {
-  return (dynCall_viiii = Module["dynCall_viiii"] = Module["asm"]["dynCall_viiii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_viiiiii = Module["dynCall_viiiiii"] = function() {
-  return (dynCall_viiiiii = Module["dynCall_viiiiii"] = Module["asm"]["dynCall_viiiiii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_viiiii = Module["dynCall_viiiii"] = function() {
-  return (dynCall_viiiii = Module["dynCall_viiiii"] = Module["asm"]["dynCall_viiiii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_viiiiiii = Module["dynCall_viiiiiii"] = function() {
-  return (dynCall_viiiiiii = Module["dynCall_viiiiiii"] = Module["asm"]["dynCall_viiiiiii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_fi = Module["dynCall_fi"] = function() {
-  return (dynCall_fi = Module["dynCall_fi"] = Module["asm"]["dynCall_fi"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_dii = Module["dynCall_dii"] = function() {
-  return (dynCall_dii = Module["dynCall_dii"] = Module["asm"]["dynCall_dii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_diii = Module["dynCall_diii"] = function() {
-  return (dynCall_diii = Module["dynCall_diii"] = Module["asm"]["dynCall_diii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_fii = Module["dynCall_fii"] = function() {
-  return (dynCall_fii = Module["dynCall_fii"] = Module["asm"]["dynCall_fii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_diiii = Module["dynCall_diiii"] = function() {
-  return (dynCall_diiii = Module["dynCall_diiii"] = Module["asm"]["dynCall_diiii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_diiiiiiii = Module["dynCall_diiiiiiii"] = function() {
-  return (dynCall_diiiiiiii = Module["dynCall_diiiiiiii"] = Module["asm"]["dynCall_diiiiiiii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
-var dynCall_viiiiiiiii = Module["dynCall_viiiiiiiii"] = function() {
-  return (dynCall_viiiiiiiii = Module["dynCall_viiiiiiiii"] = Module["asm"]["dynCall_viiiiiiiii"]).apply(null, arguments);
-};
-
-/** @type {function(...*):?} */
 var dynCall_jiiii = Module["dynCall_jiiii"] = function() {
   return (dynCall_jiiii = Module["dynCall_jiiii"] = Module["asm"]["dynCall_jiiii"]).apply(null, arguments);
 };
@@ -3483,6 +3203,12 @@ var dynCall_jiji = Module["dynCall_jiji"] = function() {
 
 
 // === Auto-generated postamble setup entry stuff ===
+
+
+
+
+
+
 
 
 
@@ -3707,6 +3433,7 @@ function callMain(args) {
     }
   } finally {
     calledMain = true;
+
   }
 }
 
@@ -3776,12 +3503,13 @@ function exit(status, implicit) {
   if (noExitRuntime) {
   } else {
 
-    ABORT = true;
     EXITSTATUS = status;
 
     exitRuntime();
 
     if (Module['onExit']) Module['onExit'](status);
+
+    ABORT = true;
   }
 
   quit_(status, new ExitStatus(status));

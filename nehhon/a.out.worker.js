@@ -42,12 +42,6 @@ this.onmessage = function(e) {
   try {
     if (e.data.cmd === 'load') { // Preload command that is called once per worker to parse and load the Emscripten code.
 
-
-      // Initialize the global "process"-wide fields:
-      Module['DYNAMIC_BASE'] = e.data.DYNAMIC_BASE;
-
-      Module['DYNAMICTOP_PTR'] = e.data.DYNAMICTOP_PTR;
-
       // Module and memory were sent from main thread
       Module['wasmModule'] = e.data.wasmModule;
 
@@ -111,7 +105,7 @@ this.onmessage = function(e) {
         // enable that to work. If you find the following line to crash, either change the signature
         // to "proper" void *ThreadMain(void *arg) form, or try linking with the Emscripten linker
         // flag -s EMULATE_FUNCTION_POINTER_CASTS=1 to add in emulation for this x86 ABI extension.
-        var result = Module['dynCall_ii'](e.data.start_routine, e.data.arg);
+        var result = Module['dynCall']('ii', e.data.start_routine, [e.data.arg]);
 
         // The thread might have finished without calling pthread_exit(). If so, then perform the exit operation ourselves.
         // (This is a no-op if explicit pthread_exit() had been called prior.)
@@ -144,7 +138,7 @@ this.onmessage = function(e) {
     }
   } catch(ex) {
     err('worker.js onmessage() captured an uncaught exception: ' + ex);
-    if (ex.stack) err(ex.stack);
+    if (ex && ex.stack) err(ex.stack);
     throw ex;
   }
 };

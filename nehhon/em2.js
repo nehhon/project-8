@@ -94,8 +94,6 @@ var ENVIRONMENT_IS_PTHREAD = Module["ENVIRONMENT_IS_PTHREAD"] || false;
 
 if (ENVIRONMENT_IS_PTHREAD) {
  buffer = Module["buffer"];
- DYNAMIC_BASE = Module["DYNAMIC_BASE"];
- DYNAMICTOP_PTR = Module["DYNAMICTOP_PTR"];
 }
 
 var _scriptDir = typeof document !== "undefined" && document.currentScript ? document.currentScript.src : undefined;
@@ -181,13 +179,6 @@ if (Module["thisProgram"]) thisProgram = Module["thisProgram"];
 if (Module["quit"]) quit_ = Module["quit"];
 
 var STACK_ALIGN = 16;
-
-function dynamicAlloc(size) {
- var ret = GROWABLE_HEAP_I32()[DYNAMICTOP_PTR >> 2];
- var end = ret + size + 15 & -16;
- GROWABLE_HEAP_I32()[DYNAMICTOP_PTR >> 2] = end;
- return ret;
-}
 
 function alignMemory(size, factor) {
  if (!factor) factor = STACK_ALIGN;
@@ -343,43 +334,8 @@ function removeFunction(index) {
  removeFunctionWasm(index);
 }
 
-var funcWrappers = {};
-
-function getFuncWrapper(func, sig) {
- if (!func) return;
- assert(sig);
- if (!funcWrappers[sig]) {
-  funcWrappers[sig] = {};
- }
- var sigCache = funcWrappers[sig];
- if (!sigCache[func]) {
-  if (sig.length === 1) {
-   sigCache[func] = function dynCall_wrapper() {
-    return dynCall(sig, func);
-   };
-  } else if (sig.length === 2) {
-   sigCache[func] = function dynCall_wrapper(arg) {
-    return dynCall(sig, func, [ arg ]);
-   };
-  } else {
-   sigCache[func] = function dynCall_wrapper() {
-    return dynCall(sig, func, Array.prototype.slice.call(arguments));
-   };
-  }
- }
- return sigCache[func];
-}
-
 function makeBigInt(low, high, unsigned) {
  return unsigned ? +(low >>> 0) + +(high >>> 0) * 4294967296 : +(low >>> 0) + +(high | 0) * 4294967296;
-}
-
-function dynCall(sig, ptr, args) {
- if (args && args.length) {
-  return Module["dynCall_" + sig].apply(null, [ ptr ].concat(args));
- } else {
-  return Module["dynCall_" + sig].call(null, ptr);
- }
 }
 
 var tempRet0 = 0;
@@ -391,8 +347,6 @@ var setTempRet0 = function(value) {
 var getTempRet0 = function() {
  return tempRet0;
 };
-
-var GLOBAL_BASE = 1024;
 
 var Atomics_load = Atomics.load;
 
@@ -433,7 +387,7 @@ function setValue(ptr, value, type, noSafe) {
   break;
 
  case "i64":
-  tempI64 = [ value >>> 0, (tempDouble = value, +Math_abs(tempDouble) >= 1 ? tempDouble > 0 ? (Math_min(+Math_floor(tempDouble / 4294967296), 4294967295) | 0) >>> 0 : ~~+Math_ceil((tempDouble - +(~~tempDouble >>> 0)) / 4294967296) >>> 0 : 0) ], 
+  tempI64 = [ value >>> 0, (tempDouble = value, +Math.abs(tempDouble) >= 1 ? tempDouble > 0 ? (Math.min(+Math.floor(tempDouble / 4294967296), 4294967295) | 0) >>> 0 : ~~+Math.ceil((tempDouble - +(~~tempDouble >>> 0)) / 4294967296) >>> 0 : 0) ], 
   GROWABLE_HEAP_I32()[ptr >> 2] = tempI64[0], GROWABLE_HEAP_I32()[ptr + 4 >> 2] = tempI64[1];
   break;
 
@@ -483,11 +437,7 @@ function getValue(ptr, type, noSafe) {
 
 var wasmMemory;
 
-var wasmTable = new WebAssembly.Table({
- "initial": 429,
- "maximum": 429 + 0,
- "element": "anyfunc"
-});
+var wasmTable;
 
 var wasmModule;
 
@@ -571,70 +521,19 @@ var ALLOC_NORMAL = 0;
 
 var ALLOC_STACK = 1;
 
-var ALLOC_DYNAMIC = 2;
-
-var ALLOC_NONE = 3;
-
-function allocate(slab, types, allocator, ptr) {
- var zeroinit, size;
- if (typeof slab === "number") {
-  zeroinit = true;
-  size = slab;
- } else {
-  zeroinit = false;
-  size = slab.length;
- }
- var singleType = typeof types === "string" ? types : null;
+function allocate(slab, allocator) {
  var ret;
- if (allocator == ALLOC_NONE) {
-  ret = ptr;
+ if (allocator == ALLOC_STACK) {
+  ret = stackAlloc(slab.length);
  } else {
-  ret = [ _malloc, stackAlloc, dynamicAlloc ][allocator](Math.max(size, singleType ? 1 : types.length));
+  ret = _malloc(slab.length);
  }
- if (zeroinit) {
-  var stop;
-  ptr = ret;
-  assert((ret & 3) == 0);
-  stop = ret + (size & ~3);
-  for (;ptr < stop; ptr += 4) {
-   GROWABLE_HEAP_I32()[ptr >> 2] = 0;
-  }
-  stop = ret + size;
-  while (ptr < stop) {
-   GROWABLE_HEAP_I8()[ptr++ >> 0] = 0;
-  }
-  return ret;
- }
- if (singleType === "i8") {
-  if (slab.subarray || slab.slice) {
-   GROWABLE_HEAP_U8().set(slab, ret);
-  } else {
-   GROWABLE_HEAP_U8().set(new Uint8Array(slab), ret);
-  }
-  return ret;
- }
- var i = 0, type, typeSize, previousType;
- while (i < size) {
-  var curr = slab[i];
-  type = singleType || types[i];
-  if (type === 0) {
-   i++;
-   continue;
-  }
-  if (type == "i64") type = "i32";
-  setValue(ret + i, curr, type);
-  if (previousType !== type) {
-   typeSize = getNativeTypeSize(type);
-   previousType = type;
-  }
-  i += typeSize;
+ if (slab.subarray || slab.slice) {
+  GROWABLE_HEAP_U8().set(slab, ret);
+ } else {
+  GROWABLE_HEAP_U8().set(new Uint8Array(slab), ret);
  }
  return ret;
-}
-
-function getMemory(size) {
- if (!runtimeInitialized) return dynamicAlloc(size);
- return _malloc(size);
 }
 
 function UTF8ArrayToString(heap, idx, maxBytesToRead) {
@@ -858,8 +757,6 @@ var PAGE_SIZE = 16384;
 
 var WASM_PAGE_SIZE = 65536;
 
-var ASMJS_PAGE_SIZE = 16777216;
-
 function alignUp(x, multiple) {
  if (x % multiple > 0) {
   x += multiple - x % multiple;
@@ -881,7 +778,7 @@ function updateGlobalBufferAndViews(buf) {
  Module["HEAPF64"] = HEAPF64 = new Float64Array(buf);
 }
 
-var STATIC_BASE = 1024, STACK_BASE = 9490880, STACKTOP = STACK_BASE, STACK_MAX = 4248e3, DYNAMIC_BASE = 9490880, DYNAMICTOP_PTR = 4247056;
+var STACK_BASE = 9461968, STACKTOP = STACK_BASE, STACK_MAX = 4219088;
 
 if (ENVIRONMENT_IS_PTHREAD) {}
 
@@ -919,29 +816,7 @@ INITIAL_INITIAL_MEMORY = buffer.byteLength;
 
 updateGlobalBufferAndViews(buffer);
 
-if (!ENVIRONMENT_IS_PTHREAD) {
- GROWABLE_HEAP_I32()[DYNAMICTOP_PTR >> 2] = DYNAMIC_BASE;
-}
-
-function callRuntimeCallbacks(callbacks) {
- while (callbacks.length > 0) {
-  var callback = callbacks.shift();
-  if (typeof callback == "function") {
-   callback(Module);
-   continue;
-  }
-  var func = callback.func;
-  if (typeof func === "number") {
-   if (callback.arg === undefined) {
-    Module["dynCall_v"](func);
-   } else {
-    Module["dynCall_vi"](func, callback.arg);
-   }
-  } else {
-   func(callback.arg === undefined ? null : callback.arg);
-  }
- }
-}
+if (!ENVIRONMENT_IS_PTHREAD) {}
 
 var __ATPRERUN__ = [];
 
@@ -1013,66 +888,6 @@ function addOnExit(cb) {}
 function addOnPostRun(cb) {
  __ATPOSTRUN__.unshift(cb);
 }
-
-function unSign(value, bits, ignore) {
- if (value >= 0) {
-  return value;
- }
- return bits <= 32 ? 2 * Math.abs(1 << bits - 1) + value : Math.pow(2, bits) + value;
-}
-
-function reSign(value, bits, ignore) {
- if (value <= 0) {
-  return value;
- }
- var half = bits <= 32 ? Math.abs(1 << bits - 1) : Math.pow(2, bits - 1);
- if (value >= half && (bits <= 32 || value > half)) {
-  value = -2 * half + value;
- }
- return value;
-}
-
-var Math_abs = Math.abs;
-
-var Math_cos = Math.cos;
-
-var Math_sin = Math.sin;
-
-var Math_tan = Math.tan;
-
-var Math_acos = Math.acos;
-
-var Math_asin = Math.asin;
-
-var Math_atan = Math.atan;
-
-var Math_atan2 = Math.atan2;
-
-var Math_exp = Math.exp;
-
-var Math_log = Math.log;
-
-var Math_sqrt = Math.sqrt;
-
-var Math_ceil = Math.ceil;
-
-var Math_floor = Math.floor;
-
-var Math_pow = Math.pow;
-
-var Math_imul = Math.imul;
-
-var Math_fround = Math.fround;
-
-var Math_round = Math.round;
-
-var Math_min = Math.min;
-
-var Math_max = Math.max;
-
-var Math_clz32 = Math.clz32;
-
-var Math_trunc = Math.trunc;
 
 var runDependencies = 0;
 
@@ -1180,9 +995,7 @@ function getBinaryPromise() {
    return getBinary();
   });
  }
- return new Promise(function(resolve, reject) {
-  resolve(getBinary());
- });
+ return Promise.resolve().then(getBinary);
 }
 
 function createWasm() {
@@ -1193,6 +1006,7 @@ function createWasm() {
  function receiveInstance(instance, module) {
   var exports = instance.exports;
   Module["asm"] = exports;
+  wasmTable = Module["asm"]["__indirect_function_table"];
   wasmModule = module;
   if (!ENVIRONMENT_IS_PTHREAD) {
    var numWorkersToLoad = PThread.unusedWorkers.length;
@@ -1281,289 +1095,288 @@ var ASM_CONSTS = {
  1215: function($0, $1) {
   rcrconsole($0, $1);
  },
- 1236: function($0, $1, $2) {
+ 1236: function($0) {
+  fstdD("SEC55", $0);
+ },
+ 1254: function($0, $1, $2) {
   NHretransmit($0, $1, $2);
  },
- 1259: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 1277: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   onlineTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 1314: function($0) {
+ 1332: function($0) {
   thereIsAnIdiot($0);
  },
- 1333: function() {
+ 1351: function() {
   SetupGameConfig();
  },
- 1353: function($0, $1, $2, $3, $4, $5) {
+ 1371: function($0, $1, $2, $3, $4, $5) {
   onlineTable($0, $1, $2, $3, $4, $5);
  },
- 1396: function() {
+ 1414: function() {
   mapWindow();
  },
- 1408: function() {
+ 1426: function() {
   setupPlayermenu();
  },
- 1426: function($0, $1, $2) {
+ 1444: function($0, $1, $2) {
   peerSend($0, $1, $2);
  },
- 1450: function($0, $1, $2, $3) {
+ 1468: function($0, $1, $2, $3) {
   chat($0, 0, $1, $2, $3);
  },
- 1477: function($0) {
+ 1495: function($0) {
   presetuprndtable($0);
  },
- 1498: function($0, $1, $2, $3, $4) {
+ 1516: function($0, $1, $2, $3, $4) {
   randomMapTable($0, $1, $2, $3, $4);
  },
- 1540: function($0) {
+ 1558: function($0) {
   play($0);
  },
- 1551: function($0, $1, $2) {
+ 1569: function($0, $1, $2) {
   play($0, $1, $2);
  },
- 1626: function() {
+ 1644: function() {
   menuDefect();
  },
- 1640: function($0, $1) {
+ 1658: function($0, $1) {
   dmgAlert($0, $1);
  },
- 1658: function() {
+ 1676: function() {
   setupMWmenu();
  },
- 1677: function($0, $1, $2, $3, $4, $5) {
+ 1695: function($0, $1, $2, $3, $4, $5) {
   setupTradingmenu($0, $1, $2, $3, $4, $5);
  },
- 1722: function() {
+ 1740: function() {
   cleanMenuIcons();
  },
- 1739: function() {
+ 1757: function() {
   setupColorGL();
  },
- 1756: function($0, $1, $2, $3, $4, $5) {
+ 1774: function($0, $1, $2, $3, $4, $5) {
   addRNDOBJ($0, $1, $2, $3, $4, $5);
  },
- 1794: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
+ 1812: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
   insertInfo($0, $1, $2, $3, $4, 0, $5, $6, $7, $8, $9, $10, $11, $12);
  },
- 1868: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
+ 1886: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
   insertInfo($0, $1, $2, $3, $4, 1, $5, $6, $7, $8, $9, $10, $11, $12);
  },
- 1953: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {
+ 1971: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {
   multiOptions($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13);
  },
- 2030: function() {
+ 2048: function() {
   waitlistsetup();
  },
- 2048: function() {
+ 2066: function() {
   startMovement0();
  },
- 2069: function() {
+ 2087: function() {
   waitingList();
  },
- 2083: function() {
+ 2101: function() {
   startGame();
  },
- 2097: function() {
+ 2115: function() {
   gid("playersinfo").innerHTML = "<span style='width:50px;float:left;font-size:11px;color:#dcaa14;text-decoration:overline;'>Score</span><br>";
  },
- 2238: function($0, $1, $2, $3, $4, $5, $6, $7) {
+ 2256: function($0, $1, $2, $3, $4, $5, $6, $7) {
   setupPlayerInfo($0, $1, $2, $3, $4, $5, $6, $7);
  },
- 2290: function() {
+ 2308: function() {
   editorPlayerTable();
  },
- 2313: function() {
+ 2331: function() {
   activeKingdomSetup();
   setupColorGL();
  },
- 2351: function() {
+ 2369: function() {
   editorPlayerTable();
   activeKingdomSetup();
   setupColorGL();
  },
- 2640: function($0, $1, $2, $3, $4) {
+ 2656: function($0, $1, $2, $3, $4) {
   buttonSetup($0, $1, $2, $3, $4);
  },
- 2800: function($0, $1, $2, $3) {
+ 2816: function($0, $1, $2, $3) {
   setup3Dtexture($0, $1, $2, $3);
  },
- 2835: function() {
+ 2851: function() {
   startGameStep0.check();
  },
- 2858: function() {
+ 2874: function() {
   svggme2();
  },
- 2868: function($0, $1) {
+ 2884: function($0, $1) {
   chFFg($0, $1);
  },
- 2884: function() {
+ 2900: function() {
+  fstdD("SEC56");
+ },
+ 2915: function() {
   nhcleanclose();
  },
- 2899: function($0) {
+ 2930: function($0) {
   sresizeBuffer($0);
  },
- 2922: function($0, $1, $2, $3) {
+ 2953: function($0, $1, $2, $3) {
   bufferPos($0, $1, $2, $3);
  },
- 2950: function($0, $1, $2, $3, $4) {
+ 2981: function($0, $1, $2, $3, $4) {
   bufferPhysics($0, $1, $2, $3, $4);
  },
- 2986: function($0, $1, $2, $3, $4) {
+ 3017: function($0, $1, $2, $3, $4) {
   bufferMargin($0, $1, $2, $3, $4);
  },
- 3015: function($0, $1, $2, $3, $4) {
+ 3046: function($0, $1, $2, $3, $4) {
   bufferIMG($0, $1, $2, $3, $4);
  },
- 3047: function($0, $1, $2, $3, $4, $5) {
+ 3078: function($0, $1, $2, $3, $4, $5) {
   customMapTable($0, $1, $2, $3, $4, $5);
  },
- 3200: function($0, $1, $2, $3) {
+ 3232: function($0, $1, $2, $3) {
   changeresources($0, $1, $2, $3);
  },
- 3234: function($0, $1) {
+ 3266: function($0, $1) {
   popInfo($0, $1);
  },
- 3249: function($0, $1) {
+ 3281: function($0, $1) {
   changePlayerScore($0, $1);
  },
- 3276: function($0, $1) {
+ 3308: function($0, $1) {
   EDterrainInfo($0, $1);
  },
- 3302: function($0, $1) {
+ 3334: function($0, $1) {
   ms("manage", $0, $1);
  },
- 3321: function($0, $1) {
+ 3353: function($0, $1) {
   ms("manage22", $0, $1);
  },
- 3342: function($0, $1, $2, $3) {
+ 3374: function($0, $1, $2, $3) {
   locationAlert($0, $1, $2, $3);
  },
- 3376: function($0) {
+ 3408: function($0) {
   console.log("cycnfo", $0);
  },
- 3401: function($0, $1) {
+ 3433: function($0, $1) {
   console.log("checkcycle", $0, $1);
  },
- 3436: function() {
+ 3468: function() {
   console.log("SENT");
  },
- 3456: function($0, $1) {
+ 3488: function($0, $1) {
   console.log("currentCycle", $0, $1);
  },
- 3490: function($0) {
+ 3522: function($0) {
   console.log("recv", $0);
  },
- 3513: function($0, $1) {
+ 3545: function($0, $1) {
   setupArrows($0, $1);
  },
- 3532: function() {
+ 3564: function() {
   showGuide();
  },
- 3544: function($0, $1) {
+ 3576: function($0, $1) {
   setupArrows($0, $1);
  },
- 3568: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {
+ 3600: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {
   selectionOne0($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14);
  },
- 3664: function($0, $1) {
+ 3696: function($0, $1) {
   showHealthOne($0, $1);
  },
- 3688: function() {
+ 3720: function() {
   gid("delunit").style.display = "block";
  },
- 3725: function($0, $1, $2) {
+ 3757: function($0, $1, $2) {
   selectMulp($0, $1, $2);
  },
- 3746: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
+ 3778: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
   editProps($0, $1, $2, $3, $4, $5, $6, $7, $8, $9);
  },
- 3800: function($0, $1, $2, $3, $4, $5, $6, $7) {
+ 3832: function($0, $1, $2, $3, $4, $5, $6, $7) {
   writeProps($0, $1, $2, $3, $4, $5, $6, $7);
  },
- 3849: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 3881: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   writeProps($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 3924: function() {
+ 3956: function() {
   setupGameMusic();
  },
- 3988: function($0) {
+ 4e3: function($0) {
   showProgress($0);
  },
- 4116: function() {
+ 4128: function() {
   stpTupdtr();
  },
- 4128: function($0, $1) {
+ 4140: function($0, $1) {
   setupGL($0, $1);
  },
- 4145: function($0) {
+ 4157: function($0) {
   setupGL(0, $0);
  },
- 4161: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 4173: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   setupEditorPlayerTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 4226: function($0) {
+ 4238: function($0) {
   pong($0);
  },
- 4235: function($0) {
+ 4247: function($0) {
   updateMax($0);
  },
- 4251: function() {
+ 4263: function() {
   moduleLoaded();
  },
- 4266: function() {
+ 4278: function() {
   playerWon();
  },
- 4278: function($0) {
+ 4290: function($0) {
   updateHealth($0);
  },
- 4295: function() {
+ 4307: function() {
   popAlert(4);
  },
- 4307: function($0) {
+ 4319: function($0) {
   popAlert($0);
  },
- 4320: function() {
+ 4332: function() {
   gameOver();
  },
- 63432: function() {
+ 36696: function() {
   throw "Canceled!";
  },
- 63672: function($0, $1) {
+ 36918: function($0, $1) {
   setTimeout(function() {
    _do_emscripten_dispatch_to_thread($0, $1);
   }, 0);
  }
 };
 
-function _emscripten_asm_const_async_on_main_thread_vii(code, sigPtr, argbuf) {
- var args = readAsmConstArgs(sigPtr, argbuf);
- if (ENVIRONMENT_IS_PTHREAD) {
-  return _emscripten_proxy_to_main_thread_js.apply(null, [ -1 - code, 0 ].concat(args));
- }
- return ASM_CONSTS[code].apply(null, args);
-}
-
-function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
- var args = readAsmConstArgs(sigPtr, argbuf);
- return ASM_CONSTS[code].apply(null, args);
-}
-
-function _emscripten_asm_const_sync_on_main_thread_iii(code, sigPtr, argbuf) {
- var args = readAsmConstArgs(sigPtr, argbuf);
- if (ENVIRONMENT_IS_PTHREAD) {
-  return _emscripten_proxy_to_main_thread_js.apply(null, [ -1 - code, 1 ].concat(args));
- }
- return ASM_CONSTS[code].apply(null, args);
-}
-
 function initPthreadsJS() {
  PThread.initRuntime();
 }
 
-if (!ENVIRONMENT_IS_PTHREAD) __ATINIT__.push({
- func: function() {
-  ___wasm_call_ctors();
+function callRuntimeCallbacks(callbacks) {
+ while (callbacks.length > 0) {
+  var callback = callbacks.shift();
+  if (typeof callback == "function") {
+   callback(Module);
+   continue;
+  }
+  var func = callback.func;
+  if (typeof func === "number") {
+   if (callback.arg === undefined) {
+    wasmTable.get(func)();
+   } else {
+    wasmTable.get(func)(callback.arg);
+   }
+  } else {
+   func(callback.arg === undefined ? null : callback.arg);
+  }
  }
-});
+}
 
 function demangle(func) {
  return func;
@@ -1576,6 +1389,22 @@ function demangleAll(text) {
   return x === y ? x : y + " [" + x + "]";
  });
 }
+
+function dynCallLegacy(sig, ptr, args) {
+ if (args && args.length) {
+  return Module["dynCall_" + sig].apply(null, [ ptr ].concat(args));
+ }
+ return Module["dynCall_" + sig].call(null, ptr);
+}
+
+function dynCall(sig, ptr, args) {
+ if (sig.indexOf("j") != -1) {
+  return dynCallLegacy(sig, ptr, args);
+ }
+ return wasmTable.get(ptr).apply(null, args);
+}
+
+Module["dynCall"] = dynCall;
 
 var __pthread_ptr = 0;
 
@@ -1718,16 +1547,14 @@ var ERRNO_CODES = {
  ESTRPIPE: 135
 };
 
-var __main_thread_futex_wait_address = 4247984;
-
 function _emscripten_futex_wake(addr, count) {
  if (addr <= 0 || addr > GROWABLE_HEAP_I8().length || addr & 3 != 0 || count < 0) return -28;
  if (count == 0) return 0;
  if (count >= 2147483647) count = Infinity;
- var mainThreadWaitAddress = Atomics.load(GROWABLE_HEAP_I32(), __main_thread_futex_wait_address >> 2);
+ var mainThreadWaitAddress = Atomics.load(GROWABLE_HEAP_I32(), PThread.mainThreadFutex >> 2);
  var mainThreadWoken = 0;
  if (mainThreadWaitAddress == addr) {
-  var loadedAddr = Atomics.compareExchange(GROWABLE_HEAP_I32(), __main_thread_futex_wait_address >> 2, mainThreadWaitAddress, 0);
+  var loadedAddr = Atomics.compareExchange(GROWABLE_HEAP_I32(), PThread.mainThreadFutex >> 2, mainThreadWaitAddress, 0);
   if (loadedAddr == mainThreadWaitAddress) {
    --count;
    mainThreadWoken = 1;
@@ -1780,27 +1607,33 @@ var PThread = {
  },
  unusedWorkers: [],
  runningWorkers: [],
- initRuntime: function() {
-  registerPthreadPtr(PThread.mainThreadBlock, !ENVIRONMENT_IS_WORKER, 1);
-  _emscripten_register_main_browser_thread_id(PThread.mainThreadBlock);
- },
  initMainThreadBlock: function() {
   var pthreadPoolSize = 2;
   for (var i = 0; i < pthreadPoolSize; ++i) {
    PThread.allocateUnusedWorker();
   }
-  PThread.mainThreadBlock = 4247232;
+ },
+ initRuntime: function() {
+  PThread.mainThreadBlock = _malloc(232);
   for (var i = 0; i < 232 / 4; ++i) GROWABLE_HEAP_U32()[PThread.mainThreadBlock / 4 + i] = 0;
   GROWABLE_HEAP_I32()[PThread.mainThreadBlock + 12 >> 2] = PThread.mainThreadBlock;
   var headPtr = PThread.mainThreadBlock + 156;
   GROWABLE_HEAP_I32()[headPtr >> 2] = headPtr;
-  var tlsMemory = 4247472;
+  var tlsMemory = _malloc(512);
   for (var i = 0; i < 128; ++i) GROWABLE_HEAP_U32()[tlsMemory / 4 + i] = 0;
   Atomics.store(GROWABLE_HEAP_U32(), PThread.mainThreadBlock + 104 >> 2, tlsMemory);
   Atomics.store(GROWABLE_HEAP_U32(), PThread.mainThreadBlock + 40 >> 2, PThread.mainThreadBlock);
   Atomics.store(GROWABLE_HEAP_U32(), PThread.mainThreadBlock + 44 >> 2, 42);
+  PThread.initShared();
+  registerPthreadPtr(PThread.mainThreadBlock, !ENVIRONMENT_IS_WORKER, 1);
+  _emscripten_register_main_browser_thread_id(PThread.mainThreadBlock);
  },
- initWorker: function() {},
+ initWorker: function() {
+  PThread.initShared();
+ },
+ initShared: function() {
+  PThread.mainThreadFutex = _main_thread_futex;
+ },
  pthreads: {},
  threadExitHandlers: [],
  setThreadStatus: function() {},
@@ -1942,9 +1775,7 @@ var PThread = {
    "cmd": "load",
    "urlOrBlob": Module["mainScriptUrlOrBlob"] || _scriptDir,
    "wasmMemory": wasmMemory,
-   "wasmModule": wasmModule,
-   "DYNAMIC_BASE": DYNAMIC_BASE,
-   "DYNAMICTOP_PTR": DYNAMICTOP_PTR
+   "wasmModule": wasmModule
   });
  },
  allocateUnusedWorker: function() {
@@ -1979,18 +1810,18 @@ function getNoExitRuntime() {
 Module["getNoExitRuntime"] = getNoExitRuntime;
 
 function jsStackTrace() {
- var err = new Error();
- if (!err.stack) {
+ var error = new Error();
+ if (!error.stack) {
   try {
    throw new Error();
   } catch (e) {
-   err = e;
+   error = e;
   }
-  if (!err.stack) {
+  if (!error.stack) {
    return "(no stack trace available)";
   }
  }
- return err.stack.toString();
+ return error.stack.toString();
 }
 
 function stackTrace() {
@@ -2078,6 +1909,27 @@ function _abort() {
  abort();
 }
 
+function mainThreadEM_ASM(code, sigPtr, argbuf, sync) {
+ var args = readAsmConstArgs(sigPtr, argbuf);
+ if (ENVIRONMENT_IS_PTHREAD) {
+  return _emscripten_proxy_to_main_thread_js.apply(null, [ -1 - code, sync ].concat(args));
+ }
+ return ASM_CONSTS[code].apply(null, args);
+}
+
+function _emscripten_asm_const_async_on_main_thread(code, sigPtr, argbuf) {
+ return mainThreadEM_ASM(code, sigPtr, argbuf, 0);
+}
+
+function _emscripten_asm_const_int(code, sigPtr, argbuf) {
+ var args = readAsmConstArgs(sigPtr, argbuf);
+ return ASM_CONSTS[code].apply(null, args);
+}
+
+function _emscripten_asm_const_int_sync_on_main_thread(code, sigPtr, argbuf) {
+ return mainThreadEM_ASM(code, sigPtr, argbuf, 1);
+}
+
 function _emscripten_check_blocking_allowed() {
  if (ENVIRONMENT_IS_WORKER) return;
  warnOnce("Blocking on the main thread is very dangerous, see https://emscripten.org/docs/porting/pthreads.html#blocking-on-the-main-browser-thread");
@@ -2092,33 +1944,37 @@ function _emscripten_conditional_set_current_thread_status(expectedStatus, newSt
 
 function _emscripten_futex_wait(addr, val, timeout) {
  if (addr <= 0 || addr > GROWABLE_HEAP_I8().length || addr & 3 != 0) return -28;
- if (ENVIRONMENT_IS_WORKER) {
+ if (!ENVIRONMENT_IS_WEB) {
   var ret = Atomics.wait(GROWABLE_HEAP_I32(), addr >> 2, val, timeout);
   if (ret === "timed-out") return -73;
   if (ret === "not-equal") return -6;
   if (ret === "ok") return 0;
   throw "Atomics.wait returned an unexpected value " + ret;
  } else {
-  var loadedVal = Atomics.load(GROWABLE_HEAP_I32(), addr >> 2);
-  if (val != loadedVal) return -6;
+  if (Atomics.load(GROWABLE_HEAP_I32(), addr >> 2) != val) {
+   return -6;
+  }
   var tNow = performance.now();
   var tEnd = tNow + timeout;
-  Atomics.store(GROWABLE_HEAP_I32(), __main_thread_futex_wait_address >> 2, addr);
-  var ourWaitAddress = addr;
-  while (addr == ourWaitAddress) {
+  var lastAddr = Atomics.exchange(GROWABLE_HEAP_I32(), PThread.mainThreadFutex >> 2, addr);
+  while (1) {
    tNow = performance.now();
    if (tNow > tEnd) {
+    lastAddr = Atomics.exchange(GROWABLE_HEAP_I32(), PThread.mainThreadFutex >> 2, 0);
     return -73;
    }
+   lastAddr = Atomics.exchange(GROWABLE_HEAP_I32(), PThread.mainThreadFutex >> 2, 0);
+   if (lastAddr == 0) {
+    break;
+   }
    _emscripten_main_thread_process_queued_calls();
-   addr = Atomics.load(GROWABLE_HEAP_I32(), __main_thread_futex_wait_address >> 2);
+   if (Atomics.load(GROWABLE_HEAP_I32(), addr >> 2) != val) {
+    return -6;
+   }
+   lastAddr = Atomics.exchange(GROWABLE_HEAP_I32(), PThread.mainThreadFutex >> 2, addr);
   }
   return 0;
  }
-}
-
-function _emscripten_get_sbrk_ptr() {
- return 4247056;
 }
 
 function _emscripten_is_main_browser_thread() {
@@ -2192,7 +2048,6 @@ function _emscripten_resize_heap(requestedSize) {
  if (requestedSize <= oldSize) {
   return false;
  }
- var PAGE_MULTIPLE = 65536;
  var maxHeapSize = 4294967296;
  if (requestedSize > maxHeapSize) {
   return false;
@@ -2201,7 +2056,7 @@ function _emscripten_resize_heap(requestedSize) {
  for (var cutDown = 1; cutDown <= 4; cutDown *= 2) {
   var overGrownHeapSize = oldSize * (1 + .2 / cutDown);
   overGrownHeapSize = Math.min(overGrownHeapSize, requestedSize + 100663296);
-  var newSize = Math.min(maxHeapSize, alignUp(Math.max(minHeapSize, requestedSize, overGrownHeapSize), PAGE_MULTIPLE));
+  var newSize = Math.min(maxHeapSize, alignUp(Math.max(minHeapSize, requestedSize, overGrownHeapSize), 65536));
   var replacement = emscripten_realloc_buffer(newSize);
   if (replacement) {
    return true;
@@ -2484,7 +2339,7 @@ function __emscripten_fetch_xhr(fetch, onsuccess, onerror, onprogress, onreadyst
  var fetch_attr = fetch + 112;
  var requestMethod = UTF8ToString(fetch_attr);
  if (!requestMethod) requestMethod = "GET";
- var userData = GROWABLE_HEAP_U32()[fetch_attr + 32 >> 2];
+ var userData = GROWABLE_HEAP_U32()[fetch + 4 >> 2];
  var fetchAttributes = GROWABLE_HEAP_U32()[fetch_attr + 52 >> 2];
  var timeoutMsecs = GROWABLE_HEAP_U32()[fetch_attr + 56 >> 2];
  var withCredentials = !!GROWABLE_HEAP_U32()[fetch_attr + 60 >> 2];
@@ -2549,9 +2404,6 @@ function __emscripten_fetch_xhr(fetch, onsuccess, onerror, onprogress, onreadyst
    Fetch.setu64(fetch + 32, len);
   }
   GROWABLE_HEAP_U16()[fetch + 40 >> 1] = xhr.readyState;
-  if (xhr.readyState === 4 && xhr.status === 0) {
-   if (len > 0) xhr.status = 200; else xhr.status = 404;
-  }
   GROWABLE_HEAP_U16()[fetch + 42 >> 1] = xhr.status;
   if (xhr.statusText) stringToUTF8(xhr.statusText, fetch + 44, 64);
   if (xhr.status >= 200 && xhr.status < 300) {
@@ -2563,7 +2415,6 @@ function __emscripten_fetch_xhr(fetch, onsuccess, onerror, onprogress, onreadyst
  xhr.onerror = function(e) {
   saveResponse(fetchAttrLoadToMemory);
   var status = xhr.status;
-  if (xhr.readyState === 4 && status === 0) status = 404;
   Fetch.setu64(fetch + 24, 0);
   Fetch.setu64(fetch + 32, xhr.response ? xhr.response.byteLength : 0);
   GROWABLE_HEAP_U16()[fetch + 40 >> 1] = xhr.readyState;
@@ -2717,12 +2568,6 @@ function __emscripten_fetch_delete_cached_data(db, fetch, onsuccess, onerror) {
  }
 }
 
-var _fetch_work_queue = 4247216;
-
-function __emscripten_get_fetch_work_queue() {
- return _fetch_work_queue;
-}
-
 function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readystatechangecb) {
  if (typeof noExitRuntime !== "undefined") noExitRuntime = true;
  var fetch_attr = fetch + 112;
@@ -2739,26 +2584,26 @@ function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readysta
  var fetchAttrAppend = !!(fetchAttributes & 8);
  var fetchAttrReplace = !!(fetchAttributes & 16);
  var reportSuccess = function(fetch, xhr, e) {
-  if (onsuccess) dynCall_vi(onsuccess, fetch); else if (successcb) successcb(fetch);
+  if (onsuccess) wasmTable.get(onsuccess)(fetch); else if (successcb) successcb(fetch);
  };
  var reportProgress = function(fetch, xhr, e) {
-  if (onprogress) dynCall_vi(onprogress, fetch); else if (progresscb) progresscb(fetch);
+  if (onprogress) wasmTable.get(onprogress)(fetch); else if (progresscb) progresscb(fetch);
  };
  var reportError = function(fetch, xhr, e) {
-  if (onerror) dynCall_vi(onerror, fetch); else if (errorcb) errorcb(fetch);
+  if (onerror) wasmTable.get(onerror)(fetch); else if (errorcb) errorcb(fetch);
  };
  var reportReadyStateChange = function(fetch, xhr, e) {
-  if (onreadystatechange) dynCall_vi(onreadystatechange, fetch); else if (readystatechangecb) readystatechangecb(fetch);
+  if (onreadystatechange) wasmTable.get(onreadystatechange)(fetch); else if (readystatechangecb) readystatechangecb(fetch);
  };
  var performUncachedXhr = function(fetch, xhr, e) {
   __emscripten_fetch_xhr(fetch, reportSuccess, reportError, reportProgress, reportReadyStateChange);
  };
  var cacheResultAndReportSuccess = function(fetch, xhr, e) {
   var storeSuccess = function(fetch, xhr, e) {
-   if (onsuccess) dynCall_vi(onsuccess, fetch); else if (successcb) successcb(fetch);
+   if (onsuccess) wasmTable.get(onsuccess)(fetch); else if (successcb) successcb(fetch);
   };
   var storeError = function(fetch, xhr, e) {
-   if (onsuccess) dynCall_vi(onsuccess, fetch); else if (successcb) successcb(fetch);
+   if (onsuccess) wasmTable.get(onsuccess)(fetch); else if (successcb) successcb(fetch);
   };
   __emscripten_fetch_cache_data(Fetch.dbInstance, fetch, xhr.response, storeSuccess, storeError);
  };
@@ -2823,6 +2668,10 @@ function __webgl_enable_WEBGL_draw_buffers(ctx) {
   };
   return 1;
  }
+}
+
+function __webgl_enable_WEBGL_multi_draw(ctx) {
+ return !!(ctx.multiDrawWebgl = ctx.getExtension("WEBGL_multi_draw"));
 }
 
 var GL = {
@@ -2907,6 +2756,7 @@ var GL = {
   __webgl_enable_OES_vertex_array_object(GLctx);
   __webgl_enable_WEBGL_draw_buffers(GLctx);
   GLctx.disjointTimerQueryExt = GLctx.getExtension("EXT_disjoint_timer_query");
+  __webgl_enable_WEBGL_multi_draw(GLctx);
   var automaticallyEnabledExtensions = [ "OES_texture_float", "OES_texture_half_float", "OES_standard_derivatives", "OES_vertex_array_object", "WEBGL_compressed_texture_s3tc", "WEBGL_depth_texture", "OES_element_index_uint", "EXT_texture_filter_anisotropic", "EXT_frag_depth", "WEBGL_draw_buffers", "ANGLE_instanced_arrays", "OES_texture_float_linear", "OES_texture_half_float_linear", "EXT_blend_minmax", "EXT_shader_texture_lod", "EXT_texture_norm16", "WEBGL_compressed_texture_pvrtc", "EXT_color_buffer_half_float", "WEBGL_color_buffer_float", "EXT_sRGB", "WEBGL_compressed_texture_etc1", "EXT_disjoint_timer_query", "WEBGL_compressed_texture_etc", "WEBGL_compressed_texture_astc", "EXT_color_buffer_float", "WEBGL_compressed_texture_s3tc_srgb", "EXT_disjoint_timer_query_webgl2", "WEBKIT_WEBGL_compressed_texture_pvrtc" ];
   function shouldEnableAutomatically(extension) {
    var ret = false;
@@ -2979,10 +2829,10 @@ function _emscripten_webgl_do_create_context(target, attributes) {
  contextAttributes.renderViaOffscreenBackBuffer = GROWABLE_HEAP_I32()[a + (52 >> 2)];
  var canvas = findCanvasEventTarget(target);
  if (!canvas) {
-  return -4;
+  return 0;
  }
  if (contextAttributes.explicitSwapControl) {
-  return -1;
+  return 0;
  }
  var contextHandle = GL.createContext(canvas, contextAttributes);
  return contextHandle;
@@ -3050,6 +2900,8 @@ var PATH = {
  },
  basename: function(path) {
   if (path === "/") return "/";
+  path = PATH.normalize(path);
+  path = path.replace(/\/$/, "");
   var lastSlash = path.lastIndexOf("/");
   if (lastSlash === -1) return path;
   return path.substr(lastSlash + 1);
@@ -3110,7 +2962,7 @@ function _fd_write(fd, iov, iovcnt, pnum) {
 
 function _pthread_cleanup_push(routine, arg) {
  PThread.threadExitHandlers.push(function() {
-  dynCall_vi(routine, arg);
+  wasmTable.get(routine)(arg);
  });
 }
 
@@ -3300,7 +3152,7 @@ function _setTempRet0($i) {
  setTempRet0($i | 0);
 }
 
-if (!ENVIRONMENT_IS_PTHREAD) PThread.initMainThreadBlock(); else PThread.initWorker();
+if (!ENVIRONMENT_IS_PTHREAD) PThread.initMainThreadBlock();
 
 if (!ENVIRONMENT_IS_PTHREAD) Fetch.staticInit();
 
@@ -3333,7 +3185,11 @@ function intArrayToString(array) {
  return ret.join("");
 }
 
-var asmGlobalArg = {};
+if (!ENVIRONMENT_IS_PTHREAD) __ATINIT__.push({
+ func: function() {
+  ___wasm_call_ctors();
+ }
+});
 
 var asmLibraryArg = {
  "__assert_fail": ___assert_fail,
@@ -3342,15 +3198,14 @@ var asmLibraryArg = {
  "_emscripten_fetch_free": __emscripten_fetch_free,
  "_emscripten_notify_thread_queue": __emscripten_notify_thread_queue,
  "abort": _abort,
- "emscripten_asm_const_async_on_main_thread_vii": _emscripten_asm_const_async_on_main_thread_vii,
- "emscripten_asm_const_iii": _emscripten_asm_const_iii,
- "emscripten_asm_const_sync_on_main_thread_iii": _emscripten_asm_const_sync_on_main_thread_iii,
+ "emscripten_asm_const_async_on_main_thread": _emscripten_asm_const_async_on_main_thread,
+ "emscripten_asm_const_int": _emscripten_asm_const_int,
+ "emscripten_asm_const_int_sync_on_main_thread": _emscripten_asm_const_int_sync_on_main_thread,
  "emscripten_check_blocking_allowed": _emscripten_check_blocking_allowed,
  "emscripten_conditional_set_current_thread_status": _emscripten_conditional_set_current_thread_status,
  "emscripten_futex_wait": _emscripten_futex_wait,
  "emscripten_futex_wake": _emscripten_futex_wake,
  "emscripten_get_now": _emscripten_get_now,
- "emscripten_get_sbrk_ptr": _emscripten_get_sbrk_ptr,
  "emscripten_is_main_browser_thread": _emscripten_is_main_browser_thread,
  "emscripten_is_main_runtime_thread": _emscripten_is_main_runtime_thread,
  "emscripten_memcpy_big": _emscripten_memcpy_big,
@@ -3367,8 +3222,7 @@ var asmLibraryArg = {
  "pthread_create": _pthread_create,
  "pthread_exit": _pthread_exit,
  "pthread_self": _pthread_self,
- "setTempRet0": _setTempRet0,
- "table": wasmTable
+ "setTempRet0": _setTempRet0
 };
 
 var asm = createWasm();
@@ -4237,97 +4091,15 @@ var _emscripten_tls_init = Module["_emscripten_tls_init"] = function() {
  return (_emscripten_tls_init = Module["_emscripten_tls_init"] = Module["asm"]["emscripten_tls_init"]).apply(null, arguments);
 };
 
-var __growWasmMemory = Module["__growWasmMemory"] = function() {
- return (__growWasmMemory = Module["__growWasmMemory"] = Module["asm"]["__growWasmMemory"]).apply(null, arguments);
-};
-
-var dynCall_vi = Module["dynCall_vi"] = function() {
- return (dynCall_vi = Module["dynCall_vi"] = Module["asm"]["dynCall_vi"]).apply(null, arguments);
-};
-
-var dynCall_vii = Module["dynCall_vii"] = function() {
- return (dynCall_vii = Module["dynCall_vii"] = Module["asm"]["dynCall_vii"]).apply(null, arguments);
-};
-
-var dynCall_ii = Module["dynCall_ii"] = function() {
- return (dynCall_ii = Module["dynCall_ii"] = Module["asm"]["dynCall_ii"]).apply(null, arguments);
-};
-
-var dynCall_iiii = Module["dynCall_iiii"] = function() {
- return (dynCall_iiii = Module["dynCall_iiii"] = Module["asm"]["dynCall_iiii"]).apply(null, arguments);
-};
-
-var dynCall_iiiii = Module["dynCall_iiiii"] = function() {
- return (dynCall_iiiii = Module["dynCall_iiiii"] = Module["asm"]["dynCall_iiiii"]).apply(null, arguments);
-};
-
-var dynCall_viii = Module["dynCall_viii"] = function() {
- return (dynCall_viii = Module["dynCall_viii"] = Module["asm"]["dynCall_viii"]).apply(null, arguments);
-};
-
-var dynCall_iii = Module["dynCall_iii"] = function() {
- return (dynCall_iii = Module["dynCall_iii"] = Module["asm"]["dynCall_iii"]).apply(null, arguments);
-};
-
-var dynCall_iiiiiii = Module["dynCall_iiiiiii"] = function() {
- return (dynCall_iiiiiii = Module["dynCall_iiiiiii"] = Module["asm"]["dynCall_iiiiiii"]).apply(null, arguments);
-};
-
-var dynCall_viiii = Module["dynCall_viiii"] = function() {
- return (dynCall_viiii = Module["dynCall_viiii"] = Module["asm"]["dynCall_viiii"]).apply(null, arguments);
-};
-
-var dynCall_viiiiii = Module["dynCall_viiiiii"] = function() {
- return (dynCall_viiiiii = Module["dynCall_viiiiii"] = Module["asm"]["dynCall_viiiiii"]).apply(null, arguments);
-};
-
-var dynCall_viiiii = Module["dynCall_viiiii"] = function() {
- return (dynCall_viiiii = Module["dynCall_viiiii"] = Module["asm"]["dynCall_viiiii"]).apply(null, arguments);
-};
-
-var dynCall_viiiiiii = Module["dynCall_viiiiiii"] = function() {
- return (dynCall_viiiiiii = Module["dynCall_viiiiiii"] = Module["asm"]["dynCall_viiiiiii"]).apply(null, arguments);
-};
-
-var dynCall_fi = Module["dynCall_fi"] = function() {
- return (dynCall_fi = Module["dynCall_fi"] = Module["asm"]["dynCall_fi"]).apply(null, arguments);
-};
-
-var dynCall_dii = Module["dynCall_dii"] = function() {
- return (dynCall_dii = Module["dynCall_dii"] = Module["asm"]["dynCall_dii"]).apply(null, arguments);
-};
-
-var dynCall_diii = Module["dynCall_diii"] = function() {
- return (dynCall_diii = Module["dynCall_diii"] = Module["asm"]["dynCall_diii"]).apply(null, arguments);
-};
-
-var dynCall_fii = Module["dynCall_fii"] = function() {
- return (dynCall_fii = Module["dynCall_fii"] = Module["asm"]["dynCall_fii"]).apply(null, arguments);
-};
-
-var dynCall_diiii = Module["dynCall_diiii"] = function() {
- return (dynCall_diiii = Module["dynCall_diiii"] = Module["asm"]["dynCall_diiii"]).apply(null, arguments);
-};
-
-var dynCall_diiiiiiii = Module["dynCall_diiiiiiii"] = function() {
- return (dynCall_diiiiiiii = Module["dynCall_diiiiiiii"] = Module["asm"]["dynCall_diiiiiiii"]).apply(null, arguments);
-};
-
-var dynCall_viiiiiiiii = Module["dynCall_viiiiiiiii"] = function() {
- return (dynCall_viiiiiiiii = Module["dynCall_viiiiiiiii"] = Module["asm"]["dynCall_viiiiiiiii"]).apply(null, arguments);
-};
-
 var dynCall_jiiii = Module["dynCall_jiiii"] = function() {
  return (dynCall_jiiii = Module["dynCall_jiiii"] = Module["asm"]["dynCall_jiiii"]).apply(null, arguments);
-};
-
-var dynCall_iidiiii = Module["dynCall_iidiiii"] = function() {
- return (dynCall_iidiiii = Module["dynCall_iidiiii"] = Module["asm"]["dynCall_iidiiii"]).apply(null, arguments);
 };
 
 var dynCall_jiji = Module["dynCall_jiji"] = function() {
  return (dynCall_jiji = Module["dynCall_jiji"] = Module["asm"]["dynCall_jiji"]).apply(null, arguments);
 };
+
+var _main_thread_futex = Module["_main_thread_futex"] = 4217436;
 
 Module["PThread"] = PThread;
 
@@ -4419,10 +4191,10 @@ function exit(status, implicit) {
  }
  if (noExitRuntime) {} else {
   PThread.terminateAllThreads();
-  ABORT = true;
   EXITSTATUS = status;
   exitRuntime();
   if (Module["onExit"]) Module["onExit"](status);
+  ABORT = true;
  }
  quit_(status, new ExitStatus(status));
 }
@@ -4442,4 +4214,6 @@ if (!ENVIRONMENT_IS_PTHREAD) noExitRuntime = true;
 
 if (!ENVIRONMENT_IS_PTHREAD) {
  run();
-} else {}
+} else {
+ PThread.initWorker();
+}

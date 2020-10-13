@@ -1,3 +1,8 @@
+##397
+Ctrl + < shortcut to hide trees and terrain
+Improved minimap visibility
+Alt + click shortcut to automatically attack walls
+Minor bug fixes
 ##396
 Fixed some graphic bugs
 Pathfinder working properly for 2x2 units (catapults, boats...)
