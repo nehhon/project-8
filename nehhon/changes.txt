@@ -1,3 +1,9 @@
+##399
+Fixed selection rectangle bug
+New desktop app version
+Updated theme
+Added pixel density option
+Added 8 fields + farm shortcut for asians
 ##398
 Ctrl + < shortcut to hide trees and terrain
 Improved minimap visibility

@@ -778,7 +778,7 @@ function updateGlobalBufferAndViews(buf) {
  Module["HEAPF64"] = HEAPF64 = new Float64Array(buf);
 }
 
-var STACK_BASE = 9461968, STACKTOP = STACK_BASE, STACK_MAX = 4219088;
+var STACK_BASE = 9462160, STACKTOP = STACK_BASE, STACK_MAX = 4219280;
 
 if (ENVIRONMENT_IS_PTHREAD) {}
 
@@ -1095,259 +1095,259 @@ var ASM_CONSTS = {
  1215: function($0, $1) {
   rcrconsole($0, $1);
  },
- 1236: function($0) {
-  fstdD("SEC55", $0);
+ 1236: function($0, $1) {
+  fstdD("SEC55", $0, $1);
  },
- 1254: function($0, $1, $2) {
+ 1260: function($0, $1, $2) {
   NHretransmit($0, $1, $2);
  },
- 1277: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 1283: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   onlineTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 1332: function($0) {
+ 1338: function($0) {
   thereIsAnIdiot($0);
  },
- 1351: function() {
+ 1357: function() {
   SetupGameConfig();
  },
- 1371: function($0, $1, $2, $3, $4, $5) {
+ 1377: function($0, $1, $2, $3, $4, $5) {
   onlineTable($0, $1, $2, $3, $4, $5);
  },
- 1414: function() {
+ 1420: function() {
   mapWindow();
  },
- 1426: function() {
+ 1432: function() {
   setupPlayermenu();
  },
- 1444: function($0, $1, $2) {
+ 1450: function($0, $1, $2) {
   peerSend($0, $1, $2);
  },
- 1468: function($0, $1, $2, $3) {
+ 1474: function($0, $1, $2, $3) {
   chat($0, 0, $1, $2, $3);
  },
- 1495: function($0) {
+ 1501: function($0) {
   presetuprndtable($0);
  },
- 1516: function($0, $1, $2, $3, $4) {
+ 1522: function($0, $1, $2, $3, $4) {
   randomMapTable($0, $1, $2, $3, $4);
  },
- 1558: function($0) {
+ 1564: function($0) {
   play($0);
  },
- 1569: function($0, $1, $2) {
+ 1575: function($0, $1, $2) {
   play($0, $1, $2);
  },
- 1644: function() {
+ 1650: function() {
   menuDefect();
  },
- 1658: function($0, $1) {
+ 1664: function($0, $1) {
   dmgAlert($0, $1);
  },
- 1676: function() {
+ 1682: function() {
   setupMWmenu();
  },
- 1695: function($0, $1, $2, $3, $4, $5) {
+ 1701: function($0, $1, $2, $3, $4, $5) {
   setupTradingmenu($0, $1, $2, $3, $4, $5);
  },
- 1740: function() {
+ 1746: function() {
   cleanMenuIcons();
  },
- 1757: function() {
+ 1763: function() {
   setupColorGL();
  },
- 1774: function($0, $1, $2, $3, $4, $5) {
+ 1780: function($0, $1, $2, $3, $4, $5) {
   addRNDOBJ($0, $1, $2, $3, $4, $5);
  },
- 1812: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
+ 1818: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
   insertInfo($0, $1, $2, $3, $4, 0, $5, $6, $7, $8, $9, $10, $11, $12);
  },
- 1886: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
+ 1892: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
   insertInfo($0, $1, $2, $3, $4, 1, $5, $6, $7, $8, $9, $10, $11, $12);
  },
- 1971: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {
+ 1977: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {
   multiOptions($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13);
  },
- 2048: function() {
+ 2054: function() {
   waitlistsetup();
  },
- 2066: function() {
+ 2072: function() {
   startMovement0();
  },
- 2087: function() {
+ 2093: function() {
   waitingList();
  },
- 2101: function() {
+ 2107: function() {
   startGame();
  },
- 2115: function() {
+ 2121: function() {
   gid("playersinfo").innerHTML = "<span style='width:50px;float:left;font-size:11px;color:#dcaa14;text-decoration:overline;'>Score</span><br>";
  },
- 2256: function($0, $1, $2, $3, $4, $5, $6, $7) {
+ 2262: function($0, $1, $2, $3, $4, $5, $6, $7) {
   setupPlayerInfo($0, $1, $2, $3, $4, $5, $6, $7);
  },
- 2308: function() {
+ 2314: function() {
   editorPlayerTable();
  },
- 2331: function() {
+ 2337: function() {
   activeKingdomSetup();
   setupColorGL();
  },
- 2369: function() {
+ 2375: function() {
   editorPlayerTable();
   activeKingdomSetup();
   setupColorGL();
  },
- 2656: function($0, $1, $2, $3, $4) {
+ 2672: function($0, $1, $2, $3, $4) {
   buttonSetup($0, $1, $2, $3, $4);
  },
- 2816: function($0, $1, $2, $3) {
+ 2832: function($0, $1, $2, $3) {
   setup3Dtexture($0, $1, $2, $3);
  },
- 2851: function() {
+ 2867: function() {
   startGameStep0.check();
  },
- 2874: function() {
+ 2890: function() {
   svggme2();
  },
- 2884: function($0, $1) {
+ 2900: function($0, $1) {
   chFFg($0, $1);
  },
- 2900: function() {
+ 2916: function() {
   fstdD("SEC56");
  },
- 2915: function() {
+ 2931: function() {
   nhcleanclose();
  },
- 2930: function($0) {
+ 2946: function($0) {
   sresizeBuffer($0);
  },
- 2953: function($0, $1, $2, $3) {
+ 2969: function($0, $1, $2, $3) {
   bufferPos($0, $1, $2, $3);
  },
- 2981: function($0, $1, $2, $3, $4) {
+ 2997: function($0, $1, $2, $3, $4) {
   bufferPhysics($0, $1, $2, $3, $4);
  },
- 3017: function($0, $1, $2, $3, $4) {
+ 3033: function($0, $1, $2, $3, $4) {
   bufferMargin($0, $1, $2, $3, $4);
  },
- 3046: function($0, $1, $2, $3, $4) {
+ 3062: function($0, $1, $2, $3, $4) {
   bufferIMG($0, $1, $2, $3, $4);
  },
- 3078: function($0, $1, $2, $3, $4, $5) {
+ 3094: function($0, $1, $2, $3, $4, $5) {
   customMapTable($0, $1, $2, $3, $4, $5);
  },
- 3232: function($0, $1, $2, $3) {
+ 3248: function($0, $1, $2, $3) {
   changeresources($0, $1, $2, $3);
  },
- 3266: function($0, $1) {
+ 3282: function($0, $1) {
   popInfo($0, $1);
  },
- 3281: function($0, $1) {
+ 3297: function($0, $1) {
   changePlayerScore($0, $1);
  },
- 3308: function($0, $1) {
+ 3324: function($0, $1) {
   EDterrainInfo($0, $1);
  },
- 3334: function($0, $1) {
+ 3350: function($0, $1) {
   ms("manage", $0, $1);
  },
- 3353: function($0, $1) {
+ 3369: function($0, $1) {
   ms("manage22", $0, $1);
  },
- 3374: function($0, $1, $2, $3) {
+ 3390: function($0, $1, $2, $3) {
   locationAlert($0, $1, $2, $3);
  },
- 3408: function($0) {
+ 3424: function($0) {
   console.log("cycnfo", $0);
  },
- 3433: function($0, $1) {
+ 3449: function($0, $1) {
   console.log("checkcycle", $0, $1);
  },
- 3468: function() {
+ 3484: function() {
   console.log("SENT");
  },
- 3488: function($0, $1) {
+ 3504: function($0, $1) {
   console.log("currentCycle", $0, $1);
  },
- 3522: function($0) {
+ 3538: function($0) {
   console.log("recv", $0);
  },
- 3545: function($0, $1) {
+ 3561: function($0, $1) {
   setupArrows($0, $1);
  },
- 3564: function() {
+ 3580: function() {
   showGuide();
  },
- 3576: function($0, $1) {
+ 3592: function($0, $1) {
   setupArrows($0, $1);
  },
- 3600: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {
+ 3616: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {
   selectionOne0($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14);
  },
- 3696: function($0, $1) {
+ 3712: function($0, $1) {
   showHealthOne($0, $1);
  },
- 3720: function() {
+ 3736: function() {
   gid("delunit").style.display = "block";
  },
- 3757: function($0, $1, $2) {
+ 3773: function($0, $1, $2) {
   selectMulp($0, $1, $2);
  },
- 3778: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
+ 3794: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
   editProps($0, $1, $2, $3, $4, $5, $6, $7, $8, $9);
  },
- 3832: function($0, $1, $2, $3, $4, $5, $6, $7) {
+ 3848: function($0, $1, $2, $3, $4, $5, $6, $7) {
   writeProps($0, $1, $2, $3, $4, $5, $6, $7);
  },
- 3881: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 3897: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   writeProps($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 3956: function() {
+ 3972: function() {
   setupGameMusic();
  },
- 4e3: function($0) {
+ 4016: function($0) {
   showProgress($0);
  },
- 4128: function() {
+ 4144: function() {
   stpTupdtr();
  },
- 4140: function($0, $1) {
+ 4156: function($0, $1) {
   setupGL($0, $1);
  },
- 4157: function($0) {
+ 4173: function($0) {
   setupGL(0, $0);
  },
- 4173: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 4189: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   setupEditorPlayerTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 4238: function($0) {
+ 4254: function($0) {
   pong($0);
  },
- 4247: function($0) {
+ 4263: function($0) {
   updateMax($0);
  },
- 4263: function() {
+ 4279: function() {
   moduleLoaded();
  },
- 4278: function() {
+ 4294: function() {
   playerWon();
  },
- 4290: function($0) {
+ 4306: function($0) {
   updateHealth($0);
  },
- 4307: function() {
+ 4323: function() {
   popAlert(4);
  },
- 4319: function($0) {
+ 4335: function($0) {
   popAlert($0);
  },
- 4332: function() {
+ 4348: function() {
   gameOver();
  },
- 36696: function() {
+ 36712: function() {
   throw "Canceled!";
  },
- 36918: function($0, $1) {
+ 36934: function($0, $1) {
   setTimeout(function() {
    _do_emscripten_dispatch_to_thread($0, $1);
   }, 0);
@@ -4099,7 +4099,7 @@ var dynCall_jiji = Module["dynCall_jiji"] = function() {
  return (dynCall_jiji = Module["dynCall_jiji"] = Module["asm"]["dynCall_jiji"]).apply(null, arguments);
 };
 
-var _main_thread_futex = Module["_main_thread_futex"] = 4217436;
+var _main_thread_futex = Module["_main_thread_futex"] = 4217628;
 
 Module["PThread"] = PThread;
 

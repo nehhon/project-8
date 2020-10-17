@@ -3,5 +3,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tza.red/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://tza.red/download/</loc>
   </url>
 </urlset>
