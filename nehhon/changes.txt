@@ -1,3 +1,6 @@
+##401
+Fixed "Maximum call stack size exceeded" and invisible fields errors
+Cows are not automatically shared with teammates
 ##399
 Fixed selection rectangle bug
 New desktop app version
