@@ -90,14 +90,9 @@ Cykle dzień-noc
 Muzyka
 Dźwięki
 Death sounds
-Daily stats
-Games played
-Current players
-Total visits
 W trakcie
 Czekaj
 Private
-Nie znaleziono rozgrywki
 Wpisz nazwę gry
 Liczba graczy
 TAK
@@ -110,7 +105,7 @@ GOTOWA MAPA| Gra na gotowej mapie
 Serwer anulował grę.
 Zostałeś wyrzucony przez serwer.
 WIELU GRACZY| Gra WIELOOSOBOWA
-UTWÓRZ| Utwórz nową grę
+UTWÓRZ| Utwórz pokój
 Odśwież
 Wyrzuć
 Wyżej
@@ -454,3 +449,10 @@ Wynajmij herosów
 Broń pozycji
 Przekup jednostkę wroga
 Kamienna brama
+Zamień na kamienną bramę
+Registered users only
+Room restricted to registered users only
+Log Out
+Change
+Log In
+Account

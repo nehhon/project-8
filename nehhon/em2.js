@@ -778,7 +778,7 @@ function updateGlobalBufferAndViews(buf) {
  Module["HEAPF64"] = HEAPF64 = new Float64Array(buf);
 }
 
-var STACK_BASE = 9462160, STACKTOP = STACK_BASE, STACK_MAX = 4219280;
+var STACK_BASE = 9462224, STACKTOP = STACK_BASE, STACK_MAX = 4219344;
 
 if (ENVIRONMENT_IS_PTHREAD) {}
 
@@ -1101,253 +1101,259 @@ var ASM_CONSTS = {
  1260: function($0, $1, $2) {
   NHretransmit($0, $1, $2);
  },
- 1283: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 1283: function() {
+  fstdD("SEC1488");
+ },
+ 1300: function() {
+  spAlert("packet lost");
+ },
+ 1323: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   onlineTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 1338: function($0) {
+ 1378: function($0) {
   thereIsAnIdiot($0);
  },
- 1357: function() {
+ 1397: function() {
   SetupGameConfig();
  },
- 1377: function($0, $1, $2, $3, $4, $5) {
+ 1417: function($0, $1, $2, $3, $4, $5) {
   onlineTable($0, $1, $2, $3, $4, $5);
  },
- 1420: function() {
+ 1460: function() {
   mapWindow();
  },
- 1432: function() {
+ 1472: function() {
   setupPlayermenu();
  },
- 1450: function($0, $1, $2) {
+ 1490: function($0, $1, $2) {
   peerSend($0, $1, $2);
  },
- 1474: function($0, $1, $2, $3) {
-  chat($0, 0, $1, $2, $3);
+ 1514: function($0, $1, $2, $3, $4, $5, $6, $7) {
+  chat($0, 0, $1, $2, $3, $4, $5, $6, $7);
  },
- 1501: function($0) {
+ 1557: function($0) {
   presetuprndtable($0);
  },
- 1522: function($0, $1, $2, $3, $4) {
+ 1578: function($0, $1, $2, $3, $4) {
   randomMapTable($0, $1, $2, $3, $4);
  },
- 1564: function($0) {
+ 1620: function($0) {
   play($0);
  },
- 1575: function($0, $1, $2) {
+ 1631: function($0, $1, $2) {
   play($0, $1, $2);
  },
- 1650: function() {
+ 1706: function() {
   menuDefect();
  },
- 1664: function($0, $1) {
+ 1792: function($0, $1) {
   dmgAlert($0, $1);
  },
- 1682: function() {
+ 1810: function() {
   setupMWmenu();
  },
- 1701: function($0, $1, $2, $3, $4, $5) {
+ 1829: function($0, $1, $2, $3, $4, $5) {
   setupTradingmenu($0, $1, $2, $3, $4, $5);
  },
- 1746: function() {
+ 1874: function() {
   cleanMenuIcons();
  },
- 1763: function() {
+ 1891: function() {
   setupColorGL();
  },
- 1780: function($0, $1, $2, $3, $4, $5) {
+ 1908: function($0, $1, $2, $3, $4, $5) {
   addRNDOBJ($0, $1, $2, $3, $4, $5);
  },
- 1818: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
+ 1946: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
   insertInfo($0, $1, $2, $3, $4, 0, $5, $6, $7, $8, $9, $10, $11, $12);
  },
- 1892: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
+ 2020: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {
   insertInfo($0, $1, $2, $3, $4, 1, $5, $6, $7, $8, $9, $10, $11, $12);
  },
- 1977: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {
+ 2105: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) {
   multiOptions($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13);
  },
- 2054: function() {
+ 2182: function() {
   waitlistsetup();
  },
- 2072: function() {
+ 2200: function() {
   startMovement0();
  },
- 2093: function() {
+ 2221: function() {
   waitingList();
  },
- 2107: function() {
+ 2235: function() {
   startGame();
  },
- 2121: function() {
+ 2249: function() {
   gid("playersinfo").innerHTML = "<span style='width:50px;float:left;font-size:11px;color:#dcaa14;text-decoration:overline;'>Score</span><br>";
  },
- 2262: function($0, $1, $2, $3, $4, $5, $6, $7) {
-  setupPlayerInfo($0, $1, $2, $3, $4, $5, $6, $7);
+ 2390: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+  setupPlayerInfo($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 2314: function() {
+ 2446: function() {
   editorPlayerTable();
  },
- 2337: function() {
+ 2469: function() {
   activeKingdomSetup();
   setupColorGL();
  },
- 2375: function() {
+ 2507: function() {
   editorPlayerTable();
   activeKingdomSetup();
   setupColorGL();
  },
- 2672: function($0, $1, $2, $3, $4) {
+ 2736: function($0, $1, $2, $3, $4) {
   buttonSetup($0, $1, $2, $3, $4);
  },
- 2832: function($0, $1, $2, $3) {
+ 2896: function($0, $1, $2, $3) {
   setup3Dtexture($0, $1, $2, $3);
  },
- 2867: function() {
+ 2931: function() {
   startGameStep0.check();
  },
- 2890: function() {
+ 2954: function() {
   svggme2();
  },
- 2900: function($0, $1) {
+ 2964: function($0, $1) {
   chFFg($0, $1);
  },
- 2916: function() {
-  fstdD("SEC56");
+ 2980: function() {
+  fstdD("SEC566666666");
  },
- 2931: function() {
+ 3002: function() {
   nhcleanclose();
  },
- 2946: function($0) {
+ 3017: function($0) {
   sresizeBuffer($0);
  },
- 2969: function($0, $1, $2, $3) {
+ 3040: function($0, $1, $2, $3) {
   bufferPos($0, $1, $2, $3);
  },
- 2997: function($0, $1, $2, $3, $4) {
+ 3068: function($0, $1, $2, $3, $4) {
   bufferPhysics($0, $1, $2, $3, $4);
  },
- 3033: function($0, $1, $2, $3, $4) {
+ 3104: function($0, $1, $2, $3, $4) {
   bufferMargin($0, $1, $2, $3, $4);
  },
- 3062: function($0, $1, $2, $3, $4) {
+ 3133: function($0, $1, $2, $3, $4) {
   bufferIMG($0, $1, $2, $3, $4);
  },
- 3094: function($0, $1, $2, $3, $4, $5) {
+ 3165: function($0, $1, $2, $3, $4, $5) {
   customMapTable($0, $1, $2, $3, $4, $5);
  },
- 3248: function($0, $1, $2, $3) {
+ 3312: function($0, $1, $2, $3) {
   changeresources($0, $1, $2, $3);
  },
- 3282: function($0, $1) {
+ 3346: function($0, $1) {
   popInfo($0, $1);
  },
- 3297: function($0, $1) {
+ 3361: function($0, $1) {
   changePlayerScore($0, $1);
  },
- 3324: function($0, $1) {
+ 3388: function($0, $1) {
   EDterrainInfo($0, $1);
  },
- 3350: function($0, $1) {
+ 3414: function($0, $1) {
   ms("manage", $0, $1);
  },
- 3369: function($0, $1) {
+ 3433: function($0, $1) {
   ms("manage22", $0, $1);
  },
- 3390: function($0, $1, $2, $3) {
-  locationAlert($0, $1, $2, $3);
+ 3454: function($0, $1, $2, $3, $4) {
+  locationAlert($0, $1, $2, $3, $4);
  },
- 3424: function($0) {
+ 3492: function($0) {
   console.log("cycnfo", $0);
  },
- 3449: function($0, $1) {
+ 3517: function($0, $1) {
   console.log("checkcycle", $0, $1);
  },
- 3484: function() {
+ 3552: function() {
   console.log("SENT");
  },
- 3504: function($0, $1) {
+ 3572: function($0, $1) {
   console.log("currentCycle", $0, $1);
  },
- 3538: function($0) {
+ 3606: function($0) {
   console.log("recv", $0);
  },
- 3561: function($0, $1) {
+ 3629: function($0, $1) {
   setupArrows($0, $1);
  },
- 3580: function() {
+ 3648: function() {
   showGuide();
  },
- 3592: function($0, $1) {
+ 3660: function($0, $1) {
   setupArrows($0, $1);
  },
- 3616: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) {
-  selectionOne0($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14);
+ 3684: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) {
+  selectionOne0($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15);
  },
- 3712: function($0, $1) {
+ 3777: function($0, $1) {
   showHealthOne($0, $1);
  },
- 3736: function() {
+ 3801: function() {
   gid("delunit").style.display = "block";
  },
- 3773: function($0, $1, $2) {
+ 3838: function($0, $1, $2) {
   selectMulp($0, $1, $2);
  },
- 3794: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
+ 3859: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
   editProps($0, $1, $2, $3, $4, $5, $6, $7, $8, $9);
  },
- 3848: function($0, $1, $2, $3, $4, $5, $6, $7) {
+ 3913: function($0, $1, $2, $3, $4, $5, $6, $7) {
   writeProps($0, $1, $2, $3, $4, $5, $6, $7);
  },
- 3897: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 3962: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   writeProps($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 3972: function() {
+ 4036: function() {
   setupGameMusic();
  },
- 4016: function($0) {
+ 4080: function($0) {
   showProgress($0);
  },
- 4144: function() {
+ 4208: function() {
   stpTupdtr();
  },
- 4156: function($0, $1) {
+ 4220: function($0, $1) {
   setupGL($0, $1);
  },
- 4173: function($0) {
+ 4237: function($0) {
   setupGL(0, $0);
  },
- 4189: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 4253: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   setupEditorPlayerTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 4254: function($0) {
+ 4318: function($0) {
   pong($0);
  },
- 4263: function($0) {
+ 4327: function($0) {
   updateMax($0);
  },
- 4279: function() {
+ 4343: function() {
   moduleLoaded();
  },
- 4294: function() {
+ 4358: function() {
   playerWon();
  },
- 4306: function($0) {
+ 4370: function($0) {
   updateHealth($0);
  },
- 4323: function() {
+ 4387: function() {
   popAlert(4);
  },
- 4335: function($0) {
+ 4399: function($0) {
   popAlert($0);
  },
- 4348: function() {
+ 4412: function() {
   gameOver();
  },
- 36712: function() {
+ 36776: function() {
   throw "Canceled!";
  },
- 36934: function($0, $1) {
+ 36998: function($0, $1) {
   setTimeout(function() {
    _do_emscripten_dispatch_to_thread($0, $1);
   }, 0);
@@ -3435,6 +3441,10 @@ var __Z6nfolenv = Module["__Z6nfolenv"] = function() {
  return (__Z6nfolenv = Module["__Z6nfolenv"] = Module["asm"]["_Z6nfolenv"]).apply(null, arguments);
 };
 
+var __Z11movtableADDjjjj = Module["__Z11movtableADDjjjj"] = function() {
+ return (__Z11movtableADDjjjj = Module["__Z11movtableADDjjjj"] = Module["asm"]["_Z11movtableADDjjjj"]).apply(null, arguments);
+};
+
 var __Z9stmenummxi = Module["__Z9stmenummxi"] = function() {
  return (__Z9stmenummxi = Module["__Z9stmenummxi"] = Module["asm"]["_Z9stmenummxi"]).apply(null, arguments);
 };
@@ -3445,10 +3455,6 @@ var __Z16setupTranslationjj = Module["__Z16setupTranslationjj"] = function() {
 
 var __Z10checkStockb = Module["__Z10checkStockb"] = function() {
  return (__Z10checkStockb = Module["__Z10checkStockb"] = Module["asm"]["_Z10checkStockb"]).apply(null, arguments);
-};
-
-var __Z11movtableADDjjjj = Module["__Z11movtableADDjjjj"] = function() {
- return (__Z11movtableADDjjjj = Module["__Z11movtableADDjjjj"] = Module["asm"]["_Z11movtableADDjjjj"]).apply(null, arguments);
 };
 
 var __Z6amountv = Module["__Z6amountv"] = function() {
@@ -4099,7 +4105,7 @@ var dynCall_jiji = Module["dynCall_jiji"] = function() {
  return (dynCall_jiji = Module["dynCall_jiji"] = Module["asm"]["dynCall_jiji"]).apply(null, arguments);
 };
 
-var _main_thread_futex = Module["_main_thread_futex"] = 4217628;
+var _main_thread_futex = Module["_main_thread_futex"] = 4217692;
 
 Module["PThread"] = PThread;
 

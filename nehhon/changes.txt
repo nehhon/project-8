@@ -1,3 +1,9 @@
+##402
+Accounts
+Destroying unbuilt walls gives experience
+Unbuilt walls are destroyed faster
+Fixed a bug that was freezing the game at the beginning
+Updated theme
 ##401
 Fixed "Maximum call stack size exceeded" and invisible fields errors
 Cows are not automatically shared with teammates
