@@ -1017,9 +1017,9 @@ function updateGlobalBufferAndViews(buf) {
   Module['HEAPF64'] = HEAPF64 = new Float64Array(buf);
 }
 
-var STACK_BASE = 9461040,
+var STACK_BASE = 9460944,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 4218160;
+    STACK_MAX = 4218064;
 
 
 
@@ -1450,15 +1450,15 @@ var ASM_CONSTS = {
  2896: function($0, $1, $2, $3) {setup3Dtexture($0,$1,$2,$3)},  
  2931: function() {startGameStep0.check()},  
  2954: function() {svggme2()},  
- 2964: function($0, $1) {chFFg($0,$1)},  
- 2980: function() {fstdD("SEC566666666")},  
- 3002: function() {nhcleanclose()},  
- 3017: function($0) {sresizeBuffer($0);},  
- 3040: function($0, $1, $2, $3) {bufferPos($0,$1,$2,$3)},  
- 3068: function($0, $1, $2, $3, $4) {bufferPhysics($0,$1,$2,$3,$4)},  
- 3104: function($0, $1, $2, $3, $4) {bufferMargin($0,$1,$2,$3,$4)},  
- 3133: function($0, $1, $2, $3, $4) {bufferIMG($0,$1,$2,$3,$4)},  
- 3165: function($0, $1, $2, $3, $4, $5) {customMapTable($0,$1,$2,$3,$4,$5);},  
+ 2964: function() {fstdD("SEC56666 STEP-2")},  
+ 2989: function() {nhcleanclose()},  
+ 3004: function($0, $1) {chFFg($0,$1)},  
+ 3020: function($0) {sresizeBuffer($0);},  
+ 3043: function($0, $1, $2, $3) {bufferPos($0,$1,$2,$3)},  
+ 3071: function($0, $1, $2, $3, $4) {bufferPhysics($0,$1,$2,$3,$4)},  
+ 3107: function($0, $1, $2, $3, $4) {bufferMargin($0,$1,$2,$3,$4)},  
+ 3136: function($0, $1, $2, $3, $4) {bufferIMG($0,$1,$2,$3,$4)},  
+ 3168: function($0, $1, $2, $3, $4, $5) {customMapTable($0,$1,$2,$3,$4,$5);},  
  3312: function($0, $1, $2, $3) {changeresources($0,$1,$2,$3)},  
  3346: function($0, $1) {popInfo($0,$1)},  
  3361: function($0, $1) {changePlayerScore($0,$1)},  

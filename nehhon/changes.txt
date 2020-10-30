@@ -1,3 +1,6 @@
+##404
+Sync error is probably fixed
+Minor bug fixes
 ##402
 Accounts
 Destroying unbuilt walls gives experience

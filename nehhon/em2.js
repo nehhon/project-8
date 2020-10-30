@@ -778,7 +778,7 @@ function updateGlobalBufferAndViews(buf) {
  Module["HEAPF64"] = HEAPF64 = new Float64Array(buf);
 }
 
-var STACK_BASE = 9462224, STACKTOP = STACK_BASE, STACK_MAX = 4219344;
+var STACK_BASE = 9462128, STACKTOP = STACK_BASE, STACK_MAX = 4219248;
 
 if (ENVIRONMENT_IS_PTHREAD) {}
 
@@ -1213,33 +1213,33 @@ var ASM_CONSTS = {
   startGameStep0.check();
  },
  2954: function() {
-  svggme2();
+  fstdD("SEC56666 STEP-2");
  },
- 2964: function($0, $1) {
-  chFFg($0, $1);
- },
- 2980: function() {
-  fstdD("SEC566666666");
- },
- 3002: function() {
+ 2979: function() {
   nhcleanclose();
  },
- 3017: function($0) {
+ 2994: function() {
+  svggme2();
+ },
+ 3004: function($0, $1) {
+  chFFg($0, $1);
+ },
+ 3020: function($0) {
   sresizeBuffer($0);
  },
- 3040: function($0, $1, $2, $3) {
+ 3043: function($0, $1, $2, $3) {
   bufferPos($0, $1, $2, $3);
  },
- 3068: function($0, $1, $2, $3, $4) {
+ 3071: function($0, $1, $2, $3, $4) {
   bufferPhysics($0, $1, $2, $3, $4);
  },
- 3104: function($0, $1, $2, $3, $4) {
+ 3107: function($0, $1, $2, $3, $4) {
   bufferMargin($0, $1, $2, $3, $4);
  },
- 3133: function($0, $1, $2, $3, $4) {
+ 3136: function($0, $1, $2, $3, $4) {
   bufferIMG($0, $1, $2, $3, $4);
  },
- 3165: function($0, $1, $2, $3, $4, $5) {
+ 3168: function($0, $1, $2, $3, $4, $5) {
   customMapTable($0, $1, $2, $3, $4, $5);
  },
  3312: function($0, $1, $2, $3) {
@@ -4105,7 +4105,7 @@ var dynCall_jiji = Module["dynCall_jiji"] = function() {
  return (dynCall_jiji = Module["dynCall_jiji"] = Module["asm"]["dynCall_jiji"]).apply(null, arguments);
 };
 
-var _main_thread_futex = Module["_main_thread_futex"] = 4217692;
+var _main_thread_futex = Module["_main_thread_futex"] = 4217596;
 
 Module["PThread"] = PThread;
 
