@@ -778,7 +778,7 @@ function updateGlobalBufferAndViews(buf) {
  Module["HEAPF64"] = HEAPF64 = new Float64Array(buf);
 }
 
-var STACK_BASE = 9462128, STACKTOP = STACK_BASE, STACK_MAX = 4219248;
+var STACK_BASE = 9462176, STACKTOP = STACK_BASE, STACK_MAX = 4219296;
 
 if (ENVIRONMENT_IS_PTHREAD) {}
 
@@ -1212,148 +1212,154 @@ var ASM_CONSTS = {
  2931: function() {
   startGameStep0.check();
  },
- 2954: function() {
+ 2954: function($0) {
+  console.log("ccrun", $0);
+ },
+ 2978: function() {
   fstdD("SEC56666 STEP-2");
  },
- 2979: function() {
+ 3003: function() {
   nhcleanclose();
  },
- 2994: function() {
+ 3018: function() {
   svggme2();
  },
- 3004: function($0, $1) {
+ 3028: function($0, $1) {
   chFFg($0, $1);
  },
- 3020: function($0) {
+ 3044: function($0) {
   sresizeBuffer($0);
  },
- 3043: function($0, $1, $2, $3) {
+ 3067: function($0, $1, $2, $3) {
   bufferPos($0, $1, $2, $3);
  },
- 3071: function($0, $1, $2, $3, $4) {
+ 3095: function($0, $1, $2, $3, $4) {
   bufferPhysics($0, $1, $2, $3, $4);
  },
- 3107: function($0, $1, $2, $3, $4) {
+ 3131: function($0, $1, $2, $3, $4) {
   bufferMargin($0, $1, $2, $3, $4);
  },
- 3136: function($0, $1, $2, $3, $4) {
+ 3160: function($0, $1, $2, $3, $4) {
   bufferIMG($0, $1, $2, $3, $4);
  },
- 3168: function($0, $1, $2, $3, $4, $5) {
+ 3192: function($0, $1, $2, $3, $4, $5) {
   customMapTable($0, $1, $2, $3, $4, $5);
  },
- 3312: function($0, $1, $2, $3) {
+ 3344: function($0, $1, $2, $3) {
   changeresources($0, $1, $2, $3);
  },
- 3346: function($0, $1) {
+ 3378: function($0, $1) {
   popInfo($0, $1);
  },
- 3361: function($0, $1) {
+ 3393: function($0, $1) {
   changePlayerScore($0, $1);
  },
- 3388: function($0, $1) {
+ 3420: function($0, $1) {
   EDterrainInfo($0, $1);
  },
- 3414: function($0, $1) {
+ 3446: function($0, $1) {
   ms("manage", $0, $1);
  },
- 3433: function($0, $1) {
+ 3465: function($0, $1) {
   ms("manage22", $0, $1);
  },
- 3454: function($0, $1, $2, $3, $4) {
+ 3486: function($0, $1, $2, $3, $4) {
   locationAlert($0, $1, $2, $3, $4);
  },
- 3492: function($0) {
+ 3524: function($0) {
   console.log("cycnfo", $0);
  },
- 3517: function($0, $1) {
+ 3549: function($0, $1) {
   console.log("checkcycle", $0, $1);
  },
- 3552: function() {
+ 3584: function() {
+  clrNHtimer();
+ },
+ 3597: function() {
   console.log("SENT");
  },
- 3572: function($0, $1) {
+ 3617: function($0, $1) {
   console.log("currentCycle", $0, $1);
  },
- 3606: function($0) {
+ 3651: function($0) {
   console.log("recv", $0);
  },
- 3629: function($0, $1) {
+ 3674: function($0, $1) {
   setupArrows($0, $1);
  },
- 3648: function() {
+ 3693: function() {
   showGuide();
  },
- 3660: function($0, $1) {
+ 3705: function($0, $1) {
   setupArrows($0, $1);
  },
- 3684: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) {
+ 3729: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) {
   selectionOne0($0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15);
  },
- 3777: function($0, $1) {
+ 3825: function($0, $1) {
   showHealthOne($0, $1);
  },
- 3801: function() {
+ 3849: function() {
   gid("delunit").style.display = "block";
  },
- 3838: function($0, $1, $2) {
+ 3886: function($0, $1, $2) {
   selectMulp($0, $1, $2);
  },
- 3859: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
+ 3907: function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
   editProps($0, $1, $2, $3, $4, $5, $6, $7, $8, $9);
  },
- 3913: function($0, $1, $2, $3, $4, $5, $6, $7) {
+ 3961: function($0, $1, $2, $3, $4, $5, $6, $7) {
   writeProps($0, $1, $2, $3, $4, $5, $6, $7);
  },
- 3962: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 4010: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   writeProps($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 4036: function() {
+ 4084: function() {
   setupGameMusic();
  },
- 4080: function($0) {
+ 4128: function($0) {
   showProgress($0);
  },
- 4208: function() {
+ 4256: function() {
   stpTupdtr();
  },
- 4220: function($0, $1) {
+ 4268: function($0, $1) {
   setupGL($0, $1);
  },
- 4237: function($0) {
+ 4285: function($0) {
   setupGL(0, $0);
  },
- 4253: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 4301: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   setupEditorPlayerTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 4318: function($0) {
+ 4366: function($0) {
   pong($0);
  },
- 4327: function($0) {
+ 4375: function($0) {
   updateMax($0);
  },
- 4343: function() {
+ 4391: function() {
   moduleLoaded();
  },
- 4358: function() {
+ 4406: function() {
   playerWon();
  },
- 4370: function($0) {
+ 4418: function($0) {
   updateHealth($0);
  },
- 4387: function() {
+ 4435: function() {
   popAlert(4);
  },
- 4399: function($0) {
+ 4447: function($0) {
   popAlert($0);
  },
- 4412: function() {
+ 4460: function() {
   gameOver();
  },
- 36776: function() {
+ 36824: function() {
   throw "Canceled!";
  },
- 36998: function($0, $1) {
+ 37046: function($0, $1) {
   setTimeout(function() {
    _do_emscripten_dispatch_to_thread($0, $1);
   }, 0);
@@ -3421,6 +3427,10 @@ var __Z12deletePlayerjb = Module["__Z12deletePlayerjb"] = function() {
  return (__Z12deletePlayerjb = Module["__Z12deletePlayerjb"] = Module["asm"]["_Z12deletePlayerjb"]).apply(null, arguments);
 };
 
+var __Z11dellmitTestv = Module["__Z11dellmitTestv"] = function() {
+ return (__Z11dellmitTestv = Module["__Z11dellmitTestv"] = Module["asm"]["_Z11dellmitTestv"]).apply(null, arguments);
+};
+
 var __Z10tempstraddv = Module["__Z10tempstraddv"] = function() {
  return (__Z10tempstraddv = Module["__Z10tempstraddv"] = Module["asm"]["_Z10tempstraddv"]).apply(null, arguments);
 };
@@ -3841,6 +3851,10 @@ var __Z10mouseEnterj = Module["__Z10mouseEnterj"] = function() {
  return (__Z10mouseEnterj = Module["__Z10mouseEnterj"] = Module["asm"]["_Z10mouseEnterj"]).apply(null, arguments);
 };
 
+var __Z7ckMnhstv = Module["__Z7ckMnhstv"] = function() {
+ return (__Z7ckMnhstv = Module["__Z7ckMnhstv"] = Module["asm"]["_Z7ckMnhstv"]).apply(null, arguments);
+};
+
 var __Z9peacetimev = Module["__Z9peacetimev"] = function() {
  return (__Z9peacetimev = Module["__Z9peacetimev"] = Module["asm"]["_Z9peacetimev"]).apply(null, arguments);
 };
@@ -4105,7 +4119,7 @@ var dynCall_jiji = Module["dynCall_jiji"] = function() {
  return (dynCall_jiji = Module["dynCall_jiji"] = Module["asm"]["dynCall_jiji"]).apply(null, arguments);
 };
 
-var _main_thread_futex = Module["_main_thread_futex"] = 4217596;
+var _main_thread_futex = Module["_main_thread_futex"] = 4217644;
 
 Module["PThread"] = PThread;
 

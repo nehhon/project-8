@@ -1,3 +1,5 @@
+##405
+Increased stability
 ##404
 Sync error is probably fixed
 Minor bug fixes
