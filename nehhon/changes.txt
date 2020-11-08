@@ -1,3 +1,7 @@
+##409
+Reconnection time extended
+Standard kingdom colors option
+Minor bug fixes
 ##405
 Increased stability
 ##404

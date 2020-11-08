@@ -778,7 +778,7 @@ function updateGlobalBufferAndViews(buf) {
  Module["HEAPF64"] = HEAPF64 = new Float64Array(buf);
 }
 
-var STACK_BASE = 9462176, STACKTOP = STACK_BASE, STACK_MAX = 4219296;
+var STACK_BASE = 9466272, STACKTOP = STACK_BASE, STACK_MAX = 4223392;
 
 if (ENVIRONMENT_IS_PTHREAD) {}
 
@@ -1101,49 +1101,49 @@ var ASM_CONSTS = {
  1260: function($0, $1, $2) {
   NHretransmit($0, $1, $2);
  },
- 1283: function() {
-  fstdD("SEC1488");
+ 1283: function($0) {
+  fstdD("SEC1488", $0);
  },
- 1300: function() {
+ 1303: function() {
   spAlert("packet lost");
  },
- 1323: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
+ 1326: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {
   onlineTable($0, $1, $2, $3, $4, $5, $6, $7, $8);
  },
- 1378: function($0) {
+ 1381: function($0) {
   thereIsAnIdiot($0);
  },
- 1397: function() {
+ 1400: function() {
   SetupGameConfig();
  },
- 1417: function($0, $1, $2, $3, $4, $5) {
+ 1420: function($0, $1, $2, $3, $4, $5) {
   onlineTable($0, $1, $2, $3, $4, $5);
  },
- 1460: function() {
+ 1463: function() {
   mapWindow();
  },
- 1472: function() {
+ 1475: function() {
   setupPlayermenu();
  },
- 1490: function($0, $1, $2) {
+ 1493: function($0, $1, $2) {
   peerSend($0, $1, $2);
  },
- 1514: function($0, $1, $2, $3, $4, $5, $6, $7) {
+ 1517: function($0, $1, $2, $3, $4, $5, $6, $7) {
   chat($0, 0, $1, $2, $3, $4, $5, $6, $7);
  },
- 1557: function($0) {
+ 1560: function($0) {
   presetuprndtable($0);
  },
- 1578: function($0, $1, $2, $3, $4) {
+ 1581: function($0, $1, $2, $3, $4) {
   randomMapTable($0, $1, $2, $3, $4);
  },
- 1620: function($0) {
+ 1623: function($0) {
   play($0);
  },
- 1631: function($0, $1, $2) {
+ 1634: function($0, $1, $2) {
   play($0, $1, $2);
  },
- 1706: function() {
+ 1709: function() {
   menuDefect();
  },
  1792: function($0, $1) {
@@ -3371,8 +3371,8 @@ var __Z8idddaminj = Module["__Z8idddaminj"] = function() {
  return (__Z8idddaminj = Module["__Z8idddaminj"] = Module["asm"]["_Z8idddaminj"]).apply(null, arguments);
 };
 
-var __Z9shareNamej = Module["__Z9shareNamej"] = function() {
- return (__Z9shareNamej = Module["__Z9shareNamej"] = Module["asm"]["_Z9shareNamej"]).apply(null, arguments);
+var __Z9shareNamejj = Module["__Z9shareNamejj"] = function() {
+ return (__Z9shareNamejj = Module["__Z9shareNamejj"] = Module["asm"]["_Z9shareNamejj"]).apply(null, arguments);
 };
 
 var __Z8updtpingjj = Module["__Z8updtpingjj"] = function() {
@@ -3807,8 +3807,8 @@ var __Z7setupGLfjj = Module["__Z7setupGLfjj"] = function() {
  return (__Z7setupGLfjj = Module["__Z7setupGLfjj"] = Module["asm"]["_Z7setupGLfjj"]).apply(null, arguments);
 };
 
-var __Z15getColorTexturev = Module["__Z15getColorTexturev"] = function() {
- return (__Z15getColorTexturev = Module["__Z15getColorTexturev"] = Module["asm"]["_Z15getColorTexturev"]).apply(null, arguments);
+var __Z15getColorTextureb = Module["__Z15getColorTextureb"] = function() {
+ return (__Z15getColorTextureb = Module["__Z15getColorTextureb"] = Module["asm"]["_Z15getColorTextureb"]).apply(null, arguments);
 };
 
 var __Z10changePagei = Module["__Z10changePagei"] = function() {
@@ -4119,7 +4119,7 @@ var dynCall_jiji = Module["dynCall_jiji"] = function() {
  return (dynCall_jiji = Module["dynCall_jiji"] = Module["asm"]["dynCall_jiji"]).apply(null, arguments);
 };
 
-var _main_thread_futex = Module["_main_thread_futex"] = 4217644;
+var _main_thread_futex = Module["_main_thread_futex"] = 4221740;
 
 Module["PThread"] = PThread;
 

@@ -1017,9 +1017,9 @@ function updateGlobalBufferAndViews(buf) {
   Module['HEAPF64'] = HEAPF64 = new Float64Array(buf);
 }
 
-var STACK_BASE = 9460992,
+var STACK_BASE = 9465088,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 4218112;
+    STACK_MAX = 4222208;
 
 
 
@@ -1413,21 +1413,21 @@ var ASM_CONSTS = {
  1215: function($0, $1) {rcrconsole($0,$1)},  
  1236: function($0, $1) {fstdD("SEC55",$0,$1)},  
  1260: function($0, $1, $2) {NHretransmit($0,$1,$2)},  
- 1283: function() {fstdD("SEC1488")},  
- 1300: function() {spAlert("packet lost")},  
- 1323: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {onlineTable($0,$1,$2,$3,$4,$5,$6,$7,$8);},  
- 1378: function($0) {thereIsAnIdiot($0)},  
- 1397: function() {SetupGameConfig()},  
- 1417: function($0, $1, $2, $3, $4, $5) {onlineTable($0,$1,$2,$3,$4,$5);},  
- 1460: function() {mapWindow()},  
- 1472: function() {setupPlayermenu()},  
- 1490: function($0, $1, $2) {peerSend($0,$1,$2);},  
- 1514: function($0, $1, $2, $3, $4, $5, $6, $7) {chat($0,0,$1,$2,$3,$4,$5,$6,$7)},  
- 1557: function($0) {presetuprndtable($0)},  
- 1578: function($0, $1, $2, $3, $4) {randomMapTable($0,$1,$2,$3,$4);},  
- 1620: function($0) {play($0)},  
- 1631: function($0, $1, $2) {play($0,$1,$2)},  
- 1706: function() {menuDefect();},  
+ 1283: function($0) {fstdD("SEC1488",$0)},  
+ 1303: function() {spAlert("packet lost")},  
+ 1326: function($0, $1, $2, $3, $4, $5, $6, $7, $8) {onlineTable($0,$1,$2,$3,$4,$5,$6,$7,$8);},  
+ 1381: function($0) {thereIsAnIdiot($0)},  
+ 1400: function() {SetupGameConfig()},  
+ 1420: function($0, $1, $2, $3, $4, $5) {onlineTable($0,$1,$2,$3,$4,$5);},  
+ 1463: function() {mapWindow()},  
+ 1475: function() {setupPlayermenu()},  
+ 1493: function($0, $1, $2) {peerSend($0,$1,$2);},  
+ 1517: function($0, $1, $2, $3, $4, $5, $6, $7) {chat($0,0,$1,$2,$3,$4,$5,$6,$7)},  
+ 1560: function($0) {presetuprndtable($0)},  
+ 1581: function($0, $1, $2, $3, $4) {randomMapTable($0,$1,$2,$3,$4);},  
+ 1623: function($0) {play($0)},  
+ 1634: function($0, $1, $2) {play($0,$1,$2)},  
+ 1709: function() {menuDefect();},  
  1792: function($0, $1) {dmgAlert($0,$1)},  
  1810: function() {setupMWmenu();},  
  1829: function($0, $1, $2, $3, $4, $5) {setupTradingmenu($0,$1,$2,$3,$4,$5)},  
@@ -2398,8 +2398,8 @@ var __Z8idddaminj = Module["__Z8idddaminj"] = function() {
 };
 
 /** @type {function(...*):?} */
-var __Z9shareNamej = Module["__Z9shareNamej"] = function() {
-  return (__Z9shareNamej = Module["__Z9shareNamej"] = Module["asm"]["_Z9shareNamej"]).apply(null, arguments);
+var __Z9shareNamejj = Module["__Z9shareNamejj"] = function() {
+  return (__Z9shareNamejj = Module["__Z9shareNamejj"] = Module["asm"]["_Z9shareNamejj"]).apply(null, arguments);
 };
 
 /** @type {function(...*):?} */
@@ -2938,8 +2938,8 @@ var __Z7setupGLfjj = Module["__Z7setupGLfjj"] = function() {
 };
 
 /** @type {function(...*):?} */
-var __Z15getColorTexturev = Module["__Z15getColorTexturev"] = function() {
-  return (__Z15getColorTexturev = Module["__Z15getColorTexturev"] = Module["asm"]["_Z15getColorTexturev"]).apply(null, arguments);
+var __Z15getColorTextureb = Module["__Z15getColorTextureb"] = function() {
+  return (__Z15getColorTextureb = Module["__Z15getColorTextureb"] = Module["asm"]["_Z15getColorTextureb"]).apply(null, arguments);
 };
 
 /** @type {function(...*):?} */
