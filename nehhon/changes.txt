@@ -1,3 +1,6 @@
+##410
+Exploring enabled (beta)
+Minor bug fixes
 ##409
 Reconnection time extended
 Standard kingdom colors option

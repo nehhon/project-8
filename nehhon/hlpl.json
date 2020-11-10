@@ -2923,12 +2923,12 @@
          "icon":"5,61"
       },
       "C_EXPERIENCEUP":{
-         ";rollover":"Naucz siê jak",
-         ";brief":"Nauka",
-         ";detail":"Peasant is blah blah blah HP/A/D/Koszt/Range",
-         ";also":"WI_COMMANDS,HT_COMMANDS,B_A_WARRIORS_GUILD",
-         ";related":"U_E_CASTLE",
-         ";icon":"5,62"
+         "rollover":"Naucz siê jak",
+         "brief":"Nauka",
+         "detail":"",
+         "also":"WI_COMMANDS,HT_COMMANDS,B_A_WARRIORS_GUILD",
+         "related":"U_E_CASTLE",
+         "icon":"5,62"
       },
       "C_FLAMEBOLT":{
          "rollover":"Naucz siê jak u¿ywaæ zaklêcia Ognisty pocisk",
