@@ -1,3 +1,5 @@
+##412
+Increased stability
 ##410
 Exploring enabled (beta)
 Minor bug fixes
