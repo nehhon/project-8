@@ -1,3 +1,9 @@
+##413
+Attack interval of units adjusted like Tzar
+Smarter cow milking
+Ctrl + Double click shortcut
+Ninja cost reduced to 240 gold
+Minor bug fixes
 ##412
 Increased stability
 ##410
