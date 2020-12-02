@@ -1,3 +1,10 @@
+##417
+Diplomacy panel
+Sharing resources and control
+Sending tributes
+Score moved to diplomacy panel
+Increased stability
+Minor bug fixes
 ##413
 Attack interval of units adjusted like Tzar
 Smarter cow milking
