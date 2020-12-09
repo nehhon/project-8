@@ -1,3 +1,8 @@
+##419
+Game statistics after finishing a game
+Increased stability of savegames
+Spies can reveal other spies and invisible units
+Several bugs fixed
 ##417
 Diplomacy panel
 Sharing resources and control
