@@ -1,3 +1,9 @@
+##421
+New terrains Winter and Grass & Snow
+Creating maps from images (map editor -> options)
+New UI available (/#Settings -> New UI)
+New avatars
+Minor bug fixes
 ##420
 Maximum online room size extended to 32 players
 Pop limit is increased by 25% after investigating supply storage (before it was +50)
