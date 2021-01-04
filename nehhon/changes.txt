@@ -1,3 +1,12 @@
+##422
+Team 0 now is 🛇 = no team
+Save custom map settings
+Supr key functionality changed to shift+supr
+New button for selecting all military units
+Ballista nerfed, now is like Tzar
+Rotate buildings shortcut changed from shift to control
+New avatars
+Minor bug fixes
 ##421
 New terrains Winter and Grass & Snow
 Creating maps from images (map editor -> options)
