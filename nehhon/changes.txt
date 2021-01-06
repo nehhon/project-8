@@ -1,7 +1,10 @@
+##425
+Destroying unbuilt buildings returns resources always
+Script 0:0 error was reduced
+Minor bug fixes (map editor)
 ##424
 Team 0 now is 🛇 = no team
 Save custom map settings
-Supr key functionality changed to shift+supr
 New button for selecting all military units
 Ballista nerfed, now is like Tzar
 Rotate buildings shortcut changed from shift to control
