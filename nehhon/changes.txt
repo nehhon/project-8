@@ -1,9 +1,13 @@
+##426
+Ninja cost reduced to 190 gold
+Updated phone UI
+Increased stability
 ##425
 Destroying unbuilt buildings returns resources always
 Script 0:0 error was reduced
 Minor bug fixes (map editor)
 ##424
-Team 0 now is 🛇 = no team
+Team 0 now is &#128711; = no team
 Save custom map settings
 New button for selecting all military units
 Ballista nerfed, now is like Tzar
