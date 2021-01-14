@@ -1,3 +1,7 @@
+##428
+Random race option
+Peasants automatically collect resources after building a storage/lumber
+Minor bug fixes
 ##426
 Ninja cost reduced to 190 gold
 Updated phone UI
