@@ -1,3 +1,9 @@
+##429
+Extended statistics
+F2 key to select all military units
+F1 key to select free peasants
+Reduced lag in some situations
+Minor bug fixes
 ##428
 Random race option
 Peasants automatically collect resources after building a storage/lumber
