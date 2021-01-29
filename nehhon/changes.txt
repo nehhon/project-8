@@ -1,3 +1,9 @@
+##431 29/01/2021
+Battle royale option
+Advanced options: modify units/technologies/building times, resource collection time, game speed, instant build, resource gain, minimum distance between players, shared victory condition
+Cheats: hmpetleva and hmspawn (different, just write hmspawn and choose the object)
+Updated guide - units table
+Minor bug fixes
 ##430
 Updated configuration menu, now is possible to modify initial objects
 Updated map editor menu

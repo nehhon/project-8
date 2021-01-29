@@ -450,43 +450,74 @@ Mantener posición
 Sobornar al enemigo
 Puerta de piedra
 Mejorar a puerta de piedra
-Registered users only
-Room restricted to registered users only
-Log Out
-Change
+Permitir sólo usuarios registrados
+Sala sólo para usuarios registrados
+Cerrar sesión
+Cambiar
 Log In
 Account
-Standard kingdom colors
+Colores del reino estándar
 Convertir en guerrero jihad
 ENVIAR RECURSOS
-%d has sent you %s
-Now you can control %s units
-%s is sharing resources with you
-Damage inflicted
-Damage taken
-Units killed
-Units lost
-Scroll with mouse
-Generate terrain from image
-Invert
-New UI
-Custom saved settings
-View more
-Select all military units
+%d te ha enviado %s
+Ahora puedes controlar las unidades de %s
+%s esta compartiendo recursos contigo
+Daño causado
+Daño recibido
+Unidades matadas
+Unidades perdidas
+Desplazarse con el ratón
+Crear terreno desde imagen
+Invertir
+Nueva UI
+Configuraciones guardadas
+Ver todo
+Ver todas las unidades militares
 DIPLOMACIA
-Units done
-Buildings done
-Maximum units
-Maximum buildings
-Main
-Technologies
+Unidades creadas
+Edificios construidos
+Máximo de unidades
+Máximo de edifcios
+Principal
+Tecnologías
 Misc
-Level-ups
-Distance travelled
-Shared resources
-Buildings destroyed
-Buildings lost
-Mana usage
+Subidas de nivel
+Distancia recorrida
+Recursos compartidos
+Esdificios destruidos
+Edificios perdidos
+Uso de mana
 Heroes
 Score
-Max pop
+Máximo de población
+Objetos iniciales
+Objetos aleatorios
+Distancia
+Cada 256
+Battle Royale (BETA)
+Duración del círculo
+Tiempo de inicio
+Posicionamiento
+Círculos
+Centro
+Daño
+Condición de victoria compartida
+Radio círculo final
+Tiempo de pausa
+Distancia mínima entre jugadores
+Ganancia de recursos
+Cada 1s
+Cada 60s
+Cada unidad matada
+Tiempos de construcción
+Tiempos de unidades
+Tiempos de tecnologías
+Tiempo de recolección
+Opciones avanzadas
+Construcción instantanea
+Círculo cerrando
+Círculo esperando
+Círculo final
+Revelar mapa al morir
+Loco
+Duración total
