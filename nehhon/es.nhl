@@ -464,7 +464,7 @@ Ahora puedes controlar las unidades de %s
 %s esta compartiendo recursos contigo
 Daño causado
 Daño recibido
-Unidades matadas
+Unidades asesinadas
 Unidades perdidas
 Desplazarse con el ratón
 Crear terreno desde imagen
@@ -521,3 +521,10 @@ Círculo final
 Revelar mapa al morir
 Loco
 Duración total
+Tree health
+Select all priests
+Select all mounted units
+Select all archers
+Select all sword units
+Por defecto
+Use backspace as delete key

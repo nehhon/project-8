@@ -1,3 +1,9 @@
+##434 02/02/2021
+Modify the properties of the starting/random objects
+Customizable tree health
+Buttons to select all priests/archers/mounted/sword units
+Using backspace as deletion key is disabled by default
+Minor bug fixes
 ##432 29/01/2021
 Battle royale option
 Advanced options: modify units/technologies/building times, resource collection time, game speed, instant build, resource gain, minimum distance between players, shared victory condition
