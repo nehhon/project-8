@@ -1,3 +1,9 @@
+##436 19/02/2021
+New experimental server
+Reduced CPU usage
+Monks with level >2 can become priests
+Select all priests pressing F3
+Minor bug fixes
 ##435 02/02/2021
 Modify the properties of the starting/random objects
 Customizable tree health
