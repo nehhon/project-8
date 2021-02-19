@@ -30,8 +30,8 @@
 29:adminSelection\28bool\2c\20bool\29
 30:unit::stay\28bool\29
 31:unit::specialMove\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
-32:movtableADD\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
-33:VP8GetValue
+32:VP8GetValue
+33:movtableADD\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
 34:unit::kill\28bool\29
 35:unit::setupIMG\28int*\2c\20float\2c\20bool\2c\20float\29
 36:VP8LoadFinalBytes
@@ -679,7 +679,7 @@
 678:downloadFailed\28emscripten_fetch_t*\29
 679:dlmemalign
 680:dlcalloc
-681:discTimeOut\28unsigned\20int\2c\20unsigned\20int\29
+681:disctimeout\28unsigned\20int\2c\20unsigned\20int\29
 682:dellmitTest\28\29
 683:delTexs\28\29
 684:delMagicVision\28unsigned\20int\2c\20unsigned\20int\29
