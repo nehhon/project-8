@@ -107,7 +107,7 @@ Foste expulso pelo servidor
 MULTIJOGADOR| Jogo Multijogador
 CRIAR| Criar um jogo
 Actualizar
-Sair
+Kick
 Up
 Down
 Raça
@@ -531,3 +531,4 @@ Use backspace as delete key
 Tornar-se Sacerdote
 Access forbidden
 Waiting outside
+Special Buildings

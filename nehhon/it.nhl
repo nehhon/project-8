@@ -107,7 +107,7 @@ L'host ti ha espulso dalla partita.
 MULTIGIOCATORE | Modalità per pių giocatori
 CREA PARTITA| Nuova stanza
 Aggiorna
-Esci
+Kick
 Su
 Giù
 Civiltà
@@ -531,3 +531,4 @@ Use backspace as delete key
 Converti in sacerdote
 Access forbidden
 Waiting outside
+Special Buildings
