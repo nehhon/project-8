@@ -17,9 +17,9 @@
 16:adminSelection\28bool\2c\20bool\29
 17:unit::stay\28bool\29
 18:unit::specialMove\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
-19:VP8GetValue
-20:unit::kill\28bool\29
-21:movtableADD\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
+19:movtableADD\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
+20:VP8GetValue
+21:unit::kill\28bool\29
 22:unit::setupIMG\28int*\2c\20float\2c\20bool\2c\20float\29
 23:VP8LoadFinalBytes
 24:newUnit\28unsigned\20int\2c\20unsigned\20int\2c\20int\2c\20int\2c\20unsigned\20char\2c\20bool\29

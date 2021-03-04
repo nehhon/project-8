@@ -1,4 +1,7 @@
-##440 4/03/2021
+##441 04/03/2021
+Statistical graphics
+Minor bug fixes
+##440 03/03/2021
 Improved AI, use of cows, spells and better resource management
 More stats
 Select all mages pressing F5
