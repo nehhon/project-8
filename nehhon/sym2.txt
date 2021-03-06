@@ -46,9 +46,9 @@
 45:GOmenu\28\29
 46:_tr_flush_bits
 47:VP8GetSignedValue
-48:ReadHuffmanCode
-49:out
-50:cosf
+48:cosf
+49:ReadHuffmanCode
+50:out
 51:sinf
 52:WebPSafeMalloc
 53:searchFreeSpace\28int&\2c\20int&\2c\20unit&\2c\20superInfo&\29

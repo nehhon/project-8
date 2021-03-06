@@ -1,3 +1,8 @@
+##442 05/03/2021
+Separated teams option
+More detailed charts
+Adjusted AI aggressiveness
+Minor bug fixes
 ##441 04/03/2021
 Statistical graphics
 Minor bug fixes
