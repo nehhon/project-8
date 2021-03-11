@@ -1,4 +1,8 @@
-##442 05/03/2021
+##443 11/03/2021
+Samurai cost reduced to 120 food, 50 gold
+Experimental features
+Minor bug fixes
+##442 06/03/2021
 Separated teams option
 More detailed charts
 Adjusted AI aggressiveness
