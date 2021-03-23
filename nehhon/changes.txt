@@ -1,3 +1,8 @@
+##444 23/03/2021
+Public rooms
+New map types: Small lakes and rivers
+VIP users rooms are hosted on the server
+Minor bug fixes
 ##443 11/03/2021
 Samurai cost reduced to 120 food, 50 gold
 Experimental features
