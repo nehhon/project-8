@@ -1,3 +1,8 @@
+##447 10/04/2021
+Ranked games
+Maximum online room size extended to 50 players
+Added buttons to select all magicians/cows
+Minor bug fixes
 ##446 27/03/2021
 Increased stability
 ##444 23/03/2021
