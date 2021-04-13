@@ -1,3 +1,6 @@
+##448 13/04/2021
+Ranked games from 4v4 to 21v21
+Minor bug fixes
 ##447 10/04/2021
 Ranked games
 Maximum online room size extended to 50 players
