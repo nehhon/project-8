@@ -1,3 +1,5 @@
+##450 19/04/2021
+Updated ranking
 ##448 13/04/2021
 Ranked games from 4v4 to 21v21
 Minor bug fixes
