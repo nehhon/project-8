@@ -1,3 +1,8 @@
+##453 06/05/2021
+Fire rain spell is like og Tzar
+Country flags
+Increased server stability
+Minor bug fixes
 ##450 19/04/2021
 Updated ranking
 ##448 13/04/2021
