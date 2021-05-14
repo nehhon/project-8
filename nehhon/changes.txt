@@ -1,3 +1,11 @@
+##454 14/05/2021
+Fire rain spell is like before
+Smaller maps in ranked games
+30% of ranked games will be with separated teams + small lakes
+New experimental team balancing system for ranked games
+Generate advanced custom maps in the map editor (Settings->Options)
+Old custom maps/savegames will not be compatible with the next versions
+Minor bug fixes
 ##453 06/05/2021
 Fire rain spell is like og Tzar
 Country flags
