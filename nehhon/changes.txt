@@ -1,3 +1,12 @@
+##456 13/06/2021
+Added ground patches
+Improved minimap colors
+Players share resources automatically after disconnection (only rankeds)
+Battle royale mode is working on custom maps/savegames
+New avatars
+Maps from old versions are still compatible
+Reduced CPU usage
+Minor bug fixes
 ##455 15/05/2021
 Fire rain spell is like before
 Smaller maps in ranked games

@@ -494,7 +494,7 @@ Initial objects
 Random objects
 Distance
 Each 256
-Battle Royale (BETA)
+Battle Royale
 Circle duration
 Start time
 Positioning
@@ -544,3 +544,5 @@ Rank score
 %s has joined!
 You can't control %s units anymore
 %s stopped sharing resources with you
+Ground Patches
+Delete

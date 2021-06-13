@@ -1,0 +1,30 @@
+{
+  "short_name": "Tzared",
+  "name": "Tzared",
+  "icons": [
+    {
+      "src": "nehhon/48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "nehhon/96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "nehhon/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "nehhon/800.png",
+      "type": "image/png",
+      "sizes": "800x800"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#b00000",
+  "background_color": "#ffffff"
+}

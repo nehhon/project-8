@@ -494,7 +494,7 @@ Objetos iniciales
 Objetos aleatorios
 Distancia
 Cada 256
-Battle Royale (BETA)
+Battle Royale
 Duración del círculo
 Tiempo de inicio
 Posicionamiento
@@ -544,3 +544,5 @@ Rank score
 %s has joined!
 You can't control %s units anymore
 %s stopped sharing resources with you
+Objetos a ras de suelo
+Borrar
