@@ -1,7 +1,11 @@
+##458 16/06/2021
+New experimental team balancing system for ranked games
+Buy potions, swords or shields in the asian market
+Antialiasing disabled for web browsers due to high GPU usage
+Minor bug fixes
 ##457 13/06/2021
 Added ground patches
 Improved minimap colors
-Players share resources automatically after disconnection (only rankeds)
 Battle royale mode is working on custom maps/savegames
 New avatars
 Maps from old versions are still compatible
