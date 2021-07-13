@@ -101,7 +101,7 @@ Añadir IA
 Desconectar
 JUGAR
 MISIÓN| Jugar una misión ya creada
-¡%s se ha desconectado!
+%s se ha desconectado!
 El servidor ha cancelado la partida.
 El servidor te ha expulsado de la partida.
 MULTIJUGADOR| Juego para varios jugadores
@@ -128,7 +128,7 @@ Guía
 Aviso
 OK
 Descargando gráficos...
-¡%s ha sido derrotado!
+%s ha sido derrotado!
 %s ha ganado!
 No hay suficiente %s
 No hay suficientes casas
@@ -522,27 +522,51 @@ Revelar mapa al morir
 Loco
 Duración total
 Tree health
-Select all priests
-Select all mounted units
-Select all archers
-Select all sword units
+Selecciona todos los sacerdotes
+Selecciona todas las unidades a caballo
+Selecciona todos los arqueros
+Selecciona todas las unidades con espada
 Por defecto
 Use backspace as delete key
 Convertir en sacerdote
-Access forbidden
-Waiting outside
-Special Buildings
-Charts
-Separated teams
-Small lakes
-Rivers
-Waiting for players
-Select all wizards
-Select cows with +450 food
+Acceso denegado
+Esperando fuera
+Edificios especiales
+Graficos
+Equipos separados
+Lagos pequeños
+Rios
+Esperando a jugadores
+Selecciona todos los magos
+Seleciona todas las vacas con +450 de comida
 Iniciando...
 Rank score
-%s has joined!
-You can't control %s units anymore
-%s stopped sharing resources with you
+%s se ha unido!
+Ya no puedes controlar las unidades de %s
+%s dejó de compartir recursos contigo
 Objetos a ras de suelo
 Borrar
+Novedades
+Ranking
+Descargar
+Sesión iniciada
+Bandera
+Calidad de la niebla
+Densidad de pixeles
+Resetear
+Ready
+No puedes cambiar tu nombre hasta dentro de %s días
+Solo puedes cambiar tu nombre una vez cada 60 días
+Avatar
+Prados
+Trenkorian
+Desierto
+Nieve
+Verano
+Rareland
+Jungla
+Invierno
+Prados & Nieve
+RANKED
+oficial
+min

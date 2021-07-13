@@ -1,3 +1,11 @@
+##459 13/07/2021
+Training of units is almost like Tzar
+Improved Bulgarian translation (thanks to Боги19919)
+Ninja cost reduced from 240 to 200 gold
+Rocket tower cost increased to 1500 wood and 800 stone
+Select all spies pressing F6
+Damaging allied units removes score
+Minor bug fixes
 ##458 16/06/2021
 New experimental team balancing system for ranked games
 Buy potions, swords or shields in the asian market

@@ -99,7 +99,7 @@ TAK
 NIE
 Dodaj AI
 Rozłącz
-Rozpocznij grę
+Graj
 GOTOWA MAPA| Gra na gotowej mapie
 %s rozłączył się!
 Serwer anulował grę.
@@ -452,10 +452,10 @@ Kamienna brama
 Zamień na kamienną bramę
 Registered users only
 Room restricted to registered users only
-Log Out
+Wyloguj się
 Change
-Log In
-Account
+Zaloguj się
+Konto
 Standard kingdom colors
 Stań się wojownikiem dżihadu
 PRZENIEŚ SUROWCE
@@ -541,8 +541,32 @@ Select all wizards
 Select cows with +450 food
 Inicjalizacja...
 Rank score
-%s has joined!
+%s dołączył!
 You can't control %s units anymore
 %s stopped sharing resources with you
 Małe obiekty
 Wykasuj
+Changelog
+Ranking
+Pobierz
+Logged in
+Flaga
+Fog quality
+Pixel density
+Reset
+Ready
+You can't change your name for %s days
+You can change your name once every 60 days
+Avatar
+Trawa
+Trenkorian
+Pustynia
+Śnieg
+Lato
+Rareland
+Dżungla
+Zima
+Trawa & Śnieg
+RANKED
+oficjalny
+min

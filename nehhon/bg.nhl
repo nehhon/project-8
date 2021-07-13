@@ -1,7 +1,7 @@
 НАСТРОЙКИ НА ИГРАТА
 Размер на картата
-Continue
-CANCEL
+Продължи
+Отказ
 Health
 Пълно Здраве
 Attack
@@ -12,8 +12,8 @@ Kingdom
 Ограничение за населението
 Уровень сложности
 Свободно население
-Equalize values for all kingdoms
-CLOSE
+Изравняване на стойностите за всички царства
+Затвори
 ЦВЯТ
 Име на играча
 Злато
@@ -22,10 +22,10 @@ CLOSE
 Камък
 Компютър
 Отбор
-Captureable
+Уловено
 Nature
 Добави
-Map size is too small, expanded to %s
+Размерът на картата е твърде малък и разширен до %s
 Терен
 Тип на картата
 Суха
@@ -34,12 +34,12 @@ Map size is too small, expanded to %s
 Острови
 Архипелаг
 Случайна
-AI aggressivity
-Visibility
+Агресивност на AI
+Видимост
 Без мъгла
-Temporal fog
-Fog of war
-Extreme fog
+Временна мъгла
+Стандартна мъгла
+Екстремна мъгла
 Първоначално богатство
 Infinite
 Дървена порта
@@ -48,36 +48,36 @@ Infinite
 НАСТРОЙКИ
 език
 Автоматично пускане на пълен екран
-Shadows
+Сенки
 ПАУЗА
 Вода
-Ground
+Повърхност
 МЕНЮ
 ОПЦИИ
-Random
+Случаен
 СЛУЧАЙНА КАРТА
-Clear map
-Full random map
-Зареждам...
+Изчистване на картата
+Случайна карта
+Зареждане...
 Размер на картата
 Име на картата
 ГОТОВА КАРТА
 Описание
-Author
+Автор
 Единици
-Buildings
-Items
+Постройки
+Предмети
 Trees
 Resources
 Златно находище
 Каменна кариера
 СЪОБЩЕНИЕ
-Cost
+Цена
 Requires
 Изчакваме останалите играчи
-Error loading game.
-Sorry, the game is full.
-Password
+Възникна проблем при зареждането на играта.
+Играта е пълна.
+Парола
 Скорост
 ОБРАТНО В ИГРАТА
 ЗАПИСВАНЕ
@@ -85,34 +85,34 @@ Password
 ИЗХОД
 Бързина на зоомване
 Скролиране
-Menu opacity
+Непрозрачност на менюто
 Цикъл ден/нощ
 Сила на музиката
 Сила на звука
-Death sounds
+Звуци на умиращи единици
 В игра
-В изчакаване не играчи
+В изчакаване на играчи
 Private
 Въведете името на играта
 Брой на играчите
-Yes
-No
+Да
+Не
 Добави AI
 Прекъсване на връзката
 НАЧАЛО
 ГОТОВА КАРТА| Игра на готова карта
 %s прекъсна връзката!
-The game was canceled by the server.
-You were kicked off by the server.
+Създателят на играта прекъсна връзката.
+Вие бяхте изгонен от сървъра.
 МРЕЖА| Игра в мрежа
 СЪЗДАЙ| Създаване на игра
-Refresh
-Kick
+Опресняване
+Изгонване
 горе
 долу
 Раса
 СВОБОДЕН
-Инициализирам играта...
+Инициализиране на играта...
 Натисни за да влезеш
 ЗАПИСАНА ИГРА| Зареждане на записана игра
 Настройки на картата
@@ -124,17 +124,17 @@ Kick
 За
 ОБРАТНО
 Запазване на съдържанието на играта локално
-Guide
-Warning
+Ръководство
+Внимание
 ОК
 Изтеглят се графиките...
 %s е сразен!
-%s won!
+%s победи!
 Няма достатъчно %s
 Къщите свършиха
 Достигнат е лимита на населението
 Проблем със свързването
-Network async. Game canceled.
+Опресняване на мрежата. Играта бе прекъсната.
 Мечка
 Пехота
 Пиконосец
@@ -205,7 +205,7 @@ Shield
 Прилеп
 Сатрап
 Тежка кавалерия
-Воин на Аллах
+Войн на Аллах
 Рибен пасаж
 Еничар
 Замъкът на злото
@@ -395,7 +395,7 @@ Sword
 Experience
 Manna
 Храна
-Copy room link
+Копиране на връзка към стаята
 ЗАГУБИХМЕ, ЦАРЮ!
 DEFEATED
 ПОБЕДА, ЦАРЮ!
@@ -403,19 +403,19 @@ VICTORIOUS
 Кули
 ТАЗИ| Присъединяване към избраната игра
 Пречистване на рудата
-Tree density
-Symmetrical map
-Shared initial position
-Peace time
-Zoom to cursor
+Гъстота на дърветата
+Симетрична карта
+Споделена начална позиция
+Мирно време
+Увеличаване с курсора
 Условия за победа
-Kill everything
-Destroy castles & barracks
-Destroy castles
+Унищожи всичко
+Унищожи казарми и замъци
+Унищожи замъци
 Тактика на акостирането
 Увеличава вместимостта на корабите
-Unlimited zoom
-Team chat
+Безкрайно увеличение
+Отборни съобщения
 WASD as arrow keys
 Location sent
 Придвижи се
@@ -450,99 +450,123 @@ Help
 Подкупи вражеската войска
 Каменна порта
 Надстрой каменна порта
-Registered users only
-Room restricted to registered users only
-Log Out
-Change
-Log In
-Account
-Standard kingdom colors
-Тръгни на джихад
+Достъп само до регистрирани потребители
+Стаята е достъпна само за регистрирани потребители
+Отписване
+Промени
+Вписване
+Профил
+Стандартни цветове на играчите
+Тръгни към джихада
 ПРЕХВЪРЛЯНЕ НА БОГАТСТВА
-%d has sent you %s
-Now you can control %s units
-%s is sharing resources with you
+%d ви даде %s
+Сега вие контролирате единиците на %s
+%s сподели ресурсите си с вас!
 Damage inflicted
 Damage taken
 Units killed
 Units lost
-Scroll with mouse
-Generate terrain from image
-Invert
-New UI
-Custom saved settings
-View more
-Select all military units
+Преместване на мирогледа, чрез курсора
+Генериране на карта, чрез снимка
+Обръщане
+Нов UI
+Запаметени настройки
+Виж всичко
+Избери всички пехотни единици
 ДИПЛОМАЦИЯ
 Units done
 Buildings done
-Maximum units
-Maximum buildings
-Main
-Technologies
-Misc
+Максимален брой единици
+Максимален брой постройки
+Основна статистика
+Прогрес
+Разни
 Level-ups
-Distance travelled
-Shared resources
-Buildings destroyed
-Buildings lost
-Mana usage
-Heroes
-Score
+Изминато разтояние
+Споделени ресурси
+Унищожени постройки
+Унищожени сгради
+Използване на мана
+Герои
+Резултат
 Max pop
-Initial objects
-Random objects
-Distance
+Първоначални обекти
+Произволни обекти
+Разстояние
 Each 256
-Battle Royale
-Circle duration
-Start time
-Positioning
-Circles
-Center
-Gas damage
-Shared victory condition
-Final circle radius
-Pause time
-Minimum distance between players
-Resource gain
+Екстремна битка
+Продължителност на кръга
+Начален час
+Позициониране
+Окръжностти
+Център
+Щети нанесени от зоната
+Взаимно условие за победа
+Финална ширина на окръжността
+Междинно време
+Минимално разстояние между играчите
+Печалба от ресурси
 Each 1s
 Each 60s
 Each unit killed
-Building times
-Units times
+Време за строене
+Време за създаване на единици
 Technologies times
-Resource collection time
-Advanced options
-Instant build
-Circle closing
-Circle waiting
-Final circle
-Reveal map fog when dying
+Време за събиране на ресурси
+Разширени настройки
+Незабавно строителство
+Окръжността се затваря
+Изчакване на окръжността
+Финална окръжност
+Разкриване на картата, когато загубите
 Crazy
-Total duration
-Tree health
-Select all priests
-Select all mounted units
-Select all archers
-Select all sword units
-Default
-Use backspace as delete key
+Обща продължителност
+Живот на дървото
+Изберете всички свещенници
+Изберете всички механични единици
+Изберете всички стрелци
+Изберете всички пехотни единици
+По подразбиране
+Използване на Backspace, като бутон за изтриване на единици
 Стани свещеник
-Access forbidden
-Waiting outside
-Special Buildings
-Charts
-Separated teams
-Small lakes
-Rivers
-Waiting for players
-Select all wizards
-Select cows with +450 food
-Инициализирам...
-Rank score
-%s has joined!
-You can't control %s units anymore
-%s stopped sharing resources with you
+Достъпът е отказан
+Изчакване извън протичането на играта
+Специални постройки
+Статистика
+Разграничени отбори
+Малки езера
+Реки
+Изчакване на играчи
+Изберете всички магьосници
+Изберете кравите с повече от 450 храна
+Инициализиране...
+Класификацио̀нен резултат
+се присъедини!
+Вие вече не можете да контролирате единиците на %s
+%s спря споделянето на ресурси с вас
 Изображения по терена
 Delete
+Новости
+Класация
+Изтегляне
+Вписан
+Знаме
+Качество на мъглата
+Резолюция
+Нулиране
+Готов
+You can't change your name for %s days
+Вие можете да сменяте името си на всеки 60 дни
+Аватар
+Тревиста
+Тренкориан
+Пустинна
+Снежна
+Лятна
+Полярна
+Екваториална
+Зимна
+Заскрежена
+КЛАСИРАН
+официален
+мин
