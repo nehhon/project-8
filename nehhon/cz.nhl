@@ -114,7 +114,6 @@ Rasa
 OTEVŘENÉ
 Hra je inicializována...
 Kliknout pro připojení
-NAHRÁT HRU| Nahrát uloženou hru
 Editor mapy
 EVROPAN| Rasa hráče
 ARAB| Rasa hráče
@@ -685,3 +684,4 @@ Set kingdom resources
 Kingdom resources
 Pause/Unpause
 Active kingdom
+NAHRÁT HRU

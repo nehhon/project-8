@@ -114,7 +114,6 @@ Civilización
 DISPONIBLE
 Iniciando la partida...
 Click para unirse
-CARGAR PARTIDA| Cargar una partida guardada
 Editor de mapas
 EUROPEO| Civilización del jugador
 ÁRABE| Civilización del jugador
@@ -508,7 +507,7 @@ Distancia mínima entre jugadores
 Ganancia de recursos
 Cada 1s
 Cada 60s
-Cada unidad matada
+Cada unidad asesinada
 Tiempos de construcción
 Tiempos de unidades
 Tiempos de tecnologías
@@ -685,3 +684,4 @@ Set kingdom resources
 Kingdom resources
 Pause/Unpause
 Active kingdom
+CARGAR PARTIDA

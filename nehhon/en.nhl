@@ -114,7 +114,6 @@ Civilization
 OPEN
 Initializing Game...
 Click to join
-LOAD GAME| Load saved game
 Map editor
 EUROPEAN| Player race
 ARABIAN| Player race
@@ -685,3 +684,4 @@ Set kingdom resources
 Kingdom resources
 Pause/Unpause
 Active kingdom
+LOAD GAME

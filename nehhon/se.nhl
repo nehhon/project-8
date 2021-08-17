@@ -114,7 +114,6 @@ Människors ras
 OPEN
 Initializing Game...
 Klicka för att gå med
-LOAD GAME| Load saved game
 Kartredigerare
 EUROPEAN| Player race
 ARABIAN| Player race
@@ -685,3 +684,4 @@ Set kingdom resources
 Kingdom resources
 Pause/Unpause
 Active kingdom
+LOAD GAME
