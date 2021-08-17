@@ -570,3 +570,118 @@ Prados & Nieve
 RANKED
 oficial
 min
+Tiempo de ataque (ms)
+Ataque/s
+Rango
+Velocidad
+%s room
+Fast 1v1
+undefined
+Media de las ultimas 16 partidas
+Multihilo
+Anti-aliasing
+GPU
+Bajo
+Medio
+Alto
+Ultra
+Peasants by resource
+Resources/s
+RULES
+Action
+Event
+Add quest
+Appear object
+Change diplomacy settings
+Change object owner
+Change player status
+Conversation
+Delay
+Destroy object
+Erase object
+Explore area
+Load map
+Lock view
+Lock/Unlock units
+Object order
+Player defeated
+Player won
+Remove quest
+Scroll view
+Send chat message
+Set object properties
+Set timer
+Show message
+Show story screen
+Spawn object
+Stop timer
+Unlock view
+Object destroyed
+Object enter holder
+Object exist
+Object in area
+Object leave holder
+Condition
+Rule
+Object
+Rectangle
+Area
+Clear
+Set
+View
+For which
+All
+Type
+Count
+Check all
+Clear all
+Select objects
+Cualquiera
+Unidades militares
+Order
+Zone
+Amount
+Properties
+Objetive
+Por defecto
+Proteger
+Object near to
+Operation
+Actions
+Conditions
+Repetitions
+Optional
+Negative
+None (executed at the start)
+Event trigger
+(The object(s) that activates the rule)
+Multiple
+Single
+General
+Restore mana
+Restore health
+Minimum repetition time
+Check rule each
+Duplicate
+Current resources
+Map explored (beta)
+Object state
+State
+Killed
+Created
+Deleted
+Objective
+Selected
+Attacking
+Building/Repairing
+Healing
+Teaching
+Refuged
+Object killed unit
+Cultivar, talar o extraer
+Reparar edificio
+Refuge
+Set kingdom resources
+Kingdom resources
+Pause/Unpause
+Active kingdom

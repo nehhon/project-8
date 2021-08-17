@@ -3463,7 +3463,10 @@
         "whatis":"WHAT IS?",
         "hotkey":"HOT KEYS",
         "back":"BACK",
-        "close":"CLOSE"
+        "close":"CLOSE",
+        "table":"TABLE",
+        "bonuses":"BONUSES",
+        "bonuses_inv":"BONUSES (inverted)"
     },
     "HOTKEYS":{
 "X":"Show map",

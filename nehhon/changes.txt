@@ -1,3 +1,25 @@
+##460 17/08/2021
+Map editor rules/events
+Alt+click when using a spell/action moves the nearest selected unit
+New menu with data about resources/s and peasants by pressing the Q key
+Improved unit targeting when attacking
+Select all heroes pressing F7
+Initial towers can attack units under peace time
+It is possible to choose which resource to share
+New option "Map explored"
+Whirlpool spell
+Magic vision working when ultra fog is enabled
+Control+click on the invisibility spell for automatic invisibility
+"New UI" adapted to more resolutions
+Ping with the server is displayed after pressing F4 (top right)
+Load original custom maps from Tzar in Map editor > options (rules, conversations... not working)
+Asian mage sight increased from 15 to 21
+Pikeman is exactly like Tzar
+Maps created will be compatible forever
+New avatars
+Improved Bulgarian translation (thanks to Боги19919)
+Minor bug fixes
+Special thanks to Michael (Macca)
 ##459 13/07/2021
 Training of units is almost like Tzar
 Improved Bulgarian translation (thanks to Боги19919)

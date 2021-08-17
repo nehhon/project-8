@@ -7,7 +7,7 @@ Health
 Attack
 Defense
 Мана
-Kingdom
+Кралство
 ЗАПИШИ
 Ограничение за населението
 Уровень сложности
@@ -46,7 +46,7 @@ Infinite
 Първоначални хора
 Ограничение за населението
 НАСТРОЙКИ
-език
+Език
 Автоматично пускане на пълен екран
 Сенки
 ПАУЗА
@@ -92,8 +92,8 @@ Requires
 Звуци на умиращи единици
 В игра
 В изчакаване на играчи
-Private
-Въведете името на играта
+Поверителна игра
+Име на играта
 Брой на играчите
 Да
 Не
@@ -121,7 +121,7 @@ Private
 АЗИАТСКА| Раса на играча
 Прости
 САМОСТОЯТЕЛНА ИГРА| Самостоятелна игра срещу компютъра
-За
+За нас
 ОБРАТНО
 Запазване на съдържанието на играта локално
 Ръководство
@@ -401,7 +401,7 @@ DEFEATED
 ПОБЕДА, ЦАРЮ!
 VICTORIOUS
 Кули
-ТАЗИ| Присъединяване към избраната игра
+Присъединяване към игра| Присъединяване към избраната игра
 Пречистване на рудата
 Гъстота на дърветата
 Симетрична карта
@@ -469,7 +469,7 @@ Units lost
 Преместване на мирогледа, чрез курсора
 Генериране на карта, чрез снимка
 Обръщане
-Нов UI
+Нов потребителски интерфейс
 Запаметени настройки
 Виж всичко
 Избери всички пехотни единици
@@ -493,7 +493,7 @@ Max pop
 Първоначални обекти
 Произволни обекти
 Разстояние
-Each 256
+На всеки 256
 Екстремна битка
 Продължителност на кръга
 Начален час
@@ -505,13 +505,13 @@ Each 256
 Финална ширина на окръжността
 Междинно време
 Минимално разстояние между играчите
-Печалба от ресурси
-Each 1s
-Each 60s
-Each unit killed
+Получаване на ресурси
+На всяка 1 сек
+На всеки 60 сек
+За всяка убита единица
 Време за строене
 Време за създаване на единици
-Technologies times
+Време за развиване на технологии
 Време за събиране на ресурси
 Разширени настройки
 Незабавно строителство
@@ -567,6 +567,121 @@ You can't change your name for %s days
 Екваториална
 Зимна
 Заскрежена
-КЛАСИРАН
+КЛАСИРАНЕ
 официален
 мин
+Време за атака
+Атака за сек
+Диапазон
+Бързина
+Игра на %s
+Бърза игра 1в1
+undefined
+Средностатистически резултат за последните 16 игри
+Многонишковост
+Сглаждане на пикселите
+GPU
+Ниска
+Средна
+Висока
+Епична
+Peasants by resource
+Resources/s
+RULES
+Action
+Event
+Add quest
+Appear object
+Change diplomacy settings
+Change object owner
+Change player status
+Conversation
+Delay
+Destroy object
+Erase object
+Explore area
+Load map
+Lock view
+Lock/Unlock units
+Object order
+Player defeated
+Player won
+Remove quest
+Scroll view
+Send chat message
+Set object properties
+Set timer
+Show message
+Show story screen
+Spawn object
+Stop timer
+Unlock view
+Object destroyed
+Object enter holder
+Object exist
+Object in area
+Object leave holder
+Condition
+Rule
+Object
+Rectangle
+Area
+Clear
+Set
+View
+For which
+All
+Type
+Count
+Check all
+Clear all
+Select objects
+Any
+Military Units
+Order
+Zone
+Amount
+Properties
+Objetive
+Стандартно действие
+Охранявай
+Object near to
+Operation
+Actions
+Conditions
+Repetitions
+Optional
+Negative
+None (executed at the start)
+Event trigger
+(The object(s) that activates the rule)
+Multiple
+Single
+General
+Restore mana
+Restore health
+Minimum repetition time
+Check rule each
+Duplicate
+Current resources
+Map explored (beta)
+Object state
+State
+Killed
+Created
+Deleted
+Objective
+Selected
+Attacking
+Building/Repairing
+Healing
+Teaching
+Refuged
+Object killed unit
+Добивай
+Поправи постройката
+Refuge
+Set kingdom resources
+Kingdom resources
+Pause/Unpause
+Active kingdom
