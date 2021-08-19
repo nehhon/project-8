@@ -1,3 +1,11 @@
+##466 19/08/2021
+Added attack ground and patrol object orders (map editor)
+Spawn object now includes custom properties option
+New event "Game time >"
+New menu for bulk edit/select/kill objects
+Change object kingdom is working properly
+Fixed "minimum repetition time" option bug at the start
+Minor bug fixes
 ##465 18/08/2021
 Advanced diplomacy options in the map editor
 Minor bug fixes

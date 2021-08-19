@@ -641,7 +641,7 @@ Order
 Zone
 Amount
 Properties
-Objetive
+Objective
 Default
 Guard
 Object near to
@@ -687,3 +687,9 @@ Active kingdom
 LOAD GAME
 Specific
 By team
+Attack ground
+ACCEPT
+Change kingdom to
+None
+Bulk editor
+Game time
