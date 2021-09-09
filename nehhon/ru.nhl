@@ -669,14 +669,14 @@ State
 Killed
 Created
 Deleted
-Objective
+Destroyed by
 Selected
 Attacking
 Building/Repairing
 Healing
 Teaching
 Refuged
-Object killed unit
+Object destroyed by
 Добыча: копать, рубить, разраб.
 Ремонтировать
 Refuge
@@ -693,3 +693,26 @@ Change kingdom to
 None
 Bulk editor
 Game time
+Player is AI (online)
+Set special variable
+Random
+Special variable
+Object properties
+For each object destroyed
+For each object lost
+Variable
+Wrong PIN
+Investigate technology
+Too many attempts, access blocked
+PIN required to edit the map
+Technology investigated
+Disable technology
+Change diplomacy options
+Origin
+Destine
+Teletransport object
+Ланселот,Артур,Гюлвен,Мерлин,Чернотрън,Морин,Голстък,Карамбол,Хелерик,Рокмор,Бридпорт,Кейсвил,Стирм,Тунис,Пелегрим,Пересон,Пирк,Фарн,Горк
+Иб Фадлан,Мохамед,Ал Фериса,Харън Ай Рашид,Синдбад,Мелемад,Моррак,Сахаван,Белефас,Мокхак,Норах,Керхетин,Махам,Дюшеш,Дирех
+Алжида,Торанага,Ичинзен,Хайяко,Мозуки,Хитачи,Тошиба,Харашико,Марасума,Куродзум,Ечинген,Генджи,Муса,Ечибо,Ичиках,Йотокан,Марага
+Фистантилус,Скендербег,Рейслин,Тунис,Морук,Сокоб,Барас,Харъм,Билиз,Юнте,Орк,Сава,Пиргос,Савадор,Гандъх,Гордор,Феш,Гилм,Пергас
+Vision

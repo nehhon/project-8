@@ -77,7 +77,7 @@ Requires
 Waiting for players to connect
 Error loading game.
 Sorry, the game is full.
-Password
+PIN
 Game Speed
 BACK TO GAME
 SAVE GAME
@@ -669,14 +669,14 @@ State
 Killed
 Created
 Deleted
-Objective
+Destroyed by
 Selected
 Attacking
 Building/Repairing
 Healing
 Teaching
 Refuged
-Object killed unit
+Object destroyed by
 Dig, chop or mine
 Repair building
 Refuge
@@ -693,3 +693,26 @@ Change kingdom to
 None
 Bulk editor
 Game time
+Player is AI (online)
+Set special variable
+Random
+Special variable
+Object properties
+For each object destroyed
+For each object lost
+Variable
+Wrong PIN
+Investigate technology
+Too many attempts, access blocked
+PIN required to edit the map
+Technology investigated
+Disable technology
+Change diplomacy options
+Origin
+Destine
+Teletransport object
+Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockmore,Bridport,Casevil,Stirm,Tonis,Pelegrim,Peresohn,Pirk,Pharn,Gork
+Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan,Bellefars,Mokhac,Norahz,Kerhetin,Maham,Dushesh,Direkh
+Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodzum,Ishinghen,Genghis,Musa,Echibo,Ichikahr,Yotokan,Maraga
+Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
+Vision

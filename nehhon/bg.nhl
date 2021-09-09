@@ -6,8 +6,8 @@ Health
 Пълно Здраве
 Attack
 Defense
-Мана
-Кралство
+Манна
+Царство
 ЗАПИШИ
 Ограничение за населението
 Уровень сложности
@@ -22,10 +22,10 @@ Defense
 Камък
 Компютър
 Отбор
-Уловено
+Чрез улавяне
 Nature
 Добави
-Размерът на картата е твърде малък и разширен до %s
+Размерът на картата е твърде малък и е разширен на %s
 Терен
 Тип на картата
 Суха
@@ -77,7 +77,7 @@ Requires
 Изчакваме останалите играчи
 Възникна проблем при зареждането на играта.
 Играта е пълна.
-Парола
+ПИН
 Скорост
 ОБРАТНО В ИГРАТА
 ЗАПИСВАНЕ
@@ -126,7 +126,7 @@ Requires
 Ръководство
 Внимание
 ОК
-Изтеглят се графиките...
+Графиките се изтеглят...
 %s е сразен!
 %s победи!
 Няма достатъчно %s
@@ -394,7 +394,7 @@ Sword
 Experience
 Manna
 Храна
-Копиране на връзка към стаята
+Копиране на връзката към стаята
 ЗАГУБИХМЕ, ЦАРЮ!
 DEFEATED
 ПОБЕДА, ЦАРЮ!
@@ -414,7 +414,7 @@ VICTORIOUS
 Тактика на акостирането
 Увеличава вместимостта на корабите
 Безкрайно увеличение
-Отборни съобщения
+Съобщи само на своя отбор
 WASD as arrow keys
 Location sent
 Придвижи се
@@ -461,10 +461,10 @@ Help
 %d ви даде %s
 Сега вие контролирате единиците на %s
 %s сподели ресурсите си с вас!
-Damage inflicted
-Damage taken
-Units killed
-Units lost
+Нанесени щети
+Получени щети
+Убити единици
+Изгубени единици
 Преместване на мирогледа, чрез курсора
 Генериране на карта, чрез снимка
 Обръщане
@@ -473,14 +473,14 @@ Units lost
 Виж всичко
 Избери всички пехотни единици
 ДИПЛОМАЦИЯ
-Units done
-Buildings done
+Оцелели единици
+Оцелели сгради
 Максимален брой единици
 Максимален брой постройки
 Основна статистика
 Прогрес
 Разни
-Level-ups
+Вдигнати нива
 Изминато разтояние
 Споделени ресурси
 Унищожени постройки
@@ -488,7 +488,7 @@ Level-ups
 Използване на мана
 Герои
 Резултат
-Max pop
+Максимално население
 Първоначални обекти
 Произволни обекти
 Разстояние
@@ -535,7 +535,7 @@ Crazy
 Разграничени отбори
 Малки езера
 Реки
-Изчакване на играчи
+Изчакване на играчи...
 Изберете всички магьосници
 Изберете кравите с повече от 450 храна
 Инициализиране...
@@ -554,11 +554,11 @@ Delete
 Резолюция
 Нулиране
 Готов
-You can't change your name for %s days
+Вие можете да смените името си след %s дена
 Вие можете да сменяте името си на всеки 60 дни
-Аватар
+Въплащение
 Тревиста
-Тренкориан
+Скалиста
 Пустинна
 Снежна
 Лятна
@@ -568,9 +568,9 @@ You can't change your name for %s days
 Заскрежена
 КЛАСИРАНЕ
 официален
-мин
+мин.
 Време за атака
-Атака за сек
+Атака за сек.
 Диапазон
 Бързина
 Игра на %s
@@ -586,110 +586,133 @@ GPU
 Епична
 Peasants by resource
 Resources/s
-RULES
-Action
-Event
+ПРАВИЛА
+Действие
+Събитие
 Add quest
 Appear object
-Change diplomacy settings
-Change object owner
-Change player status
-Conversation
-Delay
-Destroy object
+Промени дипломацията
+Промени притежателя на обекта
+Промени игрови статус
+Беседа
+Забавяне
+Унищожи обект
 Erase object
-Explore area
-Load map
+Проучи зоната
+Зареди карта
 Lock view
 Lock/Unlock units
 Object order
-Player defeated
-Player won
+Губещ играч
+Печеливш играч
 Remove quest
 Scroll view
-Send chat message
-Set object properties
-Set timer
-Show message
+Изпрати съобщение
+Задайте свойства на обекта
+Включи брояча
+Покажи съобщение
 Show story screen
-Spawn object
-Stop timer
+Появяващ се обект
+Изключи брояча
 Unlock view
-Object destroyed
+Обектът е унищожен
 Object enter holder
-Object exist
-Object in area
+Обектът съществува
+Обект в зоната
 Object leave holder
-Condition
-Rule
-Object
-Rectangle
-Area
-Clear
-Set
-View
+Състояние
+Правило
+Обект
+Правоъгълник
+Зона
+Изчисти
+Наложи
+Виж
 For which
-All
-Type
-Count
-Check all
-Clear all
-Select objects
+Всички
+Вид
+Резултат
+Провери всички
+Премахни всички
+Избери обекти
 Any
 Military Units
-Order
-Zone
-Amount
-Properties
+Поръчка
+Зона
+Брой
+Характеристика
 Objective
 Стандартно действие
 Охранявай
 Object near to
-Operation
-Actions
-Conditions
-Repetitions
-Optional
+Операция
+Действия
+Условия
+Повторения
+По избор
 Negative
 None (executed at the start)
-Event trigger
-(The object(s) that activates the rule)
-Multiple
-Single
-General
-Restore mana
-Restore health
-Minimum repetition time
-Check rule each
-Duplicate
-Current resources
+Задействане на събитие
+(Обект, който активира правилото)
+Множествен
+Единичен
+Основен
+Възвръщане на манна
+Възвръщане на здраве
+Минимално време за повторение
+Проверка на правилото на всеки
+Дублирай
+Текущи ресурси
 Map explored (beta)
-Object state
-State
-Killed
-Created
-Deleted
-Objective
-Selected
-Attacking
+Режим на обекта
+Режим
+Убит
+Създаден
+Премахнат
+Унищожен от
+Избран
+Атакуваща
 Building/Repairing
-Healing
-Teaching
-Refuged
-Object killed unit
+Лекуваща
+Обучаваща
+Подслоняваща
+Object destroyed by
 Добивай
 Поправи постройката
-Refuge
-Set kingdom resources
-Kingdom resources
-Pause/Unpause
-Active kingdom
+Подслон
+Задайте ресурси на царството
+Ресурси на царството
+Пауза/Пускане
+Принадлежи на царство:
 ЗАРЕЖДАНЕ
 Specific
-By team
+По отбор
 Обстрелвай позиция
 ОК
-Change kingdom to
+Смени царството на
 None
-Bulk editor
-Game time
+Групов редактор
+Игрово време
+Player is AI (online)
+Set special variable
+Случайно
+Special variable
+Object properties
+На всеки унищожен обект
+На всеки изгубен обект
+Променлив
+Wrong PIN
+Проучете технологията
+Too many attempts, access blocked
+PIN required to edit the map
+Technology investigated
+Disable technology
+Change diplomacy options
+Origin
+Destine
+Teletransport object
+Ланселот,Артур,Гюлвен,Мерлин,Чернотрън,Морин,Голстък,Карамбол,Хелерик,Рокмор,Бридпорт,Кейсвил,Стирм,Тунис,Пелегрим,Пересон,Пирк,Фарн,Горк
+Иб Фадлан,Мохамед,Ал Фериса,Харън Ай Рашид,Синдбад,Мелемад,Моррак,Сахаван,Белефас,Мокхак,Норах,Керхетин,Махам,Дюшеш,Дирех
+Алжида,Торанага,Ичинзен,Хайяко,Мозуки,Хитачи,Тошиба,Харашико,Марасума,Куродзум,Ечинген,Генджи,Муса,Ечибо,Ичиках,Йотокан,Марага
+Фистантилус,Скендербег,Рейслин,Тунис,Морук,Сокоб,Барас,Харъм,Билиз,Юнте,Орк,Сава,Пиргос,Савадор,Гандъх,Гордор,Феш,Гилм,Пергас
+Vision

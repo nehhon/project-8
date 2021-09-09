@@ -1,3 +1,12 @@
+##467 09/09/2021
+New events "Player is AI", "For each object destroyed", "Object properties", "Special variable", "Technology investigated"
+New actions "Set special variable", "Investigate technology", "Change diplomacy", "Teletransport object"
+Set PIN to maps
+Event trigger option added to events
+Ninja cost reduced from 200 to 160 gold
+Rocket tower stone cost reduced from 800 to 600
+Improved Bulgarian translation (thanks to Боги19919)
+Minor bug fixes
 ##466 19/08/2021
 Added attack ground and patrol object orders (map editor)
 Spawn object now includes custom properties option
