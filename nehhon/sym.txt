@@ -253,7 +253,7 @@
 252:rndDecals\28\29
 253:rewritefog\28\29
 254:removeAnim\28unsigned\20int\2c\20unsigned\20int\29
-255:readSVG\28unsigned\20long\2c\20unsigned\20long\2c\20unsigned\20int\29
+255:readSVG\28unsigned\20long\2c\20unsigned\20long\2c\20unsigned\20int\2c\20bool\29
 256:readSUP\28emscripten_fetch_t*\29
 257:randomMap\28bool\29
 258:pop_arg
