@@ -1,3 +1,6 @@
+##469 14/09/2021
+Event trigger working properly when using negative conditions
+Minor bug fixes
 ##468 10/09/2021
 Set PIN to maps
 Minor bug fixes
