@@ -1,13 +1,11 @@
-NASTAVENÍ HRY
+Logged in
 Velikost mapy
 Pokračovat
 ZRUŠIT
 Zdraví
-Maximální zdraví
-Útok
 Obrana
-many
 Království
+Útok
 ULOŽIT
 Limit populace
 Úroveň obtížnosti
@@ -40,15 +38,10 @@ Zruší černý závoj
 Temporal fog
 Fog of war
 Extreme fog
-Úroveň surovin na začátku hry
 Nekonečná
 Dřevěná brána
-Počáteční rolníci
 Limit populace
-NASTAVENÍ
-Jazyk
 Automatická celá obrazovka
-Shadows
 PAUZA
 Voda
 Ground
@@ -59,7 +52,6 @@ NÁHODNÁ MAPA
 Clear map
 Full random map
 Nahrává se...
-Velikost mapy
 Název mapy
 UŽIVATELSKÁ MAPA
 Popis
@@ -76,7 +68,6 @@ Cost
 Vyžaduje
 Čeká se, až se hráči připojí
 Při nahrávání hry došlo k chybě.
-Promiňte, ale herní server je již zaplněn.
 PIN
 Rychlost hry
 ZPĚT DO HRY
@@ -103,17 +94,15 @@ HRÁT
 UŽIVATELSKÁ MAPA| Hrát na uživatelské mapě
 %s se odpojil!
 Server hru zrušil.
+Promiňte, ale herní server je již zaplněn.
 Server vás vykopnul.
 HRA PRO VÍCE HRÁČŮ| Hra pro více hráčů
 VYTVOŘIT| Vytvořit hru
-Obnovit
 Vykopnout
 Nahoru
 Dolu
 Rasa
-OTEVŘENÉ
 Hra je inicializována...
-Kliknout pro připojení
 Editor mapy
 EVROPAN| Rasa hráče
 ARAB| Rasa hráče
@@ -548,7 +537,6 @@ Smazat
 Changelog
 Ranking
 Download
-Logged in
 Flag
 Fog quality
 Pixel density
@@ -654,8 +642,6 @@ Negative
 None (executed at the start)
 Event trigger
 (The object(s) that activates the rule)
-Multiple
-Single
 General
 Restore mana
 Restore health
@@ -666,7 +652,6 @@ Current resources
 Map explored (beta)
 Object state
 State
-Killed
 Created
 Deleted
 Destroyed by
@@ -710,9 +695,26 @@ Disable technology
 Change diplomacy options
 Origin
 Destine
-Teletransport object
+Teleport object
 Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockmore,Bridport,Casevil,Stirm,Tonis,Pelegrim,Peresohn,Pirk,Pharn,Gork
 Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan,Bellefars,Mokhac,Norahz,Kerhetin,Maham,Dushesh,Direkh
 Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodzum,Ishinghen,Genghis,Musa,Echibo,Ichikahr,Yotokan,Maraga
 Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
 Vision
+Clan
+Invitation code
+Create clan
+Delete clan
+Members
+Join
+{tag}
+Incorrect invitation code
+Clan name currently unavailable
+Leave clan
+Jste si tím jist?
+Ranked cancelled
+Teams
+v
+free-for-all
+Jazyk
+Shadows

@@ -1,13 +1,11 @@
-OPCIONES DE JUEGO
+Sesión iniciada
 Tamaño del mapa
 Continuar
 CANCELAR
 Salud
-Salud máxima
-Ataque
 Defensa
-maná
 Reino
+Ataque
 GUARDAR
 Límite de población
 Nivel de dificultad de la IA
@@ -40,15 +38,10 @@ Sin niebla
 Niebla temporal
 Niebla de guerra
 Niebla extrema
-Recursos iniciales
 Infinito
 Puerta de madera
-Campesinos iniciales
 Límite de población
-AJUSTES
-Idioma
 Pantalla completa automática
-Sombras
 PAUSA
 Agua
 Tierra
@@ -59,7 +52,6 @@ MAPA ALEATORIO
 Limpiar mapa
 Mapa aleatorio completo
 Cargando...
-Tamaño del mapa
 Nombre de la misión
 MISIÓN EXISTENTE
 Descripción
@@ -76,7 +68,6 @@ Coste
 Necesita
 Esperando conexión de jugadores
 Error al cargar la partida.
-Lo siento, la partida está completa.
 PIN
 Velocidad
 VOLVER AL JUEGO
@@ -103,17 +94,15 @@ JUGAR
 MISIÓN| Jugar una misión ya creada
 %s se ha desconectado!
 El servidor ha cancelado la partida.
+Lo siento, la partida está completa.
 El servidor te ha expulsado de la partida.
 MULTIJUGADOR| Juego para varios jugadores
 CREAR| Crear sala
-Actualizar
 Expulsar
 Arriba
 Abajo
 Civilización
-DISPONIBLE
 Iniciando la partida...
-Click para unirse
 Editor de mapas
 EUROPEO| Civilización del jugador
 ÁRABE| Civilización del jugador
@@ -476,14 +465,14 @@ DIPLOMACIA
 Unidades creadas
 Edificios construidos
 Máximo de unidades
-Máximo de edifcios
+Máximo de edificios
 Principal
 Tecnologías
 Misc
 Subidas de nivel
 Distancia recorrida
 Recursos compartidos
-Esdificios destruidos
+Edificios destruidos
 Edificios perdidos
 Uso de mana
 Heroes
@@ -534,7 +523,7 @@ Edificios especiales
 Graficos
 Equipos separados
 Lagos pequeños
-Rios
+Ríos
 Esperando a jugadores
 Selecciona todos los magos
 Seleciona todas las vacas con +450 de comida
@@ -548,7 +537,6 @@ Borrar
 Novedades
 Ranking
 Descargar
-Sesión iniciada
 Bandera
 Calidad de la niebla
 Densidad de pixeles
@@ -584,135 +572,149 @@ Bajo
 Medio
 Alto
 Ultra
-Peasants by resource
-Resources/s
-RULES
-Action
-Event
-Add quest
-Appear object
-Change diplomacy settings
-Change object owner
-Change player status
-Conversation
-Delay
-Destroy object
-Erase object
-Explore area
-Load map
-Lock view
-Lock/Unlock units
-Object order
-Player defeated
-Player won
-Remove quest
+Campesinos por recurso
+Recursos/s
+REGLAS
+Acción
+Evento
+Añadir misión
+Mostrar objeto
+Cambiar las opciones de diplomacia
+Cambiar dueño del objeto
+Cambiar estado del jugador
+Conversación
+Retraso
+Destruir objeto
+Ocultar objeto
+Explorar area
+Cargar mapa
+Bloquear vista
+Bloquear/Desbloquear unidades
+Orden sobre el objeto
+Jugador derrotado
+El jugador ganó
+Quitar misión
 Scroll view
-Send chat message
-Set object properties
-Set timer
+Enviar mensaje de chat
+Establecer propiedades del objeto
+Establecer contador
 Show message
 Show story screen
-Spawn object
-Stop timer
-Unlock view
-Object destroyed
+Generar objeto
+Parar contador
+Desbloquear vista
+Objeto destruido
 Object enter holder
-Object exist
-Object in area
+El objeto existe
+Objeto en area
 Object leave holder
-Condition
-Rule
-Object
-Rectangle
+Condición
+Regla
+Objeto
+Rectángulo
 Area
-Clear
-Set
-View
-For which
-All
-Type
-Count
-Check all
-Clear all
-Select objects
+Limpiar
+Establecer
+Ver
+Para
+Todos
+Tipo
+Cantidad
+Activar todo
+Desactivar todo
+Seleccionar objectos
 Cualquiera
 Unidades militares
-Order
-Zone
-Amount
-Properties
-Objective
+Orden
+Zona
+Cantidad
+Propiedades
+Objetivo
 Por defecto
 Proteger
-Object near to
-Operation
-Actions
-Conditions
-Repetitions
-Optional
-Negative
-None (executed at the start)
-Event trigger
-(The object(s) that activates the rule)
-Multiple
-Single
+Objeto cercano a
+Operación
+Acciones
+Condiciones
+Repeticiones
+Opcional
+Negativo
+Ninguna (ejecutado al inicio)
+Responsable del evento
+(El objeto/s que activa la regla)
 General
-Restore mana
-Restore health
-Minimum repetition time
-Check rule each
-Duplicate
-Current resources
-Map explored (beta)
-Object state
-State
-Killed
-Created
-Deleted
-Destroyed by
-Selected
-Attacking
-Building/Repairing
-Healing
-Teaching
-Refuged
-Object destroyed by
+Regenerar mana
+Regenerar vida
+Tiempo minimo de repetición
+Comprobar la regla cada
+Duplicar
+Recursos actuales
+Mapa explorado (beta)
+Estado del objeto
+Estado
+Creado
+Eliminado
+Destruido por
+Seleccionado
+Atacando
+Construyendo/Reparando
+Curando
+Enseñando
+Dentro de
+Objeto destruido por
 Cultivar, talar o extraer
 Reparar edificio
-Refuge
-Set kingdom resources
-Kingdom resources
+Refugiar
+Establecer los recursos del reino
+Recursos del reino
 Pause/Unpause
-Active kingdom
+Reino activo
 CARGAR PARTIDA
-Specific
-By team
+Específico
+Por equipos
 Atacar una posición
 ACEPTAR
-Change kingdom to
-None
+Cambiar el reino a
+Ninguno
 Bulk editor
-Game time
-Player is AI (online)
-Set special variable
-Random
-Special variable
-Object properties
-For each object destroyed
-For each object lost
+Tiempo jugado
+El jugador es una IA (online)
+Establecer variable especial
+Aleatorio
+Variable especial
+Propiedades del objeto
+Para cada objeto destruido
+Para cada objeto perdido
 Variable
-Wrong PIN
-Investigate technology
-Too many attempts, access blocked
-PIN required to edit the map
-Technology investigated
-Disable technology
-Change diplomacy options
-Origin
-Destine
-Teletransport object
+PIN incorrecto
+Investigar tecnología
+Demasiados intentos, acceso bloqueado
+PIN requerido para editar el mapa
+Tecnología investigada
+Desactivar tecnología
+Cambiar las opciones de diplomacia
+Origen
+Destino
+Teletransportar objeto
 Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockmore,Bridport,Casevil,Stirm,Tonis,Pelegrim,Peresohn,Pirk,Pharn,Gork
 Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan,Bellefars,Mokhac,Norahz,Kerhetin,Maham,Dushesh,Direkh
 Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodzum,Ishinghen,Genghis,Musa,Echibo,Ichikahr,Yotokan,Maraga
 Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
-Vision
+Visión
+Clan
+Código de invitación
+Crear clan
+Elminar clan
+Miembros
+Unirse
+{tag}
+Código de invitación incorrecto
+El nombre del clan no está disponible
+Abandonar clan
+¿Estás seguro?
+Ranked cancelada
+Equipos
+v
+sin equipos
+Idioma
+Sombras

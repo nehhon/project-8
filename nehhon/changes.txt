@@ -1,3 +1,10 @@
+##470 30/09/2021
+Improved balancing system for ranked games
+Ranked games can start with an odd number of players (last player is kicked)
+Added Clans - Account->Clan
+New ranked games: 1v1 and Battle Royale 1500 FFA
+Updated Spanish and Italian translations
+Minor bug fixes
 ##469 14/09/2021
 Event trigger working properly when using negative conditions
 Minor bug fixes

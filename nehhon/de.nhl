@@ -1,13 +1,11 @@
-SPIELOPTIONEN
+Logged in
 Kartengr&ouml;&szlig;e
 Fortfahren
 ABBRECHEN
 Gesundheit
-Max health
-Angriff
 Verteidigung
-Manna
 K�nigreich
+Angriff
 SPEICHERN
 Bev&ouml;lkerungslimit
 Schwierigkeitsgrad
@@ -40,15 +38,10 @@ Kein Nebel
 Temporal fog
 Fog of war
 Extreme fog
-Ressourcen zu Beginn des Spiels
 Unendlich
 Holztor
-Initial peasants
 Bev&ouml;lkerungslimit
-EINSTELLUNGEN
-Language
 Automatic full screen
-Shadows
 SPIEL ANGEHALTEN
 Water
 Ground
@@ -59,7 +52,6 @@ ZUF&Auml;LLIGE KARTE
 Clear map
 Full random map
 Das Spiel wird geladen...
-Kartengr&ouml;&szlig;e
 Karten&uuml;berschrift
 BENUTZERDEFINIERTE KARTE
 Beschreibung
@@ -76,7 +68,6 @@ Cost
 Erforderlich
 Warte, dass Spieler eine Verbindung erstellen
 Fehler beim Laden des Spiels.
-Leider sind alle Pl&auml;tze im Spiel belegt.
 PIN
 Spielgeschw.
 ZUR&Uuml;CK ZUM SPIEL
@@ -103,17 +94,15 @@ SPIELEN
 BENUTZERDEFINIERTE KARTE| Benutzerdefinierte Karte spielen
 %s hat seine Verbindung zum Spiel getrennt!
 Das Spiel wurde vom Server abgebrochen.
+Leider sind alle Pl&auml;tze im Spiel belegt.
 Sie wurden vom Server getrennt.
 Mehrspieler| Multiplayer-Spiel
 ERSTELLEN| Ein Spiel erstellen
-Aktualisieren
 Verbindung trennen
 Up
 Down
 Race
-OFFEN
 Das Spiel wird initialisiert...
-Click to join
 Map editor
 EUROP&Auml;ER| Rasse des Spielers
 ARABER| Rasse des Spielers
@@ -548,7 +537,6 @@ L�schen
 Changelog
 Ranking
 Download
-Logged in
 Flag
 Fog quality
 Pixel density
@@ -654,8 +642,6 @@ Negative
 None (executed at the start)
 Event trigger
 (The object(s) that activates the rule)
-Multiple
-Single
 General
 Restore mana
 Restore health
@@ -666,7 +652,6 @@ Current resources
 Map explored (beta)
 Object state
 State
-Killed
 Created
 Deleted
 Destroyed by
@@ -710,9 +695,26 @@ Disable technology
 Change diplomacy options
 Origin
 Destine
-Teletransport object
+Teleport object
 Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockmore,Bridport,Casevil,Stirm,Tonis,Pelegrim,Peresohn,Pirk,Pharn,Gork
 Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan,Bellefars,Mokhac,Norahz,Kerhetin,Maham,Dushesh,Direkh
 Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodzum,Ishinghen,Genghis,Musa,Echibo,Ichikahr,Yotokan,Maraga
 Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
 Vision
+Clan
+Invitation code
+Create clan
+Delete clan
+Members
+Join
+{tag}
+Incorrect invitation code
+Clan name currently unavailable
+Leave clan
+Sind Sie sicher?
+Ranked cancelled
+Teams
+v
+free-for-all
+Language
+Shadows

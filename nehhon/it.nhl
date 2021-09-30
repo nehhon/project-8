@@ -1,13 +1,11 @@
-OPZIONI DI GIOCO
+Sessione iniziata
 Dimensioni della mappa
 Continua
 ANNULLA
 Salute
-Massima salute
-Attacco
 Difesa
-mana
 Regno
+Attacco
 SALVA
 Limite di popolazione
 Livello di difficoltà dell'IA
@@ -40,15 +38,10 @@ Senza nebbia
 Nebbia temporale
 Nebbia di guerra
 Nebbia estrema
-Risorse iniziali
 Infinito
 Porta di legno
-Contadini iniziali
 Limite di popolazione
-DETTAGLI
-Lingua
 Schermo intero automatico
-Ombre
 PAUSA
 Acqua
 Terra
@@ -59,7 +52,6 @@ MAPPA CASUALE
 Pulire mappa
 Mappa casuale completa
 Caricamento...
-Dimensioni della mappa
 Nome della missione
 MISSIONE ATTUALE
 Descrizione
@@ -76,7 +68,6 @@ Costo
 Necessita di
 In attesa della connessione dei giocatori
 Errore durante il caricamento della partita.
-La partita è completa.
 PIN
 Velocità
 RIPRENDI PARTITA
@@ -103,17 +94,15 @@ GIOCA
 MISSIONE| Gioca una missione creata
 %s si è sconnesso!
 L'host ha annullato la partita.
+La partita è completa.
 L'host ti ha espulso dalla partita.
 MULTIGIOCATORE | Modalità per pių giocatori
 CREA PARTITA| Nuova stanza
-Aggiorna
 Kick
 Su
 Giù
 Civiltà
-DISPONIBILE
 Inizializzazione della partita...
-Clicca per unirti
 Editor mappe
 EUROPEA| Civiltà del giocatore
 ARABA| Civiltà del giocatore
@@ -449,270 +438,283 @@ Mantieni la posizione
 Corrompi il nemico
 Porta di pietra
 Migliora in porta di pietra
-Registered users only
-Room restricted to registered users only
-Log Out
-Change
-Log In
-Account
-Standard kingdom colors
+Permettere solo utenti registrati
+Spazio solo per gli utenti registrati
+Disconnettersi
+Cambiare
+Accedi
+Conto
+Colori del regno standard
 Converti in guerriero jihad
 INVIA RISORSE
-%d has sent you %s
-Now you can control %s units
-%s is sharing resources with you
-Damage inflicted
-Damage taken
-Units killed
-Units lost
-Scroll with mouse
-Generate terrain from image
-Invert
-New UI
-Custom saved settings
-View more
-Select all military units
+%d ti ha mandato %s
+Ora puoi controllare le unità di %s
+%s sta condividendo risorse con te
+Danni causati
+Danno ricevuto
+Unità uccise
+Unità perse
+Scorrimento con il mouse
+Creare terreno dall'immagine
+Invertire
+Nuova interfaccia
+Configurazioni salvate
+Vedere tutto
+Vedere tutte le unità militari
 DIPLOMAZIA
-Units done
-Buildings done
-Maximum units
-Maximum buildings
-Main
-Technologies
+Unità create
+Edifici costruiti
+Massimo di unità
+Massimo di edifici
+Principale
+Tecnologie
 Misc
-Level-ups
-Distance travelled
-Shared resources
-Buildings destroyed
-Buildings lost
-Mana usage
-Heroes
-Score
-Max pop
-Initial objects
-Random objects
-Distance
-Each 256
+Guadagni di livello
+Distanza percorsa
+Risorse condivise
+Edifici distrutti
+Edifici persi
+Uso di mana
+Eroi
+Punteggio
+Massima popolazione
+Oggetti iniziali
+Oggetti casuali
+Distanza
+Ogni 256
 Battle Royale
-Circle duration
-Start time
-Positioning
-Circles
-Center
-Gas damage
-Shared victory condition
-Final circle radius
-Pause time
-Minimum distance between players
-Resource gain
-Each 1s
-Each 60s
-Each unit killed
-Building times
-Units times
-Technologies times
-Resource collection time
-Advanced options
-Instant build
-Circle closing
-Circle waiting
-Final circle
-Reveal map fog when dying
-Crazy
-Total duration
-Tree health
-Select all priests
-Select all mounted units
-Select all archers
-Select all sword units
-Default
-Use backspace as delete key
+Durata del cerchio
+Tempo di inizio
+Posizionamento
+Cerchi
+Centro
+Danno
+Condizione di vittoria condivisa
+Raggio del cerchio finale
+Tempo di pausa
+Distanza minima tra i giocatori
+Guadagno di risorse
+Ogni 1s
+Ogni 60s
+Ogni unità uccisa
+Tempi di costruzione
+Tempi di unità
+Tempi di tecnologie
+Tempo di raccolta
+Opzioni avanzate
+Costruzione istantanea
+Cerchio chiudendo
+Cerchio aspettando
+Cerchio finale
+Rivela la mappa alla morte
+Pazzo
+Durata totale
+Salute degli alberi
+Seleziona tutti i sacerdoti
+Seleziona tutte le unità montate
+Seleziona tutti gli arcieri
+Seleziona tutte le unità con la spada
+Predefinito
+Usa backspace come tasto di cancellazione
 Converti in sacerdote
-Access forbidden
-Waiting outside
-Special Buildings
-Charts
-Separated teams
-Small lakes
-Rivers
-Waiting for players
-Select all wizards
-Select cows with +450 food
+Accesso negato
+Aspettando fuori
+Edifici speciali
+Grafica
+Squadre separate
+Laghi piccoli
+Fiumi
+Aspettando giocatori
+Seleziona tutti i maghi
+Seleziona tutte le mucche con +450 cibo.
 Inizializzazione...
 Rank score
-%s has joined!
-You can't control %s units anymore
-%s stopped sharing resources with you
+%s si è unito!
+Non puoi più controllare le unità di %s
+%s ha smesso di condividere risorse con te
 Oggetti rasoterra
 Rimuovi
-Changelog
-Ranking
-Download
-Logged in
-Flag
-Fog quality
-Pixel density
-Reset
-Ready
-You can't change your name for %s days
-You can change your name once every 60 days
+Annunci
+Classifica
+Scarica
+Bandiera
+Qualità della nebbia
+Densità dei pixel
+Azzerare
+Pronto
+Non puoi cambiare il tuo nome per %s giorni
+Puoi cambiare il tuo nome solo una volta ogni 60 giorni
 Avatar
-Grass
+Prati
 Trenkorian
-Desert
-Snow
-Summer
+Deserto
+Neve
+Estate
 Rareland
-Jungle
-Winter
-Grass & Snow
+Giungla
+Inverno
+Prati & Neve
 RANKED
-official
+ufficiale
 min
-Attack Time (ms)
-Attack/s
-Range
-Speed (px/s)
+Tempo d'attacco (ms)
+Attacco/s
+Raggio
+Velocità
 %s room
-Fast 1v1
+1v1 Veloce
 undefined
-Average last 16 games
+Media delle ultime 16 partite
 Multithreading
 Anti-aliasing
 GPU
-Low
-Medium
-High
+Basso
+Medio
+Alto
 Ultra
-Peasants by resource
-Resources/s
-RULES
-Action
-Event
-Add quest
-Appear object
-Change diplomacy settings
-Change object owner
-Change player status
-Conversation
-Delay
-Destroy object
-Erase object
-Explore area
-Load map
-Lock view
-Lock/Unlock units
-Object order
-Player defeated
-Player won
-Remove quest
-Scroll view
-Send chat message
-Set object properties
-Set timer
-Show message
-Show story screen
-Spawn object
-Stop timer
-Unlock view
-Object destroyed
+Contadini per risorse
+Risorse/s
+Regole
+Azione
+Evento
+Aggiungi missione
+Mostrare oggetto
+Cambiare le opzioni della diplomazia
+Cambiare il proprietario dell'oggetto
+Cambiare lo stato del giocatore
+Conversazione
+Ritardo
+Distruggere l'oggetto
+Nascondi oggetto
+Esplora l'area
+Carica mappa
+Bloccare la vista
+Bloccare/sbloccare le unità
+Ordine sull'oggetto
+Giocatore sconfitto
+Il giocatore ha vinto
+Rimuovere la missione
+Spostare la visione
+Inviare un messaggio di chat
+Impostare le proprietà dell'oggetto
+Imposta contatore
+Mostrare messaggio
+Mostra la schermata della storia
+Generare oggetto
+Fermare contatore
+Sbloccare vista
+Oggetto distrutto
 Object enter holder
-Object exist
-Object in area
+L'oggetto esiste
+Oggetto in zona
 Object leave holder
-Condition
-Rule
-Object
-Rectangle
+Condizione
+Regola
+Oggetto
+Rettangolo
 Area
-Clear
-Set
-View
-For which
-All
-Type
-Count
-Check all
-Clear all
-Select objects
+Pulire
+Stabilire
+Vedere
+Per
+Tutti
+Tipo
+Quantità
+Attivare tutti
+Disattivare tutti
+Selezionare oggetti
 Qualsiasi
 Unità militari
-Order
-Zone
-Amount
-Properties
-Objective
+Ordine
+Zona
+Quantità
+Proprietà
+Obiettivo
 Predefiniti
 Proteggi
-Object near to
-Operation
-Actions
-Conditions
-Repetitions
-Optional
-Negative
-None (executed at the start)
-Event trigger
-(The object(s) that activates the rule)
-Multiple
-Single
-General
-Restore mana
-Restore health
-Minimum repetition time
-Check rule each
-Duplicate
-Current resources
-Map explored (beta)
-Object state
-State
-Killed
-Created
-Deleted
-Destroyed by
-Selected
-Attacking
-Building/Repairing
-Healing
-Teaching
-Refuged
-Object destroyed by
+Oggetto vicino a
+Operazione
+Azioni
+Condizioni
+Ripetizioni
+Opzionale
+Negativo
+Nessuna (eseguita all'inizio)
+Responsabile dell'evento
+(L'oggetto o gli oggetti che fanno scattare la regola)
+Generale
+Rigenerare il mana
+Rigenerare vita
+Tempo minimo di ripetizione
+Controllare la regola ogni
+Duplicare
+Risorse attuali
+Mappa esplorata (beta)
+Stato dell'oggetto
+Stato
+Creato
+Eliminato
+Distrutto da
+Selezionato
+Attaccando
+Costruendo/Riparando
+Guarendo
+Insegnando
+All'interno del
+Oggetto distrutto da
 Coltiva, disbosca o estrai
 Ripara edificio
-Refuge
-Set kingdom resources
-Kingdom resources
+Rifugiare
+Stabilire le risorse del regno
+Risorse del regno
 Pause/Unpause
-Active kingdom
+Regno attivo
 CARICA PARTITA
-Specific
-By team
+Specifico
+Squadra
 Attacca una posizione
 ACCETTA
-Change kingdom to
-None
-Bulk editor
-Game time
-Player is AI (online)
-Set special variable
-Random
-Special variable
-Object properties
-For each object destroyed
-For each object lost
-Variable
-Wrong PIN
-Investigate technology
-Too many attempts, access blocked
-PIN required to edit the map
-Technology investigated
-Disable technology
-Change diplomacy options
-Origin
-Destine
-Teletransport object
+Cambia il regno a
+Nessuno
+Editor di massa
+Tempo giocato
+Il giocatore è un'IA (online)
+Impostare la variabile speciale
+Casuale
+Variabile speciale
+Proprietà dell'oggetto
+Per ogni oggetto distrutto
+Per ogni oggetto mancante
+Variabile
+PIN sbagliato
+Ricerca tecnologia
+Troppi tentativi, accesso bloccato
+PIN necessario per modificare la mappa
+Tecnologia ricercata
+Disattivare tecnologia
+Cambia le opzioni della diplomazia
+Origine
+Destinazione
+Teletrasportare oggetto
 Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockmore,Bridport,Casevil,Stirm,Tonis,Pelegrim,Peresohn,Pirk,Pharn,Gork
 Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan,Bellefars,Mokhac,Norahz,Kerhetin,Maham,Dushesh,Direkh
 Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodzum,Ishinghen,Genghis,Musa,Echibo,Ichikahr,Yotokan,Maraga
 Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
-Vision
+Visione
+Clan
+Codice d'invito
+Creare clan
+Eliminare clan
+Membri
+Unirsi
+{tag}
+Codice d'invito errato
+Il nome del clan non è disponibile
+Lasciare clan
+Sei sicuro?
+Classifica annullata
+Squadre
+v
+senza squadre
+Lingua
+Ombre

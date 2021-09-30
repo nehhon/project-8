@@ -1,13 +1,11 @@
-OPCJE GRY
+Logged in
 Rozmiar mapy
 Dalej
 ANULUJ
 Zdrowie
-Maksymalne zdrowie
-Atak
 Obrona
-Mana
 Królestwo
+Atak
 ZAPISZ
 Limit populacji
 Poziom trudności
@@ -40,15 +38,10 @@ Brak mgły
 Temporal fog
 Fog of war
 Extreme fog
-Surowce początkowe
 Nieskończone
 Drewniana brama
-Wieśniak
 Limit populacji
-USTAWIENIA
-Język
 Automatyczny pełny ekran
-Shadows
 PAUZA
 Woda
 Ground
@@ -59,7 +52,6 @@ LOSOWA MAPA
 Clear map
 Full random map
 Wczytywanie...
-Rozmiar mapy
 Tytuł mapy
 GOTOWA MAPA
 Opis
@@ -76,7 +68,6 @@ Cost
 Wymaga
 Czekam na pozostałych graczy.
 Wystąpił błąd przy wczytywaniu gry.
-Przykro mi, gra została zapełniona.
 PIN
 Szybkość gry
 POWRÓT DO GRY
@@ -103,17 +94,15 @@ Graj
 GOTOWA MAPA| Gra na gotowej mapie
 %s rozłączył się!
 Serwer anulował grę.
+Przykro mi, gra została zapełniona.
 Zostałeś wyrzucony przez serwer.
 MULTIPLAYER| Gra WIELOOSOBOWA
 UTWÓRZ| Utwórz pokój
-Odśwież
 Wyrzuć
 Wyżej
 Niżej
 Rasa
-OTWÓRZ
 Inicjalizacja gry...
-Kliknij, aby Dołączyć
 Edytor Mapy
 EUROPEJCZYCY| Rasa
 ARABOWIE| Rasa
@@ -548,7 +537,6 @@ Wykasuj
 Changelog
 Ranking
 Pobierz
-Logged in
 Flaga
 Fog quality
 Pixel density
@@ -654,8 +642,6 @@ Negative
 None (executed at the start)
 Event trigger
 (The object(s) that activates the rule)
-Multiple
-Single
 General
 Restore mana
 Restore health
@@ -666,7 +652,6 @@ Current resources
 Map explored (beta)
 Object state
 State
-Killed
 Created
 Deleted
 Destroyed by
@@ -710,9 +695,26 @@ Disable technology
 Change diplomacy options
 Origin
 Destine
-Teletransport object
+Teleport object
 Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockmore,Bridport,Casevil,Stirm,Tonis,Pelegrim,Peresohn,Pirk,Pharn,Gork
 Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan,Bellefars,Mokhac,Norahz,Kerhetin,Maham,Dushesh,Direkh
 Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodzum,Ishinghen,Genghis,Musa,Echibo,Ichikahr,Yotokan,Maraga
 Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
 Vision
+Clan
+Invitation code
+Create clan
+Delete clan
+Members
+Join
+{tag}
+Incorrect invitation code
+Clan name currently unavailable
+Leave clan
+Czy jesteś pewien?
+Ranked cancelled
+Teams
+v
+free-for-all
+Język
+Shadows

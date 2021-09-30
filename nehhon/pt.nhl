@@ -1,13 +1,11 @@
-OPÇÕES DO JOGO
+Logged in
 Tamanho do mapa
 Continuar
 CANCELAR
 Saúde
-Saúde máxima
-Ataque
 Defesa
-Manna
 Reino
+Ataque
 GRAVAR
 Limite da população
 Nível de dificuldade
@@ -40,15 +38,10 @@ Sem Campo de Visão
 Temporal fog
 Fog of war
 Extreme fog
-Recursos iniciais
 Infinito
 Portão de Madeira
-Camponeses iniciais
 Limite da População
-OPÇÕES
-Língua
 Tela cheia automática
-Shadows
 PAUSA
 Água
 Ground
@@ -59,7 +52,6 @@ MAPA ALEATÓRIO
 Clear map
 Full random map
 Carregando...
-Tamanho do mapa
 Nome do Mapa
 MAPA PREDEFINIDO
 Descrição
@@ -76,7 +68,6 @@ Cost
 Requer
 Esperando pelos jogadores para ligar:
 Erro no carregamento de jogo
-Desculpa, o jogo está preenchido.
 PIN
 Velocidade
 VOLTAR AO JOGO
@@ -103,17 +94,15 @@ JOGAR
 MAPA PREDEFINIDO| Mapa predefinido
 %s desligou!
 O jogo foi cancelado pelo servidor
+Desculpa, o jogo está preenchido.
 Foste expulso pelo servidor
 MULTIJOGADOR| Jogo Multijogador
 CRIAR| Criar um jogo
-Actualizar
 Kick
 Up
 Down
 Raça
-ABRIR
 Iniciando jogo...
-Clique para participar
 Editor de mapas
 EUROPEU| Civilização do jogador
 ÁRABE| Civilização do jogador
@@ -548,7 +537,6 @@ Apagar
 Changelog
 Ranking
 Download
-Logged in
 Flag
 Fog quality
 Pixel density
@@ -654,8 +642,6 @@ Negative
 None (executed at the start)
 Event trigger
 (The object(s) that activates the rule)
-Multiple
-Single
 General
 Restore mana
 Restore health
@@ -666,7 +652,6 @@ Current resources
 Map explored (beta)
 Object state
 State
-Killed
 Created
 Deleted
 Destroyed by
@@ -710,9 +695,26 @@ Disable technology
 Change diplomacy options
 Origin
 Destine
-Teletransport object
+Teleport object
 Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockmore,Bridport,Casevil,Stirm,Tonis,Pelegrim,Peresohn,Pirk,Pharn,Gork
 Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan,Bellefars,Mokhac,Norahz,Kerhetin,Maham,Dushesh,Direkh
 Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodzum,Ishinghen,Genghis,Musa,Echibo,Ichikahr,Yotokan,Maraga
 Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
 Vision
+Clan
+Invitation code
+Create clan
+Delete clan
+Members
+Join
+{tag}
+Incorrect invitation code
+Clan name currently unavailable
+Leave clan
+Tens a certeza?
+Ranked cancelled
+Teams
+v
+free-for-all
+Língua
+Shadows
