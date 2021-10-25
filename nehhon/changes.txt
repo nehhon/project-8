@@ -1,3 +1,5 @@
+##472 25/10/2021
+Minor bug fixes
 ##470 30/09/2021
 Improved balancing system for ranked games
 Ranked games can start with an odd number of players (last player is kicked)
