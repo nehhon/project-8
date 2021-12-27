@@ -1,3 +1,5 @@
+##475 27/12/2021
+Minor bug fixes
 ##473 18/12/2021
 Many bug fixes related to saved games
 Improved AI exploration
