@@ -1,3 +1,5 @@
+##477 15/01/2022
+Minor bug fixes
 ##476 13/01/2022
 New scoring system for ranked games
 Reloading trading is working properly
