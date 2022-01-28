@@ -1,4 +1,8 @@
-##477 15/01/2022
+##478 28/01/2022
+Added multiple game modes on ranked room
+Units added to group 6,7,8 or 9 (ctrl+6...) can't be selected using shorcuts like F2
+Improved balancing system for ranked games
+Improved Bulgarian translation (thanks to Боги19919)
 Minor bug fixes
 ##476 13/01/2022
 New scoring system for ranked games

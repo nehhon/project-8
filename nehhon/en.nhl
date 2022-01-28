@@ -23,7 +23,7 @@ Team
 Captureable
 Nature
 Add
-Map size is too small,  expanded to %s
+Map size is too small, expanded to %s
 Terrain
 Map Type
 Dry
@@ -733,3 +733,4 @@ Capture enemy building
 Score area
 Multiplied x1.55 if the player wins
 Area under the score over time curve (see charts)
+%s teams
