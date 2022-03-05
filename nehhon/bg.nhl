@@ -734,3 +734,49 @@ Teleport object
 Резултатът изчислява вашите приноси в играта. Умножава се с 1.55, ако вие победите.
 Това е площта под кривата на резултата във статистиката (погледни графиките).
 %s teams
+If you leave now you will not be able to re-enter in 2 minutes
+Modding
+Bonus
+Max limit
+Sight
+Menu
+Minimum attack distance
+Altitude
+Size
+Storage type
+Resource type
+Unit name
+Inventory size
+Inventory type
+Can attack everything
+Attack angle
+Base
+Maximum trading amount
+Any resource
+Items
+Any
+Floor
+Ground
+Air
+Width
+Height
+Shape
+BY USER RACE SELECTION
+Increase value
+Increase unit characteristics
+Increase unit characteristics (%)
+Lower the cost
+Upgrade object
+Enable feature
+Enable
+%s production
+Construction speed
+Experience speed
+Maximum experience
+Mercenaries experience
+Health gain after killing
+%s range
+Mana/s
+Milk/s
+Meat/s
+Mining performance

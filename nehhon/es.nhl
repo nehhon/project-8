@@ -718,19 +718,65 @@ v
 sin equipos
 Idioma
 Sombras
-Random
-Load original Tzar map .wmp (beta)
-Gold gathered
-Wood gathered
-Food gathered
-Stone gathered
-Population
-Peasants
-Brush size
-Put object
-Objects
+Aleatorio
+Cargar mapa original de Tzar .wmp (beta)
+Oro recolectado
+Madera recolectada
+Comida recolectada
+Piedra recolectada
+Población
+Campesinos
+Tamaño pincel
+Añadir objeto
+Objetos
 Capturar edificio enemigo
 Score area
-Multiplied x1.55 if the player wins
-Area under the score over time curve (see charts)
-%s teams
+Multiplicada x1.55 is el jugador gana
+Area bajo la curva score sobre el tiempo (visible en -> graficos)
+%s equipos
+Si abandonas ahora no podrás volver a entrar hasta dentro de 2 minutos
+Modding
+Bonus
+Max limit
+Sight
+Menu
+Minimum attack distance
+Altitude
+Size
+Storage type
+Resource type
+Unit name
+Inventory size
+Inventory type
+Can attack everything
+Attack angle
+Base
+Maximum trading amount
+Any resource
+Items
+Any
+Floor
+Ground
+Air
+Width
+Height
+Shape
+BY USER RACE SELECTION
+Increase value
+Increase unit characteristics
+Increase unit characteristics (%)
+Lower the cost
+Upgrade object
+Enable feature
+Enable
+%s production
+Construction speed
+Experience speed
+Maximum experience
+Mercenaries experience
+Health gain after killing
+%s range
+Mana/s
+Milk/s
+Meat/s
+Mining performance

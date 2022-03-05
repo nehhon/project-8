@@ -718,19 +718,65 @@ v
 senza squadre
 Lingua
 Ombre
-Random
-Load original Tzar map .wmp (beta)
-Gold gathered
-Wood gathered
-Food gathered
-Stone gathered
-Population
-Peasants
-Brush size
-Put object
-Objects
+Casuale
+Carica mappa originale di Tzar .wmp (beta)
+Oro raccolto
+Legno raccolto
+Cibo raccolto
+Pietra raccolta
+Popolazione
+Contadini
+Dimensione spazzola
+Aggiungi oggetto
+Oggetti
 Cattura edificio nemico
 Score area
-Multiplied x1.55 if the player wins
-Area under the score over time curve (see charts)
-%s teams
+Moltiplicato x1.55 se il giocatore vince
+Area sotto la curva del score nel tempo (vedi grafici)
+%s squadre
+Se te ne vai ora, non potrai tornare tra 2 minuti
+Modding
+Bonus
+Max limit
+Sight
+Menu
+Minimum attack distance
+Altitude
+Size
+Storage type
+Resource type
+Unit name
+Inventory size
+Inventory type
+Can attack everything
+Attack angle
+Base
+Maximum trading amount
+Any resource
+Items
+Any
+Floor
+Ground
+Air
+Width
+Height
+Shape
+BY USER RACE SELECTION
+Increase value
+Increase unit characteristics
+Increase unit characteristics (%)
+Lower the cost
+Upgrade object
+Enable feature
+Enable
+%s production
+Construction speed
+Experience speed
+Maximum experience
+Mercenaries experience
+Health gain after killing
+%s range
+Mana/s
+Milk/s
+Meat/s
+Mining performance

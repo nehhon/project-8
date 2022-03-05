@@ -1,3 +1,6 @@
+##479 05/03/2022
+Separated teams option disabled temporarily on rankeds
+Minor bug fixes
 ##478 28/01/2022
 Added multiple game modes on ranked room
 Units added to group 6,7,8 or 9 (ctrl+6...) can't be selected using shorcuts like F2
