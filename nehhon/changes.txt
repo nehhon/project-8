@@ -1,3 +1,6 @@
+##480 15/03/2022
+Symmetrical maps are now more symmetrical
+Bug fixes
 ##479 05/03/2022
 Separated teams option disabled temporarily on rankeds
 Minor bug fixes
