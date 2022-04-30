@@ -1,3 +1,11 @@
+##482 30/04/2022
+Guard/protect units order
+Separated teams option enabled again
+AI makes priests
+Tenor gifs
+"Kingdom resources" event operator changed from ">" to ">=" (even for old maps)
+Improved performance
+Minor bug fixes
 ##480 15/03/2022
 Symmetrical maps are now more symmetrical
 Bug fixes

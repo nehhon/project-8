@@ -643,7 +643,7 @@ None (executed at the start)
 Event trigger
 (The object(s) that activates the rule)
 General
-Restore mana
+Restore manna
 Restore health
 Minimum repetition time
 Check rule each
@@ -775,8 +775,30 @@ Experience speed
 Maximum experience
 Mercenaries experience
 Health gain after killing
-%s range
-Mana/s
+Manna/s
 Milk/s
 Meat/s
 Mining performance
+Blessing attack bonus
+Radius
+Manna
+Damage
+Healing value
+Duration (ms)
+Whirpool attack interval
+Heroes experience
+Murder damage
+Auto make invisible manna
+Maximum training level
+Maximum cow meat
+Meat divisions
+Fish/s
+Maximum fish amount
+Leadership radius
+Minimum trading amount
+Trading amount/s
+Mana interval
+Zamorduj
+Mercenaries generation time
+Asian market items generation time
+Connection lost with the server
