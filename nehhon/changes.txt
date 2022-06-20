@@ -1,4 +1,4 @@
-##489 20/06/2022
+##490 20/06/2022
 Minor bug fixes
 ##488 14/06/2022
 Log in/create account using just an email (if you already have an account you can log in with your discord registration email address)
