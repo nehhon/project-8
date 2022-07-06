@@ -1,3 +1,8 @@
+##492 06/07/2022
+Modding enabled, edit properties of units/buildings/technologies and much more (temporarily only available for custom maps)
+Killing special units such as ninjas, priest, mages and catapults gives more score points
+Priests can patrol
+Minor bug fixes
 ##490 20/06/2022
 Minor bug fixes
 ##488 14/06/2022
