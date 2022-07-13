@@ -1,3 +1,8 @@
+##494 13/07/2022
+Modding enabled for single player random maps
+It is possible to save modding presets
+Improved Bulgarian translation (thanks to Боги19919)
+Minor bug fixes
 ##492 06/07/2022
 Modding enabled, edit properties of units/buildings/technologies and much more (temporarily only available for custom maps)
 Killing special units such as ninjas, priest, mages and catapults gives more score points
