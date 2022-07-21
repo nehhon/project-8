@@ -1,3 +1,7 @@
+##495 21/07/2022
+Automatic online reconnection
+Edit unit names (click on the name to change it)
+Minor bug fixes
 ##494 13/07/2022
 Modding enabled for single player random maps
 It is possible to save modding presets
