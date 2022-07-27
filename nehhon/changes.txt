@@ -1,3 +1,14 @@
+##497 27/07/2022
+You can investigate multiple technologies
+Crusaders are now automatically generated without putting the flag (ctrl + click to do it manually)
+Deploy magic units at the wizard's position by pressing ctrl + click
+If a building is destroyed while is creating units the spent resources are returned
+Level potions now give attack and armor but cost was increased
+Cows with 600 of food are killed automatically after milking
+Loading savegames online is working again
+Improved Spanish and Bulgarian translation (thanks to Боги19919)
+Units get a custom name after becoming heroes
+Minor bug fixes
 ##495 21/07/2022
 Automatic online reconnection
 Edit unit names (click on the name to change it)

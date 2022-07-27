@@ -696,8 +696,8 @@ Cambiar las opciones de diplomacia
 Origen
 Destino
 Teletransportar objeto
-Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockmore,Bridport,Casevil,Stirm,Tonis,Pelegrim,Peresohn,Pirk,Pharn,Gork
-Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan,Bellefars,Mokhac,Norahz,Kerhetin,Maham,Dushesh,Direkh
+Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockmore,Bridport,Casevil,Stirm,Tonis,Pelegrim,Peresohn,Pirk,Pharn,Gork,Aceituno
+Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan,Bellefars,Mokhac,Norahz,Kerhetin,Maham,Dushesh,Direkh,Aboud,Ali,Amir,Abahti,Abanaisati,Abatui,Abdelkader,Abid,Abyahu
 Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodzum,Ishinghen,Genghis,Musa,Echibo,Ichikahr,Yotokan,Maraga
 Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
 Visión
@@ -738,99 +738,104 @@ Si abandonas ahora no podrás volver a entrar hasta dentro de 2 minutos
 Modding
 Bonus
 Max limit
-Sight
+Visión
 Menu
-Minimum attack distance
-Altitude
-Size
-Storage type
-Resource type
-Unit name
-Inventory size
-Inventory type
-Can attack everything
-Attack angle
+Minima distancia de ataque
+Altitud
+Tamaño
+Tipo de almacen
+Tipo de recurso
+Nombre de la unidad
+Tamaño del inventario
+Tipo de inventario
+Puede atacar todo
+Angulo de ataque
 Base
-Maximum trading amount
-Any resource
-Items
-Any
-Floor
-Ground
-Air
-Width
-Height
-Shape
-BY USER RACE SELECTION
-Increase value
-Increase unit characteristics
-Increase unit characteristics (%)
-Lower the cost
-Upgrade object
-Enable feature
-Enable
-%s production
-Construction speed
-Experience speed
-Maximum experience
-Mercenaries experience
-Health gain after killing
-Manna/s
-Milk/s
-Meat/s
-Mining performance
-Blessing attack bonus
-Radius
-Manna
-Damage
-Healing value
-Duration (ms)
-Whirpool attack interval
-Tavern heroes experience
-Murder damage
-Auto make invisible manna
-Maximum training level
-Maximum cow meat
-Meat divisions
-Fish/s
-Maximum fish amount
-Leadership radius
-Minimum trading amount
-Trading amount/s
-Mana interval
+Cantidad máxima de recursos al comerciar
+Cualquier recurso
+Objetos
+Cualquiera
+Suelo
+Tierra
+Aire
+Ancho
+Alto
+Forma
+Según la selección de la raza
+Aumentar valor
+Mejorar características
+Mejorar características (%)
+Bajar el precio
+Mejorar el objeto
+Activar característica
+Activa
+Producción de %s
+Velocidad de construcción
+Velocidad de ganar experiencia
+Experiencia maxima
+Experiencia de los mercenarios
+Ganancia de salud despues de matar
+Mana/s
+Leche/s
+Carne/s
+Rendimiento del minado
+Bonus de ataque al bendecir
+Radio
+Mana
+Daño
+Valor de curación
+Duración (ms)
+Intervalo de ataque del remolino
+Experiencia de los heroes de la taberna
+Daño al asesinar (ninja)
+Coste de hacerse invisible (ninja)
+Maximo nivel alcanzable al entrenar
+Máxima cantidad de carne de la vaca
+Divisiones de la carne
+Recolección de peces/s
+Máxima cantidad de peces
+Radio de liderazgo
+Minima cantidad posible para comerciar
+Cantidad posible para comerciar/s
+Invervalo de actualización del mana
 Asesinar
-Mercenaries generation time
-Asian market items generation time
-Connection lost with the server
-Population cost
-Disabled
-Only registered users can create accounts
-Your account must be 1 week old to play rankeds
-An email has been sent with a verification code (check spam folder), enter it here
-Wrong code
-Too many attempts, try again tomorrow
-Any (1x1)
-Can use unresearched orders
+Tiempo de generación de mercenarios
+Tiempo de generación de objetos en el mercado asiatico
+Conexión perdida con el servidor
+Coste de poblacion
+Deshabilitado
+Solo los usuarios registrados pueden crear salas
+Tu cuenta debe de tener mas de 1 semana de antiguedad para poder jugar
+Un correo se ha enviado con un código de verificación (revisa la carpeta de spam/correo no deseado), introducelo aqui
+Codigo incorrecto
+Demasiados intentos, prueba otra vez mañana
+Cualquiera (1x1)
+Puede usar ordenes no investigadas
 Descargar
 Recoger objetos
 Evacuar todas las unidades
 Construir objeto mágico
 Comerciar
-Can use potions
-Can train
-Can gain experience
-Score multiplier
-Resistance
-Can discover invisible units
-First attack time (ms)
-Shots
-Crusaders (Minimum)
-Crusaders (Maximum)
-Crusaders increment
-Crusaders recharge time (ms)
-Hero minimum level
+Puede usar pociones
+Puede entrenar
+Puede ganar experiencia
+Multiplicador del score
+Resistencia
+Puede descubrir unidades invisibles
+Tiempo del primer ataque (ms)
+Disparos
+Cruzados (Minimum)
+Cruzados (Maximum)
+Incremento de cruzados
+Tiempo de recarga de cruzados (ms)
+Minimo nivel del heroes
 Mejorar a muralla de piedra
 CARGAR
 MÚSICA
-Technologies cannot be researched while units are being created
-Reconnecting
+Esta tecnología esta siendo investigada en otro edificio
+Reconectando
+Convocar Cruzada
+.
+.
+.
+.
