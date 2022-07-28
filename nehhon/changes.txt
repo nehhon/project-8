@@ -1,3 +1,6 @@
+##498 28/07/2022
+Spawn magic units endlessly pressing ctrl+shift
+Minor bug fixes
 ##497 27/07/2022
 You can investigate multiple technologies
 Crusaders are now automatically generated without putting the flag (ctrl + click to do it manually)
