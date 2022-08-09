@@ -1,3 +1,14 @@
+##499 09/08/2022
+Controls/shorcuts are now customizable (in-game menu)
+More detailed descriptions of units/buildings/technologies
+Ctrl+click when investigating technologies or creating buildings doesn't spend resources until is required
+You can order to investigate technologies or create units in unbuilt buildings
+Added an option to disable automatical killing of cows (options -> advanced options)
+Changed default (5000) preset
+Added "Kingdom values" action/event in map editor, edit variables like pop limit, free pop, blessing radius...
+"Object properties" event operator changed from ">" to ">=" (even for old maps)
+Added new object orders in the map editor (guard, fire rain, heal...) and new event "Population limit reached"
+Minor bug fixes
 ##498 28/07/2022
 Spawn magic units endlessly pressing ctrl+shift
 Minor bug fixes
