@@ -1,3 +1,6 @@
+##502 10/08/2022
+Improved Bulgarian translation (thanks to Боги19919)
+Minor bug fixes
 ##499 09/08/2022
 Controls/shorcuts are now customizable (in-game menu)
 More detailed descriptions of units/buildings/technologies
