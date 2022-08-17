@@ -1,8 +1,16 @@
+##503 17/08/2022
+Modding enabled for online random maps
+Now you can see the changes from a custom mod
+Separated teams option has been limited to 33% of ranked games
+New advanced option "Disable sharing resources during peace time"
+Buildings near the castle (<30 squares) can't be attacked during peace time
+New option to change how units are mark as selected
+Minor bug fixes
 ##502 10/08/2022
 Improved Bulgarian translation (thanks to Боги19919)
 Minor bug fixes
 ##499 09/08/2022
-Controls/shorcuts are now customizable (in-game menu)
+Controls/shortcuts are now customizable (in-game menu)
 More detailed descriptions of units/buildings/technologies
 Ctrl+click when investigating technologies or creating buildings doesn't spend resources until is required
 You can order to investigate technologies or create units in unbuilt buildings

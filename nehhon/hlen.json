@@ -3469,39 +3469,14 @@
         "bonuses_inv":"BONUSES (inverted)"
     },
     "HOTKEYS":{
-"X":"Show map",
-"F3":"Hide chat",
-"F4":"Hide players/time",
 "Double click on a unit":"Selects all units of the same type on the screen",
 "Ctrl + Double click":"Selects all units of the same type, and with the same current state, that can be commanded by the player on the screen",
 "Alt + Double Click":"Selects all military or non-military units that can be commanded by the player on the screen",
 "Ctrl + Digit (1-9)":"When units are selected, assigns the number to the selected group",
 "Digit (1-9)":"Selects a group previously defined with Control + Digit",
-"Ctrl + 0":"Removes the number assigned to the units selected",
 "Right click when a unit is selected":"Performs the unit's default action at the desired location",
-"Enter":"Shows the chat dialog",
-"Space":"Centers the selected object on screen",
-"Delete":"Deletes your unit/building (does not apply to units not belonging to your kingdom)",
-"Slash (\\)":"Shows trees translucently so that the player may see units (or other objects) obscured by them",
-"Slash (\\) + Control":"Hide terrain",
-"Tab":"Shows an individual unit when multiple units are selected",
 "Ctrl + Enter":"Sends the current location to allies (location is visible on the mini-map)",
 "Ctrl + Shift + Enter":"Sends the current location to enemies and allies (location is visible on the mini-map)",
-"Ctrl + Right click when a unit is selected":"Performs \"move advance \"on the units selected",
-"Ctrl + Shift + Right click when a unit is selected":"Performs \"move advance with way points\"",
-"Alt + Right click when a unit is selected":"Move sneak",
-"Alt + Shift + Right click when a unit is selected":"Move sneak with way points",
-"Ctrl + Right click when a building is selected":"Sets rally point",
-"Ctrl + C":"Select a castle (if there is more than one castle, use this combination to select these castles in sequence)",
-"Ctrl + B":"Select a barracks (if there is more than one barracks, use this combination to select barracks in sequence)",
-"Reverse quotes (`)":"Shows (while the key is pressed) the objects' health bars",
-"Ctrl + Reverse quotes":"Switches the objects' bars on or off",
-"Ctrl + Home":"Same as above but selects the building/unit as well",
-"Right click on an item in the object's inventory":"Drops the item",
-"Left click on an item in the object's inventory":"Uses the item",
-"Ctrl + Left click on an item in the object's inventory":"Instant item use",
-"Ctrl + Right click on an item in the object's inventory":"Instant item drop",
-"Alt + Left click on an item in the object's inventory":"Installs item as the new default item"
+"Ctrl + Right click when a unit is selected":"Move and attack every visible enemy unit"
     }
-    
     }

@@ -3064,9 +3064,6 @@
          "icon":"5,81"
       }
    },
-   "HOTKEYS":{
-      
-   },
    "How to ...":{
       "HT_COLLECTRES":{
          "rollover":"Impara a raccogliere risorse",
@@ -3460,5 +3457,15 @@
     "bonuses":"BONUSES",
     "bonuses_inv":"BONUSES (inverted)"
 },
-   "HOTKEYS":{"F1":"Menu screen","F2":"Save dialog","F3":"Load dialog","F4":"Scores","F5":"Diplomacy screen","F6":"Tribute dialog","F8":"Current objectives","F9":"Options screen","F10":"Same as F1","F11":"Takes snapshot of the game","Double click on a unit":"Selects all units of the same type on the screen","Ctrl + Double click":"Selects all units of the same type, and with the same current state, that can be commanded by the player on the screen","Alt + Double Click":"Selects all military or non-military units that can be commanded by the player on the screen","Alt  + Ctrl + Double click":"Selects all military or non-military units with the same current state that can be commanded by the player on the screen","Ctrl + Digit (1-9)":"When units are selected, assigns the number to the selected group","Digit (1-9)":"Selects a group previously defined with Control + Digit","Ctrl + 0":"Removes the number assigned to the units selected","Right click when a unit is selected":"Performs the unit's default action at the desired location","Right click on an item in the object's inventory":"Drops the item","Left click on an item in the object's inventory":"Uses the item","Ctrl + Left click on an item in the object's inventory":"Instant item use","Ctrl + Right click on an item in the object's inventory":"Instant item drop","Alt + Left click on an item in the object's inventory":"Installs item as the new default item","Enter":"Shows the chat dialog","Space":"Centers the selected object on screen","Backspace":"Instant use of the unit's default item","Escape":"Deselects currently selected unit or shows the previous menu","Home":"Centers the building in which the latest technology was researched, or where the latest unit was produced","Page Down after Home was hit":"Shows the next event","Page Up after Home was hit":"Shows the previous event","Shift + Home":"Centers the site of the last location","Shift + Page Down after Home was hit":"Shows the next location","Shift + Page Up after Home was hit":"Shows the previous location","Delete":"Deletes your unit/building (does not apply to units not belonging to your kingdom)","Plus":"Increases the game speed","Minus":"Decreases the game speed","Slash (\\)":"Shows trees translucently so that the player may see units (or other objects) obscured by them","Backslash (/)":"Shows the inventory of the selected object","Less then (<)":"Moves to the previous page of the object's inventory","More than (>)":"Moves to the next page of the object's inventory","Tab":"Shows an individual unit when multiple units are selected","Reverse quotes (`)":"Shows (while the key is pressed) the objects' health bars","Ctrl + Reverse quotes":"Switches the objects' bars on or off","Ctrl + Home":"Same as above but selects the building/unit as well","Ctrl + Enter":"Sends the current location to other players (location is visible on the mini-map)","Ctrl + Right click when a unit is selected":"Performs \"move advance \"on the units selected","Ctrl + Shift + Right click when a unit is selected":"Performs \"move advance with way points\"","Alt + Right click when a unit is selected":"Move sneak","Alt + Shift + Right click when a unit is selected":"Move sneak with way points","Ctrl + Right click when a building is selected":"Sets rally point","Alt + Right click when a building is selected":"Sets rally point with default action","Ctrl + Alt + Right click when a building is selected":"Sets rally point with move advance","Ctrl + C":"Select a castle (if there is more than one castle, use this combination to select these castles in sequence)","Ctrl + B":"Select a barracks (if there is more than one barracks, use this combination to select barracks in sequence)"}
+   "HOTKEYS":{
+      "Double click on a unit":"Selects all units of the same type on the screen",
+      "Ctrl + Double click":"Selects all units of the same type, and with the same current state, that can be commanded by the player on the screen",
+      "Alt + Double Click":"Selects all military or non-military units that can be commanded by the player on the screen",
+      "Ctrl + Digit (1-9)":"When units are selected, assigns the number to the selected group",
+      "Digit (1-9)":"Selects a group previously defined with Control + Digit",
+      "Right click when a unit is selected":"Performs the unit's default action at the desired location",
+      "Ctrl + Enter":"Sends the current location to allies (location is visible on the mini-map)",
+      "Ctrl + Shift + Enter":"Sends the current location to enemies and allies (location is visible on the mini-map)",
+      "Ctrl + Right click when a unit is selected":"Move and attack every visible enemy unit"
+      }
 }
