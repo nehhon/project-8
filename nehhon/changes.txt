@@ -1,3 +1,6 @@
+##504 18/08/2022
+New option to limit FPS to 30 (activate it if you have big lags)
+Minor bug fixes
 ##503 17/08/2022
 Modding enabled for online random maps
 Now you can see the changes from a custom mod
