@@ -1,3 +1,8 @@
+##506 10/09/2022
+New graphic engine "WebGPU" only available in Chrome web version, can be enabled in #Settings
+Antialiasing option enabled for web browsers
+Reduced RAM usage
+Minor bug fixes
 ##504 18/08/2022
 New option to limit FPS to 30 (activate it if you have big lags)
 Minor bug fixes
