@@ -804,7 +804,7 @@
 803:chscrntype\28unsigned\20int\29
 804:chonltyp\28bool\2c\20bool\2c\20bool\29
 805:chonltm\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
-806:chmnlen\28unsigned\20int\29
+806:chmnlen\28unsigned\20int\2c\20bool\29
 807:chmapsize\28int\29
 808:chkxkingdomval\28unsigned\20int\2c\20unsigned\20int\29
 809:chkxkingdom\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29

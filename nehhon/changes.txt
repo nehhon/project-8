@@ -1,4 +1,4 @@
-##507 10/09/2022
+##510 10/09/2022
 New graphic engine "WebGPU" only available in Chrome web version, can be enabled in #Settings
 Antialiasing option enabled for web browsers
 Reduced RAM usage
