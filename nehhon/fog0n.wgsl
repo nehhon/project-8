@@ -44,10 +44,6 @@ fn vert_main(
 }
 
 
-struct FragOutput {
-  @builtin(frag_depth) x: f32,
-  @location(0) y: vec4<f32>
-}
 
 @fragment
 fn frag_main(
