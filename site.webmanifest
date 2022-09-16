@@ -16,11 +16,6 @@
       "src": "nehhon/192.png",
       "type": "image/png",
       "sizes": "192x192"
-    },
-    {
-      "src": "nehhon/800.png",
-      "type": "image/png",
-      "sizes": "800x800"
     }
   ],
   "start_url": "/",

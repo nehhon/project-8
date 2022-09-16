@@ -20,7 +20,7 @@ Comida
 Pedra
 Computador
 Equipa
-Captureable
+Capturable
 Natureza
 Adicionar
 Map size is too small, expanded to %s
@@ -876,4 +876,5 @@ Changes
 Change color of selected units
 Comprar Itens
 Disable sharing resources during peace time
-Limit to 30fps
+Limit FPS to 30
+Save as file

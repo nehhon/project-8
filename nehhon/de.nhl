@@ -20,7 +20,7 @@ Nahrung
 Steine
 Computer
 Team
-Captureable
+Capturable
 Natur
 Add
 Map size is too small, expanded to %s
@@ -876,4 +876,5 @@ Changes
 Change color of selected units
 Gegenst&auml;nde kaufen
 Disable sharing resources during peace time
-Limit to 30fps
+Limit FPS to 30
+Save as file

@@ -20,7 +20,7 @@ Food
 Stone
 Computer
 Lag
-Captureable
+Capturable
 Nature
 Lägg till
 Map size is too small, expanded to %s
@@ -876,4 +876,5 @@ Changes
 Change color of selected units
 Buy Items
 Disable sharing resources during peace time
-Limit to 30fps
+Limit FPS to 30
+Save as file

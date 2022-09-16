@@ -1,3 +1,7 @@
+##514 16/09/2022
+Save random map configuration as file
+Improved Bulgarian translation (thanks to Боги19919)
+Minor bug fixes
 ##513 15/09/2022
 Battle royale game mode is now compatible with WebGPU
 Minor bug fixes

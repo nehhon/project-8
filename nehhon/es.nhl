@@ -876,4 +876,5 @@ Changes
 Change color of selected units
 Comprar objetos
 Disable sharing resources during peace time
-Limit to 30fps
+Limit FPS to 30
+Save as file
