@@ -1,4 +1,4 @@
-Logged in
+Zalogowany
 Rozmiar mapy
 Dalej
 ANULUJ
@@ -457,7 +457,7 @@ Units lost
 Scroll with mouse
 Generate terrain from image
 Invert
-New UI
+Nowy Interfejs
 Custom saved settings
 View more
 Select all military units
@@ -538,8 +538,8 @@ Changelog
 Ranking
 Pobierz
 Flaga
-Fog quality
-Pixel density
+Jakość mgły
+Gęstości pikseli
 Reset
 Ready
 You can't change your name for %s days
@@ -565,12 +565,12 @@ Speed (px/s)
 Fast 1v1
 undefined
 Average last 16 games
-Multithreading
+Wielowątkowość
 Anti-aliasing
 GPU
-Low
-Medium
-High
+Niska
+Średnia
+Wysoka
 Ultra
 Peasants by resource
 Resources/s
@@ -717,7 +717,7 @@ Teams
 v
 free-for-all
 Język
-Shadows
+Cienie
 Random
 Load original Tzar map .wmp (beta)
 Gold gathered
@@ -876,5 +876,5 @@ Changes
 Change color of selected units
 Kup przedmioty
 Disable sharing resources during peace time
-Limit FPS to 30
+Limit FPS do 30
 Save as file

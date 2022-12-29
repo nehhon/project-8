@@ -1,3 +1,9 @@
+##517 29/12/2022
+Units created in buildings added to the groups 6, 7, 8 or 9 are automatically added to that group
+Shift + number to select only units in a group
+Improved Polish translation (thanks to Dio Brando)
+Separated teams option appears more frequently
+Minor bug fixes
 ##514 16/09/2022
 Save random map configuration as file
 Improved Bulgarian translation (thanks to Боги19919)
