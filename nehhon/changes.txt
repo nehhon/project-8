@@ -1,4 +1,4 @@
-##519 28/04/2023
+##520 29/04/2023
 Range of the teach spell has been expanded to 2 squares
 Improved WebGPU engine compatibility
 Corrected the duration of the invisibility spell when applied several times
