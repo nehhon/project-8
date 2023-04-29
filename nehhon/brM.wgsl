@@ -105,4 +105,5 @@ color.c=vec4(1.0);
 
 
   discard;
+  return color;
 }

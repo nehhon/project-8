@@ -24,7 +24,7 @@
   @binding(5) @group(0)  var<uniform> now : u32;
   @binding(6) @group(0)  var<uniform> mwidth : u32;
   @binding(7) @group(0)  var<uniform> zoom : f32;
-
+  @binding(8) @group(0) var<uniform> ambient : vec4<f32>;
 
 
   fn txta (index:u32) -> vec4<f32> {
@@ -98,7 +98,7 @@ fn frag_main(
     if(c.r==1&&c.g==0&&c.b==1){
     imgid=tnfo.img2;
     }else if(c.a!=0){
-    return c;
+    return c*ambient;
     }
   }
 
@@ -116,5 +116,5 @@ fn frag_main(
 
 
 
-  return txta(text1d[txtid]);
+  return txta(text1d[txtid])*ambient;
 }

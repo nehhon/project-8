@@ -60,6 +60,7 @@
   @binding(9) @group(0)  var<storage, read> info : array<nfo>;
   @binding(10) @group(0) var<uniform> mwidth : u32;
   @binding(11) @group(0) var<uniform> hideTrees : u32;
+  @binding(12) @group(0) var<uniform> ambient : vec4<f32>;
 
   struct VertexOutput {
     @builtin(position) pos : vec4<f32>,
@@ -203,10 +204,10 @@ fn frag_main(
     color*=recolor;
   }
 
- 
+
 
   if(color.a<0.004){ discard; }
 
 
-  return color;
+  return color*ambient;
 }

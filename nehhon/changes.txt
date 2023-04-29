@@ -1,3 +1,9 @@
+##519 28/04/2023
+Range of the teach spell has been expanded to 2 squares
+Improved WebGPU engine compatibility
+Corrected the duration of the invisibility spell when applied several times
+Improved Polish transition thanks to Dio Brando
+Minor bug fixes
 ##517 29/12/2022
 Units created in buildings added to the groups 6, 7, 8 or 9 are automatically added to that group
 Shift + number to select only units in a group
