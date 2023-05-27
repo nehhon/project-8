@@ -10,7 +10,7 @@ ZAPISZ
 Limit populacji
 Poziom trudności
 Początkowy limit populacji
-Equalize values for all kingdoms
+Wyrównanie wartości dla wszystkich królestw
 ZAMKNIJ
 Kolor
 Imię gracza
@@ -20,10 +20,10 @@ Pożywienia
 Kamienia
 Komputer
 Drużyna
-Captureable
+Możliwość przejęcia
 Natura
 Dodaj
-Map size is too small, expanded to %s
+Rozmiar mapy jest zbyt mały, rozszerz do wartości %s
 Teren
 Typ mapy
 Sucha
@@ -32,39 +32,39 @@ Kontynent
 Wyspa
 Archipelag
 Losowa
-AI aggressivity
-Visibility
+Agresywność SI
+Widoczność
 Brak mgły
-Temporal fog
-Fog of war
-Extreme fog
+Jednorazowa mgła
+Mgła wojny
+Ekstremalna mgła
 Nieskończone
 Drewniana brama
 Limit populacji
 Automatyczny pełny ekran
 PAUZA
 Woda
-Ground
+Lądowy
 MENU
 OPCJE
-Random
+Losowa
 LOSOWA MAPA
-Clear map
-Full random map
+Wyczyść mape
+Pełna losowa mapa
 Wczytywanie...
 Tytuł mapy
 GOTOWA MAPA
 Opis
-Author
+Autor
 Jednost.
-Buildings
-Items
+Budynki
+Przedmioty
 Drzewa
 Surowce
 Złoża złota
 Skały
 TEKST WIADOMOŚCI
-Cost
+Koszt
 Wymaga
 Czekam na pozostałych graczy.
 Wystąpił błąd przy wczytywaniu gry.
@@ -76,19 +76,19 @@ Pełny ekran
 WYJŚCIE
 Prędkość Przybliża
 Przewijanie
-Menu opacity
+Krycie menu
 Cykle dzień-noc
 Muzyka
 Dźwięki
-Death sounds
+Dźwięk śmierci unicestwienia jednostki
 W trakcie
 Czekaj
-Private
+Prywatny
 Wpisz nazwę gry
 Liczba graczy
 TAK
 NIE
-Dodaj AI
+Dodaj SI
 Rozłącz
 Graj
 GOTOWA MAPA| Gra na gotowej mapie
@@ -112,12 +112,12 @@ JEDEN GRACZ| Gra dla Jednego Gracza
 Na temat
 POWRÓT
 Zapisywanie zawartości gry lokalnie
-Guide
+Przewodnik
 Ostrzeżenie
 OK
 Pobieranie tekstur...
 %s został pokonany!
-%s won!
+%s Wygrał!
 Brakuje: %s
 Zbyt mało domów
 Osiągnięto limit populacji
@@ -383,7 +383,7 @@ Miecz
 Doświadczenie
 Mana
 Pożywienie
-Copy room link
+Skopiuj link do pokoju
 ZOSTAŁEŚ
 POKONANY
 ODNIOSŁEŚ
@@ -391,20 +391,20 @@ ZWYCIĘSTWO
 Wieże
 PRZYŁĄCZ SIĘ| Przyłącz się do gry
 Wzbogacanie rudy
-Tree density
-Symmetrical map
-Shared initial position
-Peace time
-Zoom to cursor
+Zalesienie drzew
+Symetryczna mapa
+Wspólny start z tych samych pozycji
+Czas pokoju
+Zbliż do kursora
 Warunek zwycięstwa
-Kill everything
-Destroy castles & barracks
-Destroy castles
+Zniszcz wszystko
+Zniszcz Twierdze / Koszary
+Zniszcz Twierdze
 Desant
 Zwiększa ładowność statków
-Unlimited zoom
-Team chat
-WASD as arrow keys
+Nielimitowane zbliżenie/oddalenie
+Pogawędka zespołowa
+WASD jako klawisze strzałek
 Lokacja została wysłana
 Ruch
 Atakuj wroga
@@ -438,142 +438,142 @@ Broń pozycji
 Przekup jednostkę wroga
 Kamienna brama
 Zamień na kamienną bramę
-Registered users only
-Room restricted to registered users only
+Tylko dla zarejestrowanych użytkowników
+Pokój jest zastrzeżony tylko dla zarejestrowanych użytkowników!
 Wyloguj się
-Change
+Zmiany
 Zaloguj się
 Konto
-Standard kingdom colors
+Standardowe kolory królestw
 Stań się wojownikiem dżihadu
 PRZENIEŚ SUROWCE
-%d has sent you %s
-Now you can control %s units
-%s is sharing resources with you
-Damage inflicted
-Damage taken
-Units killed
-Units lost
-Scroll with mouse
-Generate terrain from image
-Invert
-Nowy Interfejs
-Custom saved settings
-View more
-Select all military units
+%d Wysłał Ci %s
+%s 🗡 Pozwolił Ci kontrolować jego jednostki =)
+%s ⛏ Współdzieli z tobą zasoby :)
+Zadane obrażenia
+Otrzymane obrażenia
+Zabite jednostki
+Utracone jednostki
+Przewijanie za pomocą myszy
+Generuj mape z obrazka
+Odwróc
+Nowa oprawa graficzna
+Niestandardowe zapisane ustawienia
+Zobacz wiecej
+Zaznacz wszystkie jednostki wojskowe
 DYPLOMACJA
-Units done
-Buildings done
-Maximum units
-Maximum buildings
-Main
-Technologies
-Misc
-Level-ups
-Distance travelled
-Shared resources
-Buildings destroyed
-Buildings lost
-Mana usage
-Heroes
-Score
-Max pop
-Initial objects
-Random objects
-Distance
-Each 256
+Wyszkolone jednostki
+Zbudowane budynki
+Maksymalna ilość jednostek
+Maksymalna ilość budynków
+Główne
+Technologie
+Różne
+Awanse jednostek
+Przemierzony dystans jednostek
+Współdzielone surowce
+Zniszczone budynki
+Utracone budynki
+Wykorzystana mana
+Heros
+Punkty
+Limit populacji
+Obiekty początkowe
+Losowy objekt
+Dystans
+Każde 256
 Battle Royale
-Circle duration
-Start time
+Czas trwania okręgu
+Czas rozpoczęcia okręgu
 Positioning
-Circles
-Center
-Gas damage
-Shared victory condition
-Final circle radius
-Pause time
-Minimum distance between players
-Resource gain
-Each 1s
-Each 60s
-Each unit killed
-Building times
-Units times
-Technologies times
-Resource collection time
-Advanced options
-Instant build
-Circle closing
-Circle waiting
-Final circle
-Reveal map fog when dying
+Ilość okręgów
+Centruj
+Obrażenia czerwonego okręgu
+Wspólny warunek zwycięstwa
+Końcowy obszar okręgu
+Zatrzymanie czasu okręgu
+Minimalny dystans między graczami
+Otrzymywanie surowców
+Za każdą 1s
+Za każde 60s
+Za Każdą zabitą jednostke
+Czas budowy konstruukcji
+Czas szkolenia jednostki
+Czas badania technologii
+Czas zbierania surowców
+Zaawansowane opcje
+Natychmiastowe budowanie
+Zamykanie kręgu
+Zatrzymanie kręgu
+Krąg końcowy
+Uwolnienie mapy z mgły wojny podczas klęski
 Crazy
-Total duration
-Tree health
-Wybierz kapłanów
-Wybierz jednostki konne
-Wybierz łuczników
-Wybierz jednostki piesze
-Default
-Use backspace as delete key
+Ogólny czas trwania
+Punkty życia drzewa
+Wybierz Kapłanów
+Wybierz Kawalerię
+Wybierz Łuczników
+Wybierz Piechotę
+Domyślne
+Użyj backspace jako klawisza usuwania
 Stań się kapłanem
-Access forbidden
-Waiting outside
-Special Buildings
-Charts
-Separated teams
-Small lakes
-Rivers
-Waiting for players
-Select all wizards
-Select cows with +450 food
+Dostep zablokowany
+Poczekaj na zewnątrz
+Budynki specjalne
+Wykresy
+Rozdzielone zespoły
+Małe rzeki
+Rzeki
+Oczekiwanie na graczy
+Zaznacz wszystkich czarnoksiężników
+Zaznacz krowy z pokarmem wyższym niż 450 pożywienia
 Inicjalizacja...
-Rank score
-%s dołączył!
-You can't control %s units anymore
-%s stopped sharing resources with you
+Wynik Punktów rankingowych
+%s dołączył do gry!
+%s Odebrał Ci móżliwość kontrolowania jego jednostek =(
+%s Przestał wpsółdzielić z Tobą surowce :(
 Małe obiekty
 Wykasuj
-Changelog
-Ranking
+Dziennik zmian
+Rankingowy
 Pobierz
 Flaga
 Jakość mgły
-Gęstości pikseli
-Reset
-Ready
-You can't change your name for %s days
-You can change your name once every 60 days
-Avatar
+Gęstość pikseli
+Zresetuj ustawienia
+Gotowy
+Nie móżesz zmienić swojej nazwy gracza jeszcze przez %s dni
+Możesz zmienić swoją nazwę gracza raz na 60 dni
+Awatar
 Trawa
 Trenkorian
 Pustynia
 Śnieg
 Lato
-Rareland
+Rzadka ziemia
 Dżungla
 Zima
 Trawa & Śnieg
-RANKED
+Gra rankingowa
 oficjalny
-min
+minuty
 Attack Time (ms)
 Attack/s
-Range
-Speed (px/s)
-%s room
-Fast 1v1
+Zasięg jednostki
+Szybkość pixel na sekundę (px/s)
+%s Nazwa gry
+Szybkie 1 Kontra 1
 undefined
-Average last 16 games
-Wielowątkowość
+Średnia z ostatnich szesnastu rozegranych meczy
+Multithreading
 Anti-aliasing
 GPU
 Niska
 Średnia
 Wysoka
 Ultra
-Peasants by resource
-Resources/s
+Ilość wiesniaków gromadzących surowce 
+Produkcja surowców na sekunde
 RULES
 Action
 Event
@@ -582,7 +582,7 @@ Appear object
 Change diplomacy settings
 Change object owner
 Change player status
-Conversation
+Dyskusja
 Delay
 Destroy object
 Erase object
@@ -648,8 +648,8 @@ Restore health
 Minimum repetition time
 Check rule each
 Duplicate
-Current resources
-Map explored (beta)
+Aktualny stan zasobów
+Odkrywanie mapy (beta)
 Object state
 State
 Created
@@ -677,23 +677,23 @@ ZATWIERDŹ
 Change kingdom to
 None
 Bulk editor
-Game time
-Player is AI (online)
+Czas gry
+Gracz komputer (SI) jest aktywny
 Set special variable
-Random
+Losowa
 Special variable
 Object properties
-For each object destroyed
-For each object lost
-Variable
-Wrong PIN
-Investigate technology
-Too many attempts, access blocked
-PIN required to edit the map
+Dla każdego zniszczonego obiektu
+Dla każdego utraconego obiektu
+Zmienna
+Niewłasciwy kod PIN
+Zbadaj technologię
+Zbyt wiele prób, dostęp został zablokowany
+Wymagany kod PIN do edycji mapy
 Technology investigated
-Disable technology
-Change diplomacy options
-Origin
+Wyłączenie technologii
+Zmień opcje dyplomacji
+Pochodzenie
 Destine
 Teleport object
 Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockmore,Bridport,Casevil,Stirm,Tonis,Pelegrim,Peresohn,Pirk,Pharn,Gork,Aceituno
@@ -702,179 +702,184 @@ Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodz
 Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
 Vision
 Clan
-Invitation code
-Create clan
-Delete clan
-Members
-Join
+Kod do zaproszenia
+Stwórz klan
+Usuń klan
+Członkowie
+Dołącz
 {tag}
-Incorrect invitation code
-Clan name currently unavailable
-Leave clan
+Kod zaproszenia do gry jest nieprawidłowy
+Nazwa klanu obecnie jest niedostepna
+Opuść klan
 Czy jesteś pewien?
-Ranked cancelled
-Teams
+Gra rankingowa anulowana
+Zespołowy
 v
-free-for-all
+Każdy na każdego
 Język
 Cienie
-Random
-Load original Tzar map .wmp (beta)
-Gold gathered
-Wood gathered
-Food gathered
-Stone gathered
-Population
-Peasants
-Brush size
-Put object
-Objects
+Losowa
+Załaduj oryginalną mapę tzar mapa.wmp (beta)
+Wydobyte złoto
+Ścięte drzewo
+Zebrane pożywienie
+Wydobyty kamień
+Populacja
+Wieśniacy
+Rozmiar skalowania
+Postaw objekt
+Obiekty
 Przejmij budowlę wroga
-Score area
-Multiplied x1.55 if the player wins
+Obszar punktacji
+Wynik jest mnożony przez 1.55 jeśli gracz wygra grę
 Area under the score over time curve (see charts)
 %s teams
-If you leave now you will not be able to re-enter in 2 minutes
-Modding
+Jeśli wyjdziesz teraz, nie będziesz mógł wejść ponownie za 2 minuty
+Modyfikacja
 Bonus
-Max limit
-Sight
+Maksymalny limit
+Zasięg odkrywania terenu
 Menu
-Minimum attack distance
+Minimalny dystans ataku
 Altitude
-Size
-Storage type
-Resource type
-Unit name
-Inventory size
-Inventory type
-Can attack everything
-Attack angle
-Base
-Maximum trading amount
-Any resource
-Items
-Any
-Floor
-Ground
-Air
-Width
-Height
-Shape
-BY USER RACE SELECTION
-Increase value
-Increase unit characteristics
-Increase unit characteristics (%)
-Lower the cost
-Upgrade object
-Enable feature
-Enable
+Rodzaj
+Rodzaj składowania
+Rodzaj zasobu
+Nazwa jednostki
+Rozmiar inwentarza
+Rodzaj inwentarza
+Może atakować wszystko
+Kąt natarcia
+Podstawa jednostki
+Maksymalna ilość handlu towarem
+Każdy surowiec
+Przedmioty
+Każdy
+Lądowa
+Powierzchniowa
+Powietrzna
+Szerokość
+Wysokość
+Kształt
+Wybór rasy przez użytkownika
+Zwiększ wartość
+Zmniejsz statystyki jednostki
+Zwiększ statystyki jednostki w (%)
+Zmniejsz koszt produkcji
+Usprawnij budlowę
+Włączenie fukncji
+Włączenie
 %s production
 Construction speed
-Experience speed
-Maximum experience
-Mercenaries experience
+Szybkość zdobywania dośwaidczenia
+Maksymalna ilość doświadczenia
+Doświadczenie najemników
 Health gain after killing
-Manna/s
-Milk/s
-Meat/s
-Mining performance
-Blessing attack bonus
-Radius
+Produkcja many na sekundę
+Produkcja mleka Bożego na sekundę
+Produkcja mięsa na sekundę
+Wydajność górnicza
+Bonus do ataku używając zaklęcia bogosławieństwo
+Promień/obszar
 Manna
-Damage
-Healing value
-Duration (ms)
+Obrażenia
+Wartość uzdrawiania
+Limit czasowy zaklęcia (ms)
 Whirpool attack interval
-Tavern heroes experience
-Murder damage
+Poziom herosów z gospody
+Umiejętność Morderstwo - Obrażenia
 Auto make invisible manna
-Maximum training level
-Maximum cow meat
-Meat divisions
-Fish/s
-Maximum fish amount
-Leadership radius
-Minimum trading amount
-Trading amount/s
+Maksymalny poziom podczas trenowania
+Maksymalna ilość mięsa w krowie
+Wartość fragmentu mięsa
+Ilość połowu ryb na sekundę
+Maksymalna ilość połowu ryb
+Zasięg przywódctwa herosa
+Minimalna ilość handlu towarem
+Ilość maksymalnego handlu na sekundę
 Mana interval
 Zamorduj
-Mercenaries generation time
-Asian market items generation time
-Connection lost with the server
-Population cost
-Disabled
-Only registered users can create accounts
-Your account must be 1 week old to play rankeds
-An email has been sent with a verification code (check spam folder), enter it here
-Wrong code
-Too many attempts, try again tomorrow
-Any (1x1)
+Produkcja czasowa najemników (ms)
+Czasowa produkcja artefaktów z targu azjatyckiego (ms)
+Straciłeś połączenie z serwerem :(
+Koszt populacji ludności
+Wyłączenie
+Tylko zarejestrowani użytkownicy mogą stworzyć pokój gry
+Twoje konto musi istnieć jeden tydzień, aby móc uczestniczyć w grach rankingowych
+Wiadomość została wysłana z kodem weryfikacyjny (Sprawdź folder z spamem), wprowadź go tutaj
+Błędny kod
+Zbyt wiele prób, spróbuj ponownie
+Każdy (1x1)
 Can use unresearched orders
 Rozładuj
 Podnieś przedmioty
 Wypuść wszystkie jednostki
 Utwórz magiczny przedmiot
 Handel
-Can use potions
-Can train
-Can gain experience
-Score multiplier
-Resistance
-Can discover invisible units
-First attack time (ms)
-Shots
-Crusaders (Minimum)
-Crusaders (Maximum)
-Crusaders increment
-Crusaders recharge time (ms)
-Hero minimum level
+Możliwość używania mikstur
+Możliwość treningu
+Możliwość zdobywania doświadczenia
+Punkty za unicestwienie 
+Odporność budowli
+Pozwala dostrzegać niewidzialne jednostki
+Czas pierwszego ataku (ms)
+Strzały
+Minimalna możliwa ilość stworzonych krzyżowców
+Maksymalna możliwa ilość stworzonych krzyżowców
+Przyrost ilościowy krzyżowców w klasztorze
+Czas ładowania budowy krzyżowców (ms)
+Minimalny poziom herosa
 Zamień na kamienny mur
 WCZYTAJ
 OPCJE MUZYKI
-This technology is being investigated in other building
-Reconnecting
+Ta technologia jest opracowywana w innych budynkach
+Ponowne dołączanie
 Utwórz wyprawę krzyżową
-st
-nd
-rd
+Pierwsze miejsce
+Drugie Miejsce
+Trzecie miejsce
 th
-Shortcut
-Create unit
-Create building
+Skrót klawiszowy
+Stwórz jednostkę
+konstruuj strukturę
 Gildie
 Specjalne
-Press a key
-Action
-Delete building / unit
-Hide chat
-Game information
-Select all spies
-Select all heroes
-Focus view into selected unit
-Hide trees
-Alternate screen info
-Move up
-Move down
-Move right
-Move left
-Controls
-Sign up
-Expand minimap
-Reset zoom
-Control key
-Shift key
-Alt key
-Select all militar units + spies
-Select all militar units (no wizards)
-Disabled automatic killing of cows
-Set kingdom values
-Kingdom value
-Pause
-Change name
-Changes
-Change color of selected units
+Wciśnij klawisz a
+Akcja
+Usuń strukturę / Jednostkę
+Ukryj czat
+Informacja gry
+Zaznacz wszystkich szpiegów
+Zaznacz wszystkich herosów
+Skup widok na wybranej jednostce
+Ukryj drzewa
+Alternatywne informacje o ekranie
+przesuń w górę
+przesuń w dół
+przesuń w prawo
+przesuń w lewo
+Kontrola
+Zapisz się
+rozwiń mapę
+Zresetuj zmianę przybliżenia
+Klawisz Ctrl
+Klawisz shift
+Klawisz alt
+Zaznacz wszystkie jednostki wojskowe + szpieg
+Zaznacz wszystkie jednostki wojskowe (bez czarnoksiężników
+Wyłącz automatyczny ubój krów
+Ustaw wartość królestwa
+Wartość królestwa
+Zatrzymaj grę
+Zmień nazwę
+Zmiany
+Zmiana koloru zaznaczonej jednostki
 Kup przedmioty
-Disable sharing resources during peace time
-Limit FPS do 30
-Save as file
+Wyłącz możliwość wpsółdzielenia zasobów z innymi podczas czasu pokoju
+Ustaw limit FPS do 30
+zapisz jako plik
+Players
+Time played
+Spent resources
+Received resources
+Last played games

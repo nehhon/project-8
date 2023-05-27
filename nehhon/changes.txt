@@ -1,3 +1,6 @@
+##522 27/05/2023
+New section "last games played"
+Added more ending stats about resource management
 ##520 29/04/2023
 Range of the teach spell has been expanded to 2 squares
 Improved WebGPU engine compatibility
