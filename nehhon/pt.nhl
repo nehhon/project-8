@@ -1,4 +1,4 @@
-Logged in
+Conectado
 Tamanho do mapa
 Continuar
 CANCELAR
@@ -10,7 +10,7 @@ GRAVAR
 Limite da população
 Nível de dificuldade
 População livre
-Equalize values for all kingdoms
+Equalizar valores para todos os reinos
 FECHAR
 Cor
 Nome do jogador
@@ -20,10 +20,10 @@ Comida
 Pedra
 Computador
 Equipa
-Capturable
+Capturável
 Natureza
 Adicionar
-Map size is too small, expanded to %s
+O tamanho do mapa é muito pequeno, expandido para %s
 Terreno
 Tipo de mapa
 Seco
@@ -32,39 +32,39 @@ Continental
 Ilha
 Arquipélagos
 Aleatório
-AI aggressivity
-Visibility
+Aggressividade da IA
+Visibilidade
 Sem Campo de Visão
-Temporal fog
-Fog of war
-Extreme fog
+Neblina temporal
+Neblina de guerra
+Neblina extrema
 Infinito
 Portão de Madeira
 Limite da População
 Tela cheia automática
 PAUSA
 Água
-Ground
+Terreno
 MENU
 OPÇÕES
-Random
+Aleatório
 MAPA ALEATÓRIO
-Clear map
-Full random map
+Limpar mapa
+Mapa aleatório completo
 Carregando...
 Nome do Mapa
 MAPA PREDEFINIDO
 Descrição
-Author
+Autor
 Unidades
-Buildings
-Items
+Edifícios
+Itens
 Árvores
 Recursos
 Rochas com Ouro
 Rochas
 MENSAGEM
-Cost
+Custo
 Requer
 Esperando pelos jogadores para ligar:
 Erro no carregamento de jogo
@@ -76,14 +76,14 @@ Tela cheia
 ABANDONAR
 Velocidade de zoom
 Deslizamento
-Menu opacity
+Opacidade do menu
 Transição dia/noite
 Volume musical
 Volume sonoro
-Death sounds
+Sons de morte
 Jogando
 Esperando
-Private
+Privado
 Introduzir nome do jogo
 Jogadores
 Sim
@@ -112,12 +112,12 @@ JOGO INDIVIDUAL| Jogo Individual
 Info
 VOLTAR
 Salvar o conteúdo do jogo localmente
-Guide
+Guia
 Aviso
 ACEITAR
 Baixando texturas...
 %s foi derrotado!
-%s won!
+%s venceu!
 %s insuficiente
 Casas insuficientes
 Alcançado o limite da população
@@ -383,7 +383,7 @@ Espada
 Experiência
 Manna
 Comida
-Copy room link
+Copiar link da sala
 FOSTE
 DERROTADO
 VENCESTE
@@ -391,20 +391,20 @@ VICTORIOUS
 Torres
 JUNTAR| Juntar-se a um jogo
 Flutuação do Minério
-Tree density
-Symmetrical map
-Shared initial position
-Peace time
-Zoom to cursor
+Densidade das árvores
+Mapa simétrico
+Posição inicial compartilhada
+Tempo de paz
+Zoom para o cursor
 Condição de vitória
-Kill everything
-Destroy castles & barracks
-Destroy castles
+Destruir tudo
+Destruir castelos e quartéis
+Destruir castelos
 Táctica de Desembarque
 Aumenta o armazenamento dos barcos
-Unlimited zoom
-Team chat
-WASD as arrow keys
+Zoom ilimitado
+Chat de equipe
+WASD como teclas de seta
 Localização enviada
 Mover
 Atacar
@@ -438,448 +438,448 @@ Permanecer no sítio
 Subornar unidade inimiga
 Portão de Pedra
 Melhorar para Portão de Pedra
-Registered users only
-Room restricted to registered users only
-Log Out
-Change
-Log In
-Account
-Standard kingdom colors
+Apenas usuários registrados
+Sala restrita a usuários registrados
+Sair
+Alterar
+Entrar
+Conta
+Cores padrão do reino
 Tornar-se Guerreiro Jihad
 TRANSFERIR RECURSOS
-%d has sent you %s
-Now you can control %s units
-%s is sharing resources with you
-Damage inflicted
-Damage taken
-Units killed
-Units lost
-Scroll with mouse
-Generate terrain from image
-Invert
-New UI
-Custom saved settings
-View more
-Select all military units
+%d enviou %s para você
+Agora você pode controlar as unidades de %s
+%s está compartilhando recursos com você
+Dano causado
+Dano recebido
+Unidades eliminadas
+Unidades perdidas
+Rolar com o mouse
+Gerar terreno a partir de imagem
+Inverter
+Nova IU
+Configurações salvas personalizadas
+Ver tudo
+Selecionar todas as unidades militares
 DIPLOMACIA
-Units done
-Buildings done
-Maximum units
-Maximum buildings
-Main
-Technologies
-Misc
-Level-ups
-Distance travelled
-Shared resources
-Buildings destroyed
-Buildings lost
-Manna usage
-Heroes
-Score
-Max pop
-Initial objects
-Random objects
-Distance
-Each 256
+Unidades concluídas
+Construções concluídas
+Unidades máximas
+Construções máximas
+Principais estatísticas
+Tecnologias
+Diversos
+Níveis alcançados
+Distância percorrida
+Recursos compartilhados
+Construções destruídas
+Construções perdidas
+Uso de mana
+Heróis
+Pontuação
+População máxima
+Objetos iniciais
+Objetos aleatórios
+Distância
+A cada 256
 Battle Royale
-Circle duration
-Start time
-Positioning
-Circles
-Center
-Gas damage
-Shared victory condition
-Final circle radius
-Pause time
-Minimum distance between players
-Resource gain
-Each 1s
-Each 60s
-Each unit killed
-Building times
-Units times
-Technologies times
-Resource collection time
-Advanced options
-Instant build
-Circle closing
-Circle waiting
-Final circle
-Reveal map fog when dying
-Crazy
-Total duration
-Tree health
-Select all priests
-Select all mounted units
-Select all archers
-Select all sword units
-Default
-Use backspace as delete key
+Duração do círculo
+Tempo de início
+Posicionamento
+Círculos
+Centro
+Dano do gás
+Condição de vitória compartilhada
+Raio do círculo final
+Tempo de pausa
+Distância mínima entre jogadores
+Ganho de recursos
+A cada 1s
+A cada 60s
+A cada unidade eliminada
+Tempo de construção
+Tempo de unidades
+Tempo de tecnologias
+Tempo de coleta de recursos
+Opções avançadas
+Construção instantânea
+Fechamento do círculo
+Aguardando círculo
+Círculo final
+Revelar mapa nebuloso ao morrer
+Loucura
+Duração total
+Vida das árvores
+Selecionar todos os sacerdotes
+Selecionar todas as unidades montadas
+Selecionar todos os arqueiros
+Selecionar todas as unidades de espada
+Padrão
+Usar backspace como tecla de exclusão
 Tornar-se Sacerdote
-Access forbidden
-Waiting outside
-Special Buildings
-Charts
-Separated teams
-Small lakes
-Rivers
-Waiting for players
-Select all wizards
-Select cows with +450 food
+Acesso proibido
+Aguardando do lado de fora
+Construções especiais
+Gráficos
+Equipes separadas
+Pequenos lagos
+Rios
+Aguardando jogadores
+Selecionar todos os magos
+Selecionar vacas com +450 de comida
 Iniciando...
-Rank score
-%s has joined!
-You can't control %s units anymore
-%s stopped sharing resources with you
+Pontuação do ranking
+%s entrou!
+Você não pode mais controlar as unidades de %s
+%s parou de compartilhar recursos com você
 Emendas de terreno
 Apagar
-Changelog
+Registro de alterações
 Ranking
-Download
-Flag
-Fog quality
-Pixel density
-Reset
-Ready
-You can't change your name for %s days
-You can change your name once every 60 days
+Baixar
+Bandeira
+Qualidade da neblina
+Densidade de pixels
+Redefinir
+Pronto
+Você não pode alterar seu nome por %s dias
+Você pode alterar seu nome apenas uma vez a cada 60 dias
 Avatar
-Grass
+Gramado
 Trenkorian
-Desert
-Snow
-Summer
-Rareland
-Jungle
-Winter
-Grass & Snow
+Deserto
+Neve
+Verão
+Terra rara
+Selva
+Inverno
+Gramado e Neve
 RANKED
-official
+oficial
 min
-Attack Time (ms)
-Attack/s
-Range
-Speed (px/s)
-%s room
-Fast 1v1
+Tempo de ataque (ms)
+Ataque/s
+Alcance
+Velocidade (px/s)
+Sala %s
+1v1 rápido
 undefined
-Average last 16 games
+Média dos últimos 16 jogos
 Multithreading
-Anti-aliasing
+Antisserrilhamento
 GPU
-Low
-Medium
-High
+Baixo
+Médio
+Alto
 Ultra
-Peasants by resource
-Resources/s
-RULES
-Action
-Event
-Add quest
-Appear object
-Change diplomacy settings
-Change object owner
-Change player status
-Conversation
-Delay
-Destroy object
-Erase object
-Explore area
-Load map
-Lock view
-Lock/Unlock units
-Object order
-Player defeated
-Player won
-Remove quest
-Scroll view
-Send chat message
-Set object properties
-Set timer
-Show message
-Show story screen
-Spawn object
-Stop timer
-Unlock view
-Object destroyed
-Object enter holder
-Object exist
-Object in area
-Object leave holder
-Condition
-Rule
-Object
-Rectangle
-Area
-Clear
-Set
-View
-For which
-All
-Type
-Count
-Check all
-Clear all
-Select objects
+Camponeses por recurso
+Recursos/s
+REGRAS
+Ação
+Evento
+Adicionar missão
+Aparecer objeto
+Alterar configurações de diplomacia
+Alterar dono do objeto
+Alterar status do jogador
+Conversa
+Atraso
+Destruir objeto
+Apagar objeto
+Explorar área
+Carregar mapa
+Bloquear visão
+Bloquear/Desbloquear unidades
+Ordem do objeto
+Jogador derrotado
+Jogador venceu
+Remover missão
+Rolar visão
+Enviar mensagem de chat
+Definir propriedades do objeto
+Definir temporizador
+Mostrar mensagem
+Mostrar tela de história
+Gerar objeto
+Parar temporizador
+Desbloquear visão
+Objeto destruído
+Objeto entra no suporte
+Objeto existe
+Objeto na área
+Objeto deixa o suporte
+Condição
+Regra
+Objeto
+Retângulo
+Área
+Limpar
+Definir
+Visualização
+Para qual
+Todos
+Tipo
+Contagem
+Verificar todos
+Limpar todos
+Selecionar objetos
 Qualquer
 Unidades militares
-Order
-Zone
-Amount
-Properties
-Objective
+Ordem
+Zona
+Quantidade
+Propriedades
+Objetivo
 Original
 Defender
-Object near to
-Operation
-Actions
-Conditions
-Repetitions
-Optional
-Negative
-None (executed at the start)
-Event trigger
-(The object(s) that activates the rule)
-General
-Restore manna
-Restore health
-Minimum repetition time
-Check rule each
-Duplicate
-Current resources
-Map explored (beta)
-Object state
-State
-Created
-Deleted
-Destroyed by
-Selected
-Attacking
-Building/Repairing
-Healing
-Teaching
-Refuged
-Object destroyed by
+Objeto próximo a
+Operação
+Ações
+Condições
+Repetições
+Opcional
+Negativo
+Nenhuma (executado no início)
+Acionador de evento
+(O(s) objeto(s) que ativa a regra)
+Geral
+Restaurar maná
+Restaurar vida
+Tempo mínimo de repetição
+Verificar regra a cada
+Duplicar
+Recursos atuais
+Mapa explorado (beta)
+Estado do objeto
+Estado
+Criado
+Excluído
+Destruido por
+Selecionado
+Atacando
+Construindo/Reparando
+Curando
+Ensinando
+Refugiado
+Objeto destruído por
 Cavar, cortar ou extrair
 Reparar
-Refuge
-Set kingdom resources
-Kingdom resources
-Pause/Unpause
+Refúgio
+Definir recursos do reino
+Recursos do reino
+Pausar/Continuar jogo
 Active kingdom
 CARREGAR JOGO
-Specific
-By team
+Específico
+Por equipe
 Atacar sítio
 ACEITAR
-Change kingdom to
-None
-Bulk editor
-Game time
-Player is AI (online)
-Set special variable
-Random
-Special variable
-Object properties
-For each object destroyed
-For each object lost
-Variable
-Wrong PIN
-Research technology
-Too many attempts, access blocked
-PIN required to edit the map
-Technology researched
-Disable technology
-Change diplomacy options
-Origin
-Destine
-Teleport object
+Alterar reino para
+Nenhum
+Editor em massa
+Tempo de jogo
+Jogador é IA (online)
+Definir variável especial
+Aleatório
+Variável especial
+Propriedades do objeto
+Para cada objeto destruído
+Para cada objeto perdido
+Variável
+PIN incorreto
+Pesquisar tecnologia
+Muitas tentativas, acesso bloqueado
+PIN necessário para editar o mapa
+Tecnologia pesquisada
+Desativar tecnologia
+Alterar opções de diplomacia
+Origem
+Destino
+Teletransportar objeto
 Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockmore,Bridport,Casevil,Stirm,Tonis,Pelegrim,Peresohn,Pirk,Pharn,Gork,Aceituno
 Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan,Bellefars,Mokhac,Norahz,Kerhetin,Maham,Dushesh,Direkh,Aboud,Ali,Amir,Abahti,Abanaisati,Abatui,Abdelkader,Abid,Abyahu
 Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodzum,Ishinghen,Genghis,Musa,Echibo,Ichikahr,Yotokan,Maraga
 Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
-Vision
-Clan
-Invitation code
-Create clan
-Delete clan
-Members
-Join
+Visão
+Clã
+Código de convite
+Criar clã
+Excluir clã
+Membros
+Entrar
 {tag}
-Incorrect invitation code
-Clan name currently unavailable
-Leave clan
+Código de convite incorreto
+Nome do clã indisponível no momento
+Sair do clã
 Tens a certeza?
-Ranked cancelled
-Teams
+Classificado cancelado
+Equipes
 v
-free-for-all
+todos contra todos
 Língua
-Shadows
-Random
-Load original Tzar map .wmp (beta)
-Gold gathered
-Wood gathered
-Food gathered
-Stone gathered
-Population
-Peasants
-Brush size
-Put object
-Objects
+Sombras
+Aleatório
+Carregar mapa original Tzar .wmp (beta)
+Ouro coletado
+Madeira coletada
+Comida coletada
+Pedra coletada
+População
+Camponeses
+Tamanho do pincel
+Colocar objeto
+Objetos
 Capturar edifício inimigo
-Score area
-Multiplied x1.55 if the player wins
-Area under the score over time curve (see charts)
-%s teams
-If you leave now you will not be able to re-enter in 2 minutes
+Área de pontuação
+Multiplicado por 1.55 se o jogador vencer
+Área sob a curva de pontuação ao longo do tempo (ver gráficos)
+%s equipes
+Se você sair agora, não poderá entrar novamente em 2 minutos
 Modding
-Bonus
-Max limit
-Sight
-Menu
-Minimum attack distance
+Bônus
+Limite máximo
+Visão da unidade
+Menu da unidade
+Distância mínima de ataque
 Altitude
-Size
-Storage type
-Resource type
-Unit name
-Inventory size
-Inventory type
-Can attack everything
-Attack angle
+Tamanho da unidade
+Tipo de armazenamento
+Tipo de recurso
+Nome da unidade
+Tamanho do inventário
+Tipo de inventário
+Pode atacar tudo
+Ângulo de ataque
 Base
-Maximum trading amount
-Any resource
-Items
-Any
-Floor
-Ground
-Air
-Width
-Height
-Shape
-BY USER RACE SELECTION
-Increase value
-Increase unit characteristics
-Increase unit characteristics (%)
-Lower the cost
-Upgrade object
-Enable feature
-Enable
-%s production
-Construction speed
-Experience speed
-Maximum experience
-Mercenaries experience
-Health gain after killing
+Quantidade máxima de negociação
+Qualquer recurso
+Itens
+Qualquer
+Chão
+Terra
+Ar
+Largura
+Altura
+Formato
+POR SELEÇÃO DE RAÇA DO USUÁRIO
+Aumentar valor
+Aumentar características da unidade
+Aumentar características da unidade (%)
+Reduzir o custo
+Atualizar objeto
+Habilitar recurso
+Habilitar
+Produção de %s
+Velocidade de construção
+Velocidade de experiência
+Experiência máxima
+Experiência de mercenários
+Aumento de saúde após matar
 Manna/s
-Milk/s
-Meat/s
-Mining performance
-Blessing attack bonus
-Radius
+Leite/s
+Carne/s
+Desempenho de mineração
+Bônus de ataque da bênção
+Raio
 Manna
-Damage
-Healing value
-Duration (ms)
-Whirpool attack interval
-Tavern heroes experience
-Murder damage
-Auto make invisible manna
-Maximum training level
-Maximum cow meat
-Meat divisions
-Fish/s
-Maximum fish amount
-Leadership radius
-Minimum trading amount
-Trading amount/s
-Mana interval
+Dano
+Valor de cura
+Duração (ms)
+Intervalo de ataque do redemoinho
+Experiência de heróis da taverna
+Dano de assassinato
+Criar automaticamente manna invisível
+Nível máximo de treinamento
+Quantidade máxima de carne de vaca
+Divisões de carne
+Peixe/s
+Quantidade máxima de peixe
+Raio de liderança
+Quantidade mínima de negociação
+Quantidade de negociação/s
+Intervalo de manna
 Assassinar
-Mercenaries generation time
-Asian market items generation time
-Connection lost with the server
-Population cost
-Disabled
-Only registered users can create accounts
-Your account must be 1 week old to play rankeds
-An email has been sent with a verification code (check spam folder), enter it here
-Wrong code
-Too many attempts, try again tomorrow
-Any (1x1)
-Can use unresearched orders
+Tempo de geração de mercenários
+Tempo de geração de itens do mercado asiático
+Conexão perdida com o servidor
+Custo de população
+Desabilitado
+Apenas usuários registrados podem criar contas
+Sua conta deve ter 1 semana de idade para jogar classificatórios
+Um e-mail com um código de verificação foi enviado (verifique a pasta de spam), insira-o aqui
+Código incorreto
+Muitas tentativas, tente novamente amanhã
+Qualquer (1x1)
+Pode usar ordens não pesquisadas
 Descarregar
 Recolher itens
 Mostrar todas as unidades
 Construir Item Mágico
 Negociar
-Can use potions
-Can train
-Can gain experience
-Score multiplier
-Resistance
-Can discover invisible units
-First attack time (ms)
-Shots
-Crusaders (Minimum)
-Crusaders (Maximum)
-Crusaders increment
-Crusaders recharge time (ms)
-Hero minimum level
+Pode usar poções
+Pode treinar
+Pode ganhar experiência
+Multiplicador de pontuação
+Resistência do prédio
+Pode descobrir unidades invisíveis
+Primeiro tempo de ataque (ms)
+Tiros
+Cruzados (mínimo)
+Cruzados (máximo)
+Incremento de cruzados
+Tempo de recarga de cruzados (ms)
+Nível mínimo de herói
 Melhorar para Muralha de Pedra
 CARREGAR
 OPÇÕES DE MÚSICA
-This technology is being investigated in other building
-Reconnecting
+Esta tecnologia está sendo pesquisada em outro prédio
+Reconectando
 Pregar Cruzada
-st
-nd
-rd
-th
-Shortcut
-Create unit
-Create building
+1º
+2º
+3º
+º
+Atalho
+Criar unidade
+Criar prédio
 Especiais
 Raros
-Press a key
-Action
-Delete building / unit
-Hide chat
-Game information
-Select all spies
-Select all heroes
-Focus view into selected unit
-Hide trees
-Alternate screen info
-Move up
-Move down
-Move right
-Move left
-Controls
-Sign up
-Expand minimap
-Reset zoom
-Control key
-Shift key
-Alt key
-Select all militar units + spies
-Select all militar units (no wizards)
-Disabled automatic killing of cows
-Set kingdom values
-Kingdom value
-Pause
-Change name
-Changes
-Change color of selected units
+Pressione uma tecla
+Ação
+Excluir prédio / unidade
+Esconder chat
+Informações do jogo
+Selecionar todos os espiões
+Selecionar todos os heróis
+Focar visualização na unidade selecionada
+Esconder árvores
+Alternar informações na tela
+Mover para cima
+Mover para baixo
+Mover para a direita
+Mover para a esquerda
+Controles
+Cadastrar-se
+Expandir minimapa
+Redefinir zoom
+Tecla de controle
+Tecla Shift
+Tecla Alt
+Selecionar todas as unidades militares + espiões
+Selecionar todas as unidades militares (sem magos)
+Desativar morte automática de vacas
+Definir valores do reino
+Valor do reino
+Pausar
+Mudar nome
+Alterações
+Mudar a cor das unidades selecionadas
 Comprar Itens
-Disable sharing resources during peace time
-Limit FPS to 30
-Save as file
-Players
-Time played
-Spent resources
-Received resources
-Last played games
+Desabilitar compartilhamento de recursos durante o tempo de paz
+Limitar FPS para 30
+Salvar como arquivo
+Jogadores
+Tempo jogado
+Recursos gastos
+Recursos recebidos
+Últimos jogos jogados

@@ -49,7 +49,7 @@
 48:unit::setupPosition\28float\29
 49:unit::setupBufferSP\28\29
 50:unit::spellIMG\28int\2c\20int\2c\20bool\29
-51:empire::pay\28int*\2c\20bool\29
+51:empire::pay\28int*\2c\20bool\2c\20bool\29
 52:moveToGathPoint\28unit&\2c\20unsigned\20int\29
 53:_tr_flush_block
 54:visibilityWrite\28int\2c\20int\2c\20int\2c\20bool\29

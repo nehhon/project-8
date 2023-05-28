@@ -737,149 +737,149 @@ Area sotto la curva del score nel tempo (vedi grafici)
 Se te ne vai ora, non potrai tornare tra 2 minuti
 Modding
 Bonus
-Max limit
-Sight
+Limite massimo
+Vista
 Menu
-Minimum attack distance
-Altitude
-Size
-Storage type
-Resource type
-Unit name
-Inventory size
-Inventory type
-Can attack everything
-Attack angle
+Distanza minima di attacco
+Altitudine
+Dimensione
+Tipo di deposito
+Tipo di risorsa
+Nome dell'unità
+Dimensione dell'inventario
+Tipo di inventario
+Può attaccare tutto
+Angolo di attacco
 Base
-Maximum trading amount
-Any resource
-Items
-Any
-Floor
-Ground
-Air
-Width
-Height
-Shape
-BY USER RACE SELECTION
-Increase value
-Increase unit characteristics
-Increase unit characteristics (%)
-Lower the cost
-Upgrade object
-Enable feature
-Enable
-%s production
-Construction speed
-Experience speed
-Maximum experience
-Mercenaries experience
-Health gain after killing
+Quantità massima di scambio
+Qualsiasi risorsa
+Articoli
+Qualsiasi
+Pavimento
+Terra
+Aria
+Larghezza
+Altezza
+Forma
+DA SELEZIONE RAZZA UTENTE
+Aumenta il valore
+Aumenta le caratteristiche dell'unità
+Aumenta le caratteristiche dell'unità (%)
+Abbassa il costo
+Aggiorna oggetto
+Abilita funzione
+Abilita
+Produzione di %s
+Velocità di costruzione
+Velocità di esperienza
+Esperienza massima
+Esperienza dei mercenari
+Guadagno di salute dopo aver ucciso
 Manna/s
-Milk/s
-Meat/s
-Mining performance
-Blessing attack bonus
-Radius
+Latte/s
+Carne/s
+Prestazioni di estrazione
+Bonus di attacco di benedizione
+Raggio
 Manna
-Damage
-Healing value
-Duration (ms)
-Whirpool attack interval
-Tavern heroes experience
-Murder damage
-Auto make invisible manna
-Maximum training level
-Maximum cow meat
-Meat divisions
-Fish/s
-Maximum fish amount
-Leadership radius
-Minimum trading amount
-Trading amount/s
-Mana interval
+Danno
+Valore di guarigione
+Durata (ms)
+Intervallo di attacco del vortice
+Esperienza degli eroi della taverna
+Danno dell'omicidio
+Auto rendi invisibile manna
+Livello massimo di allenamento
+Carne di mucca massima
+Divisioni di carne
+Pesce/s
+Quantità massima di pesce
+Raggio di leadership
+Quantità minima di scambio
+Quantità di scambio/s
+Intervallo di manna
 Assassina
-Mercenaries generation time
-Asian market items generation time
-Connection lost with the server
-Population cost
-Disabled
-Only registered users can create accounts
-Your account must be 1 week old to play rankeds
-An email has been sent with a verification code (check spam folder), enter it here
-Wrong code
-Too many attempts, try again tomorrow
-Any (1x1)
-Can use unresearched orders
+Tempo di generazione dei mercenari
+Tempo di generazione degli oggetti del mercato asiatico
+Connessione persa con il server
+Costo della popolazione
+Disabilitato
+Solo gli utenti registrati possono creare account
+Il tuo account deve avere 1 settimana per giocare ai rankeds
+È stata inviata un'email con un codice di verifica (controlla la cartella spam), inseriscilo qui
+Codice errato
+Troppi tentativi, riprova domani
+Qualsiasi (1x1)
+Può utilizzare ordini non ricercati
 Scarica
 Raccogli oggetti
 Evacua tutte le unità
 Crea oggetto magico
 Commercia
-Can use potions
-Can train
-Can gain experience
-Score multiplier
-Resistance
-Can discover invisible units
-First attack time (ms)
-Shots
-Crusaders (Minimum)
-Crusaders (Maximum)
-Crusaders increment
-Crusaders recharge time (ms)
-Hero minimum level
+Può utilizzare pozioni
+Può allenarsi
+Può guadagnare esperienza
+Moltiplicatore di punteggio
+Resistenza
+Può scoprire unità invisibili
+Tempo del primo attacco (ms)
+Colpi
+Crociati (Minimo)
+Crociati (Massimo)
+Incremento dei crociati
+Tempo di ricarica dei crociati (ms)
+Livello minimo dell'eroe
 Migliora in muraglia di pietra
 CARICA
 MUSICA
-This technology is being investigated in other building
-Reconnecting
+Questa tecnologia è in fase di ricerca in un altro edificio
+Riconnessione
 Convoca crociata
-st
-nd
-rd
-th
-Shortcut
-Create unit
-Create building
+°
+°
+°
+°
+Scorciatoia
+Crea unità
+Crea edificio
 Speciali
 Altri
-Press a key
-Action
-Delete building / unit
-Hide chat
-Game information
-Select all spies
-Select all heroes
-Focus view into selected unit
-Hide trees
-Alternate screen info
-Move up
-Move down
-Move right
-Move left
-Controls
-Sign up
-Expand minimap
-Reset zoom
-Control key
-Shift key
-Alt key
-Select all militar units + spies
-Select all militar units (no wizards)
-Disabled automatic killing of cows
-Set kingdom values
-Kingdom value
-Pause
-Change name
-Changes
-Change color of selected units
+Premi un tasto
+Azione
+Elimina edificio / unità
+Nascondi chat
+Informazioni sul gioco
+Seleziona tutti gli spie
+Seleziona tutti gli eroi
+Concentra la vista sull'unità selezionata
+Nascondi alberi
+Informazioni alternate sullo schermo
+Muovi su
+Muovi giù
+Muovi a destra
+Muovi a sinistra
+Controlli
+Iscriviti
+Espandi minimappa
+Reimposta zoom
+Tasto di controllo
+Tasto shift
+Tasto alt
+Seleziona tutte le unità militari + spie
+Seleziona tutte le unità militari (no maghi)
+Disabilita l'uccisione automatica delle mucche
+Imposta i valori del regno
+Valore del regno
+Pausa
+Cambia nome
+Cambiamenti
+Cambia colore delle unità selezionate
 Compra oggetti
-Disable sharing resources during peace time
-Limit FPS to 30
-Save as file
-Players
-Time played
-Spent resources
-Received resources
-Last played games
+Disabilita la condivisione delle risorse durante il tempo di pace
+Limita FPS a 30
+Salva come file
+Giocatori
+Tempo giocato
+Risorse spese
+Risorse ricevute
+Ultimi giochi giocati

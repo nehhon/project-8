@@ -63,7 +63,7 @@
 62:unit::setupBufferSP\28\29
 63:dlmalloc
 64:unit::spellIMG\28int\2c\20int\2c\20bool\29
-65:empire::pay\28int*\2c\20bool\29
+65:empire::pay\28int*\2c\20bool\2c\20bool\29
 66:moveToGathPoint\28unit&\2c\20unsigned\20int\29
 67:_tr_flush_block
 68:visibilityWrite\28int\2c\20int\2c\20int\2c\20bool\29

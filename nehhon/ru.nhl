@@ -440,10 +440,10 @@ Help
 Улучшить до каменных ворот
 Registered users only
 Room restricted to registered users only
-Выйти из системы
+Log Out
 Change
-Войти
-Аккаунт
+Log In
+Account
 Standard kingdom colors
 Стать воином Джихада
 ПЕРЕДАТЬ РЕСУРСЫ
@@ -474,7 +474,7 @@ Distance travelled
 Shared resources
 Buildings destroyed
 Buildings lost
-Mana usage
+Manna usage
 Heroes
 Score
 Max pop
@@ -534,9 +534,9 @@ You can't control %s units anymore
 %s stopped sharing resources with you
 Наземные дороги
 Удалить
-Изменения
-Рейтинг
-Скачать
+Changelog
+Ranking
+Download
 Flag
 Fog quality
 Pixel density
@@ -555,8 +555,8 @@ Jungle
 Winter
 Grass & Snow
 RANKED
-официальный
-мин
+official
+min
 Attack Time (ms)
 Attack/s
 Range
@@ -643,7 +643,7 @@ None (executed at the start)
 Event trigger
 (The object(s) that activates the rule)
 General
-Restore mana
+Restore manna
 Restore health
 Minimum repetition time
 Check rule each
@@ -687,199 +687,199 @@ For each object destroyed
 For each object lost
 Variable
 Wrong PIN
-Investigate technology
+Research technology
 Too many attempts, access blocked
 PIN required to edit the map
-Technology investigated
+Technology researched
 Disable technology
 Change diplomacy options
 Origin
 Destine
-Teletransport object
+Teleport object
 Ланселот,Артур,Гюлвен,Мерлин,Чернотрън,Морин,Голстък,Карамбол,Хелерик,Рокмор,Бридпорт,Кейсвил,Стирм,Тунис,Пелегрим,Пересон,Пирк,Фарн,Горк
 Иб Фадлан,Мохамед,Ал Фериса,Харън Ай Рашид,Синдбад,Мелемад,Моррак,Сахаван,Белефас,Мокхак,Норах,Керхетин,Махам,Дюшеш,Дирех
 Алжида,Торанага,Ичинзен,Хайяко,Мозуки,Хитачи,Тошиба,Харашико,Марасума,Куродзум,Ечинген,Генджи,Муса,Ечибо,Ичиках,Йотокан,Марага
 Фистантилус,Скендербег,Рейслин,Тунис,Морук,Сокоб,Барас,Харъм,Билиз,Юнте,Орк,Сава,Пиргос,Савадор,Гандъх,Гордор,Феш,Гилм,Пергас
-Vision
-Clan
-Invitation code
-Create clan
-Delete clan
-Members
-Join
-{tag}
-Incorrect invitation code
-Clan name currently unavailable
-Leave clan
+Видение
+Клан
+Код приглашения
+Создать клан
+Удалить клан
+Участники
+Присоединиться
+{тег}
+Неверный код приглашения
+Недоступное название клана
+Покинуть клан
 Вы уверены?
-Ranked cancelled
-Teams
+Рейтинг отменен
+Команды
 на
-free-for-all
+Каждый за себя
 Язык
 Тени
-Random
-Load original Tzar map .wmp (beta)
-Gold gathered
-Wood gathered
-Food gathered
-Stone gathered
-Population
-Peasants
-Brush size
-Put object
-Objects
+Случайный
+Загрузить оригинальную карту Tzar .wmp (бета-версия)
+Собранное золото
+Собранное дерево
+Собранная пища
+Собранный камень
+Население
+Крестьяне
+Размер кисти
+Разместить объект
+Объекты
 Захватить вражеское строение
-Score area
-Multiplied x1.55 if the player wins
-Area under the score over time curve (see charts)
-%s teams
-If you leave now you will not be able to re-enter in 2 minutes
-Modding
-Bonus
-Max limit
-Sight
-Menu
-Minimum attack distance
-Altitude
-Size
-Storage type
-Resource type
-Unit name
-Inventory size
-Inventory type
-Can attack everything
-Attack angle
-Base
-Maximum trading amount
-Any resource
-Items
-Any
-Floor
-Ground
-Air
-Width
-Height
-Shape
-BY USER RACE SELECTION
-Increase value
-Increase unit characteristics
-Increase unit characteristics (%)
-Lower the cost
-Upgrade object
-Enable feature
-Enable
-%s production
-Construction speed
-Experience speed
-Maximum experience
-Mercenaries experience
-Health gain after killing
-Manna/s
-Milk/s
-Meat/s
-Mining performance
-Blessing attack bonus
-Radius
-Manna
-Damage
-Healing value
-Duration (ms)
-Whirpool attack interval
-Tavern heroes experience
-Murder damage
-Auto make invisible manna
-Maximum training level
-Maximum cow meat
-Meat divisions
-Fish/s
-Maximum fish amount
-Leadership radius
-Minimum trading amount
-Trading amount/s
-Mana interval
+Площадь очков
+Умножается на 1.55, если игрок выигрывает
+Площадь под кривой очков со временем (см. графики)
+%s команд
+Если вы выйдете сейчас, вы не сможете вернуться в течение 2 минут
+Моддинг
+Бонус
+Максимальное ограничение
+Обзор
+Меню
+Минимальная дистанция атаки
+Высота
+Размер
+Тип хранения
+Тип ресурса
+Имя юнита
+Размер инвентаря
+Тип инвентаря
+Может атаковать все
+Угол атаки
+База
+Максимальное количество для торговли
+Любой ресурс
+Предметы
+Любой
+Наземный
+Поверхность
+Воздух
+Ширина
+Высота
+Форма
+ПО ВЫБОРУ РАСЫ ПОЛЬЗОВАТЕЛЯ
+Увеличение значения
+Увеличение характеристик юнита
+Увеличение характеристик юнита (%)
+Снижение стоимости
+Повышение объекта
+Активация функции
+Разрешено
+Производство %s
+Скорость строительства
+Скорость опыта
+Максимальный опыт
+Опыт наемников
+Прирост здоровья после убийства
+Манна/с
+Молоко/с
+Мясо/с
+Производительность при добыче
+Бонус атаки благословения
+Радиус заклинания
+Манна
+Урон
+Целительное значение
+Продолжительность (мс)
+Интервал атаки водоворота
+Опыт героев в таверне
+Урон убийства
+Автоматическое создание невидимой маны
+Максимальный уровень обучения
+Максимальное количество мяса от коровы
+Разделение мяса
+Рыба/с
+Максимальное количество рыбы
+Радиус лидерства
+Минимальное количество для торговли
+Количество торговли/с
+Интервал маны
 Убить
-Mercenaries generation time
-Asian market items generation time
-Connection lost with the server
-Population cost
-Disabled
-Only registered users can create accounts
-Your account must be 1 week old to play rankeds
-An email has been sent with a verification code (check spam folder), enter it here
-Wrong code
-Too many attempts, try again tomorrow
-Any (1x1)
-Can use unresearched orders
+Время генерации наемников
+Время генерации предметов на азиатском рынке
+Соединение с сервером потеряно
+Затраты населения
+Отключено
+Только зарегистрированные пользователи могут создавать комнаты
+Ваш аккаунт должен быть старше 1 недели, чтобы играть в ранкеды
+На вашу электронную почту было отправлено письмо с кодом подтверждения (проверьте папку со спамом), введите его здесь
+Неверный код
+Слишком много попыток, попробуйте снова завтра
+Любой (1x1)
+Можно использовать неисследованные приказы
 Разгрузить
 Поднять предмет
 Всем на выход!
 Создать магический предмет
 Торговать
-Can use potions
-Can train
-Can gain experience
-Score multiplier
-Resistance
-Can discover invisible units
-First attack time (ms)
-Shots
-Crusaders (Minimum)
-Crusaders (Maximum)
-Crusaders increment
-Crusaders recharge time (ms)
-Hero minimum level
+Можно использовать зелья
+Можно обучать
+Можно получать опыт
+Множитель очков
+Сопротивляемость здания
+Можно обнаруживать невидимые юниты
+Время первой атаки (мс)
+Выстрелы
+Крестоносцы (Минимум)
+Крестоносцы (Максимум)
+Прирост крестоносцев
+Время перезарядки крестоносцев (мс)
+Минимальный уровень для героя
 Улучшить до каменной стены
 ЗАГРУЗИТЬ
 НАСТРОЙКИ МУЗЫКИ
-This technology is being investigated in other building
-Reconnecting
+Эта технология исследуется в другом здании
+Повторное подключение
 Проповедь крестового похода
-st
-nd
-rd
-th
-Shortcut
-Create unit
-Create building
+1-й
+2-й
+3-й
+й
+Сочетание клавиш
+Создать юнит
+Создать здание
 Особенные
 Инженерные
-Press a key
-Action
-Delete building / unit
-Hide chat
-Game information
-Select all spies
-Select all heroes
-Focus view into selected unit
-Hide trees
-Alternate screen info
-Move up
-Move down
-Move right
-Move left
-Controls
-Sign up
-Expand minimap
-Reset zoom
-Control key
-Shift key
-Alt key
-Select all militar units + spies
-Select all militar units (no wizards)
-Disabled automatic killing of cows
-Set kingdom values
-Kingdom value
-Pause
-Change name
-Changes
-Change color of selected units
+Нажмите клавишу
+Действие
+Удалить здание / юнит
+Скрыть чат
+Игровая информация
+Выбрать всех шпионов
+Выбрать всех героев
+Фокусировка на выбранном юните
+Скрыть деревья
+Альтернативная информация на экране
+Движение вверх
+Движение вниз
+Движение вправо
+Движение влево
+Управление игрой
+Регистрация
+Расширить миникарту
+Сбросить масштаб
+Клавиша Ctrl
+Клавиша Shift
+Клавиша Alt
+Выбрать всех военных юнитов + шпионов
+Выбрать всех военных юнитов (без волшебников)
+Отключить автоматическое убийство коров
+Задать значения королевства
+Значения королевства
+Пауза
+Изменить имя
+Изменения
+Изменить цвет выбранных юнитов
 Купить предметы
-Disable sharing resources during peace time
-Limit FPS to 30
-Save as file
-Players
-Time played
-Spent resources
-Received resources
-Last played games
+Отключить обмен ресурсами во время мира
+Ограничить FPS до 30
+Сохранить как файл
+Игроки
+Игровое время
+Потраченные ресурсы
+Полученные ресурсы
+Последние сыгранные игры

@@ -462,7 +462,7 @@ Niestandardowe zapisane ustawienia
 Zobacz wiecej
 Zaznacz wszystkie jednostki wojskowe
 DYPLOMACJA
-Wyszkolone jednostki
+Zrobione jednostki
 Zbudowane budynki
 Maksymalna ilość jednostek
 Maksymalna ilość budynków
@@ -535,7 +535,7 @@ Wynik Punktów rankingowych
 Małe obiekty
 Wykasuj
 Dziennik zmian
-Rankingowy
+Ranking
 Pobierz
 Flaga
 Jakość mgły
@@ -562,7 +562,7 @@ Attack/s
 Zasięg jednostki
 Szybkość pixel na sekundę (px/s)
 %s Nazwa gry
-Szybkie 1 Kontra 1
+Szybka gra 1v1
 undefined
 Średnia z ostatnich szesnastu rozegranych meczy
 Multithreading
@@ -582,7 +582,7 @@ Appear object
 Change diplomacy settings
 Change object owner
 Change player status
-Dyskusja
+Conversation
 Delay
 Destroy object
 Erase object
@@ -878,8 +878,8 @@ Kup przedmioty
 Wyłącz możliwość wpsółdzielenia zasobów z innymi podczas czasu pokoju
 Ustaw limit FPS do 30
 zapisz jako plik
-Players
-Time played
-Spent resources
-Received resources
-Last played games
+Gracze
+Czas gry
+Wykorzystane zasoby
+Otrzymane zasoby
+Ostatnio grane gry

@@ -814,7 +814,7 @@ Puede usar ordenes no investigadas
 Descargar
 Recoger objetos
 Evacuar todas las unidades
-Construir objeto mágico
+Crear objeto mágico
 Comerciar
 Puede usar pociones
 Puede entrenar
@@ -839,47 +839,47 @@ Convocar Cruzada
 .
 .
 .
-Shortcut
-Create unit
-Create building
+Atajo
+Crear unidad
+Crear edificio
 Especiales
 Otros
-Press a key
-Action
-Delete building / unit
-Hide chat
-Game information
-Select all spies
-Select all heroes
-Focus view into selected unit
-Hide trees
-Alternate screen info
-Move up
-Move down
-Move right
-Move left
-Controls
-Sign up
-Expand minimap
-Reset zoom
-Control key
-Shift key
-Alt key
-Select all militar units + spies
-Select all militar units (no wizards)
-Disabled automatic killing of cows
-Set kingdom values
-Kingdom value
-Pause
-Change name
-Changes
-Change color of selected units
+Presiona una tecla
+Acción
+Eliminar edificio / unidad
+Ocultar chat
+Información del juego
+Seleccionar todos los espías
+Seleccionar todos los héroes
+Enfocar vista en la unidad seleccionada
+Ocultar árboles
+Alternar información en pantalla
+Mover hacia arriba
+Mover hacia abajo
+Mover a la derecha
+Mover a la izquierda
+Controles
+Registrarse
+Expandir minimapa
+Restablecer zoom
+Tecla de control
+Tecla de cambio
+Tecla Alt
+Seleccionar todas las unidades militares + espías
+Seleccionar todas las unidades militares (sin magos)
+Desactivar la matanza automática de vacas
+Establecer valores del reino
+Valor del reino
+Pausa
+Cambiar nombre
+Cambios modding
+Cambiar color de las unidades seleccionadas
 Comprar objetos
-Disable sharing resources during peace time
-Limit FPS to 30
-Save as file
-Players
-Time played
-Spent resources
-Received resources
-Last played games
+Desactivar compartir recursos durante el tiempo de paz
+Limitar FPS a 30
+Guardar como archivo
+Jugadores
+Tiempo jugado
+Recursos gastados
+Recursos recibidos
+Últimas partidas jugadas
