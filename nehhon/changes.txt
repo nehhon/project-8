@@ -1,3 +1,7 @@
+##524 24/06/2023
+Improved WebGPU engine compatibility (big step, enable it in #Settings->GPU)
+Improved player pairing in rankeds
+Minor bug fixes
 ##522 27/05/2023
 New section "last games played"
 Added more ending stats about resource management

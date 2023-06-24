@@ -75,7 +75,7 @@
 74:unit::setupPhysics\28float\2c\20float\29
 75:unit::changeKingdom\28unsigned\20int\2c\20bool\2c\20bool\29
 76:empire::kill\28bool\2c\20bool\29
-77:diplomacySetupTeam\28unsigned\20int\29
+77:diplomacySetupTeam\28unsigned\20int\2c\20bool\29
 78:build2\28unsigned\20int*\2c\20unsigned\20int*\2c\20unsigned\20int\29
 79:brdLegal\28int\2c\20int\2c\20int\29
 80:brdLegal3\28int\2c\20int\2c\20int\2c\20int\29

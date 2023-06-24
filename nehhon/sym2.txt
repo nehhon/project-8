@@ -89,7 +89,7 @@
 88:unit::setupPhysics\28float\2c\20float\29
 89:unit::changeKingdom\28unsigned\20int\2c\20bool\2c\20bool\29
 90:empire::kill\28bool\2c\20bool\29
-91:diplomacySetupTeam\28unsigned\20int\29
+91:diplomacySetupTeam\28unsigned\20int\2c\20bool\29
 92:build2\28unsigned\20int*\2c\20unsigned\20int*\2c\20unsigned\20int\29
 93:brdLegal\28int\2c\20int\2c\20int\29
 94:brdLegal3\28int\2c\20int\2c\20int\2c\20int\29
