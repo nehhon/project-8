@@ -795,7 +795,7 @@
 794:captureStartCheck\28unsigned\20int\2c\20unsigned\20int&\2c\20unsigned\20int&\2c\20unsigned\20int&\29
 795:captureControl\28unsigned\20int\2c\20unsigned\20int\29
 796:captureCheck\28unit&\29
-797:canvasSize\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
+797:canvasSize\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
 798:cancelInvisibility\28unsigned\20int\2c\20unsigned\20int\29
 799:buyRNDobj\28unsigned\20int\29
 800:buyItem\28unsigned\20int*\2c\20unsigned\20int*\2c\20unsigned\20int\29

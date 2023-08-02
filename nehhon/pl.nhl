@@ -109,7 +109,7 @@ ARABOWIE| Rasa
 AZJACI| Rasa
 Zwykłe
 JEDEN GRACZ| Gra dla Jednego Gracza
-Na temat
+O grze
 POWRÓT
 Zapisywanie zawartości gry lokalnie
 Przewodnik
@@ -372,7 +372,7 @@ Tworzenie nietoperza
 Tworzenie latającego dywanu
 Piorun
 Nauka
-Wskrzeszenie
+Wskrześ umarłych
 Magiczna wizja
 Uzdrawianie
 Błogosławieństwo
@@ -398,7 +398,7 @@ Czas pokoju
 Zbliż do kursora
 Warunek zwycięstwa
 Zniszcz wszystko
-Zniszcz Twierdze / Koszary
+Zniszcz Twierdze i Koszary
 Zniszcz Twierdze
 Desant
 Zwiększa ładowność statków
@@ -448,17 +448,17 @@ Standardowe kolory królestw
 Stań się wojownikiem dżihadu
 PRZENIEŚ SUROWCE
 %d Wysłał Ci %s
-%s 🗡 Pozwolił Ci kontrolować jego jednostki =)
-%s ⛏ Współdzieli z tobą zasoby :)
+%s 🗡 Pozwolił Ci kontrolować jego jednostki 🗡 =)
+%s ⛏ Współdzieli z tobą zasoby ⛏ :)
 Zadane obrażenia
 Otrzymane obrażenia
 Zabite jednostki
 Utracone jednostki
 Przewijanie za pomocą myszy
 Generuj mape z obrazka
-Odwróc
+Odwróć
 Nowa oprawa graficzna
-Niestandardowe zapisane ustawienia
+Niestandardowe ustawienia gry
 Zobacz wiecej
 Zaznacz wszystkie jednostki wojskowe
 DYPLOMACJA
@@ -484,20 +484,20 @@ Dystans
 Każde 256
 Battle Royale
 Czas trwania okręgu
-Czas rozpoczęcia okręgu
-Positioning
+Pierwsze zamknięcie okręgu za
+Pozycjonowanie
 Ilość okręgów
 Centruj
 Obrażenia czerwonego okręgu
 Wspólny warunek zwycięstwa
 Końcowy obszar okręgu
-Zatrzymanie czasu okręgu
+Okręg zmniejszy się za
 Minimalny dystans między graczami
 Otrzymywanie surowców
-Za każdą 1s
-Za każde 60s
-Za Każdą zabitą jednostke
-Czas budowy konstruukcji
+Co sekundę
+Co 60 sekund
+Za Każdą zabitą jednostkę
+Czas budowy konstrukcji
 Czas szkolenia jednostki
 Czas badania technologii
 Czas zbierania surowców
@@ -553,16 +553,16 @@ Lato
 Rzadka ziemia
 Dżungla
 Zima
-Trawa & Śnieg
-Gra rankingowa
-oficjalny
-minuty
+Trawa i Śnieg
+Gra Rankingowa
+Oficjalny serwer
+minut
 Attack Time (ms)
 Attack/s
 Zasięg jednostki
-Szybkość pixel na sekundę (px/s)
+Szybkość jednostki (px/s)
 %s Nazwa gry
-Szybka gra 1v1
+1 vs 1
 undefined
 Średnia z ostatnich szesnastu rozegranych meczy
 Multithreading
@@ -573,7 +573,7 @@ Niska
 Wysoka
 Ultra
 Ilość wiesniaków gromadzących surowce 
-Produkcja surowców na sekunde
+Produkcja surowców na sekundę
 RULES
 Action
 Event
@@ -642,9 +642,9 @@ Negative
 None (executed at the start)
 Event trigger
 (The object(s) that activates the rule)
-General
-Restore manna
-Restore health
+Ogólne
+Przywracanie many
+Przywracanie zdrowia
 Minimum repetition time
 Check rule each
 Duplicate
@@ -652,10 +652,10 @@ Aktualny stan zasobów
 Odkrywanie mapy (beta)
 Object state
 State
-Created
-Deleted
+Stworzony
+Usunięty
 Destroyed by
-Selected
+Zazbaczibt
 Attacking
 Building/Repairing
 Healing
@@ -675,7 +675,7 @@ By team
 Atakuj obszar
 ZATWIERDŹ
 Change kingdom to
-None
+Brak
 Bulk editor
 Czas gry
 Gracz komputer (SI) jest aktywny
@@ -700,7 +700,7 @@ Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockm
 Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan,Bellefars,Mokhac,Norahz,Kerhetin,Maham,Dushesh,Direkh,Aboud,Ali,Amir,Abahti,Abanaisati,Abatui,Abdelkader,Abid,Abyahu
 Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodzum,Ishinghen,Genghis,Musa,Echibo,Ichikahr,Yotokan,Maraga
 Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
-Vision
+Wizja
 Clan
 Kod do zaproszenia
 Stwórz klan
@@ -741,8 +741,8 @@ Maksymalny limit
 Zasięg odkrywania terenu
 Menu
 Minimalny dystans ataku
-Altitude
-Rodzaj
+Powierzchnia
+Rozmiar
 Rodzaj składowania
 Rodzaj zasobu
 Nazwa jednostki
@@ -755,41 +755,41 @@ Maksymalna ilość handlu towarem
 Każdy surowiec
 Przedmioty
 Każdy
+Wodna
 Lądowa
-Powierzchniowa
 Powietrzna
 Szerokość
 Wysokość
 Kształt
 Wybór rasy przez użytkownika
 Zwiększ wartość
-Zmniejsz statystyki jednostki
+Zwiększ statystyki jednostek
 Zwiększ statystyki jednostki w (%)
 Zmniejsz koszt produkcji
 Usprawnij budlowę
 Włączenie fukncji
 Włączenie
-%s production
-Construction speed
+%s Wydobycie
+Szybkość budowy
 Szybkość zdobywania dośwaidczenia
 Maksymalna ilość doświadczenia
-Doświadczenie najemników
-Health gain after killing
-Produkcja many na sekundę
-Produkcja mleka Bożego na sekundę
-Produkcja mięsa na sekundę
+Doświadczenie najemników z gospody
+Przyrost zdrowia po zabiciu
+Przyrost many na sekundę
+Przyrost mleka Bożego na sekundę
+Przyrost mięsa na sekundę
 Wydajność górnicza
 Bonus do ataku używając zaklęcia bogosławieństwo
 Promień/obszar
-Manna
+Mana
 Obrażenia
 Wartość uzdrawiania
 Limit czasowy zaklęcia (ms)
-Whirpool attack interval
+Obrażenia od Magicznego wiru
 Poziom herosów z gospody
 Umiejętność Morderstwo - Obrażenia
 Auto make invisible manna
-Maksymalny poziom podczas trenowania
+Maksymalny poziom podczas trenowania jednostek
 Maksymalna ilość mięsa w krowie
 Wartość fragmentu mięsa
 Ilość połowu ryb na sekundę
@@ -806,7 +806,7 @@ Koszt populacji ludności
 Wyłączenie
 Tylko zarejestrowani użytkownicy mogą stworzyć pokój gry
 Twoje konto musi istnieć jeden tydzień, aby móc uczestniczyć w grach rankingowych
-Wiadomość została wysłana z kodem weryfikacyjny (Sprawdź folder z spamem), wprowadź go tutaj
+Wiadomość została wysłana z kodem weryfikacyjnym (Sprawdź folder z spamem), wprowadź go tutaj
 Błędny kod
 Zbyt wiele prób, spróbuj ponownie
 Każdy (1x1)
@@ -819,7 +819,7 @@ Handel
 Możliwość używania mikstur
 Możliwość treningu
 Możliwość zdobywania doświadczenia
-Punkty za unicestwienie 
+Punkty za unicestwienie
 Odporność budowli
 Pozwala dostrzegać niewidzialne jednostki
 Czas pierwszego ataku (ms)
@@ -835,13 +835,13 @@ OPCJE MUZYKI
 Ta technologia jest opracowywana w innych budynkach
 Ponowne dołączanie
 Utwórz wyprawę krzyżową
-Pierwsze miejsce
-Drugie Miejsce
-Trzecie miejsce
-th
+.
+.
+.
+.
 Skrót klawiszowy
 Stwórz jednostkę
-konstruuj strukturę
+Konstruuj strukturę
 Gildie
 Specjalne
 Wciśnij klawisz a
@@ -854,15 +854,15 @@ Zaznacz wszystkich herosów
 Skup widok na wybranej jednostce
 Ukryj drzewa
 Alternatywne informacje o ekranie
-przesuń w górę
-przesuń w dół
-przesuń w prawo
-przesuń w lewo
-Kontrola
+Przesuń w górę
+Przesuń w dół
+Przesuń w prawo
+Przesuń w lewo
+Sterowanie
 Zapisz się
-rozwiń mapę
+Rozwiń mapę
 Zresetuj zmianę przybliżenia
-Klawisz Ctrl
+Control key
 Klawisz shift
 Klawisz alt
 Zaznacz wszystkie jednostki wojskowe + szpieg
@@ -878,8 +878,10 @@ Kup przedmioty
 Wyłącz możliwość wpsółdzielenia zasobów z innymi podczas czasu pokoju
 Ustaw limit FPS do 30
 zapisz jako plik
-Gracze
+Graczy
 Czas gry
 Wykorzystane zasoby
 Otrzymane zasoby
-Ostatnio grane gry
+OSTATNIO GRANE GRY
+Exit full screen
+Horizontal menu layout

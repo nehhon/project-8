@@ -1,3 +1,7 @@
+##526 02/08/2023
+Horizontal menu layout option
+Full size chat and gifs when game is finished
+Minor bug fixes
 ##524 24/06/2023
 Improved WebGPU engine compatibility (big step, enable it in #Settings->GPU)
 Improved player pairing in rankeds

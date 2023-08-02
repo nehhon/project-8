@@ -851,7 +851,7 @@
 850:captureStartCheck\28unsigned\20int\2c\20unsigned\20int&\2c\20unsigned\20int&\2c\20unsigned\20int&\29
 851:captureControl\28unsigned\20int\2c\20unsigned\20int\29
 852:captureCheck\28unit&\29
-853:canvasSize\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
+853:canvasSize\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
 854:cancel_notification
 855:cancelInvisibility\28unsigned\20int\2c\20unsigned\20int\29
 856:buyRNDobj\28unsigned\20int\29
