@@ -1,4 +1,4 @@
-##526 02/08/2023
+##527 02/08/2023
 Horizontal menu layout option
 Full size chat and gifs when game is finished
 Minor bug fixes
