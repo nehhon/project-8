@@ -567,7 +567,7 @@ undefined
 Media delle ultime 16 partite
 Multithreading
 Anti-aliasing
-GPU
+GPU Engine
 Basso
 Medio
 Alto
@@ -885,3 +885,4 @@ Risorse ricevute
 Ultimi giochi giocati
 Exit full screen
 Horizontal menu layout
+UI scale

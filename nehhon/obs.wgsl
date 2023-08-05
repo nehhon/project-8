@@ -47,7 +47,6 @@
     )/255.0;
   }
 
-
   @binding(0) @group(0)  var<storage, read> text1d : array<u32>;
   @binding(1) @group(0)  var<uniform> resolution : vec2<f32>;
   @binding(2) @group(0)  var<storage, read> unitArr : array<unit>;
@@ -61,6 +60,7 @@
   @binding(10) @group(0) var<uniform> mwidth : u32;
   @binding(11) @group(0) var<uniform> hideTrees : u32;
   @binding(12) @group(0) var<uniform> ambient : vec4<f32>;
+  @binding(13) @group(0) var<uniform> uizoom : f32;
 
   struct VertexOutput {
     @builtin(position) pos : vec4<f32>,
@@ -86,7 +86,6 @@ fn vert_main(
 
   var imgID=u.imgID&0xffff;
   var img=imgData[imgID];
-
 
 
   var dir=((u.imgID>>16)&0xffff)*img.w*img.h*img.frames;
@@ -129,6 +128,11 @@ fn vert_main(
 
   var tsizes=vec2<f32>(f32(img.w),f32(img.h));
   var vpos=tsizes*pos;
+
+  if(fixed){
+    vpos.x*=uizoom;
+    vpos.y*=uizoom;
+  }
 
   if(u.rotation!=0.0){
     var s = sin(u.rotation);
@@ -181,14 +185,11 @@ fn vert_main(
 
 @fragment
 fn frag_main(
-
   @location(0) textCoord : vec2<f32>,
   @location(1) @interpolate(flat) width : u32,
   @location(2) @interpolate(flat) imgid : u32,
   @location(3) @interpolate(flat) recolor : vec4<f32>,
   @location(4) @interpolate(flat) kcolor : vec4<f32>
-
-
   ) -> @location(0) vec4<f32> {
   var ucoord=vec2<u32>(u32(textCoord.x),u32(textCoord.y));
   var id=imgid+ucoord.y*width+(ucoord.x%width);
@@ -199,15 +200,11 @@ fn frag_main(
       color*=kcolor*1.4;
   }
   
-
   if(recolor.a>0){
     color*=recolor;
   }
 
-
-
   if(color.a<0.004){ discard; }
-
 
   return color*ambient;
 }

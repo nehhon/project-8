@@ -567,7 +567,7 @@ undefined
 Średnia z ostatnich szesnastu rozegranych meczy
 Multithreading
 Anti-aliasing
-GPU
+GPU Engine
 Niska
 Średnia
 Wysoka
@@ -885,3 +885,4 @@ Otrzymane zasoby
 OSTATNIO GRANE GRY
 Exit full screen
 Horizontal menu layout
+UI scale

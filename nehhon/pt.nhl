@@ -567,7 +567,7 @@ undefined
 Média dos últimos 16 jogos
 Multithreading
 Antisserrilhamento
-GPU
+GPU Engine
 Baixo
 Médio
 Alto
@@ -885,3 +885,4 @@ Recursos recebidos
 Últimos jogos jogados
 Exit full screen
 Horizontal menu layout
+UI scale

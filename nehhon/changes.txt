@@ -1,3 +1,6 @@
+##528 05/08/2023
+UI scale option (#Settings)
+Minor bug fixes
 ##527 02/08/2023
 Horizontal menu layout option
 Full size chat and gifs when game is finished

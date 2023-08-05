@@ -567,7 +567,7 @@ undefined
 Average last 16 games
 Multithreading
 Anti-aliasing
-GPU
+GPU Engine
 Low
 Medium
 High
@@ -885,3 +885,4 @@ Teleport object
 Последние сыгранные игры
 Exit full screen
 Horizontal menu layout
+UI scale

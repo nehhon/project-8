@@ -567,7 +567,7 @@ undefined
 Media de las ultimas 16 partidas
 Multihilo
 Anti-aliasing
-GPU
+GPU Engine
 Bajo
 Medio
 Alto
@@ -885,3 +885,4 @@ Recursos recibidos
 Últimas partidas jugadas
 Exit full screen
 Horizontal menu layout
+UI scale
