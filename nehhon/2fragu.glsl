@@ -159,18 +159,7 @@ light.rgb*=mulp;
 
 }
 
-
-
-
-
-
-
-
-
-
 //
-
-
 
 if(miniMap==0){
 
@@ -185,7 +174,6 @@ vec4 color=tcmm(txtCoords);
 
 if(rColor==2) color.a=(color.r+color.g+color.b)/2.5;
 if(color.a==0.0) discard;
-
 
 
 if(rColor==1&&color.r==color.g&&color.r==color.b) color.rgb*=v_kcolor.rgb*1.4;

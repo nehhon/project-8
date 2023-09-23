@@ -105,6 +105,8 @@ fn vert_main(
       c=0x949400;
     }else if(typ==231){
       c=0x5273d6;
+    }else if(typ==20){
+      c=0x085408;
     }
 
 
