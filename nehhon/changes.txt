@@ -1,5 +1,6 @@
-##529 23/09/2023
-New buildings menu (beta)
+##530 23/09/2023
+Teaching of Kung-fu units is like original Tzar (slower)
+New buildings menu
 Minor bug fixes
 ##528 05/08/2023
 UI scale option (#Settings)
