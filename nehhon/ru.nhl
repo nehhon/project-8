@@ -32,7 +32,7 @@ Nature
 Остров
 Архипелаг
 Случайный
-AI aggressivity
+AI aggressiveness
 Видимость
 Без тумана
 Временной туман
@@ -886,3 +886,6 @@ Teleport object
 Exit full screen
 Horizontal menu layout
 UI scale
+Remove invisibility
+Use circles as a selection mark
+No magic

@@ -17,7 +17,11 @@
     sight:u32,
     width:u32,
     height:u32,
-    rec:u32
+    rec:u32,
+    selectionX:u32,
+    selectionY:u32,
+    selectionW:u32,
+    selectionH:u32
   }
 
   struct kingdom{

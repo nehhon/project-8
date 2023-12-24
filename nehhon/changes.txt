@@ -1,3 +1,15 @@
+##533 23/12/2023
+New ranked game modes
+Option to disable circles as selection mark in #Settings
+Shift + click on "Emerge all units" button to select all units inside a building
+Selected units inside buildings now follow orders
+Ninja invisibility button divided into 2 buttons to reveal/hide
+Turn to stone/bribe all nearest units when doing Ctrl+Click
+Turn to stone/bribe all nearest units of the same type when doing Alt+Ctrl+Click
+Asian mage sight decreased from 21 to 15 (like original tzar)
+Rocket tower cost reduced from 600 stone 1500 wood to 400 stone 1000 wood (like original tzar)
+Ninja cost reduced from 160 to 120 gold (like original tzar)
+Minor bug fixes
 ##532 25/09/2023
 Minor bug fixes
 ##530 23/09/2023

@@ -17,7 +17,11 @@
     sight:u32,
     width:u32,
     height:u32,
-    rec:u32
+    rec:u32,
+    selectionX:i32,
+    selectionY:i32,
+    selectionW:u32,
+    selectionH:u32
   }
 
 
@@ -33,6 +37,8 @@
   struct VertexOutput {
     @builtin(position) pos : vec4<f32>,
     @location(0) textCoord : vec2<f32>,
+    @location(1) size : vec2<f32>,
+    @location(2) @interpolate(flat) unit : u32
   }
 
   @vertex
@@ -61,9 +67,19 @@ fn vert_main(
 
   if((u.info2&0xff)>0){
   var nf=info[u.info&0xffff];
-  var xtra=vec2(24.0);
-  var sizes=vec2<f32>(f32(nf.width*32),f32(nf.height*32));
+  var xtra=vec2(5.0*0.0);
+  var sizes=vec2<f32>(f32(nf.selectionW),f32(nf.selectionH));
   
+  if(nf.selectionW==0){
+     sizes=vec2<f32>(f32(nf.width*32),f32(nf.height*32));
+  }
+
+  //if(nf.width>2||nf.height>2) {xtra=vec2(24.0);z=1;}
+
+
+  upos-= vec2<f32>(f32(nf.selectionX),f32(nf.selectionY));
+
+
   upos-=xtra/2;
 
   sizes+=xtra;
@@ -78,6 +94,8 @@ fn vert_main(
   output.pos.x*=zoom;
   output.pos.y*=zoom;
   output.textCoord = pos;
+  output.size = sizes;
+  output.unit = nf.rec;
   }else {output.pos.z=-1;}
 
   return output;
@@ -86,7 +104,54 @@ fn vert_main(
 @fragment
 fn frag_main(
   @location(0) textCoord : vec2<f32>,
+  @location(1) sizes : vec2<f32>,
+  @location(2) @interpolate(flat) unit : u32
 ) -> @location(0) vec4<f32> {
+  /* var dist=distance(vec2(0.5),textCoord);
+
+var mrg3=0.1;
+var mrg1=0.05;
+
+
+    var dist00=distance(vec2(0.0+mrg3,0.0+mrg3),textCoord);
+    var dist10=distance(vec2(1.0-mrg3,0.0+mrg3),textCoord);
+    var dist11=distance(vec2(1.0-mrg3,1.0-mrg3),textCoord);
+    var dist01=distance(vec2(0.0+mrg3,1.0-mrg3),textCoord);
+
+var mrg=0.02;
+var mrg2=0.1;
+if(
+(dist00>mrg3&&dist10>mrg3&&dist11>mrg3&&dist01>mrg3)||
+(dist00<mrg1||dist10<mrg1||dist11<mrg1||dist01<mrg1)
+) {discard;}
+
+  
+ // if(dist>.5||dist<.45){
+   // discard;
+ // }
+
+
+
+if(
+/*  (
+  textCoord.x>mrg&&textCoord.x<1.0-mrg
+  &&
+  textCoord.y>mrg&&textCoord.y<1.0-mrg
+)
+  ||*/
+(
+    (textCoord.x>mrg2&&textCoord.x<1.0-mrg2)
+    ||
+    (textCoord.y>mrg2&&textCoord.y<1.0-mrg2)
+)
+){ discard;}
+*/
+
+
+
+
+/*
+
   var dist=distance(vec2(0.5),textCoord);
 
   if(dist>.5) {discard;}
@@ -95,4 +160,37 @@ fn frag_main(
   }
 
   return vec4(1,1,1,.25);
+*/
+
+var mrg=6.0;
+var mrg2=14.0;
+
+if(unit>0){
+mrg=2.0;
+mrg2=6.0;
+
+}
+
+
+if(
+ ( textCoord.x*sizes.x>mrg&&textCoord.x*sizes.x<sizes.x*1.0-mrg
+  &&
+  textCoord.y*sizes.y>mrg&&textCoord.y*sizes.y<sizes.y*1.0-mrg)
+  ||
+
+(
+    (textCoord.x*sizes.x>mrg2&&textCoord.x*sizes.x<sizes.x*1.0-mrg2)
+    ||
+    (textCoord.y*sizes.y>mrg2&&textCoord.y*sizes.y<sizes.y*1.0-mrg2)
+)
+
+  ){discard;}
+
+
+  return vec4(1,1,1,1);
+
+  /*
+
+*/
+
 }
