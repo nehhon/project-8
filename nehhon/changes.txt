@@ -1,3 +1,7 @@
+##534 26/12/2023
+New ranked room for battle royale mode
+New cyrillic font thanks to Bogi
+Minor bug fixes
 ##533 23/12/2023
 New ranked game modes
 Option to disable circles as selection mark in #Settings

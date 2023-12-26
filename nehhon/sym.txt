@@ -776,7 +776,7 @@
 775:chuCRcptr\28unsigned\20int\29
 776:chtgspd\28unsigned\20int\29
 777:chscrntype\28unsigned\20int\29
-778:chonltyp\28bool\2c\20bool\2c\20bool\29
+778:chonltyp\28bool\2c\20bool\2c\20bool\2c\20unsigned\20int\29
 779:chonltm\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
 780:chmnlen\28unsigned\20int\2c\20bool\29
 781:chmapsize\28int\29

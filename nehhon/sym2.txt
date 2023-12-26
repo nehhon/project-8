@@ -832,7 +832,7 @@
 831:chuCRcptr\28unsigned\20int\29
 832:chtgspd\28unsigned\20int\29
 833:chscrntype\28unsigned\20int\29
-834:chonltyp\28bool\2c\20bool\2c\20bool\29
+834:chonltyp\28bool\2c\20bool\2c\20bool\2c\20unsigned\20int\29
 835:chonltm\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
 836:chmnlen\28unsigned\20int\2c\20bool\29
 837:chmapsize\28int\29
