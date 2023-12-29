@@ -1,3 +1,5 @@
+##535 29/12/2023
+Minor bug fixes
 ##534 26/12/2023
 New ranked room for battle royale mode
 New cyrillic font thanks to Bogi
