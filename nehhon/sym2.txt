@@ -45,9 +45,9 @@
 44:cleanSelectionList\28\29
 45:liveMenu\28unsigned\20int\2c\20unsigned\20int*\2c\20unsigned\20int\2c\20unsigned\20int*\2c\20unsigned\20int\2c\20unsigned\20int\2c\20bool\29
 46:GOmenu\28unsigned\20int\2c\20bool\29
-47:_tr_flush_bits
-48:VP8GetSignedValue
-49:unit::unselect\28\29
+47:unit::unselect\28\29
+48:_tr_flush_bits
+49:VP8GetSignedValue
 50:setupIconID\28unsigned\20int\2c\20unsigned\20int\29
 51:sendOrdState\28unsigned\20int\29
 52:__pthread_mutex_unlock

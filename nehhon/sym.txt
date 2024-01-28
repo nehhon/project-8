@@ -33,9 +33,9 @@
 32:cleanSelectionList\28\29
 33:liveMenu\28unsigned\20int\2c\20unsigned\20int*\2c\20unsigned\20int\2c\20unsigned\20int*\2c\20unsigned\20int\2c\20unsigned\20int\2c\20bool\29
 34:GOmenu\28unsigned\20int\2c\20bool\29
-35:_tr_flush_bits
-36:VP8GetSignedValue
-37:unit::unselect\28\29
+35:unit::unselect\28\29
+36:_tr_flush_bits
+37:VP8GetSignedValue
 38:setupIconID\28unsigned\20int\2c\20unsigned\20int\29
 39:sendOrdState\28unsigned\20int\29
 40:searchFreeSpace\28int&\2c\20int&\2c\20unit&\2c\20superInfo&\29

@@ -1,4 +1,8 @@
-##535 29/12/2023
+##538 28/01/2024
+Disabled rocket towers in no magic ranked mode
+Improved Bulgarian translation (thanks to Боги19919)
+Minor bug fixes
+##537 29/12/2023
 Minor bug fixes
 ##534 26/12/2023
 New ranked room for battle royale mode
