@@ -1,3 +1,5 @@
+##542 05/02/2024
+Minor bug fixes
 ##538 28/01/2024
 Disabled rocket towers in no magic ranked mode
 Improved Bulgarian translation (thanks to Боги19919)
