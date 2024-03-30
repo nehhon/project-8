@@ -29,8 +29,8 @@
 28:VP8LReadBits
 29:packageAction2\28unsigned\20int\2c\20unsigned\20int*\2c\20unsigned\20int\2c\20unsigned\20int*\2c\20unsigned\20int\29
 30:crc32
-31:unit::select\28bool\29
-32:cleanSelectionList\28\29
+31:cleanSelectionList\28\29
+32:unit::select\28bool\29
 33:liveMenu\28unsigned\20int\2c\20unsigned\20int*\2c\20unsigned\20int\2c\20unsigned\20int*\2c\20unsigned\20int\2c\20unsigned\20int\2c\20bool\29
 34:GOmenu\28unsigned\20int\2c\20bool\29
 35:unit::unselect\28\29
