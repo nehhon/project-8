@@ -1,3 +1,6 @@
+##545 04/05/2024
+New ranked game mode with weekly matches
+Minor bug fixes
 ##544 28/04/2024
 Dragons can't be bribed
 Minor bug fixes
