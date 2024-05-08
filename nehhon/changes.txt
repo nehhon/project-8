@@ -1,3 +1,7 @@
+##546 08/05/2024
+Added player profile page (Account>Stats or clicking on a username)
+Improved Bulgarian translation (thanks to Боги19919)
+Minor bug fixes
 ##545 04/05/2024
 New ranked game mode with weekly matches
 Minor bug fixes
