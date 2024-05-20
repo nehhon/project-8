@@ -117,7 +117,7 @@
 116:setTypeLoop\28event&\2c\20void\20\28*\29\28event&\2c\20unit&\29\29
 117:selectionOne\28unsigned\20int\2c\20bool\29
 118:sbrk
-119:rndForest\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20bool\29
+119:rndForest\28int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20unsigned\20int\2c\20bool\29
 120:out
 121:nonearEnemies\28int\2c\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
 122:inone\28unsigned\20int\29
@@ -540,7 +540,7 @@
 539:setupTranslation\28unsigned\20int\2c\20unsigned\20int\29
 540:setupTrade\28unsigned\20int*\2c\20unsigned\20int*\2c\20unsigned\20int\29
 541:setupResources\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20short\29
-542:setupRandom\28int\29
+542:setupRandom\28unsigned\20int\29
 543:setupOnlTable\28unsigned\20int\29
 544:setupOnlID\28unsigned\20int\2c\20bool\2c\20bool\29
 545:setupOdin\28unsigned\20int\29
@@ -581,7 +581,7 @@
 580:rtnmapname\28unsigned\20int\29
 581:rstrRNDmap\28unsigned\20int\29
 582:rndforest\28\29
-583:rnd\28int\29
+583:rnd\28unsigned\20int\29
 584:rndRes\28\29
 585:rluchkids\28unsigned\20int\29
 586:rluch2kids\28unsigned\20int\29
