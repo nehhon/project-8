@@ -1,3 +1,6 @@
+##551 14/07/2024
+Number of gold mines in ranked games improved by 25%
+Minor bug fixes
 ##546 08/05/2024
 Added player profile page (Account>Stats or clicking on a username)
 Improved Bulgarian translation (thanks to Боги19919)
