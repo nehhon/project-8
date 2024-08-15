@@ -75,13 +75,19 @@ fn vert_main(
   )[VertexIndex];
 
 
-  var tsizes=vec2<f32>(f32(nf.sight)*64+64);
+  var sight=nf.sight;
+  var state=(u.info2>>8)&0xff;
+
+  if(state==4||state==14) {sight=nf.width;}
+
+
+  var tsizes=vec2<f32>(f32(sight)*64+64);
   var vpos=tsizes*pos;
 
   var output:VertexOutput;
 
 
-  vpos+=translation-tsizes/2+vec2(f32(nf.width/2),f32(nf.height/2))*32+vec2(16);
+  vpos+=translation-tsizes/2.0+vec2(f32(nf.width),f32(nf.height))*16;
   
 
   output.pos = vec4<f32>(2*(vpos+upos)/resolution, 0, 1.0);

@@ -1,3 +1,7 @@
+##552 15/08/2024
+Carpet cost increased from 80 gold to 800
+Bribe cost increased from 50 gold to 200
+Minor bug fixes
 ##551 14/07/2024
 Number of gold mines in ranked games improved by 25%
 Minor bug fixes
