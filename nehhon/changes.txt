@@ -1,3 +1,6 @@
+##556 13/10/2024
+New 24/7 game mode "IO"
+Minor bug fixes
 ##552 15/08/2024
 Carpet cost increased from 80 gold to 800
 Bribe cost increased from 50 gold to 200
