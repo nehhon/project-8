@@ -1,0 +1,914 @@
+Logat
+Dimensiunea hărții
+Continuă
+ANULEAZĂ
+Sănătate
+Apărare
+Regat
+Atac
+SALVEAZĂ
+Limita de populație
+Nivelul de dificultate al AI-ului
+Populație liberă
+Egalizează valorile pentru toate regatele
+Închide
+CULOARE
+Numele jucătorului
+Aur
+Lemn
+Hrană
+Piatră
+AI
+Echipă
+Capturabil
+Natură
+Adaugă
+Map size is too small, expanded to %s
+Teren
+Tipul de hartă
+Uscat
+Lacuri
+Continental
+Insulă
+Arhipelag
+Aleatoriu
+AI aggressiveness
+Vizibilitate
+Fără ceață
+Ceață temporară
+Ceață de război
+Ceață extremă
+Infinit
+Poartă de lemn
+Limita de populație
+Ecran complet automatic
+PAUZAT
+Apă
+Sol
+MENIU
+OPȚIUNI
+Aleatoriu
+HARTA ALEATORIE
+Hartă clară
+Hartă aleatorie completă
+Încărcare...
+Titlul hărții
+HARTA PERSONALIZATĂ
+Descriere
+Autor
+Unități
+Clădiri
+Iteme
+Copaci
+Resurse
+Pietre de aur
+Pietre
+MESAJ CHAT
+Cost
+Necesită
+Așteptând ca jucătorii să se conecteze
+Eroare la încărcarea jocului.
+PIN
+Viteza jocului
+ÎNAPOI LA JOC
+SAlVEAZĂ JOCUL
+Ecran complet
+IEȘI
+Viteză de apropiere
+Viteza de defilare
+Opacitate de meniu
+Cicluri de zi - noapte
+Volum de muzică
+Volum de sunet
+Sunete de moară
+Se joacă acum
+Așteptare
+Privat
+Numele camerei
+Jucători
+Da
+Nu
+Adaugă AI
+Deconectează
+JOACĂ
+HARTA PERSONALIZATĂ| Joacă harta personalizată
+%s s-a deconectat!
+Jocul a fost anulat de către server.
+Jocul este plin.
+Ai fost dat afară de către server.
+MULȚI JUCĂTORI| Jocul de mulți jucători
+CREEAZĂ| Creează un joc
+Expulzare
+Sus
+Jos
+Civilization
+Inițializarea jocului...
+Editor de hartă
+EUROPEANĂ| Rasa jucătorului
+ARABĂ| Rasa jucătorului
+ASIATICĂ| Rasa jucătorului
+Comun
+UN SINGUR JUCĂTOR| Jocul de un singur jucător
+Despre
+ÎNAPOI
+Salvează conținutul jocului local
+Ghid
+Avertisment
+BINE
+Descărcarea texturilor...
+%s a fost învins!
+%s a câștigat!
+Nu este suficient %s
+Nu sunt suficiente case
+Limita de populație atinsă
+Eroare de conexiune
+Rețea asincronă. Jocul a fost anulat.
+Urs
+Lacheu
+Lăncier
+Spion
+Maceman
+Arcaș
+Vrăjitor
+Arcaș lung
+Copac
+Crucișător
+Preot
+Țăran
+Catedrală
+Castel
+Perete de lemn
+Barăci
+Moară de cherestea
+Turn magic
+Breaslă a războinicilor
+Depozit
+Cavaler
+Câmp
+Fermă
+Breasla negustorilor
+Biserică
+Fierar
+Vacă
+Stabil
+Atelier
+Tavernă
+Casă
+Observează turnul
+Piață
+Avanpost
+Pod
+Manechin
+Catapultă
+Balistă
+Catapultă mare
+Fantomă
+Harbor
+Mesia
+Poartă magică
+Păzește turnul
+Perete de piatră
+Arc
+Scut
+Potion
+Fier
+Păstrează turnul
+Bombardează turnul
+Aruncă turnul în aer
+Orc
+Pitic
+Schelet
+Caravană
+Ninja
+Ronin
+Samurai
+Arcaș pe cal
+Samurai pe cal
+Car de luptă
+Galeon
+Barcă de pescuit
+Hulk
+Vapor de tip pinque
+Golem de piatră
+Liliac
+Satrap
+Cavalerie mare
+Războinic jihadist
+Plasture de pește
+Ienicer
+Castelul răului
+Moschee
+Atelier magic
+Mănăstire
+Shao-Linn
+Călugăr
+Dragon
+Covor zburător
+Djinn
+Arc lung
+Minerit de aur
+Minerit de piatră
+Tăiere de lemn
+Temper Iron
+Armură de solzi
+Halebardă
+Domesticire
+Asolament
+Lanț de zale
+Armură de plăci
+Arbaletă
+Feudalism
+Arhitectură
+Învățare
+Convertează resursele
+Crearea hărților
+Rute comerciale
+Impozite comerciale
+Cămăterie
+Depozit de provizii
+Mită
+Eroism
+Război
+Tactici
+Mercenari
+Misiune pentru eroi
+Faimă
+Tactici de asediu
+Culturism
+Spionaj
+Fanatism
+Cruciadă
+Inchiziție
+Vindecare
+Medicină
+Binecuvântează
+Invizibilitate
+Îngheață
+Fulger
+Îmbunătățește-l în turn tare
+Îmbunătățește-l în turn de piatră
+Îmbunătățește-l în turn cu tunuri
+Budism
+Inginerie
+Perete mare
+Arta călăritului
+Irrigation
+Car blindat
+Meditație
+Kung-Fu
+Turneuri
+Filozofie
+Niște ninja
+Masterat
+Concentrare
+Confuzie
+Vârtej de apă
+Transformă în piatră
+Bolț de flacără
+Bijuterie
+Activitate bancară
+Chemie
+Mâncare de mare
+Praf de pușcă
+Săgeată de rachetă
+Bushido
+Conducere
+Onoare
+Cartea lui Sun Tzu
+Braconaj de vaci
+Hipism
+Scimitar
+Jihad
+Covor fermecat
+Ploaie de foc
+Viziune magică
+Necromanție
+Călărit pe cai
+Sclavie
+Permite producția de arcași lungi
+Crește producția de aur
+Crește producția de piatră
+Crește producția de lemn
+Crește puterea de atac a unităților de mână
+Crește apărarea unității
+Permite producția de unități de suliță
+Permite producția de vaci
+Crește producția de câmpuri
+Permite producția de cavaleri
+Crește puterea de atac a unităților cu săgeți
+Țăranii devin mai ieftini
+Țăranii construiesc mai repede și permit ziduri de piatră, porți și turnuri
+Permite unitățile să câștige experiență
+Permite producția de galioane
+Permite comerțul
+Crește profitul din comerț
+Permite obținerea de împrumuturi în taverne
+Crește limita populației
+Permite mituirea unităților inamice
+Permite experiență nelimitată
+Obține repede experiență
+Permite recrutarea de unități în taverne
+Permite recrutarea de eroi în taverne
+Recrutează unități mai bune din taverne
+Permite producția de catapulte grele
+Crește punctele de lovire ale unității la fiecare nivel nou
+Permite producția de un spion
+Crește rezistența clădirii
+Permite propovăduirea unei cruciade
+Crește atacul preotului
+Permite vindecarea unităților
+Permite vindecarea unităților de la distanță
+Crește temporar abilitatea de atac a unității
+Vrajă de invizibilitate
+Cercetează invocarea liliacului
+Vrajă de înghețare
+Vrajă de fulger
+Cercetează invocarea golemului de piatră
+Permite construirea turnurilor de tun
+Crește atacul armei de asediu
+Makes stone walls, towers and gates stronger
+Permite producția de arcași călare
+Increases field production
+Allows the production of armored chariots
+Makes monks cheaper
+Increases the attack of all kung-fu units
+Allows sharing of experience between kung-fu units
+Allows the production of more experienced monks
+Allows the production of ninjas
+Allows priests to teach kung-fu units
+Allows faster manna restoration
+Researches the Confusion spell
+Cercetează vraja de vârtej
+Researches Dragon summoning
+Cercetează vraja de transformare în piatră
+Cercetează vraja de bolț de flacără
+Allows trading of items
+Increases cannon tower's attack power
+Allows the building of rocket tower
+Allows the production of horse samurai
+Unitățile din jurul unui erou câștigă experiență
+Bonus de atac erou vs. erou
+Increases the speed of learning
+Permite țăranilor să fure vaci
+Makes mounted units cheaper
+Increases sword attack power and allows the production of satraps
+Permite producția de războinici jihadiși
+Researches Magic Carpet summoning
+Allows the building of a magic workshop
+Researches the Magic Vision spell
+Researches the Raise the Dead spell
+Researches Jinn summoning
+Increases mine production
+Crește puterea de atac și apărare a unităților montate
+Permite producția de jandarmi
+Ploaie de foc
+Îngheață
+Confuzie
+Invizibilitate
+Fă un dragon
+Fă un djinn
+Fă un golem de piatră
+Fă un liliac
+Fă un covor magic
+Fulger
+Predă
+Ridică morții
+Viziunea magică
+Vindecă
+Binecuvântează
+Vârtej
+Bolț de flacără
+Transformă în piatră
+Sabie
+Experiență
+Mană
+Hrană
+Copy room link
+AI FOST
+ÎNVINS
+EȘTI
+VICTORIOS
+Turnuri
+INTRARE| Intră pe joc
+Floatarea minereurilor
+Tree density
+Symmetrical map
+Shared initial position
+Timp de pace
+Apropiază la cursor
+Condiția de victorie
+Ucidă pe toți
+Distruge castelele și cazarmele
+Distruge castele
+Tactici de aterizare
+Crește depozitarea navelor
+Apropiere nelimitată
+Chat-ul de echipă
+WASD as arrow keys
+Locație trimită
+Mișcă
+Atacă inamicul
+Explorează
+Stop
+Confuzie
+Vârtej de apă
+Fă un liliac
+Fă un golem de piatră
+Imposturează
+Fă un dragon
+Patrol
+Obține un împrumut
+Împrumută 1000 de aur
+Împrumută 1000 de piatră
+Împrumută 1000 de hrană
+Împrumută 1000 de lemn
+Rambursează împrumutul
+Uite ce poți construi
+Dezvăluie-ți adevărata ta identitate
+Selectează toți țăranii inactivi
+Ajutor
+Arată itemele
+Arată spionii
+Arată eroii
+Arată misiunile actuale
+Selectează cruciații din această cruciadă
+Angajează mercenari
+Angajează eroi
+Stai pe loc
+Mituiește o unitate inamică
+Poartă de piatră
+Îmbunătățește-l în poartă de piatră
+Numai utilizatorii înregistrați
+Cameră limitată doar la utilizatorii înregistrați
+Deconectează-te
+Schimbă
+Conectează-te
+Cont
+Culori standard ale regatului
+Devino un războinic jihadist
+TRANSFERĂ RESURSELE
+%d ți-a trimis %s
+Acum poți controla unitățile lui %s
+%s împărtășește resurse cu tine
+Daune cauzate
+Daune suferite
+Unități ucise
+Unități pierdute
+Derulează cu mouse-ul
+Generează terenului din imagine
+Inversă
+Nou UI
+Setări personalizate salvate
+Arată mai multe
+Selectează toate unitățile militare
+DIPLOMAȚIE
+Unități finalizate
+Clădiri finalizate
+Număr maxim de unități
+Numărul maxim de clădiri
+General
+Tehnologii
+Diverse
+Îmbunătățiri de nivel
+Distanță parcursă
+Resurse partajate
+Clădiri distruse
+Clădiri pierdute
+Utilizarea manei
+Eroi
+Puncte
+Pop maxim
+Obiecte inițiale
+Obiecte aleatorii
+Distanță
+Câte 256
+Bătălia Regală
+Durata cercului
+Timp de început
+Poziționare
+Cercuri
+Centru
+Deteriorarea gazului
+Condiție de victorie comună
+Raza finală a cercului
+Timp de pauză
+Distanță minimă între jucători
+Creșterea resurselor
+Câte 1s
+Câte 60s
+Pentru fiecare unitate ucisă
+Timpuri de construire
+Timpuri de unități
+Timpuri de tehnologii
+Timp de colectarea resurselor
+Opțiuni avansate
+Construire imediată
+Închiderea cercului
+Așteptarea cercului
+Cercul final
+Dezvăluiți ceața hărții când mori
+Nebun
+Durată totală
+Sănătatea copacului
+Selectează toți preoții
+Selectează toate unitățile montane
+Selectează toți arcașii
+Selectați toate unitățile cu sabie
+Implicit
+Folosește tasta înapoi ca tasta de ștergere
+Devino un preot
+Acces interzis
+Așteptând în afară
+Clădiri speciale
+Charts
+Echipe separate
+Râuri mici
+Râuri
+În așteptarea jucătorilor
+Selectează toți vrăjitorii
+Selectează vacile cu +450 de hrană
+Inițializare...
+Scor de clasare
+%s s-a alăturat!
+Nu mai poți controla %s unități
+%s a încetat să împărtășească resursele cu tine
+Plasturi de sol
+Șterge
+Listă de modificări
+Ranking
+Încarcă
+Steag
+Calitatea ceții
+Densitatea pixelilor
+Resetează
+Gata
+Nu poți să își schimbi numele în %s zile
+Poți să își schimbi numele o dată la 60 de zile 
+Avatar
+Iarbă
+Trenkorian
+Deșert
+Zăpadă
+Vară
+Ținutul rar
+Junglă
+Iarnă
+Iarbă și zăpadă
+CLASAȚI
+oficial
+min
+Timp de atac (ms)
+Atac(uri)
+Gamă
+Viteză (px/s)
+Camera lui %s
+Rapid 1vs1
+undefined
+Mediul de ultimele 16 jocuri
+Multithreading
+Anti-aliasare
+Circuitul GPU
+Scăzut
+Mediu
+Înalt
+Ultra
+Țărani pe resurse
+Resurse/s
+REGULI
+Acțiune
+Eveniment
+Adaugă misiunea
+Arată obiectul
+Change diplomacy settings Schimbă setările de diplomație
+Schimbă proprietarul obiectului
+Schimbă starea jucătorului
+Conversație
+Amânează
+Distruge obiectul
+Șterge obiectul
+Explorează aria
+Încarcă harta
+Blochează vederea
+Blochează/Deblochează unitățile
+Ordinea obiectelor
+Jucătorul a fost învins
+Jucătorul a câștigat
+Elimină misiunea
+Vedere de derulare
+Trimite un mesaj pe chat
+Setează trăsăturile de obiect
+Setează temporizatorul
+Arată mesajul
+Afișează ecranul de poveste
+Creează obiectul
+Oprește temporizatorul
+Deblochează vederea
+Obiect distrus
+Suport pentru introducerea obiectului
+Obiectul există
+Obiect în zonă
+Suport pentru concediu de obiecte
+Condiție
+Regulă
+Obiect
+Dreptunghi
+Arie
+Curăță
+Setează
+Arată
+Pentru care
+Tot
+Tastează
+Numărare
+Verifică totul
+Curăță totul
+Selectează obiecte
+Oricare
+Unități militare
+Ordin
+Zonă
+Cantitate
+Proprietăți
+Obiectiv
+Implicit
+Paznic
+Obiectul aproape de
+Operațiune
+Acțiuni
+Condiții
+Repetiții
+Opțional
+Negativ
+Niciun (executat la început)
+Declanșarea evenimentului
+(Obiectul (obiectele) care activează regula)
+General
+Restăbilește mană
+Restăbilește sănătatea
+Timp minim de repetiție
+Verifică regula pentru fiecare
+Duplică
+Resurse actuale
+Hartă descoperită (beta)
+Stare de obiect
+Stare
+Creat
+Șters
+Distrus de
+Selectat
+Atacat
+Construire/Reparare
+Vindecare
+Predare
+Refugiat
+Obiect distrus
+Sapă, taie sau minează
+Reparează clădirea
+Refugiu
+Setează resursele de regat
+Resurse de regat
+Întrerupe/Reia
+Regat activ
+ÎNCARCĂ JOCUL
+Specific
+De echipă
+Atacă terenul
+ACCEPTĂ
+Schimbă regatul la
+Niciun
+Editor sumar
+Timp de joc
+Jucătorul este AI (online)
+Setează valoarea specială
+Aleatoriu
+Valoare specială
+Trăsături de obiect
+Pentru fiecare obiect distrus
+Pentru fiecare obiect pierdut
+Valori
+PIN greșit
+Cercetează tehnologie
+Prea multe încercări, acces blocat
+PIN necesar pentru a edita harta
+Tehnologie cercetată
+Dezactivează tehnologie
+Schimbă opțiuni de diplomație
+Origini
+Destin
+Obiect de teleportare
+Lancelot,Arthur,Guivain,Merlin,Blackthorn,Morin,Golstuck,Karambol,Kelerick,Rockmore,Bridport,Casevil,Stirm,Tonis,Pelegrim,Peresohn,Pirk,Pharn,Gork,Aceituno
+Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan,Bellefars,Mokhac,Norahz,Kerhetin,Maham,Dushesh,Direkh,Aboud,Ali,Amir,Abahti,Abanaisati,Abatui,Abdelkader,Abid,Abyahu
+Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodzum,Ishinghen,Genghis,Musa,Echibo,Ichikahr,Yotokan,Maraga
+Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
+Viziune
+Clan
+Codul de invitație
+Creează un clan
+Șterge clanul
+Membri
+Alătură-te
+{tag}
+Cod de invitație greșit
+Numele clanului nu este disponibil momentan
+Părăsește clanul
+Ești sigur?
+Modul de Clasați anulat
+Echipe
+v
+liber-pentru-toți
+Limbă
+Umbre
+Aleatoriu
+Load original Tzar map .wmp (beta)
+Aur adunat
+Lemn adunat
+Hrană adunată
+Piatră adunată
+Populație
+Țărani
+Dimensiunea pensulei
+Pune obiectul
+Obiecte
+Capturează clădirea inamică
+Zonă de scor
+Multiplicat x1.55 dacă jucătorul câștigă
+Zona de sub curba scorului în timp (a se vedea graficele)
+%s echipe
+Dacă pleci acum, nu vei mai putea reveni în 2 minute
+Modificare
+Bonus
+Limită maximă
+Vedere
+Meniu
+Distanță minimă de atac
+Altitude
+Dimensiune
+Tip de stocare
+Tip de resursă
+Nume de unitate
+Dimensiune de inventar
+Tip de inventar
+Poate ataca tot
+Unghi de atac
+Bază
+Suma maximă de tranzacționare
+Vreo resursă
+Iteme
+Vreun
+Podea
+Sol
+Aer
+Lățime
+Înălțime
+Formă
+SELECTAREA RASELOR DE JUCĂTOR
+Crește valoarea
+Crește trăsăturile unității
+Crește trăsăturile unității (%)
+Reduce costul
+Îmbunătățește obiectul
+Permite funcția
+Permite
+Producție a lui %s
+Viteza construirii
+Viteza experienței
+Experiență maximă
+Experiența mercenarilor
+Câștig de sănătate după ucidere
+Mană
+Lapte
+Carne
+Performanță de minerit
+Bonus de atac de binecuvântare
+Rază
+Mană
+Daună
+Valoare de vindecare
+Durată (ms)
+Interval al vârtejului
+Experiență a eroilor de tavernă
+Daună de omor
+Face automat mana invizibilă
+Nivel de antrenament maxim
+Carne de vacă maximă
+Diviziuni de carne
+Pește
+Cantitate de pește maximă
+Raza de cei mai buni jucători
+Cantitate de comerț minimă
+Timp de comerț/s
+Mana intervală
+Omor
+Mercenaries generation time
+Timpul de generare a itemelor din piața asiatică
+Conexiunea la server a fost pierdută
+Cost de populație
+Dezactivat
+Numai jucătorii înregistrați pot face conturi
+Contul tău trebuie să existe cel puțin o săptămână pentru a juca Clasații
+A fost trimis un e-mail cu un cod de verificare (verifică folderul spam), introduce-l aici
+Cod greșit
+Prea multe încercări, încearcă din nou mâine
+Vreun (1x1)
+Poate utiliza comenzi necercetate
+Descarcă
+Ridică itemul
+Emerge toate unitățile
+Construiește un articol magic
+Fă comerț
+Poate folosi poțiuni
+Poate antrena
+Poate câștiga experiență
+Multiplicator de scor
+Rezistență
+Poate descopera unități invizibile
+Timp de primul atac (ms)
+Trageri
+Cruciați (minim)
+Cruciați (maxim)
+Creșterea cruciaților
+Crusaders recharge time (ms) Reîncărcarea timpului a cruciaților (ms)
+Nivelul minim al eroului
+Îmbunătățește-l în zid de piatră
+ÎNCARCĂ
+OPȚIUNILE DE MUZICĂ
+Această tehnologie este în curs de investigare în alte clădiri
+Reconectare
+Predică o cruciadă
+-ul
+-lea
+-lea
+-lea
+Scurtătură
+Creează unitatea
+Creează clădirea
+Bresle
+Rar
+Apasă o tastă
+Acțiune
+Șterge clădirea / unitatea
+Ascunde chat-ul
+Informație despre joc
+Selectează toți spionii
+Selectează toți eroii
+Focalizează vederea în unitatea selectată
+Ascunde copacii
+Ecranul de info alternativ
+Mută în sus
+Mută în jos
+Mută la dreapta
+Mută la stânga
+Comenzi
+Conectează-te
+Extinde miniharta
+Resetează apropierea
+Tastează Control
+Tastează Shift
+Tastează Alt
+Selectează toate unitățile militare + spioni
+Selectează toate unitățile militare (fără vrăjitori)
+Uciderea automatică a vacilor este dezactivată
+Setează valorile regatului
+Valorile regatului
+Pauză
+Schimbă numele
+Schimbări
+Schimbă culorul unităților selectate
+Cumpără itemele
+Dezactivează partajarea resurselor în timp de pace
+Limitează FPS la 30
+Salvează ca fișier
+Jucători
+Timp jucat
+Resursele au fost cheltuite
+Resursele au fost primite
+Jocurile jucate recent
+Ieși din ecranul complet
+Aranjament orizontal al meniului
+Scara UI-ului
+Șterge invizibilitatea
+Folosește cercurile ca marcaj de selecție
+Fără magie
+Jocul începe în %ss
+Last login
+Account created
+Awards
+Jocuri jucate
+ID
+Old names
+Start at
+LEAGUE
+You must play at least 16 ranked games to gain access
+You are using a VPN, your access may be restricted
+Victories
+MVPs
+Pos.
+Duration
+Preset
+Dată
+STATS
+Your email provider is not valid
+Aur
+Piatră
+Lemn
+Play again
