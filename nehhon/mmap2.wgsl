@@ -100,7 +100,7 @@ fn vert_main(
     if(typ==7){
       z=.98;
       c=0x088408;
-    }else if(typ==21){
+    }else if(typ==21||typ==254){
       c=0x009494;
      // c=0x004691;
     }else if(typ==22){
