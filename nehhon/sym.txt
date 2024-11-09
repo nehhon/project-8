@@ -203,7 +203,7 @@
 202:nearestSpaceLegal\28int&\2c\20int&\2c\20unit&\2c\20unit&\2c\20bool\29
 203:nearestGuard\28unit&\2c\20unit&\29
 204:investigateTech3\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
-205:initIntervals\28unit&\2c\20unsigned\20int\29
+205:initIntervals\28unit&\2c\20unsigned\20int\2c\20bool\29
 206:inflate_table
 207:iborn\28unsigned\20int\29
 208:healRadar\28int\2c\20int\2c\20unsigned\20int\29
@@ -858,7 +858,7 @@
 857:__cxxabiv1::__class_type_info::search_above_dst\28__cxxabiv1::__dynamic_cast_info*\2c\20void\20const*\2c\20void\20const*\2c\20int\2c\20bool\29\20const
 858:__cxxabiv1::__class_type_info::has_unambiguous_public_base\28__cxxabiv1::__dynamic_cast_info*\2c\20void*\2c\20int\29\20const
 859:__cxxabiv1::__class_type_info::can_catch\28__cxxabiv1::__shim_type_info\20const*\2c\20void*&\29\20const
-860:__cxx_global_array_dtor.133
+860:__cxx_global_array_dtor.134
 861:__cxx_global_array_dtor
 862:__cxa_is_pointer_type
 863:YuvToRgbaRow
