@@ -1,3 +1,8 @@
+##565 18/11/2024
+New IO mode map with random terrain and gold mines
+IO room is paused from 0:00 to 9:00 am CET time
+Making allies and sharing vision is now possible in IO mode and offline playing
+Minor bug fixes
 ##563 09/11/2024
 New IO mode map
 Minor bug fixes

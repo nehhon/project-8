@@ -828,7 +828,7 @@ Cruzados (Minimum)
 Cruzados (Maximum)
 Incremento de cruzados
 Tiempo de recarga de cruzados (ms)
-Minimo nivel del heroes
+Mínimo nivel del heroes
 Mejorar a muralla de piedra
 CARGAR
 MÚSICA
@@ -883,33 +883,42 @@ Tiempo jugado
 Recursos gastados
 Recursos recibidos
 Últimas partidas jugadas
-Exit full screen
-Horizontal menu layout
-UI scale
-Remove invisibility
-Use circles as a selection mark
-No magic
-Game starts in %ss
-Last login
-Account created
-Awards
+Salir del modo pantalla completa
+Menu horizontal
+Escala interfaz
+Cancelar invisibilidad
+Circulos como marca de selección
+Sin magia
+Comienza en %ss
+Último inicio de sesión
+Creación cuenta
+Premios
 Partidas jugadas
 ID
-Old names
-Start at
-LEAGUE
-You must play at least 16 ranked games to gain access
-You are using a VPN, your access may be restricted
-Victories
+Nombres antiguos
+Comienza a las
+LIGA
+Tienes que jugar al menos 16 partidas para poder unirte
+Estas usando una VPN, tu acceso podría ser restringido
+Victorias
 MVPs
 Pos.
-Duration
+Duracion
 Preset
 Fecha
-STATS
-Your email provider is not valid
+Estadísticas
+Tu proveedor de correo electrónico no es valido
 Oro
 Piedra
 Madera
-Play again
-You can't build on rocky ground
+Jugar de nuevo
+No es posible construir sobre rocas
+Modo IO pausado durante las próximas 9 horas
+Ahora, %s es tu enemigo
+%s quiere cambiar las relaciones diplomáticas y convertirse en tu aliado
+Ahora, %s es tu aliado
+Rechazar
+%s esta compartiendo visión contigo
+%s ha dejado de compartir visión contigo
+Solicitar alianza
+Cancelar alianza
