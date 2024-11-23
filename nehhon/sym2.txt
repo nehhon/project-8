@@ -518,7 +518,7 @@
 517:stackSave
 518:stackRestore
 519:stackAlloc
-520:stRecord\28unsigned\20int\29
+520:stRecord\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
 521:sstextStart\28unsigned\20int\29
 522:ss1text\28int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20unsigned\20int\2c\20bool\29
 523:spyShow\28unsigned\20int\29

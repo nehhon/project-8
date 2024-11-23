@@ -469,7 +469,7 @@
 468:std::bad_alloc::what\28\29\20const
 469:startMovement\28\29
 470:standUnit\28unsigned\20int*\2c\20unsigned\20int*\2c\20unsigned\20int\29
-471:stRecord\28unsigned\20int\29
+471:stRecord\28unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\2c\20unsigned\20int\29
 472:sstextStart\28unsigned\20int\29
 473:ss1text\28int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20int\2c\20unsigned\20int\2c\20bool\29
 474:spyShow\28unsigned\20int\29
