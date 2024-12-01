@@ -1,3 +1,7 @@
+##569 01/12/2024
+Improved IO mode performance
+Improved Bulgarian translation (thanks to Боги19919)
+Minor bug fixes
 ##567 23/11/2024
 Minor bug fixes
 ##566 20/11/2024
