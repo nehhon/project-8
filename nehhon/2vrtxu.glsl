@@ -63,6 +63,7 @@ int jump=0;
 if(fps!=0.0&&miniMap==0){
 if(a_texCoord.y>=0.0){
 t=(now-a_texCoord.y);
+if(t<0.0) {t=0.0;}
 if(fps<100.0){
 jump=int(floor(t * fps*0.001));
 }else{
@@ -176,7 +177,7 @@ if(a_margins.z>0.0){
 
 
     t = (now - a_physic.w) * 0.001;
-   
+   if(t<0.0) {t=0.0;}
     float physicY=a_physic.y * t + a_physic.z * .5 * t * t;
     vec2 vxy=vec2(a_physic.x * t,physicY);
     mxy+=vxy;

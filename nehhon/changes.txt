@@ -1,3 +1,8 @@
+##572 09/12/2024
+New IO map
+Dummies can be destroyed with catapults
+Reduced stuttering
+Minor bug fixes
 ##569 01/12/2024
 Improved IO mode performance
 Improved Bulgarian translation (thanks to Боги19919)

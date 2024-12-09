@@ -61,7 +61,11 @@ fn vert_main(
 
 
   var t=0.0;
-  if(u.date<0xffffffff){t=f32(now-u.date)*0.001;}
+  if(u.date<0xffffffff){
+    t=f32(now-u.date)*0.001;
+    if(u.date>now) {t=0.0;}
+    
+    }
 
   var upos=vec2<f32>(u.x+u.vx*t,u.y+u.vy*t+u.g*.5*t*t);
 

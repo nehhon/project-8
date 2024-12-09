@@ -48,6 +48,7 @@ fn vert_main(
 ) -> VertexOutput {
   var u=unitArr[InstanceIndex];
   var timediff=now-u.date;
+  if(u.date>now) {timediff=0;}
   var t=f32(timediff)*0.001;
   var upos=vec2<f32>(u.x+u.vx*t,u.y+u.vy*t+u.g*.5*t*t);
   var z=u.z;

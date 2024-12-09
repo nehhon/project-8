@@ -94,7 +94,10 @@ fn vert_main(
 
   var dir=((u.imgID>>16)&0xffff)*img.w*img.h*img.frames;
   var timediff=0u;
-  if(u.date<0xffffffff){timediff=now-u.date;}
+  if(u.date<0xffffffff){
+    timediff=now-u.date;
+    if(u.date>now) {timediff=0;}
+  }
 
   if(img.fps>0){
   var jump:u32;
@@ -141,7 +144,13 @@ fn vert_main(
   if(u.rotation!=0.0){
     var s = sin(u.rotation);
     var c = cos(u.rotation);
+
+    vpos-=tsizes/2.0;
     vpos *= mat2x2<f32>(c, -s, s, c);
+    vpos+=tsizes/2.0;
+
+
+
   }
 
   var output:VertexOutput;
