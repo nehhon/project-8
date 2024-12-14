@@ -1,3 +1,7 @@
+##574 14/12/2024
+New IO map
+Fixed some attack animations
+Minor bug fixes
 ##572 09/12/2024
 New IO map
 Dummies can be destroyed with catapults
