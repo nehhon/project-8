@@ -1,3 +1,7 @@
+##575 15/12/2024
+New IO map
+New ranked room "DOTA"
+Minor bug fixes
 ##574 14/12/2024
 New IO map
 Fixed some attack animations
