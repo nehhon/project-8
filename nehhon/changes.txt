@@ -1,3 +1,5 @@
+##578 18/12/2024
+Minor bug fixes
 ##577 16/12/2024
 New IO map
 Mute attack alert option
