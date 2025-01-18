@@ -1,3 +1,7 @@
+##582 18/01/2025
+Improved performance, CPU usage was reduced by 150%
+Updated pathfinder
+Minor bug fixes
 ##581 20/12/2024
 Improved WebGPU compatibility
 Minor bug fixes
