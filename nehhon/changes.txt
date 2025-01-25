@@ -1,3 +1,5 @@
+##585 25/01/2025
+New IO map, deleted rocket towers, added leadership tech, increased the cost of the walls
 ##582 18/01/2025
 Improved performance, CPU usage was reduced by 150%
 Updated pathfinder
