@@ -594,7 +594,7 @@
 593:pause0\28\29
 594:ordprps\28unsigned\20int\2c\20unsigned\20int\29
 595:ordlen\28\29
-596:onlstr\28\29
+596:onlstr\28unsigned\20int\29
 597:onlrec\28\29
 598:onlpulse\28unsigned\20int\29
 599:onlineMenu\28unsigned\20int*\2c\20unsigned\20int*\2c\20unsigned\20int\29

@@ -644,7 +644,7 @@
 643:pause0\28\29
 644:ordprps\28unsigned\20int\2c\20unsigned\20int\29
 645:ordlen\28\29
-646:onlstr\28\29
+646:onlstr\28unsigned\20int\29
 647:onlrec\28\29
 648:onlpulse\28unsigned\20int\29
 649:onlineMenu\28unsigned\20int*\2c\20unsigned\20int*\2c\20unsigned\20int\29
