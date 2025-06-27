@@ -1,3 +1,10 @@
+##602 27/06/2025
+Updated server
+Daily pro league games
+Improved Romanian translation (thanks to Vlahmaniac)
+Rocket tower cost increased to 1500 wood 1000 stone
+Ninja training time increased to 40s
+Minor bug fixes
 ##585 25/01/2025
 New IO map, deleted rocket towers, added leadership tech, increased the cost of the walls
 ##582 18/01/2025

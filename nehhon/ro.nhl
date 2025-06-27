@@ -23,7 +23,7 @@ Echipă
 Capturabil
 Natură
 Adaugă
-Map size is too small, expanded to %s
+Dimensiunea hărții este prea mică, extinsă la %s
 Teren
 Tipul de hartă
 Uscat
@@ -32,7 +32,7 @@ Continental
 Insulă
 Arhipelag
 Aleatoriu
-AI aggressiveness
+Agresivitate de AI
 Vizibilitate
 Fără ceață
 Ceață temporară
@@ -61,8 +61,8 @@ Clădiri
 Iteme
 Copaci
 Resurse
-Pietre de aur
-Pietre
+Aur
+Piatră
 MESAJ CHAT
 Cost
 Necesită
@@ -81,7 +81,7 @@ Cicluri de zi - noapte
 Volum de muzică
 Volum de sunet
 Sunete de moară
-Se joacă acum
+În timpul jocului
 Așteptare
 Privat
 Numele camerei
@@ -89,7 +89,7 @@ Jucători
 Da
 Nu
 Adaugă AI
-Deconectează
+Deconectează-te
 JOACĂ
 HARTA PERSONALIZATĂ| Joacă harta personalizată
 %s s-a deconectat!
@@ -101,7 +101,7 @@ CREEAZĂ| Creează un joc
 Expulzare
 Sus
 Jos
-Civilization
+Civilizație
 Inițializarea jocului...
 Editor de hartă
 EUROPEANĂ| Rasa jucătorului
@@ -137,8 +137,8 @@ Preot
 Țăran
 Catedrală
 Castel
-Perete de lemn
-Barăci
+Zid de lemn
+Cazarmă
 Moară de cherestea
 Turn magic
 Breaslă a războinicilor
@@ -154,7 +154,7 @@ Stabil
 Atelier
 Tavernă
 Casă
-Observează turnul
+Turn observator
 Piață
 Avanpost
 Pod
@@ -166,14 +166,14 @@ Fantomă
 Harbor
 Mesia
 Poartă magică
-Păzește turnul
-Perete de piatră
+Turn de pază
+Zid de piatră
 Arc
 Scut
 Potion
 Fier
-Păstrează turnul
-Bombardează turnul
+Turn apărător
+Turn cu bombe
 Aruncă turnul în aer
 Orc
 Pitic
@@ -247,10 +247,10 @@ Invizibilitate
 Fulger
 Îmbunătățește-l în turn tare
 Îmbunătățește-l în turn de piatră
-Îmbunătățește-l în turn cu tunuri
+Îmbunătățește-l în turnul cu tunuri
 Budism
 Inginerie
-Perete mare
+Zid mare
 Arta călăritului
 Irrigation
 Car blindat
@@ -312,7 +312,7 @@ Permite recrutarea de eroi în taverne
 Recrutează unități mai bune din taverne
 Permite producția de catapulte grele
 Crește punctele de lovire ale unității la fiecare nivel nou
-Permite producția de un spion
+Permite producția de spioni
 Crește rezistența clădirii
 Permite propovăduirea unei cruciade
 Crește atacul preotului
@@ -326,40 +326,40 @@ Vrajă de fulger
 Cercetează invocarea golemului de piatră
 Permite construirea turnurilor de tun
 Crește atacul armei de asediu
-Makes stone walls, towers and gates stronger
+Face zidurile de piatră, turnurile și porțile mai puternice
 Permite producția de arcași călare
-Increases field production
-Allows the production of armored chariots
-Makes monks cheaper
-Increases the attack of all kung-fu units
-Allows sharing of experience between kung-fu units
-Allows the production of more experienced monks
-Allows the production of ninjas
-Allows priests to teach kung-fu units
-Allows faster manna restoration
-Researches the Confusion spell
+Crește producția de câmpuri
+Permite producția de care blindate
+Face călugării mai ieftini
+Crește atacul tuturor unităților kung-fu
+Permite schimbul de experiență între unitățile kung-fu
+Permite producția de călugării mai experiențați
+Permite producția ninjilor
+Permite preoților să predea unități de kung-fu
+Permite restaurarea mai rapidă a manei
+Cercetează vraja „Confuzia”
 Cercetează vraja de vârtej
-Researches Dragon summoning
+Cercetează invocarea dragonilor
 Cercetează vraja de transformare în piatră
 Cercetează vraja de bolț de flacără
-Allows trading of items
-Increases cannon tower's attack power
-Allows the building of rocket tower
-Allows the production of horse samurai
+Permite comerțul cu itemele
+Crește puterea de atac a turnurilor cu tunuri
+Permite construirea unui turn de rachetă
+Permite producția de samuraii pe cai
 Unitățile din jurul unui erou câștigă experiență
 Bonus de atac erou vs. erou
-Increases the speed of learning
+Crește viteza de învățare
 Permite țăranilor să fure vaci
-Makes mounted units cheaper
-Increases sword attack power and allows the production of satraps
+Face unitățile montane mai ieftine
+Crește puterea atacului cu sabie și permite producția de satrapi
 Permite producția de războinici jihadiși
-Researches Magic Carpet summoning
-Allows the building of a magic workshop
-Researches the Magic Vision spell
-Researches the Raise the Dead spell
-Researches Jinn summoning
-Increases mine production
-Crește puterea de atac și apărare a unităților montate
+Cercetează invocarea covorului magic
+Permite construirea unui atelier magic
+Cercetează vraja „Viziunea magică”
+Cercetează vraja „Învierea morților”
+Cercetează invocarea djinnilor
+Crește producția de mineuri
+Crește puterea de atac și apărare a unităților montane
 Permite producția de jandarmi
 Ploaie de foc
 Îngheață
@@ -383,7 +383,7 @@ Sabie
 Experiență
 Mană
 Hrană
-Copy room link
+Copiază link-ul de grup
 AI FOST
 ÎNVINS
 EȘTI
@@ -391,9 +391,9 @@ VICTORIOS
 Turnuri
 INTRARE| Intră pe joc
 Floatarea minereurilor
-Tree density
-Symmetrical map
-Shared initial position
+Densitatea copacilor
+Hartă simetrică
+Poziție inițială împărtășită
 Timp de pace
 Apropiază la cursor
 Condiția de victorie
@@ -404,8 +404,8 @@ Tactici de aterizare
 Crește depozitarea navelor
 Apropiere nelimitată
 Chat-ul de echipă
-WASD as arrow keys
-Locație trimită
+WASD ca taste
+Locație trimisă
 Mișcă
 Atacă inamicul
 Explorează
@@ -515,12 +515,12 @@ Selectează toate unitățile montane
 Selectează toți arcașii
 Selectați toate unitățile cu sabie
 Implicit
-Folosește tasta înapoi ca tasta de ștergere
+Folosește tasta Backspace ca tastă de ștergere
 Devino un preot
 Acces interzis
 Așteptând în afară
 Clădiri speciale
-Charts
+Diagrame
 Echipe separate
 Râuri mici
 Râuri
@@ -568,9 +568,9 @@ Mediul de ultimele 16 jocuri
 Multithreading
 Anti-aliasare
 Circuitul GPU
-Scăzut
-Mediu
-Înalt
+Scăzută
+Medie
+Înaltă
 Ultra
 Țărani pe resurse
 Resurse/s
@@ -858,13 +858,13 @@ Mută în sus
 Mută în jos
 Mută la dreapta
 Mută la stânga
-Comenzi
+Controale
 Conectează-te
 Extinde miniharta
 Resetează apropierea
-Tastează Control
-Tastează Shift
-Tastează Alt
+Tasta Control
+Tasta Shift
+Tasta Alt
 Selectează toate unitățile militare + spioni
 Selectează toate unitățile militare (fără vrăjitori)
 Uciderea automatică a vacilor este dezactivată
@@ -924,4 +924,6 @@ Request alliance
 Cancel alliance
 New update available! Please refresh the page or app to apply the update
 Your peasant was killed
-Mute attack alert sound
+Mute attack alert
+There are too many players for this map
+Aceasta este o versiune personalizată a jocului, dă un clic aici pentru a vedea modificările.
