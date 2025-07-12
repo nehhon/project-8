@@ -46,7 +46,7 @@ PAUZA
 Woda
 Lądowy
 MENU
-OPCJE
+USTAWIENIA
 Losowa
 LOSOWA MAPA
 Wyczyść mape
@@ -68,20 +68,20 @@ Koszt
 Wymaga
 Czekam na pozostałych graczy.
 Wystąpił błąd przy wczytywaniu gry.
-PIN
-Szybkość gry
+HASŁO
+Prędkość gry
 POWRÓT DO GRY
 ZAPISZ GRĘ
 Pełny ekran
 WYJŚCIE
-Prędkość Przybliża
-Przewijanie
-Krycie menu
-Cykle dzień-noc
+Prędkość przybliżania
+Przewijanie mapy
+Krycie Interfejsu Użytkownika
+Cykle Dnia i nocy
 Muzyka
 Dźwięki
 Dźwięk śmierci unicestwienia jednostki
-W trakcie
+W trakcie gry
 Czekaj
 Prywatny
 Wpisz nazwę gry
@@ -96,7 +96,7 @@ GOTOWA MAPA| Gra na gotowej mapie
 Serwer anulował grę.
 Przykro mi, gra została zapełniona.
 Zostałeś wyrzucony przez serwer.
-MULTIPLAYER| Gra WIELOOSOBOWA
+POJEDYNKI WIELOOSOBOWE| Gra WIELOOSOBOWA
 UTWÓRZ| Utwórz pokój
 Wyrzuć
 Wyżej
@@ -108,7 +108,7 @@ EUROPEJCZYCY| Rasa
 ARABOWIE| Rasa
 AZJACI| Rasa
 Zwykłe
-JEDEN GRACZ| Gra dla Jednego Gracza
+POTYCZKA Z SI| Gra dla Jednego Gracza
 O grze
 POWRÓT
 Zapisywanie zawartości gry lokalnie
@@ -391,7 +391,7 @@ ZWYCIĘSTWO
 Wieże
 PRZYŁĄCZ SIĘ| Przyłącz się do gry
 Wzbogacanie rudy
-Zalesienie drzew
+Zalesienie
 Symetryczna mapa
 Wspólny start z tych samych pozycji
 Czas pokoju
@@ -403,7 +403,7 @@ Zniszcz Twierdze
 Desant
 Zwiększa ładowność statków
 Nielimitowane zbliżenie/oddalenie
-Pogawędka zespołowa
+Dyskusja zespołowa ⭢
 WASD jako klawisze strzałek
 Lokacja została wysłana
 Ruch
@@ -443,7 +443,7 @@ Pokój jest zastrzeżony tylko dla zarejestrowanych użytkowników!
 Wyloguj się
 Zmiany
 Zaloguj się
-Konto
+Profil gracza
 Standardowe kolory królestw
 Stań się wojownikiem dżihadu
 PRZENIEŚ SUROWCE
@@ -454,10 +454,10 @@ Zadane obrażenia
 Otrzymane obrażenia
 Zabite jednostki
 Utracone jednostki
-Przewijanie za pomocą myszy
-Generuj mape z obrazka
+Przewijanie mapy myszą
+Generuj mape z obrazu
 Odwróć
-Nowa oprawa graficzna
+Nowy Interfejs Użytkownika
 Niestandardowe ustawienia gry
 Zobacz wiecej
 Zaznacz wszystkie jednostki wojskowe
@@ -475,14 +475,14 @@ Współdzielone surowce
 Zniszczone budynki
 Utracone budynki
 Wykorzystana mana
-Heros
+Bohaterowie
 Punkty
 Limit populacji
 Obiekty początkowe
 Losowy objekt
 Dystans
 Każde 256
-Battle Royale
+Batalia Królewska
 Czas trwania okręgu
 Pierwsze zamknięcie okręgu za
 Pozycjonowanie
@@ -501,7 +501,7 @@ Czas budowy konstrukcji
 Czas szkolenia jednostki
 Czas badania technologii
 Czas zbierania surowców
-Zaawansowane opcje
+Zaawansowane ustawienia
 Natychmiastowe budowanie
 Zamykanie kręgu
 Zatrzymanie kręgu
@@ -509,7 +509,7 @@ Krąg końcowy
 Uwolnienie mapy z mgły wojny podczas klęski
 Crazy
 Ogólny czas trwania
-Punkty życia drzewa
+Punkty życia drzew
 Wybierz Kapłanów
 Wybierz Kawalerię
 Wybierz Łuczników
@@ -529,7 +529,7 @@ Zaznacz wszystkich czarnoksiężników
 Zaznacz krowy z pokarmem wyższym niż 450 pożywienia
 Inicjalizacja...
 Wynik Punktów rankingowych
-%s dołączył do gry!
+%s Dołączył do gry!
 %s Odebrał Ci móżliwość kontrolowania jego jednostek =(
 %s Przestał wpsółdzielić z Tobą surowce :(
 Małe obiekty
@@ -554,27 +554,27 @@ Rzadka ziemia
 Dżungla
 Zima
 Trawa i Śnieg
-Gra Rankingowa
+Rankingowa
 Oficjalny serwer
-minut
-Attack Time (ms)
-Attack/s
+Minut
+Prędkość ataku [+2] (ms)
+Atak/s
 Zasięg jednostki
-Szybkość jednostki (px/s)
+Prędkość jednostki (px/s)
 %s Nazwa gry
-1 vs 1
+1 Kontra 1
 undefined
 Średnia z ostatnich szesnastu rozegranych meczy
 Multithreading
-Anti-aliasing
-GPU Engine
+Anti-Aliasing
+Śilnik GPU
 Niska
 Średnia
 Wysoka
 Ultra
-Ilość wiesniaków gromadzących surowce 
+Ilość wiesniaków gromadzących surowce
 Produkcja surowców na sekundę
-RULES
+Zasady
 Action
 Event
 Add quest
@@ -609,7 +609,7 @@ Object exist
 Object in area
 Object leave holder
 Condition
-Rule
+Zasada
 Object
 Rectangle
 Area
@@ -620,14 +620,14 @@ For which
 All
 Type
 Count
-Check all
-Clear all
+Sprawdź wszystko
+Wyczyść wszystko
 Select objects
 Którykolwiek
 Jednostki bojowe
 Order
 Zone
-Amount
+Ilość
 Properties
 Objective
 Domyślny
@@ -647,7 +647,7 @@ Przywracanie many
 Przywracanie zdrowia
 Minimum repetition time
 Check rule each
-Duplicate
+Zduplikuj
 Aktualny stan zasobów
 Odkrywanie mapy (beta)
 Object state
@@ -686,13 +686,13 @@ Object properties
 Dla każdego zniszczonego obiektu
 Dla każdego utraconego obiektu
 Zmienna
-Niewłasciwy kod PIN
+Niewłasciwe hasło
 Zbadaj technologię
-Zbyt wiele prób, dostęp został zablokowany
-Wymagany kod PIN do edycji mapy
+Zbyt wiele prób logowania, dostęp został zablokowany
+Wymagane hasło do edycji mapy
 Technology investigated
 Wyłączenie technologii
-Zmień opcje dyplomacji
+Zmień ustawienia dyplomacji
 Pochodzenie
 Destine
 Teleport object
@@ -701,18 +701,18 @@ Ibn Fadlan,Mohammad,Al Ferissa,Harun Al Rashid,Sindbad,Mellemad,Moarrac,Sakhavan
 Ishida,Toranaga,Ichinzen,Haiako,Mozuki,Hitachi,Tosheba,Harachiko,Marasuma,Korodzum,Ishinghen,Genghis,Musa,Echibo,Ichikahr,Yotokan,Maraga
 Fistantilus,Skenderbeg,Raislin,Tenis,Morok,Sokob,Baras,Haram,Billihz,Ynte,Orgh,Savael,Birgos,Savator,Gandeh,Gordor,Fessh,Gilmi,Phergas
 Wizja
-Clan
+Klan
 Kod do zaproszenia
 Stwórz klan
 Usuń klan
 Członkowie
 Dołącz
-{tag}
+{TAG}
 Kod zaproszenia do gry jest nieprawidłowy
-Nazwa klanu obecnie jest niedostepna
+Nazwa klanu obecnie jest niedostępna
 Opuść klan
 Czy jesteś pewien?
-Gra rankingowa anulowana
+Rozgrywka rankingowa anulowana
 Zespołowy
 v
 Każdy na każdego
@@ -727,7 +727,7 @@ Wydobyty kamień
 Populacja
 Wieśniacy
 Rozmiar skalowania
-Postaw objekt
+Postaw obiekt
 Obiekty
 Przejmij budowlę wroga
 Obszar punktacji
@@ -774,18 +774,18 @@ Szybkość budowy
 Szybkość zdobywania dośwaidczenia
 Maksymalna ilość doświadczenia
 Doświadczenie najemników z gospody
-Przyrost zdrowia po zabiciu
+Przyrost zdrowia po zdobyciu poziomu
 Przyrost many na sekundę
 Przyrost mleka Bożego na sekundę
 Przyrost mięsa na sekundę
 Wydajność górnicza
-Bonus do ataku używając zaklęcia bogosławieństwo
+Bonus do ataku używając zaklęcia Bogosławieństwo
 Promień/obszar
 Mana
 Obrażenia
 Wartość uzdrawiania
 Limit czasowy zaklęcia (ms)
-Obrażenia od Magicznego wiru
+Obrażenia Magicznego wiru
 Poziom herosów z gospody
 Umiejętność Morderstwo - Obrażenia
 Auto make invisible manna
@@ -796,13 +796,13 @@ Ilość połowu ryb na sekundę
 Maksymalna ilość połowu ryb
 Zasięg przywódctwa herosa
 Minimalna ilość handlu towarem
-Ilość maksymalnego handlu na sekundę
+Maksymalna ilość handlu na sekundę
 Mana interval
 Zamorduj
 Produkcja czasowa najemników (ms)
-Czasowa produkcja artefaktów z targu azjatyckiego (ms)
+Produkcja czasowa artefaktów z targu azjatyckiego (ms)
 Straciłeś połączenie z serwerem :(
-Koszt populacji ludności
+Koszt populacji
 Wyłączenie
 Tylko zarejestrowani użytkownicy mogą stworzyć pokój gry
 Twoje konto musi istnieć jeden tydzień, aby móc uczestniczyć w grach rankingowych
@@ -822,16 +822,16 @@ Możliwość zdobywania doświadczenia
 Punkty za unicestwienie
 Odporność budowli
 Pozwala dostrzegać niewidzialne jednostki
-Czas pierwszego ataku (ms)
+Czas pierwszego ataku [1] (ms)
 Strzały
 Minimalna możliwa ilość stworzonych krzyżowców
 Maksymalna możliwa ilość stworzonych krzyżowców
 Przyrost ilościowy krzyżowców w klasztorze
 Czas ładowania budowy krzyżowców (ms)
-Minimalny poziom herosa
+Minimalny poziom bohatera
 Zamień na kamienny mur
 WCZYTAJ
-OPCJE MUZYKI
+Ustawienia muzyki
 Ta technologia jest opracowywana w innych budynkach
 Ponowne dołączanie
 Utwórz wyprawę krzyżową
@@ -850,7 +850,7 @@ Usuń strukturę / Jednostkę
 Ukryj czat
 Informacja gry
 Zaznacz wszystkich szpiegów
-Zaznacz wszystkich herosów
+Zaznacz wszystkich bohaterów
 Skup widok na wybranej jednostce
 Ukryj drzewa
 Alternatywne informacje o ekranie
@@ -882,48 +882,48 @@ Graczy
 Czas gry
 Wykorzystane zasoby
 Otrzymane zasoby
-OSTATNIO GRANE GRY
-Exit full screen
+Historia Potyczek
+Wyłącz pełny ekran
 Horizontal menu layout
-UI scale
-Remove invisibility
-Use circles as a selection mark
-No magic
-Game starts in %ss
+Skaluj Interfejs Graficzny
+Usuń niewidzialność
+Użyjwaj okręgów jako znaczników jednostek
+Pozbawiony magii
+Gra rozpoczynie się za %ss
 Last login
-Account created
+Konto utworzone ⭢
 Awards
 Rozegrane gry
-ID
-Old names
+ID ⭢
+Nazwy gracza ⭢
 Start at
-LEAGUE
-You must play at least 16 ranked games to gain access
-You are using a VPN, your access may be restricted
-Victories
+Leauge
+Aby uzyskać dostęp, należy rozegrać co najmniej 16 gier rankingowych
+Jeśli korzystasz z VPN, Twój dostęp może być ograniczony.
+Zwycięstwa
 MVPs
-Pos.
-Duration
-Preset
+Pozycja
+Czas trwania
+Rodzaj gry
 Data
-STATS
-Your email provider is not valid
+Statystyki
+Twoja poczta e-mail jest nieprawidłowa
 Złoto
 Kamień
 Drewno
-Play again
-You can't build on rocky ground
-IO mode paused for the next 9 hours
+Zagraj ponownie
+Nie można budować na skalistym gruncie
+Tryb IO zostanie wznowiony za 9 godzin
 %s jest teraz twoim wrogiem
 %s chce zostać twoim sprzymierzeńcem
 %s jest teraz twoim sprzymierzeńcem
 Decline
-%s is sharing vision with you
-%s stopped sharing vision with you
-Request alliance
-Cancel alliance
-New update available! Please refresh the page or app to apply the update
-Your peasant was killed
-Mute attack alert
-There are too many players for this map
+%s Współdzieli wizję terenu z Tobą 👁
+%s Przestał dzielić się z tobą wizją
+Otrzymałeś wniosek formalny o Sojusz!
+Odrzuć sojusz!
+Nowa aktualizacja dostępna! Odśwież stronę lub aplikację, aby zagrać!
+Twój wieśniak został zabity
+Wycisz alarm ataku
+Zbyt wielu graczy na tę mapę!
 To jest niestandardowa wersja gry, kliknij tutaj, aby zobaczyć zmiany

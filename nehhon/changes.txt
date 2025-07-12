@@ -1,3 +1,9 @@
+##608 12/07/2025
+Dragon cost reduced from 80 gold 800 mana to 60 gold 600 mana
+Irrigation technology increases food production in +12 (before +4)
+Ninja training time reduced to 32s
+Improved Polish transition thanks to Dio Brando
+Minor bug fixes
 ##602 27/06/2025
 Updated server
 Daily pro league games
