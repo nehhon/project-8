@@ -1,3 +1,6 @@
+##616 14/09/2025
+Defeated players automatically share resources in ranked mode
+Minor bug fixes
 ##608 12/07/2025
 Dragon cost reduced from 80 gold 800 mana to 60 gold 600 mana
 Irrigation technology increases food production in +12 (before +4)

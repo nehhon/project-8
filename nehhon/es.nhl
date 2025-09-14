@@ -563,7 +563,6 @@ Rango
 Velocidad
 %s room
 Fast 1v1
-undefined
 Media de las ultimas 16 partidas
 Multihilo
 Anti-aliasing
@@ -927,3 +926,4 @@ Your peasant was killed
 Mute attack alert
 There are too many players for this map
 Esta es una versión personalizada del juego, haz clic aquí para ver los cambios
+%d has killed %s

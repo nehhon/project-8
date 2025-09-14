@@ -563,7 +563,6 @@ Zasięg jednostki
 Prędkość jednostki (px/s)
 %s Nazwa gry
 1 Kontra 1
-undefined
 Średnia z ostatnich szesnastu rozegranych meczy
 Multithreading
 Anti-Aliasing
@@ -927,3 +926,4 @@ Twój wieśniak został zabity
 Wycisz alarm ataku
 Zbyt wielu graczy na tę mapę!
 To jest niestandardowa wersja gry, kliknij tutaj, aby zobaczyć zmiany
+%d has killed %s

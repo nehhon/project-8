@@ -563,7 +563,6 @@ Range
 Speed (px/s)
 %s room
 Fast 1v1
-undefined
 Average last 16 games
 Multithreading
 Anti-aliasing
@@ -927,3 +926,4 @@ Your peasant was killed
 Mute attack alert
 There are too many players for this map
 Custom version of the game, click here to see the changes
+%d has killed %s

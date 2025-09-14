@@ -563,7 +563,6 @@ Gamă
 Viteză (px/s)
 Camera lui %s
 Rapid 1vs1
-undefined
 Mediul de ultimele 16 jocuri
 Multithreading
 Anti-aliasare
@@ -927,3 +926,4 @@ Your peasant was killed
 Mute attack alert
 There are too many players for this map
 Aceasta este o versiune personalizată a jocului, dă un clic aici pentru a vedea modificările.
+%d has killed %s

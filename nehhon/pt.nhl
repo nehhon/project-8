@@ -563,7 +563,6 @@ Alcance
 Velocidade (px/s)
 Sala %s
 1v1 rápido
-undefined
 Média dos últimos 16 jogos
 Multithreading
 Antisserrilhamento
@@ -927,3 +926,4 @@ Your peasant was killed
 Mute attack alert
 There are too many players for this map
 Esta é uma versão personalizada do jogo, clique aqui para ver as mudanças
+%d has killed %s
